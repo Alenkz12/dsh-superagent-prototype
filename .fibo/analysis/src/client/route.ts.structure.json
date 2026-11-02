@@ -1,0 +1,257 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/route.ts",
+    "path": "src/client/route.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "route.ts",
+    "file_path": "src/client/route.ts",
+    "description": "Client routing model: route types, parsing, labels and session-persisted navigation state",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Imports thread and ticket filter constants and their types from app API",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "internal",
+        "filepath": "../app/api.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the SetupPlace type from the setup module",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "../setup.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports decision filter constants and type from the client API",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "./api.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the T translator type from the text module",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "./text.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "compact",
+        "function_id": "src/client/route.ts:compact(query: Q)",
+        "description": "Drops undefined entries from a query object, returning undefined when empty",
+        "filepath": "src/client/route.ts",
+        "lines": [
+          27,
+          30
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "parseRoute",
+        "function_id": "src/client/route.ts:parseRoute(value: unknown)",
+        "description": "Validates unknown input into a typed Route per page, id and query filters",
+        "filepath": "src/client/route.ts",
+        "lines": [
+          32,
+          47
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "initialLocation",
+        "function_id": "src/client/route.ts:initialLocation()",
+        "description": "Restores route and stack from sessionStorage, falling back to HOME",
+        "filepath": "src/client/route.ts",
+        "lines": [
+          53,
+          64
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "remember",
+        "function_id": "src/client/route.ts:remember(location: Location)",
+        "description": "Persists the current location into sessionStorage, ignoring failures",
+        "filepath": "src/client/route.ts",
+        "lines": [
+          65,
+          67
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "Location",
+        "interface_id": "src/client/route.ts:Location",
+        "description": "Navigation location: current route, back stack and optional settings group",
+        "filepath": "src/client/route.ts",
+        "lines": [
+          50,
+          50
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "TABS",
+        "variable_id": "src/client/route.ts:TABS",
+        "description": "Ordered list of top-level tab page names",
+        "filepath": "src/client/route.ts",
+        "lines": [
+          7,
+          7
+        ]
+      },
+      {
+        "variable_name": "SETTINGS_GROUPS",
+        "variable_id": "src/client/route.ts:SETTINGS_GROUPS",
+        "description": "Ordered list of settings page group names",
+        "filepath": "src/client/route.ts",
+        "lines": [
+          9,
+          9
+        ]
+      },
+      {
+        "variable_name": "HOME",
+        "variable_id": "src/client/route.ts:HOME",
+        "description": "Default home route pointing at the overview page",
+        "filepath": "src/client/route.ts",
+        "lines": [
+          18,
+          18
+        ]
+      },
+      {
+        "variable_name": "settingsRoute",
+        "variable_id": "src/client/route.ts:settingsRoute",
+        "description": "Builds a settings route for a group with optional source/version query",
+        "filepath": "src/client/route.ts",
+        "lines": [
+          19,
+          20
+        ]
+      },
+      {
+        "variable_name": "setupPage",
+        "variable_id": "src/client/route.ts:setupPage",
+        "description": "Maps a setup place to its corresponding settings route",
+        "filepath": "src/client/route.ts",
+        "lines": [
+          21,
+          22
+        ]
+      },
+      {
+        "variable_name": "routeLabel",
+        "variable_id": "src/client/route.ts:routeLabel",
+        "description": "Resolves a localized display label for a route using the translator",
+        "filepath": "src/client/route.ts",
+        "lines": [
+          23,
+          24
+        ]
+      },
+      {
+        "variable_name": "pick",
+        "variable_id": "src/client/route.ts:pick",
+        "description": "Returns the matching allowed value or undefined if not in the list",
+        "filepath": "src/client/route.ts",
+        "lines": [
+          26,
+          26
+        ]
+      },
+      {
+        "variable_name": "ROUTE_KEY",
+        "variable_id": "src/client/route.ts:ROUTE_KEY",
+        "description": "sessionStorage key used to persist the navigation location",
+        "filepath": "src/client/route.ts",
+        "lines": [
+          49,
+          49
+        ]
+      },
+      {
+        "variable_name": "lastSettingsGroup",
+        "variable_id": "src/client/route.ts:lastSettingsGroup",
+        "description": "Derives the active settings group from a location, defaulting to source",
+        "filepath": "src/client/route.ts",
+        "lines": [
+          51,
+          52
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "Tab",
+        "alias_id": "src/client/route.ts:Tab",
+        "description": "Union of top-level tab names derived from TABS",
+        "filepath": "src/client/route.ts",
+        "lines": [
+          8,
+          8
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "SettingsGroup",
+        "alias_id": "src/client/route.ts:SettingsGroup",
+        "description": "Union of settings group names derived from SETTINGS_GROUPS",
+        "filepath": "src/client/route.ts",
+        "lines": [
+          10,
+          10
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "Route",
+        "alias_id": "src/client/route.ts:Route",
+        "description": "Discriminated union describing every page, id and query combination",
+        "filepath": "src/client/route.ts",
+        "lines": [
+          11,
+          17
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

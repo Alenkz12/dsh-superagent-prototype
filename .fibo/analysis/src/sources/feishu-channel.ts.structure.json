@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/sources/feishu-channel.ts",
+    "path": "src/sources/feishu-channel.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "feishu-channel.ts",
+    "file_path": "src/sources/feishu-channel.ts",
+    "description": "Feishu channel source module: sends Feishu replies and builds Feishu chat/message links",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Imports the OutboundMessage type from core",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "internal",
+        "filepath": "../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the CliError error class from infra commands",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "../infra/commands.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the checkedImText text validation helper",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "../infra/text.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the SourceContext type from the host module",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "./host.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the ChannelLink and ChannelLinks types",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "./kind.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the feishuTriggerId helper for building trigger IDs",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "./feishu-trigger.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "sendFeishu",
+        "function_id": "src/sources/feishu-channel.ts:sendFeishu(host: Pick<SourceContext, 'commands'>, message: OutboundMessage)",
+        "description": "Sends an outbound message as a Feishu threaded reply via lark CLI, reporting 'sent' or 'gone'",
+        "filepath": "src/sources/feishu-channel.ts",
+        "lines": [
+          19,
+          30
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "feishuChatLink",
+        "variable_id": "src/sources/feishu-channel.ts:feishuChatLink",
+        "description": "Builds a Feishu or Lark applink URL that opens the given chat",
+        "filepath": "src/sources/feishu-channel.ts",
+        "lines": [
+          10,
+          11
+        ]
+      },
+      {
+        "variable_name": "gone",
+        "variable_id": "src/sources/feishu-channel.ts:gone",
+        "description": "Detects CLI errors meaning the target message was withdrawn or no longer found",
+        "filepath": "src/sources/feishu-channel.ts",
+        "lines": [
+          16,
+          17
+        ]
+      },
+      {
+        "variable_name": "feishuLink",
+        "variable_id": "src/sources/feishu-channel.ts:feishuLink",
+        "description": "Builds a ChannelLink for a Feishu message address, adding a trigger ID when a message ID exists",
+        "filepath": "src/sources/feishu-channel.ts",
+        "lines": [
+          32,
+          35
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

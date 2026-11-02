@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/passes.ts",
+    "path": "src/app/passes.ts",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "7da939381d66bf6e1ce56bcdf253f6c6fd90cae8521a1599eff3f020f971ab64",
+  "sourceFingerprint": "79688aeb8c43396b9f122b3feba0ce1c422f1bfbca3b32919cd764a217b67ea9",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/app",
+      "resultFingerprint": "c5d9a996b9b8fdf32bef10c15d47f0ba7a1c84c5d144bf4160f01af92915cf64"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/effects.ts",
+      "contentFingerprint": "d350590473299398b17c50dd641c72e1995dd95920c5138699491ab77e3ae481"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/http.ts",
+      "contentFingerprint": "5da39830429559975cae7ae6d39416acb2322ac8e31cfb4da3436df602cb7ec4"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/outbox.ts",
+      "contentFingerprint": "48d20062dd8c34c2b95e851c78265c9e403d1040894e97c7d9d0fa190d54415e"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/passes.ts",
+      "contentFingerprint": "79688aeb8c43396b9f122b3feba0ce1c422f1bfbca3b32919cd764a217b67ea9"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/runtime.ts",
+      "contentFingerprint": "5befef035b4a70978cd881b32282680260c6d2561679f890dd911214664cf515"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/sessions.ts",
+      "contentFingerprint": "ca2b98e57e9f27b2abb0afab59d44ea744a96d8be4cf81d7b3776901b56cd36b"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/settings.ts",
+      "contentFingerprint": "2c7cd780dd24ab6a99ddfd30f80b921db035e0d56e3e1d42a86371fe20423f3f"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/tools/main.ts",
+      "contentFingerprint": "88603eb5a94c67e93141e07bd09bde85d65f980a1f42503c53ab9c22ec5c538d"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/engine.ts",
+      "contentFingerprint": "bd9a4caff834859877d1a08ccddebc990d0e1ca568674b80f9d59ce5adcac827"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/intake.ts",
+      "contentFingerprint": "323aadefea69436ba23ed2de3bdbaad673d61915be9e239f3233ecf551a74179"
+    },
+    {
+      "kind": "file",
+      "path": "src/infra/health.ts",
+      "contentFingerprint": "dcd84306e795866ffb66ecb5274edf50114ba77052d260b4b530a1a81022d76e"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": ".idle()",
+      "limit": 20,
+      "resultFingerprint": "d6282ab2df58851b3e5972a5e0f961b113de202b387e0bb0791aa0ea133420b9"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "evaluateDue",
+      "limit": 40,
+      "resultFingerprint": "451d1827e099b625391330e70ec32b50134ab0e711467b09e49b4722148aba44"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "idle(",
+      "limit": 30,
+      "resultFingerprint": "106b59a058891981b4b1d285eb194bf32c7675a96882a12f71be82b7dd12fc83"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "kick",
+      "limit": 40,
+      "resultFingerprint": "138c3cfaf98bfc0b167a768444e8fb9d8b84ca27f188c740f02baed8275b4f17"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "Passes",
+      "limit": 60,
+      "resultFingerprint": "b809498667cbd6a502999d0b47dc4c5446065f42f82c4f5d73b78f3ecd5d5b92"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "ReceiveResult =",
+      "limit": 20,
+      "resultFingerprint": "de9fb93419941d2d7735fd72fd999dc3ae73e21a75997b723ad0ead37be7cd70"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "requestPass",
+      "limit": 40,
+      "resultFingerprint": "1aa85c8d016c2a46d4fd490704da43b0880c414e104013aab16ad63f75e15911"
+    },
+    {
+      "kind": "search",
+      "path": "src/app/effects.ts",
+      "query": "kick|async idle|drain|start()",
+      "limit": 30,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "search",
+      "path": "src/app/settings.ts",
+      "query": "paused",
+      "limit": 20,
+      "resultFingerprint": "66599c964d874336052d8b3b31fcb2c6e91c225c93c3c3c6c4198573e6126df2"
+    },
+    {
+      "kind": "search",
+      "path": "src/core",
+      "query": "evaluateDue|ReceiveResult",
+      "limit": 30,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "search",
+      "path": "src/infra/health.ts",
+      "query": "HealthEntry",
+      "limit": 40,
+      "resultFingerprint": "5d99dee447bebf065f6c55d9b8ed08d66779f4db9e9c2bcbdb755f4ccb8a001d"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-orchestration:extension-point",
+      "contentFingerprint": "5aadc2f687c3155305161b5d0e6be26724aaff5d159c9ff287ab8ec1900d137b"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-orchestration:infrastructure",
+      "contentFingerprint": "d2b41200f03f2d3bf2cd56b0c0a1a8afc8a11bb763153b84987f6d0421c13a7c"
+    }
+  ],
+  "infoFingerprint": "5eac1fbe6072dc6bb31f850596b39e3ffeeff791d86d509b08287216b4106f8d",
+  "artifacts": {
+    "info": ".fibo/analysis/src/app/passes.ts.info.md",
+    "structure": ".fibo/analysis/src/app/passes.ts.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "5eac1fbe6072dc6bb31f850596b39e3ffeeff791d86d509b08287216b4106f8d",
+    "structure": "95eec635a3de7df63c7dd1ddad0845378ef70793d5116965a46e5c44fd6d0e8d"
+  }
+}

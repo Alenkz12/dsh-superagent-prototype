@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/prompt-config.ts",
+    "path": "src/client/prompt-config.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "prompt-config.ts",
+    "file_path": "src/client/prompt-config.ts",
+    "description": "Prompt configuration helpers: section/part/skill overrides, diffs and labels",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Imported type definitions for prompt config and its view model",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "internal",
+        "filepath": "./api.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imported translation helper and translation type",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "./text.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "withOverride",
+        "function_id": "src/client/prompt-config.ts:withOverride(config: PromptConfig, part: BuiltInPart, text: string | undefined, rebase = false)",
+        "description": "Returns a copy of the config with an override text set or cleared for a built-in part",
+        "filepath": "src/client/prompt-config.ts",
+        "lines": [
+          30,
+          34
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "withSection",
+        "function_id": "src/client/prompt-config.ts:withSection(config: PromptConfig, name: string, text: string)",
+        "description": "Returns a copy of the config with a section or skill text replaced",
+        "filepath": "src/client/prompt-config.ts",
+        "lines": [
+          35,
+          37
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "withoutSkill",
+        "function_id": "src/client/prompt-config.ts:withoutSkill(config: PromptConfig, name: string)",
+        "description": "Returns a copy of the config with the named skill removed",
+        "filepath": "src/client/prompt-config.ts",
+        "lines": [
+          38,
+          41
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "lineDiff",
+        "function_id": "src/client/prompt-config.ts:lineDiff(before: string, after: string)",
+        "description": "Computes an LCS-based line diff, folding long runs of unchanged lines",
+        "filepath": "src/client/prompt-config.ts",
+        "lines": [
+          57,
+          78
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "isSkill",
+        "variable_id": "src/client/prompt-config.ts:isSkill",
+        "description": "Type guard checking whether a section name refers to a skill",
+        "filepath": "src/client/prompt-config.ts",
+        "lines": [
+          7,
+          7
+        ]
+      },
+      {
+        "variable_name": "isPart",
+        "variable_id": "src/client/prompt-config.ts:isPart",
+        "description": "Type guard checking whether a section name refers to a built-in part",
+        "filepath": "src/client/prompt-config.ts",
+        "lines": [
+          9,
+          9
+        ]
+      },
+      {
+        "variable_name": "partKey",
+        "variable_id": "src/client/prompt-config.ts:partKey",
+        "description": "Strips the 'part/' prefix to get the bare override key",
+        "filepath": "src/client/prompt-config.ts",
+        "lines": [
+          10,
+          10
+        ]
+      },
+      {
+        "variable_name": "sections",
+        "variable_id": "src/client/prompt-config.ts:sections",
+        "description": "Lists all section names from config: text sections, skills and overrides",
+        "filepath": "src/client/prompt-config.ts",
+        "lines": [
+          11,
+          12
+        ]
+      },
+      {
+        "variable_name": "sectionText",
+        "variable_id": "src/client/prompt-config.ts:sectionText",
+        "description": "Resolves the current text of a section name from config or overrides",
+        "filepath": "src/client/prompt-config.ts",
+        "lines": [
+          14,
+          16
+        ]
+      },
+      {
+        "variable_name": "withOverrides",
+        "variable_id": "src/client/prompt-config.ts:withOverrides",
+        "description": "Returns config with overrides filtered to only the kept part keys",
+        "filepath": "src/client/prompt-config.ts",
+        "lines": [
+          22,
+          23
+        ]
+      },
+      {
+        "variable_name": "partText",
+        "variable_id": "src/client/prompt-config.ts:partText",
+        "description": "Returns the effective text of a part, preferring the override",
+        "filepath": "src/client/prompt-config.ts",
+        "lines": [
+          25,
+          25
+        ]
+      },
+      {
+        "variable_name": "changedSections",
+        "variable_id": "src/client/prompt-config.ts:changedSections",
+        "description": "Lists section names whose text differs between current and saved config",
+        "filepath": "src/client/prompt-config.ts",
+        "lines": [
+          43,
+          46
+        ]
+      },
+      {
+        "variable_name": "sectionLabel",
+        "variable_id": "src/client/prompt-config.ts:sectionLabel",
+        "description": "Builds a localized display label for a section or part name",
+        "filepath": "src/client/prompt-config.ts",
+        "lines": [
+          47,
+          48
+        ]
+      },
+      {
+        "variable_name": "skillNameFree",
+        "variable_id": "src/client/prompt-config.ts:skillNameFree",
+        "description": "Checks a skill name matches the pattern and is not already used",
+        "filepath": "src/client/prompt-config.ts",
+        "lines": [
+          49,
+          50
+        ]
+      },
+      {
+        "variable_name": "partWith",
+        "variable_id": "src/client/prompt-config.ts:partWith",
+        "description": "Prepends a part's heading line to its base text when present",
+        "filepath": "src/client/prompt-config.ts",
+        "lines": [
+          52,
+          53
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "TeamSection",
+        "alias_id": "src/client/prompt-config.ts:TeamSection",
+        "description": "Type of a single team-editable prompt section key",
+        "filepath": "src/client/prompt-config.ts",
+        "lines": [
+          5,
+          5
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "BuiltInPart",
+        "alias_id": "src/client/prompt-config.ts:BuiltInPart",
+        "description": "Type of a built-in prompt part definition",
+        "filepath": "src/client/prompt-config.ts",
+        "lines": [
+          6,
+          6
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "DiffLine",
+        "alias_id": "src/client/prompt-config.ts:DiffLine",
+        "description": "Union type of a diff line (same/del/ins) or a fold marker with count",
+        "filepath": "src/client/prompt-config.ts",
+        "lines": [
+          55,
+          55
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

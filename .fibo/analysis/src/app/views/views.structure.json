@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "collection:src/app/views",
+    "path": "src/app/views",
+    "kind": "directory",
+    "sourceKind": "directory"
+  }
+}

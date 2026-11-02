@@ -1,0 +1,271 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "collection:src/sources",
+    "path": "src/sources",
+    "kind": "directory"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "20d519c00d0e2ad59f465356814fdd8c28c3a667e8dc46b5c5c23ba8c056190d",
+  "children": [
+    {
+      "id": "file:src/sources/admission-context.ts",
+      "infoFingerprint": "34abd9c8c66f3b786f5df5954b004c88dee38de8699544a5d18565b06caba9d2"
+    },
+    {
+      "id": "file:src/sources/feishu-channel.ts",
+      "infoFingerprint": "012a2a538e0e08fd1fa0b13e60ce63dcb8bdc1919fa61a1696625c25d714bfe4"
+    },
+    {
+      "id": "file:src/sources/feishu-image.ts",
+      "infoFingerprint": "cb29b171bfc8e8ce9a51a769a1fc34db363cafc68ee65dee7d053acf8442d5d4"
+    },
+    {
+      "id": "file:src/sources/feishu-loops.ts",
+      "infoFingerprint": "68ab96a2cae33f742efbffdcec4eb605132f184b5e9f190eb8b235add9777802"
+    },
+    {
+      "id": "file:src/sources/feishu-read.ts",
+      "infoFingerprint": "0f863d43b4616a0ed054a6e144810b63e14f6fa10dfff28910fb4c908522f5fc"
+    },
+    {
+      "id": "file:src/sources/feishu-trigger.ts",
+      "infoFingerprint": "703321bc20702df9a9d8bd9a7fe07ca030a3e542aba40f023a7b7c4a0f987bc0"
+    },
+    {
+      "id": "file:src/sources/feishu.ts",
+      "infoFingerprint": "abdda781c1be63c7e6844956fe2922754298cd1a86fbf1a49161459a5c667f00"
+    },
+    {
+      "id": "file:src/sources/github-channel.ts",
+      "infoFingerprint": "78dc16df781dc356372e9a6339b954611f86eaf7f7e01b12ef342df7b4533d67"
+    },
+    {
+      "id": "file:src/sources/github-pull.ts",
+      "infoFingerprint": "94edc1a22dd3ef01cdfe55dc85ff3574bf093909b9d9b7671e70e1c7b025df00"
+    },
+    {
+      "id": "file:src/sources/github-read.ts",
+      "infoFingerprint": "619250574617226dfbce440717afe8032271658022450c5ae3585361ea305f9d"
+    },
+    {
+      "id": "file:src/sources/github-trigger.ts",
+      "infoFingerprint": "2ce317006bb865b3607c5df8dbbba095e3d5e18373bd4465eda1147c0206039c"
+    },
+    {
+      "id": "file:src/sources/github.ts",
+      "infoFingerprint": "5b0b6559e192fc57da5077854ace4336d29d57cee204c48d26de6db762a1a565"
+    },
+    {
+      "id": "file:src/sources/host.ts",
+      "infoFingerprint": "42b28ca48f130ac451c5f13ad6d1425f18a47bb40f638edd5d8e1ac5f841a344"
+    },
+    {
+      "id": "file:src/sources/kind.ts",
+      "infoFingerprint": "1e99c216d2f0b5010ba9061abe7902e338a1a764b55dbeb95edbcb8337ff2e7e"
+    },
+    {
+      "id": "file:src/sources/poll.ts",
+      "infoFingerprint": "4c94c4e8de16a5994b29a053fb5ca4b24bfca8ea93460691c83d8a34538a4edc"
+    },
+    {
+      "id": "file:src/sources/registry.ts",
+      "infoFingerprint": "c318480133b361fce733b37e63330a44e206551a7aa7c5fc1370aa51880bdb3e"
+    }
+  ],
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src",
+      "resultFingerprint": "e17b6d8ec5aecd9176b3ffda9aabd0329f88456cdae8ef4e381964a8cae1ea63"
+    },
+    {
+      "kind": "directory-listing",
+      "path": "src/sources",
+      "resultFingerprint": "e13a5d7335d2907bee6071268ebe6f12a05e34a0f356774711e36baefff226d6"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/assessment.ts",
+      "contentFingerprint": "5b2c2cf71093fd560f1f3a57cc476f122241b780fbeb2f6007e727943142b545"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/execution-environment.ts",
+      "contentFingerprint": "82aae39bd65141df80f6a85991e35d05c9f0dfc748be88f78b7520ce97883b3f"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/http.ts",
+      "contentFingerprint": "5da39830429559975cae7ae6d39416acb2322ac8e31cfb4da3436df602cb7ec4"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/links.ts",
+      "contentFingerprint": "7d17aef4fb89936467ad99d6c25417b03d7b4a66ad02e3b0981aed3cb2f0ffc2"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/notices.ts",
+      "contentFingerprint": "c6d464a69809719408b6f279490d22e98e00901cba3058a84c76cfe73aa69022"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/outbox.ts",
+      "contentFingerprint": "48d20062dd8c34c2b95e851c78265c9e403d1040894e97c7d9d0fa190d54415e"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/runtime.ts",
+      "contentFingerprint": "5befef035b4a70978cd881b32282680260c6d2561679f890dd911214664cf515"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/settings-history.ts",
+      "contentFingerprint": "a20acbb1e121b41f355970c738047b3b89a75979d216079657f40bdbd2366023"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/settings.ts",
+      "contentFingerprint": "2c7cd780dd24ab6a99ddfd30f80b921db035e0d56e3e1d42a86371fe20423f3f"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/source-context.ts",
+      "contentFingerprint": "909ad5cb9739e4143ddc9ad1d38a6b1b46b18d52c0bcd2b4f8e25b691d0b9047"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/views/records.ts",
+      "contentFingerprint": "5ed48ab5dfaaa729f0520c1dfc30d962f6a716d11d71088fd43ce9bedaa3cd39"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/views/settings.ts",
+      "contentFingerprint": "5740ad427457aa501fa6cc706573ce5b6882c53d4cdc646f1ac6f02787cd25a3"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/views/sources.ts",
+      "contentFingerprint": "d81bbdba84c2a7bc49a53c95b0b96a340cc2231135f065eff59da648d0ec6798"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/deployment.tsx",
+      "contentFingerprint": "c37ebd5a24d0319a28d3d98a76dde23d9694b0fad4a7900df0eff85de82afb4b"
+    },
+    {
+      "kind": "file",
+      "path": "src/deployment.ts",
+      "contentFingerprint": "9984953f17592b267e386d4028552d413cfe9c9ac4df6dfb730b6be5115dbf77"
+    },
+    {
+      "kind": "file",
+      "path": "src/limits.ts",
+      "contentFingerprint": "78e4171e6624580038996e3931888cd1cdbefa5c0e1035235c4dffdbb4af236f"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/admission-context.ts",
+      "contentFingerprint": "c13b421c479f02dfc5846ef266081586afe33d685c742c37e62d69ccd182557f"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/feishu-image.ts",
+      "contentFingerprint": "6dd5cee8d8b00802b7e211fa536e44eaa7965a7b2bebb11c169c2512cd7ce4e5"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/feishu-loops.ts",
+      "contentFingerprint": "5a1dae9297f491fda39ff3950de843b2464a6e223ccf496deba80ba1935f7a6f"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/feishu-read.ts",
+      "contentFingerprint": "4c8fa546db21c8cf2dbc2b7dc7533e06eff3dfb41ee05a9657bd9a7975671907"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/feishu-trigger.ts",
+      "contentFingerprint": "d605d1381da26509020f743b5945a768276aa81f9604ef0b5879aab3e535bf08"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/feishu.ts",
+      "contentFingerprint": "b8830aa06caa7ee13ffb7f5d31f8707392174e9e2920323582ee150a3abc6560"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/github-channel.ts",
+      "contentFingerprint": "6de9657465b8bae9a7cb4748d469fedff3c8d27fec6ed6b4dd52e620a239a0d1"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/github-pull.ts",
+      "contentFingerprint": "615856e7a6958eade1dbf28c9628adc7a8c7bb5392bee71346e471fb571595ec"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/github-read.ts",
+      "contentFingerprint": "4951cbcdf4079c28666972b7964f1121cafd691d1cc76970583f2c57ef9dc52b"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/github-trigger.ts",
+      "contentFingerprint": "c59d6c837e022693a59b3da5829499bc39673ad95879efe543bb7d81c073c21b"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/github.ts",
+      "contentFingerprint": "60bfc2c298cbef708553de5ca0c91c387fd633bc7440c6be0d1242478ef84e88"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/host.ts",
+      "contentFingerprint": "b07998dad9194319a95a9436084cf1612aef9c4c6de22288cfa04258bbfbb1ce"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/kind.ts",
+      "contentFingerprint": "4ea3d8eee14707e0ee9b67289a62b1a568bab64732bd04041da5ad89bc9a7e98"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/poll.ts",
+      "contentFingerprint": "bc4ac0428ce3b379353dd5e02607a4d79b7c9e18d7d13e179cc5b6ba8626d6c8"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/registry.ts",
+      "contentFingerprint": "fe8a8fce0b00b65d4fb69b7cd2e5fbf4950b8dc32f0891169f9150c4a16eb5cd"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "admissionContext",
+      "limit": 20,
+      "resultFingerprint": "11b5c729e7e1ffc085cd52e7ff15c00b0768046e00b9336a1f174796ef6b6e5f"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "sources/registry.ts",
+      "limit": 30,
+      "resultFingerprint": "c8865c460b446075e35451a3d4226c7047a2506b2e23d50ba7ceb57d0af4ddd0"
+    },
+    {
+      "kind": "template",
+      "key": "directory-language-gfgo-primary-extension-point:configuration,external-adapter",
+      "contentFingerprint": "fab688df1a87f5ce54dfa8baa4a65ee619ae0f073bfd7c4d9d4d29601893409a"
+    }
+  ],
+  "infoFingerprint": "1120b8f0ce24f3234ef789aaa54dbd2f6c81d68761662426a4b359fff8eb59c3",
+  "artifacts": {
+    "info": ".fibo/analysis/src/sources/sources.info.md",
+    "structure": ".fibo/analysis/src/sources/sources.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "1120b8f0ce24f3234ef789aaa54dbd2f6c81d68761662426a4b359fff8eb59c3",
+    "structure": "1860a3baf20c663dcde3b1f2a4404a16531ac463e4853e947fb8187763dff9e7"
+  }
+}

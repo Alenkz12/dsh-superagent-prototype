@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/prompts.ts",
+    "path": "src/app/prompts.ts",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "8d813226d8221a0ce434a985274083d08f26a63126bcb58c5cc827f7acd753ce",
+  "sourceFingerprint": "fd22f1b1e7c1571f2eae4299995a13cc0b04cb212e18ef23e9b27ed28a1a1de6",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/app",
+      "resultFingerprint": "c5d9a996b9b8fdf32bef10c15d47f0ba7a1c84c5d144bf4160f01af92915cf64"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/api.ts",
+      "contentFingerprint": "ceb0c76cb2d8680e2be4edf0f6ac42c90e6a4ff78e0e14ce4aa277357606ff04"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/context.ts",
+      "contentFingerprint": "7442ebc5acc1267fc801665e36351e13a91d0bb97c2674b045330b5b8bb6d2cd"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/execution-environment.ts",
+      "contentFingerprint": "82aae39bd65141df80f6a85991e35d05c9f0dfc748be88f78b7520ce97883b3f"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/http.ts",
+      "contentFingerprint": "5da39830429559975cae7ae6d39416acb2322ac8e31cfb4da3436df602cb7ec4"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/migration.ts",
+      "contentFingerprint": "b479546845852ac670ae8fe592b8564f96bb78d30dd2370f767ba2050bab8d9b"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/notices.ts",
+      "contentFingerprint": "c6d464a69809719408b6f279490d22e98e00901cba3058a84c76cfe73aa69022"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/prompts.ts",
+      "contentFingerprint": "fd22f1b1e7c1571f2eae4299995a13cc0b04cb212e18ef23e9b27ed28a1a1de6"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/resources.ts",
+      "contentFingerprint": "cc09f56669b2ccacfc889aa98132590b618f77e6648a7ff8fe8454106c8c663f"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/runtime.ts",
+      "contentFingerprint": "5befef035b4a70978cd881b32282680260c6d2561679f890dd911214664cf515"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/sessions.ts",
+      "contentFingerprint": "ca2b98e57e9f27b2abb0afab59d44ea744a96d8be4cf81d7b3776901b56cd36b"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/versions.ts",
+      "contentFingerprint": "9ed9929bc48fff940457f4494f266c1e5b8f83dc8f993e9c2ba622c0eb89a32f"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/api.ts",
+      "contentFingerprint": "800b0347183c39601b8b7cd33607dee2538eb8da5feb5f1c7e13a1a7c2268f36"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/locales.ts",
+      "contentFingerprint": "d172c86d672b9244effe3590bc7c25ac71b80d3ccbb7d6c5fe76848ce31eba12"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/prompt-config.ts",
+      "contentFingerprint": "148a3c6ecb0e9fba57812135ab4a812a70be168481cd3a3ca083085da005f2d3"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/prompts.tsx",
+      "contentFingerprint": "ddc92a0db7d994c019e2efcb707dbbc04acb53e421ca04e9878d52de83ce6eff"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/settings.tsx",
+      "contentFingerprint": "cd1a57e27ac0d8d3a968c6abb0093ddd48a2b5e36b3d16fcb1f9be3930885ee4"
+    },
+    {
+      "kind": "file",
+      "path": "src/kv.ts",
+      "contentFingerprint": "c6dd38e1ef7b19ae5a0440e11c4a713103a318e0df3fc2fc3b12cbd9a8f4eea7"
+    },
+    {
+      "kind": "file",
+      "path": "src/policy.ts",
+      "contentFingerprint": "01cff8c333b341ee2943e644046f0da3ed9675af1c0029489b5f4bc8226d293d"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "Prompts",
+      "limit": 60,
+      "resultFingerprint": "6691a2fe0d588ec41cb9d6cda448a484f7251f2c0fd0f047396272456204abd9"
+    },
+    {
+      "kind": "search",
+      "path": "src/app/context.ts",
+      "query": "teamDefaults",
+      "limit": 50,
+      "resultFingerprint": "ef6080900dfbdf70098c641df04bd678a0f49694555ccc2558b3596968999b1f"
+    },
+    {
+      "kind": "search",
+      "path": "src/app/resources.ts",
+      "query": "prompts",
+      "limit": 50,
+      "resultFingerprint": "9c7947b42df87d0ec38bb835e9be19866727c45f187655e02c59ff61fe5e4f66"
+    },
+    {
+      "kind": "search",
+      "path": "src/app/sessions.ts",
+      "query": "compose",
+      "limit": 50,
+      "resultFingerprint": "c3406ad4d038a448bf858795c95580fc94ab8f49a74281793cf84ab6acf2fc64"
+    },
+    {
+      "kind": "search",
+      "path": "src/kv.ts",
+      "query": "prompts",
+      "limit": 50,
+      "resultFingerprint": "e8b7a2c774fa4ecfe5ea476f254d4be556f3d9bf1d19a696e0e11bd7018256df"
+    },
+    {
+      "kind": "search",
+      "path": "src/policy.ts",
+      "query": "SettingsOrigin",
+      "limit": 50,
+      "resultFingerprint": "ddf3bff74ba27877bb1bb16f39cfa647449dd8ffd88160410c11a2a685c0d873"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-domain-rules:data-contract,state-storage",
+      "contentFingerprint": "2cc9d808a80b14cb740b2710c35cf879080f4aa6fc4da1dc35cf871ee2d44541"
+    }
+  ],
+  "infoFingerprint": "b2efcda2248c4c8fe66618154d9318a7d43c0b987d7b6588cfe21739ab42f7fe",
+  "artifacts": {
+    "info": ".fibo/analysis/src/app/prompts.ts.info.md",
+    "structure": ".fibo/analysis/src/app/prompts.ts.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "b2efcda2248c4c8fe66618154d9318a7d43c0b987d7b6588cfe21739ab42f7fe",
+    "structure": "8776a786af09cdcdbfe021cf4904ec74a252f46c6eca60b3b45d734fc2c6c3c3"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "repository:.",
+    "path": ".",
+    "kind": "repository",
+    "sourceKind": "workspace"
+  }
+}

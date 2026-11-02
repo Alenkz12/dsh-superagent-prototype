@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/markdown.ts",
+    "path": "src/client/markdown.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "markdown.ts",
+    "file_path": "src/client/markdown.ts",
+    "description": "Minimal Markdown parsing utilities producing inline tokens and block structures",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "shortUrl",
+        "function_id": "src/client/markdown.ts:shortUrl(url: string)",
+        "description": "Shortens a URL to host plus truncated path, returning the original string if invalid",
+        "filepath": "src/client/markdown.ts",
+        "lines": [
+          6,
+          12
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "linkify",
+        "function_id": "src/client/markdown.ts:linkify(text: string)",
+        "description": "Splits plain text into inline tokens, converting http(s) URLs into link tokens",
+        "filepath": "src/client/markdown.ts",
+        "lines": [
+          14,
+          17
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "inlines",
+        "function_id": "src/client/markdown.ts:inlines(text: string)",
+        "description": "Parses text into inline tokens for bold, code, markdown links, and bare URLs",
+        "filepath": "src/client/markdown.ts",
+        "lines": [
+          18,
+          25
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "markdownBlocks",
+        "function_id": "src/client/markdown.ts:markdownBlocks(text: string)",
+        "description": "Splits text into blocks of headings, paragraphs, and ordered/unordered lists",
+        "filepath": "src/client/markdown.ts",
+        "lines": [
+          26,
+          42
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "Inline",
+        "alias_id": "src/client/markdown.ts:Inline",
+        "description": "Union type describing inline tokens: text, bold, code, or link",
+        "filepath": "src/client/markdown.ts",
+        "lines": [
+          3,
+          3
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "Block",
+        "alias_id": "src/client/markdown.ts:Block",
+        "description": "Union type describing blocks: heading, paragraph, or list with items",
+        "filepath": "src/client/markdown.ts",
+        "lines": [
+          4,
+          4
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/navigation.ts",
+    "path": "src/navigation.ts",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "46a6a1552475b56618825d9982c87c013e02735ba7e04ce7c8cb3c9e98e4da7a",
+  "sourceFingerprint": "0185810fbfed59fb7c9d40936d36cb4746e6ce469948199d815f7f736ffcc13f",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src",
+      "resultFingerprint": "e17b6d8ec5aecd9176b3ffda9aabd0329f88456cdae8ef4e381964a8cae1ea63"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/index.tsx",
+      "contentFingerprint": "6a7e5a0295ecbbd047dbb619e0cdf9d1489a46c8dfcc56dbfd1cfe6f6d866529"
+    },
+    {
+      "kind": "file",
+      "path": "src/navigation.ts",
+      "contentFingerprint": "0185810fbfed59fb7c9d40936d36cb4746e6ce469948199d815f7f736ffcc13f"
+    },
+    {
+      "kind": "file",
+      "path": "tests/navigation.spec.ts",
+      "contentFingerprint": "d0e6190ef0a7831c793d0776a951015c918cf5777c4e3e1b79fc1683eab282ae"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "openKnownSession",
+      "limit": 50,
+      "resultFingerprint": "739935a16e3e2618e4130ff0fab3743c9fe70fe9a9be0670a6d3d973df270890"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "SessionNavigationError",
+      "limit": 50,
+      "resultFingerprint": "6bb50157a7857c613e004048528914e70b32fdfcbc48ebf62d54936ddaf874dd"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-orchestration:api-boundary",
+      "contentFingerprint": "6535c7d92bfd9576ec067957c6596178697d2a5cad9c5291d750f1fdd8c02739"
+    }
+  ],
+  "infoFingerprint": "ea51714c7a837eb6d091f9ddfbc701b631faf2e49f5a1a14690d7a1307fde872",
+  "artifacts": {
+    "info": ".fibo/analysis/src/navigation.ts.info.md",
+    "structure": ".fibo/analysis/src/navigation.ts.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "ea51714c7a837eb6d091f9ddfbc701b631faf2e49f5a1a14690d7a1307fde872",
+    "structure": "1ea08b5363dda816fb645ae094455825427d2fd2924ac64a9d735f0e88e1b222"
+  }
+}

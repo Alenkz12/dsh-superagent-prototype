@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/setup.ts",
+    "path": "src/setup.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "setup.ts",
+    "file_path": "src/setup.ts",
+    "description": "Setup error definitions: problem codes, places, messages, and error class",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Text template fill helper imported from the infra text module",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "internal",
+        "filepath": "./infra/text.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [],
+    "classes": [
+      {
+        "class_name": "SetupError",
+        "class_id": "src/setup.ts:SetupError",
+        "description": "Setup error carrying a code, place, interpolated values, and optional output",
+        "super_class": [],
+        "filepath": "src/setup.ts",
+        "lines": [
+          30,
+          39
+        ],
+        "function": [],
+        "variables": []
+      }
+    ],
+    "interfaces": [
+      {
+        "interface_name": "SetupProblem",
+        "interface_id": "src/setup.ts:SetupProblem",
+        "description": "Structured setup problem with place, code, values, and detail text",
+        "filepath": "src/setup.ts",
+        "lines": [
+          24,
+          24
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "SETUP_PROBLEMS",
+        "variable_id": "src/setup.ts:SETUP_PROBLEMS",
+        "description": "Map of setup problem codes to their place and message template",
+        "filepath": "src/setup.ts",
+        "lines": [
+          5,
+          22
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "SetupPlace",
+        "alias_id": "src/setup.ts:SetupPlace",
+        "description": "Setup stage a problem belongs to: deployment, github, or feishu",
+        "filepath": "src/setup.ts",
+        "lines": [
+          4,
+          4
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "SetupCode",
+        "alias_id": "src/setup.ts:SetupCode",
+        "description": "Union of all known setup problem codes derived from SETUP_PROBLEMS",
+        "filepath": "src/setup.ts",
+        "lines": [
+          23,
+          23
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/core/intake.ts",
+    "path": "src/core/intake.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "intake.ts",
+    "file_path": "src/core/intake.ts",
+    "description": "Intake engine part that receives and routes incoming triggers to tickets or eval",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Imports the key helper from the ids module",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "internal",
+        "filepath": "./ids.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports isoTime, liveTicket, and threadKey helpers from the model module",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "./model.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports Ticket and Trigger types from the model module",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "./model.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the EnginePart base class and EngineOptions type from the part module",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "./part.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Tickets type from the tickets module",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "./tickets.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [],
+    "classes": [
+      {
+        "class_name": "Intake",
+        "class_id": "src/core/intake.ts:Intake",
+        "description": "Engine part that validates, normalizes, and stores triggers, routing them to tickets or eval",
+        "super_class": [],
+        "filepath": "src/core/intake.ts",
+        "lines": [
+          16,
+          63
+        ],
+        "function": [],
+        "variables": []
+      }
+    ],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "ReceiveResult",
+        "alias_id": "src/core/intake.ts:ReceiveResult",
+        "description": "Result status of receiving a trigger: stored, duplicate, or filtered",
+        "filepath": "src/core/intake.ts",
+        "lines": [
+          8,
+          8
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

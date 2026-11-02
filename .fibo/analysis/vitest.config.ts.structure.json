@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:vitest.config.ts",
+    "path": "vitest.config.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "vitest.config.ts",
+    "file_path": "vitest.config.ts",
+    "description": "Vitest test runner configuration file for the project",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "config",
+        "description": "Imports defineConfig helper from vitest/config to build the test config",
+        "lines": [
+          1,
+          1
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

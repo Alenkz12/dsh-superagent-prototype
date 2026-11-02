@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/sources/github.ts",
+    "path": "src/sources/github.ts",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "8420d3c664b123baa0944e78f9b0a0ca7772f85f9c5498b528ae7c50c6ec364f",
+  "sourceFingerprint": "60bfc2c298cbef708553de5ca0c91c387fd633bc7440c6be0d1242478ef84e88",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/sources",
+      "resultFingerprint": "e13a5d7335d2907bee6071268ebe6f12a05e34a0f356774711e36baefff226d6"
+    },
+    {
+      "kind": "file",
+      "path": "src/kv.ts",
+      "contentFingerprint": "c6dd38e1ef7b19ae5a0440e11c4a713103a318e0df3fc2fc3b12cbd9a8f4eea7"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/github-trigger.ts",
+      "contentFingerprint": "c59d6c837e022693a59b3da5829499bc39673ad95879efe543bb7d81c073c21b"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/github.ts",
+      "contentFingerprint": "60bfc2c298cbef708553de5ca0c91c387fd633bc7440c6be0d1242478ef84e88"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/host.ts",
+      "contentFingerprint": "b07998dad9194319a95a9436084cf1612aef9c4c6de22288cfa04258bbfbb1ce"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/kind.ts",
+      "contentFingerprint": "4ea3d8eee14707e0ee9b67289a62b1a568bab64732bd04041da5ad89bc9a7e98"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/poll.ts",
+      "contentFingerprint": "bc4ac0428ce3b379353dd5e02607a4d79b7c9e18d7d13e179cc5b6ba8626d6c8"
+    },
+    {
+      "kind": "search",
+      "path": "src/kv.ts",
+      "query": "github:",
+      "limit": 50,
+      "resultFingerprint": "be98708c7c411ed7bccd24974d0a2c28cbbc460a792748d011478c2780150a90"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-external-adapter:configuration,orchestration,state-storage",
+      "contentFingerprint": "0abdd875c0d4aeb330a7271e6bc76bc606098268443e6aacf9820ed4788a70df"
+    }
+  ],
+  "infoFingerprint": "5b0b6559e192fc57da5077854ace4336d29d57cee204c48d26de6db762a1a565",
+  "artifacts": {
+    "info": ".fibo/analysis/src/sources/github.ts.info.md",
+    "structure": ".fibo/analysis/src/sources/github.ts.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "5b0b6559e192fc57da5077854ace4336d29d57cee204c48d26de6db762a1a565",
+    "structure": "31ac9d21b95367f29dce5398b982428155e34127b9df767a2d91473d1a965d68"
+  }
+}

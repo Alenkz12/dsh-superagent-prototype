@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/tools/executor.ts",
+    "path": "src/app/tools/executor.ts",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "cc9fb367243f57dc46cedf1a878ef23bf4c9fca223e4dc1fdd722d40626463da",
+  "sourceFingerprint": "9869d8a5043725847f18814e23b29c11ae93aa974defa72d2eab62c61a6def47",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/app/tools",
+      "resultFingerprint": "d6e5509b425007c5c96586ae85f7b7d749e96ab754221e6174bdd8e96cfff075"
+    },
+    {
+      "kind": "file",
+      "path": "docs/007-architecture.md",
+      "contentFingerprint": "e3747665587fdf88b28d4e9c1a1f8ac40cbc2c65a9999be1fce14b69ec44d748"
+    },
+    {
+      "kind": "file",
+      "path": "prompts/handoff-worker.md",
+      "contentFingerprint": "ff68068b528ae8f0140965d73f24af6be8e3462506aae40efbc4e054becf7f94"
+    },
+    {
+      "kind": "file",
+      "path": "prompts/work.md",
+      "contentFingerprint": "b36fbc7ed4cf2d6f91ef2981a31fd5a70e11e2f3304afb921ab94ba135c69a2e"
+    },
+    {
+      "kind": "file",
+      "path": "prompts/worker.md",
+      "contentFingerprint": "3c6e02fbd2050bb17d4adf644909acc9903b603bfc7248d46df5ef0aa9ef846e"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/notices.ts",
+      "contentFingerprint": "c6d464a69809719408b6f279490d22e98e00901cba3058a84c76cfe73aa69022"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/resources.ts",
+      "contentFingerprint": "cc09f56669b2ccacfc889aa98132590b618f77e6648a7ff8fe8454106c8c663f"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/runtime.ts",
+      "contentFingerprint": "5befef035b4a70978cd881b32282680260c6d2561679f890dd911214664cf515"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/sessions.ts",
+      "contentFingerprint": "ca2b98e57e9f27b2abb0afab59d44ea744a96d8be4cf81d7b3776901b56cd36b"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/tools/executor.ts",
+      "contentFingerprint": "9869d8a5043725847f18814e23b29c11ae93aa974defa72d2eab62c61a6def47"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/tools/main.ts",
+      "contentFingerprint": "88603eb5a94c67e93141e07bd09bde85d65f980a1f42503c53ab9c22ec5c538d"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/tools/tool.ts",
+      "contentFingerprint": "172dd8f1a3da82b8a6cfe966befd5204476cc44ac0a4d7fe278518e970b7f054"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/engine.ts",
+      "contentFingerprint": "bd9a4caff834859877d1a08ccddebc990d0e1ca568674b80f9d59ce5adcac827"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/index.ts",
+      "contentFingerprint": "a5a1cf43f02eafaf520a5bfaf5e76b71ba521d04ee648cfcf12b3843cc474a3e"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/tickets.ts",
+      "contentFingerprint": "1d9f964ad34b54cbb0403bde16af58851e5e80111177ce73a27b6034e9af940e"
+    },
+    {
+      "kind": "file",
+      "path": "src/executor/dsh.ts",
+      "contentFingerprint": "6445a03121fa9bd15fc437736bcc2acc6ab950c5fe732e5b99eb8ee2c8a9476b"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/github-pull.ts",
+      "contentFingerprint": "615856e7a6958eade1dbf28c9628adc7a8c7bb5392bee71346e471fb571595ec"
+    },
+    {
+      "kind": "file",
+      "path": "tests/cards.spec.ts",
+      "contentFingerprint": "cc5a8b75490bef2f91af7f6ccfe58a9093b13d815277a6886bbcd8ddb21041e7"
+    },
+    {
+      "kind": "file",
+      "path": "tests/followups.spec.ts",
+      "contentFingerprint": "22e8ba70885a70a1673a1ddfd9f17d491308dc6a586b3a0e114b1106de9e093d"
+    },
+    {
+      "kind": "file",
+      "path": "tests/model-surface.spec.ts",
+      "contentFingerprint": "aa1226f72359a42764c2c58f1681b93693e6909a9e2f9ea521cf47e1ee778114"
+    },
+    {
+      "kind": "file",
+      "path": "tests/runtime-concurrency.spec.ts",
+      "contentFingerprint": "c29f5528381a30f27d9ee9bbf4af451dd32eeed8b2e66ab049137d87a02c0d2a"
+    },
+    {
+      "kind": "file",
+      "path": "tests/runtime.spec.ts",
+      "contentFingerprint": "e3c0cfb494307adca014d6c958f5c0f92ffcaaccdfb13b5dba2fb28ef6472752"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "EngineForExecutor",
+      "limit": 50,
+      "resultFingerprint": "6085ee4aa995d727a1cca7d0673911d1f0eb60deac8adb7535ceac5e3e299b22"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "executorTools",
+      "limit": 50,
+      "resultFingerprint": "6fc5f100b4239b68edd71af9961edb3f11745c58f8feedba06e89e1b17d443e2"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "orchestrator_report",
+      "limit": 60,
+      "resultFingerprint": "1cb952ef21ffe6fac38c210706313a57907f2ba7d67e36e1ccaea9d01e7dbbd6"
+    },
+    {
+      "kind": "search",
+      "path": "src/app/notices.ts",
+      "query": "export function reportRelay",
+      "limit": 50,
+      "resultFingerprint": "2af6ea9a98ca0754d2ef570c8e7330aa1898c9ba42574f989d7a82ffb08c2ca5"
+    },
+    {
+      "kind": "search",
+      "path": "src/app/notices.ts",
+      "query": "threadFollowedNotice",
+      "limit": 50,
+      "resultFingerprint": "1e5ab286e4d08cf1bd2af0732fa258f2c26f391eaf939b90bf9c44a3c2cc4e1f"
+    },
+    {
+      "kind": "search",
+      "path": "src/app/resources.ts",
+      "query": "resourceGrammar",
+      "limit": 50,
+      "resultFingerprint": "2f5bcd8f80627bfca6e8439f7554321e5b5074bebd74407c07b5c637e51404f1"
+    },
+    {
+      "kind": "search",
+      "path": "src/app/sessions.ts",
+      "query": "relay(",
+      "limit": 50,
+      "resultFingerprint": "efee817684110c1df62cca2c3c33193c3d5cc3a67b38aac389940dffcb2d2374"
+    },
+    {
+      "kind": "search",
+      "path": "src/core",
+      "query": "markUnrelated",
+      "limit": 50,
+      "resultFingerprint": "0d85db83089b5e5b5481759fabfa054d38544b636e936a7cbc0b6d95d099b9ae"
+    },
+    {
+      "kind": "search",
+      "path": "src/core",
+      "query": "replyStatus",
+      "limit": 50,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "search",
+      "path": "src/sources/github-pull.ts",
+      "query": "claimPull",
+      "limit": 50,
+      "resultFingerprint": "6f1e7a57a16d7e3a2db5a4c619cd5bd6f28aac18a1f9017a8df1c8b8fa26968b"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-api-boundary:orchestration",
+      "contentFingerprint": "f52a71d45df5ed5237811d5275c56e237515db38df33e7aa184fc0848a8776da"
+    }
+  ],
+  "infoFingerprint": "a475f78b9b566a04ef58a5f1c5b2dd1aa8fb7037534ed90bae1372351cfd92a9",
+  "artifacts": {
+    "info": ".fibo/analysis/src/app/tools/executor.ts.info.md",
+    "structure": ".fibo/analysis/src/app/tools/executor.ts.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "a475f78b9b566a04ef58a5f1c5b2dd1aa8fb7037534ed90bae1372351cfd92a9",
+    "structure": "25105b7cd6581f4ba99921f035122acdcd2ba3aec0e94341fe5318a03ed6d67c"
+  }
+}

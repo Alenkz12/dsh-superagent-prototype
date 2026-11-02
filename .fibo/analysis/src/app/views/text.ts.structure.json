@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/views/text.ts",
+    "path": "src/app/views/text.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "text.ts",
+    "file_path": "src/app/views/text.ts",
+    "description": "Text formatting utilities for stripping HTML/Markdown and rendering readable previews.",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "plain",
+        "function_id": "src/app/views/text.ts:plain(text: string, lines = false)",
+        "description": "Converts text to plain text by removing HTML, Markdown, images, and extra whitespace.",
+        "filepath": "src/app/views/text.ts",
+        "lines": [
+          7,
+          13
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "inline",
+        "function_id": "src/app/views/text.ts:inline(value: unknown)",
+        "description": "Formats a scalar, array, or object value as a compact inline string.",
+        "filepath": "src/app/views/text.ts",
+        "lines": [
+          16,
+          19
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "jsonLines",
+        "function_id": "src/app/views/text.ts:jsonLines(value: unknown)",
+        "description": "Formats JSON-like values as readable indented lines.",
+        "filepath": "src/app/views/text.ts",
+        "lines": [
+          20,
+          27
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "readable",
+        "function_id": "src/app/views/text.ts:readable(text: string)",
+        "description": "Pretty-prints JSON-looking text or returns the original text unchanged.",
+        "filepath": "src/app/views/text.ts",
+        "lines": [
+          29,
+          34
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "preview",
+        "function_id": "src/app/views/text.ts:preview(text: string, length = 160)",
+        "description": "Returns a shortened plain-text preview of readable content.",
+        "filepath": "src/app/views/text.ts",
+        "lines": [
+          35,
+          35
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "ENTITIES",
+        "variable_id": "src/app/views/text.ts:ENTITIES",
+        "description": "HTML entity name-to-character mapping used for decoding.",
+        "filepath": "src/app/views/text.ts",
+        "lines": [
+          2,
+          2
+        ]
+      },
+      {
+        "variable_name": "withoutHtml",
+        "variable_id": "src/app/views/text.ts:withoutHtml",
+        "description": "Removes HTML comments/tags and decodes common HTML entities.",
+        "filepath": "src/app/views/text.ts",
+        "lines": [
+          4,
+          6
+        ]
+      },
+      {
+        "variable_name": "markdown",
+        "variable_id": "src/app/views/text.ts:markdown",
+        "description": "Strips HTML and Markdown images to produce trimmed text.",
+        "filepath": "src/app/views/text.ts",
+        "lines": [
+          14,
+          14
+        ]
+      },
+      {
+        "variable_name": "scalar",
+        "variable_id": "src/app/views/text.ts:scalar",
+        "description": "Type guard checking whether a value is a primitive or null.",
+        "filepath": "src/app/views/text.ts",
+        "lines": [
+          15,
+          15
+        ]
+      },
+      {
+        "variable_name": "attribute",
+        "variable_id": "src/app/views/text.ts:attribute",
+        "description": "Returns a non-empty string attribute value or undefined.",
+        "filepath": "src/app/views/text.ts",
+        "lines": [
+          36,
+          36
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

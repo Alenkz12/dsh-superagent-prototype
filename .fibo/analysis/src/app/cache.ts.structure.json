@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/cache.ts",
+    "path": "src/app/cache.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "cache.ts",
+    "file_path": "src/app/cache.ts",
+    "description": "Text cache module providing an LRU-style bounded cache for string entries",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [],
+    "classes": [
+      {
+        "class_name": "TextCache",
+        "class_id": "src/app/cache.ts:TextCache",
+        "description": "Text cache class with size limit, LRU-ordered lookups, eviction, and entry iteration",
+        "super_class": [],
+        "filepath": "src/app/cache.ts",
+        "lines": [
+          5,
+          27
+        ],
+        "function": [],
+        "variables": []
+      }
+    ],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/infra/paths.ts",
+    "path": "src/infra/paths.ts",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "c1090731a1922e1a438e21abafe547c04a9c0f7a9600a29e91cde721b2c9f2ff",
+  "sourceFingerprint": "9ec0187b5f937fb9f803a1821e598eb77fd0878d56d269821f5b73e0f5d8f9ab",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/infra",
+      "resultFingerprint": "812201e003213df01502321bd5f8990ab3aee224858775929593aacc6c6dd8f8"
+    },
+    {
+      "kind": "file",
+      "path": "docs/004-prompts.md",
+      "contentFingerprint": "186ec9307249deae11f7aec68ff21bf58fb0601a204ada0d2688253d58627bf7"
+    },
+    {
+      "kind": "file",
+      "path": "docs/007-architecture.md",
+      "contentFingerprint": "e3747665587fdf88b28d4e9c1a1f8ac40cbc2c65a9999be1fce14b69ec44d748"
+    },
+    {
+      "kind": "file",
+      "path": "package.json",
+      "contentFingerprint": "f5170d812137dd370c568decb481e19f4da9a3d1fd7bad341a0f07942020a559"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/api.ts",
+      "contentFingerprint": "ceb0c76cb2d8680e2be4edf0f6ac42c90e6a4ff78e0e14ce4aa277357606ff04"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/assessment.ts",
+      "contentFingerprint": "5b2c2cf71093fd560f1f3a57cc476f122241b780fbeb2f6007e727943142b545"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/http.ts",
+      "contentFingerprint": "5da39830429559975cae7ae6d39416acb2322ac8e31cfb4da3436df602cb7ec4"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/skill-files.ts",
+      "contentFingerprint": "c95a1bb606bb9c7d932c807c4a9597ed7e0f8a02dbb1e16adb4133c0f1bfccf1"
+    },
+    {
+      "kind": "file",
+      "path": "src/infra/environment.ts",
+      "contentFingerprint": "413680e755ed36b74157f364a38cb5dbe81e4af0db0fa88c8376c682e2282a7c"
+    },
+    {
+      "kind": "file",
+      "path": "src/infra/paths.ts",
+      "contentFingerprint": "9ec0187b5f937fb9f803a1821e598eb77fd0878d56d269821f5b73e0f5d8f9ab"
+    },
+    {
+      "kind": "file",
+      "path": "tests/model-surface.spec.ts",
+      "contentFingerprint": "aa1226f72359a42764c2c58f1681b93693e6909a9e2f9ea521cf47e1ee778114"
+    },
+    {
+      "kind": "file",
+      "path": "tests/prompts.spec.ts",
+      "contentFingerprint": "5c9e26761d1fde35f7153a3fb95e89f72ab69e5eb97c52413f53838210ef4f40"
+    },
+    {
+      "kind": "file",
+      "path": "tests/queue.spec.ts",
+      "contentFingerprint": "3271c31da2e00b9d5bc41dd602b3239ca87336c424bef3e45377d9967d2e044d"
+    },
+    {
+      "kind": "file",
+      "path": "tests/runtime.spec.ts",
+      "contentFingerprint": "e3c0cfb494307adca014d6c958f5c0f92ffcaaccdfb13b5dba2fb28ef6472752"
+    },
+    {
+      "kind": "file",
+      "path": "tests/tools.spec.ts",
+      "contentFingerprint": "44b163705d397c18ec8fda277ed0bf6f91aea1228a47c6e15cc1918a87ff55a5"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "packagePath",
+      "limit": 60,
+      "resultFingerprint": "316ccf570bab82fa8d080c47d2d6bbf92e9b10fd6ac8485379c94bc69cc1a8e2"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "packageRoot",
+      "limit": 60,
+      "resultFingerprint": "2f72789a5c3ddd7e9b660ed9e3a54f1aa6b7227df58c73d1d4ddcf7d486ac298"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "prompts/",
+      "limit": 20,
+      "resultFingerprint": "2c410f587f73d9fb8b459e12c554546138f96fd4f58b2360dd9f2a64d4a656cb"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-utility:",
+      "contentFingerprint": "7460e3be1b1e52ea7c0b45243cce5e84e8233bd1db17216f337ebce6ba0d618d"
+    }
+  ],
+  "infoFingerprint": "ff0427ddd4a73285f8d2a442dfd6b9fdf11d94090e77c6452b4232a230e59de7",
+  "artifacts": {
+    "info": ".fibo/analysis/src/infra/paths.ts.info.md",
+    "structure": ".fibo/analysis/src/infra/paths.ts.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "ff0427ddd4a73285f8d2a442dfd6b9fdf11d94090e77c6452b4232a230e59de7",
+    "structure": "4e520373c46ad95559885c89901d6286415140ec0c852cff951eee398a9a10ea"
+  }
+}

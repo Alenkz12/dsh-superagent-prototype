@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/sources/host.ts",
+    "path": "src/sources/host.ts",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "d91c4d1b408c7cb4fcbbc296c058145c56bb67518bd10bcd5a6cf613c44306e5",
+  "sourceFingerprint": "b07998dad9194319a95a9436084cf1612aef9c4c6de22288cfa04258bbfbb1ce",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/sources",
+      "resultFingerprint": "e13a5d7335d2907bee6071268ebe6f12a05e34a0f356774711e36baefff226d6"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/runtime.ts",
+      "contentFingerprint": "5befef035b4a70978cd881b32282680260c6d2561679f890dd911214664cf515"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/settings.ts",
+      "contentFingerprint": "2c7cd780dd24ab6a99ddfd30f80b921db035e0d56e3e1d42a86371fe20423f3f"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/source-context.ts",
+      "contentFingerprint": "909ad5cb9739e4143ddc9ad1d38a6b1b46b18d52c0bcd2b4f8e25b691d0b9047"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/locales.ts",
+      "contentFingerprint": "d172c86d672b9244effe3590bc7c25ac71b80d3ccbb7d6c5fe76848ce31eba12"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/text.ts",
+      "contentFingerprint": "b5c4a264ea799f40598b66d175b434dcb37e2033cddffad8f3e0c8ec1e080c92"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/intake.ts",
+      "contentFingerprint": "323aadefea69436ba23ed2de3bdbaad673d61915be9e239f3233ecf551a74179"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/model.ts",
+      "contentFingerprint": "982155fe6a03c887a7ac4475c6d1592d12aa23c5fe3698403c93bbfd6469d44a"
+    },
+    {
+      "kind": "file",
+      "path": "src/infra/commands.ts",
+      "contentFingerprint": "9d7593c5022e0c1813731c1f1cd8471b1536b0b5f42974a08ef2b2930c1e62b2"
+    },
+    {
+      "kind": "file",
+      "path": "src/infra/text.ts",
+      "contentFingerprint": "70c9edb98139e3091d5e63d2ccf31d308c045f0510087a87517fbb3635cdd9e7"
+    },
+    {
+      "kind": "file",
+      "path": "src/kv.ts",
+      "contentFingerprint": "c6dd38e1ef7b19ae5a0440e11c4a713103a318e0df3fc2fc3b12cbd9a8f4eea7"
+    },
+    {
+      "kind": "file",
+      "path": "src/setup.ts",
+      "contentFingerprint": "eae13507edd63c331ccde9e979835202e742378cca2eb35fcd12af60e48fc6f2"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/feishu-loops.ts",
+      "contentFingerprint": "5a1dae9297f491fda39ff3950de843b2464a6e223ccf496deba80ba1935f7a6f"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/feishu.ts",
+      "contentFingerprint": "b8830aa06caa7ee13ffb7f5d31f8707392174e9e2920323582ee150a3abc6560"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/github.ts",
+      "contentFingerprint": "60bfc2c298cbef708553de5ca0c91c387fd633bc7440c6be0d1242478ef84e88"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/host.ts",
+      "contentFingerprint": "b07998dad9194319a95a9436084cf1612aef9c4c6de22288cfa04258bbfbb1ce"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/kind.ts",
+      "contentFingerprint": "4ea3d8eee14707e0ee9b67289a62b1a568bab64732bd04041da5ad89bc9a7e98"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/registry.ts",
+      "contentFingerprint": "fe8a8fce0b00b65d4fb69b7cd2e5fbf4950b8dc32f0891169f9150c4a16eb5cd"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "HEALTH_TEXT",
+      "limit": 60,
+      "resultFingerprint": "4d1e64cecd1d6af46f18147a9014058758fe0224bf9022632a41a9b30a06a2ea"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "health(",
+      "limit": 60,
+      "resultFingerprint": "88be054a3288ac8516376bd1da171be8a65734804f1a87f3264b4e432d47b5ee"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "sourceContext",
+      "limit": 60,
+      "resultFingerprint": "54f43be896ba995b2d3005e67f0f1974b2b9e05f31da2eddd584fd21d73577ce"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "SourceHost",
+      "limit": 60,
+      "resultFingerprint": "d4b16b344fce88961793c407c3399a653064b91ff164c88a15912d4cec2f6870"
+    },
+    {
+      "kind": "search",
+      "path": "src/client",
+      "query": "healthCode",
+      "limit": 50,
+      "resultFingerprint": "e4e86f3e2c49b248382bf4469a6a59e5e84142ba373060113765bcf889198fc9"
+    },
+    {
+      "kind": "search",
+      "path": "src/core",
+      "query": "export interface Thread",
+      "limit": 40,
+      "resultFingerprint": "7abefb619422bcbd83ef00d16d2f092d7eb0603b69a51f43d93f0c35ce51073d"
+    },
+    {
+      "kind": "search",
+      "path": "src/core",
+      "query": "export type ReceiveResult",
+      "limit": 40,
+      "resultFingerprint": "de9fb93419941d2d7735fd72fd999dc3ae73e21a75997b723ad0ead37be7cd70"
+    },
+    {
+      "kind": "search",
+      "path": "src/infra/commands.ts",
+      "query": "withSignal",
+      "limit": 20,
+      "resultFingerprint": "fc4866e68dc7775ad1e3cb9c469bb7b9a3ea560b5a6296d74cff8533dd9a1561"
+    },
+    {
+      "kind": "search",
+      "path": "src/kv.ts",
+      "query": "export type Key",
+      "limit": 20,
+      "resultFingerprint": "9da6390b985916945bbb38931a6e8014789f6ac98facb615e7334d163fc30583"
+    },
+    {
+      "kind": "search",
+      "path": "src/kv.ts",
+      "query": "Family",
+      "limit": 30,
+      "resultFingerprint": "198106d41c157c22fefc7b6c3b2d0a693e840672961d5413a45cf42de5947ee3"
+    },
+    {
+      "kind": "search",
+      "path": "src/setup.ts",
+      "query": "SetupProblem",
+      "limit": 20,
+      "resultFingerprint": "aa1086cab9b333061bcf5fc73b0b6bd6969dd675fc08ed035507a554cd6a5ca3"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-api-boundary:data-contract",
+      "contentFingerprint": "64c7d482706af05020d4e674e72f0c95619973c17bbe11d9a187c83ad750257e"
+    }
+  ],
+  "infoFingerprint": "42b28ca48f130ac451c5f13ad6d1425f18a47bb40f638edd5d8e1ac5f841a344",
+  "artifacts": {
+    "info": ".fibo/analysis/src/sources/host.ts.info.md",
+    "structure": ".fibo/analysis/src/sources/host.ts.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "42b28ca48f130ac451c5f13ad6d1425f18a47bb40f638edd5d8e1ac5f841a344",
+    "structure": "5a9903d6afeec469b62518c5da6b0191575b73d039670de2a6dba7e62c2e055e"
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/settings.tsx",
+    "path": "src/client/settings.tsx",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "75ad374c85848ffe6110ed8c1f6befd4ba0c4819e472d741dcd054f2313a139f",
+  "sourceFingerprint": "cd1a57e27ac0d8d3a968c6abb0093ddd48a2b5e36b3d16fcb1f9be3930885ee4",
+  "observedInputs": [
+    {
+      "kind": "file",
+      "path": "src/client/app.tsx",
+      "contentFingerprint": "23cca247e0a67fb581df6fc517522ccf0026a4897cda109c9e57c367cb2b1051"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/client.css",
+      "contentFingerprint": "8de57c24e782831b713dd5221900ee3a45172285f8598b80b27797cd9799db32"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/deployment.tsx",
+      "contentFingerprint": "c37ebd5a24d0319a28d3d98a76dde23d9694b0fad4a7900df0eff85de82afb4b"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/eval.tsx",
+      "contentFingerprint": "44350064a4a7649e418ea5db25d98a58e31f77b8171393589c5b4644d03b8cc8"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/execution.tsx",
+      "contentFingerprint": "8d9200aab40f092972234fc5712a78f1db0c1ad581517d574f8b8143c289959c"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/locales.ts",
+      "contentFingerprint": "d172c86d672b9244effe3590bc7c25ac71b80d3ccbb7d6c5fe76848ce31eba12"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/prompts.tsx",
+      "contentFingerprint": "ddc92a0db7d994c019e2efcb707dbbc04acb53e421ca04e9878d52de83ce6eff"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/provider.tsx",
+      "contentFingerprint": "5639db28e87c1fa0752a30b5280c2e492685bea0593809f72c975b5274d12a8f"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/route.ts",
+      "contentFingerprint": "457b3cf37c9678c085cf4685ae412ff92bc5510b4a5401e805e4762ad12a3a4c"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/settings-kit.tsx",
+      "contentFingerprint": "4a75031188c08fb54fd8f45725a3530b3005920412004f5d9817757a72eb87a9"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/settings.tsx",
+      "contentFingerprint": "cd1a57e27ac0d8d3a968c6abb0093ddd48a2b5e36b3d16fcb1f9be3930885ee4"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/source.tsx",
+      "contentFingerprint": "0e0d24f6b0695283d47f2127f71ab132533c64e21ac772f1f033a9ef77d29a5d"
+    },
+    {
+      "kind": "file",
+      "path": "tests/panel-deployment.spec.tsx",
+      "contentFingerprint": "7635cf0906d308ced62532dc2b5e80e8c227a3d1f347364f5397c06365b8421c"
+    },
+    {
+      "kind": "file",
+      "path": "tests/panel-overview.spec.tsx",
+      "contentFingerprint": "7f8a9c395aa9577702b90e18c756c06fbb0a12f205f85ce78c36c2c7ac2bf1ce"
+    },
+    {
+      "kind": "file",
+      "path": "tests/panel-source.spec.tsx",
+      "contentFingerprint": "d4fa5c3d4bbcf2189021824f08be4d7aaca9006711995aa86fc63f93f75049a7"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "dt-settings-nav",
+      "limit": 50,
+      "resultFingerprint": "36962bc9c47ba0333bc5ed5cf34f8e0a9e055913003cfd6d8a7c6ec76ff1b594"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "export function DeploymentPage",
+      "limit": 50,
+      "resultFingerprint": "a1a1e4fcd9825b7235fc198f5c99f54539767c49af9410e441a060f1cff46043"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "export function EvalSettings",
+      "limit": 50,
+      "resultFingerprint": "a5caa499aaa7a66526992e50b2a352f6dd83210e99e56d73bc32b48cba074f5c"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "export function ExecutionSettings",
+      "limit": 50,
+      "resultFingerprint": "6f6a51f66ff2950199c89fb8a766be29ce743317341d881c7a3ce8f1645a51ba"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "export function PromptsPage",
+      "limit": 50,
+      "resultFingerprint": "de94a1bddfd6b9ca5dbb7c8bc721c81aea863c3b1c16dbf59e10a9a0f19a5bfa"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "export function SourceSettings",
+      "limit": 50,
+      "resultFingerprint": "ec649715d161277434af5c980366cb29415503a1787334fc5bf8c3602dda965c"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "settingsGroup.",
+      "limit": 30,
+      "resultFingerprint": "3eeda872c7cbefcb2218aa3f925d72966a39552e1dd541adb7497e80f3192593"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "SettingsPage",
+      "limit": 50,
+      "resultFingerprint": "afc691513fea4dc4c6f675ddb00bb3c079bef5a3979fee21474b8f01dab4cbf9"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/provider.tsx",
+      "query": "navigate",
+      "limit": 50,
+      "resultFingerprint": "702edbf4a6987c6ad1f6fc4d449030035a089974c2c960d449d17a8d35ffc830"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-presentation:orchestration",
+      "contentFingerprint": "29dd1b20f7e2daeae82095044d6c923a58677a7694d5c9a9157f1f60778a017d"
+    }
+  ],
+  "infoFingerprint": "1b8adc0c3bceda2c08a205e660ebdd65e08f60fb6016f95b49dac231182fb300",
+  "artifacts": {
+    "info": ".fibo/analysis/src/client/settings.tsx.info.md",
+    "structure": ".fibo/analysis/src/client/settings.tsx.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "1b8adc0c3bceda2c08a205e660ebdd65e08f60fb6016f95b49dac231182fb300",
+    "structure": "c7475556733f18806e7199ddc7f1bae363f85cfb3749c3071beb53c9d4394f4d"
+  }
+}

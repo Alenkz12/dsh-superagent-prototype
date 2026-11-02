@@ -1,0 +1,703 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/migration.ts",
+    "path": "src/app/migration.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "migration.ts",
+    "file_path": "src/app/migration.ts",
+    "description": "Database schema migration module that upgrades orchestrator state to schema version 11",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "node:path",
+        "description": "Import basename helper from node:path",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "zod",
+        "description": "Import zod schema builder",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Import core domain types and helpers from core/index.ts",
+        "lines": [
+          7,
+          8
+        ],
+        "source": "internal",
+        "filepath": "../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Import Feishu chat link builder",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "../sources/feishu-channel.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Import GitHub poll horizon constant",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "../sources/poll.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Import settings schema and policy helpers",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "../policy.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Import prompt context defaults and auto-merge threshold helper",
+        "lines": [
+          12,
+          12
+        ],
+        "source": "internal",
+        "filepath": "./context.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Import prompt config schema and types",
+        "lines": [
+          13,
+          13
+        ],
+        "source": "internal",
+        "filepath": "./prompts.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Import effect kind and payload types",
+        "lines": [
+          14,
+          14
+        ],
+        "source": "internal",
+        "filepath": "./effects.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Import notice constructors for migration notices",
+        "lines": [
+          15,
+          15
+        ],
+        "source": "internal",
+        "filepath": "./notices.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Import store and settings version types",
+        "lines": [
+          16,
+          16
+        ],
+        "source": "internal",
+        "filepath": "./store.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Import versioned record helper class",
+        "lines": [
+          17,
+          17
+        ],
+        "source": "internal",
+        "filepath": "./versions.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Import KV key helpers and key type",
+        "lines": [
+          18,
+          18
+        ],
+        "source": "internal",
+        "filepath": "../kv.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "step",
+        "function_id": "src/app/migration.ts:step(record: string, work: () => T)",
+        "description": "Run a migration step and wrap failures with the record name",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          32,
+          34
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "migrateTo11",
+        "function_id": "src/app/migration.ts:migrateTo11(store: Store)",
+        "description": "Main migration entry point that applies all schema version 11 data transformations",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          36,
+          91
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "triggerTimes",
+        "function_id": "src/app/migration.ts:triggerTimes(store: Store)",
+        "description": "Normalize trigger and thread timestamps to canonical ISO format",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          96,
+          108
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "queueEarlierWork",
+        "function_id": "src/app/migration.ts:queueEarlierWork(store: Store)",
+        "description": "Move legacy KV queue entries into the effect queue and delete old keys",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          123,
+          132
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "effectQueue",
+        "function_id": "src/app/migration.ts:effectQueue(store: Store)",
+        "description": "Create an effect queue inserter that assigns sequential sequence numbers",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          138,
+          143
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "outboxReceipts",
+        "function_id": "src/app/migration.ts:outboxReceipts(store: Store)",
+        "description": "Migrate outbox sent flag into message status and enqueue pending replies",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          148,
+          159
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "settingsAsVersions",
+        "function_id": "src/app/migration.ts:settingsAsVersions(store: Store)",
+        "description": "Convert a single settings record into a versioned settings history",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          165,
+          177
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "migrateSettingsRecords",
+        "function_id": "src/app/migration.ts:migrateSettingsRecords(store: Store)",
+        "description": "Migrate stored settings and settings-version records to the new schema",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          187,
+          199
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "migrateSettings",
+        "function_id": "src/app/migration.ts:migrateSettings(value: unknown)",
+        "description": "Transform legacy settings shape into sources, policy, eval and executor fields",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          205,
+          222
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "withoutRemovedFields",
+        "function_id": "src/app/migration.ts:withoutRemovedFields(value: Stored)",
+        "description": "Strip deprecated settings fields and rewrite legacy environment prefixes",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          223,
+          247
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "legacyText",
+        "function_id": "src/app/migration.ts:legacyText(value: string)",
+        "description": "Rewrite legacy tool names and event/task vocabulary in prompt text",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          276,
+          282
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "normalize",
+        "function_id": "src/app/migration.ts:normalize(config: unknown)",
+        "description": "Normalize prompt config from either legacy or current schema",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          287,
+          295
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "migratePrompts",
+        "function_id": "src/app/migration.ts:migratePrompts(store: Store)",
+        "description": "Migrate prompt versions, rewriting text and adding member identity guides",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          301,
+          331
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "basisOf",
+        "function_id": "src/app/migration.ts:basisOf(stored: unknown)",
+        "description": "Convert stored mandate basis data into a normalized MandateBasis",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          339,
+          360
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "ticketOf",
+        "function_id": "src/app/migration.ts:ticketOf(old: Stored, answers = new Map<string, string[]>(), human: (triggerId: string) => boolean = () => false, closed: (number: number) => Follow['closed'] = () => undefined)",
+        "description": "Convert a stored ticket record into the current Ticket shape",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          366,
+          393
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "followsOf",
+        "function_id": "src/app/migration.ts:followsOf(meta: Stored, channels: ChannelRef[], closed: (number: number) => Follow['closed'])",
+        "description": "Derive follow entries from ticket channels and bound pull request number",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          400,
+          407
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "pullEnd",
+        "function_id": "src/app/migration.ts:pullEnd(stored: unknown)",
+        "description": "Parse stored pull end data into a closed follow descriptor",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          409,
+          412
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "withoutCopies",
+        "function_id": "src/app/migration.ts:withoutCopies(old: Stored)",
+        "description": "Normalize ticket data, deduplicate state/summary and clean ended metadata",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          418,
+          438
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "knownReason",
+        "function_id": "src/app/migration.ts:knownReason(text: string)",
+        "description": "Map legacy reason text to a structured Reason code and values",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          454,
+          461
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "reasonsOf",
+        "function_id": "src/app/migration.ts:reasonsOf(stored: unknown)",
+        "description": "Convert stored reason data into an array of Reason codes",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          467,
+          473
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "reasonsAsCodes",
+        "function_id": "src/app/migration.ts:reasonsAsCodes(store: Store)",
+        "description": "Migrate decision, disposition and ticket reason strings to codes",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          475,
+          490
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "moveDismissals",
+        "function_id": "src/app/migration.ts:moveDismissals(store: Store)",
+        "description": "Move problem-dismissed KV flags into decision dismissed fields",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          492,
+          498
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "dropPullEnds",
+        "function_id": "src/app/migration.ts:dropPullEnds(store: Store)",
+        "description": "Delete legacy github-ended pull end keys",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          500,
+          502
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "outcomeOf",
+        "function_id": "src/app/migration.ts:outcomeOf(ended: Pick<NonNullable<Ticket['ended']>, 'by' | 'reason'>)",
+        "description": "Derive ticket ended outcome from the end actor and reason",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          504,
+          507
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "backfillThreadTimes",
+        "function_id": "src/app/migration.ts:backfillThreadTimes(store: Store)",
+        "description": "Backfill thread createdAt and lastAt from related trigger times",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          509,
+          518
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "migrateSourceRecords",
+        "function_id": "src/app/migration.ts:migrateSourceRecords(store: Store)",
+        "description": "Run all source-specific record migrations",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          521,
+          528
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "feishuTopics",
+        "function_id": "src/app/migration.ts:feishuTopics(store: Store)",
+        "description": "Convert legacy Feishu topic arrays into id-to-seen timestamp maps",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          530,
+          537
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "feishuDirectAddresses",
+        "function_id": "src/app/migration.ts:feishuDirectAddresses(store: Store)",
+        "description": "Mark Feishu direct-message channels with an explicit direct flag",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          542,
+          560
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "feishuThreadLinks",
+        "function_id": "src/app/migration.ts:feishuThreadLinks(store: Store)",
+        "description": "Add chat links to Feishu threads missing a URL",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          562,
+          570
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "issueSourceRecords",
+        "function_id": "src/app/migration.ts:issueSourceRecords(store: Store)",
+        "description": "Migrate github-issue source records to github and move retry state",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          575,
+          587
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "githubCursors",
+        "function_id": "src/app/migration.ts:githubCursors(store: Store)",
+        "description": "Migrate legacy thread-since keys into GitHub cursor entries",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          589,
+          597
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "assessmentTriggers",
+        "function_id": "src/app/migration.ts:assessmentTriggers(store: Store)",
+        "description": "Attach trigger IDs to assessment effects and enqueue missing deliveries",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          599,
+          616
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "Member",
+        "interface_id": "src/app/migration.ts:Member",
+        "description": "Legacy member record with optional name, Feishu ID and GitHub handle",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          200,
+          200
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "SCHEMA_VERSION",
+        "variable_id": "src/app/migration.ts:SCHEMA_VERSION",
+        "description": "Current database schema version, 11",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          20,
+          20
+        ]
+      },
+      {
+        "variable_name": "OLDEST_SCHEMA",
+        "variable_id": "src/app/migration.ts:OLDEST_SCHEMA",
+        "description": "Oldest schema version supported for migration, 10",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          22,
+          22
+        ]
+      },
+      {
+        "variable_name": "tooOld",
+        "variable_id": "src/app/migration.ts:tooOld",
+        "description": "Build an error message for databases too old to migrate",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          24,
+          25
+        ]
+      },
+      {
+        "variable_name": "isObject",
+        "variable_id": "src/app/migration.ts:isObject",
+        "description": "Type guard checking a value is a non-array object record",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          28,
+          28
+        ]
+      },
+      {
+        "variable_name": "text",
+        "variable_id": "src/app/migration.ts:text",
+        "description": "Return a non-empty string or undefined",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          29,
+          29
+        ]
+      },
+      {
+        "variable_name": "DEAD_KEYS",
+        "variable_id": "src/app/migration.ts:DEAD_KEYS",
+        "description": "Obsolete KV keys removed during migration",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          113,
+          117
+        ]
+      },
+      {
+        "variable_name": "ORIGINS",
+        "variable_id": "src/app/migration.ts:ORIGINS",
+        "description": "Map legacy settings source names to normalized origins",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          180,
+          180
+        ]
+      },
+      {
+        "variable_name": "REMOVED_SOURCES",
+        "variable_id": "src/app/migration.ts:REMOVED_SOURCES",
+        "description": "Source IDs removed from settings during migration",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          182,
+          182
+        ]
+      },
+      {
+        "variable_name": "LegacyPromptConfigSchema",
+        "variable_id": "src/app/migration.ts:LegacyPromptConfigSchema",
+        "description": "Zod schema for the legacy prompt configuration shape",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          250,
+          250
+        ]
+      },
+      {
+        "variable_name": "LEGACY_FIXED",
+        "variable_id": "src/app/migration.ts:LEGACY_FIXED",
+        "description": "Legacy fixed guide names not converted into skills",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          252,
+          252
+        ]
+      },
+      {
+        "variable_name": "RENAMED_TOOLS",
+        "variable_id": "src/app/migration.ts:RENAMED_TOOLS",
+        "description": "Mapping of legacy tool names to their current equivalents",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          254,
+          263
+        ]
+      },
+      {
+        "variable_name": "READ_TOOLS",
+        "variable_id": "src/app/migration.ts:READ_TOOLS",
+        "description": "Mapping of read tool names to their read targets",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          265,
+          266
+        ]
+      },
+      {
+        "variable_name": "currentNames",
+        "variable_id": "src/app/migration.ts:currentNames",
+        "description": "Rewrite legacy DSH prefixes and orchestrator tool names in text",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          271,
+          274
+        ]
+      },
+      {
+        "variable_name": "CELLS",
+        "variable_id": "src/app/migration.ts:CELLS",
+        "description": "Admission cell values used for mandate basis classification",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          333,
+          333
+        ]
+      },
+      {
+        "variable_name": "opener",
+        "variable_id": "src/app/migration.ts:opener",
+        "description": "Check whether a channel is the opening GitHub pull request channel",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          395,
+          395
+        ]
+      },
+      {
+        "variable_name": "SENTENCES",
+        "variable_id": "src/app/migration.ts:SENTENCES",
+        "description": "Mapping of legacy reason sentences to stable reason codes",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          440,
+          452
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "Stored",
+        "alias_id": "src/app/migration.ts:Stored",
+        "description": "Generic record type for unparsed stored JSON values",
+        "filepath": "src/app/migration.ts",
+        "lines": [
+          27,
+          27
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

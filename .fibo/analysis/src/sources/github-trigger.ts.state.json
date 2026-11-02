@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/sources/github-trigger.ts",
+    "path": "src/sources/github-trigger.ts",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "f1fba0334b5fb1e8167de295feedac25e7bf761b91dacf86d38aef7a9aa39ba8",
+  "sourceFingerprint": "c59d6c837e022693a59b3da5829499bc39673ad95879efe543bb7d81c073c21b",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/sources",
+      "resultFingerprint": "e13a5d7335d2907bee6071268ebe6f12a05e34a0f356774711e36baefff226d6"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/engine.ts",
+      "contentFingerprint": "bd9a4caff834859877d1a08ccddebc990d0e1ca568674b80f9d59ce5adcac827"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/ids.ts",
+      "contentFingerprint": "bc4bc6fd43ea1377087ff2815706c57f0200666aeb4a7711a40489c377f141ab"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/model.ts",
+      "contentFingerprint": "982155fe6a03c887a7ac4475c6d1592d12aa23c5fe3698403c93bbfd6469d44a"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/ports.ts",
+      "contentFingerprint": "0b44f1cd716d64776b0e3ea74a158cf0effd92e763b1b13c7705e766e9225a43"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/replies.ts",
+      "contentFingerprint": "5a8821a1b9d951d2255709543e0be762c6d3204bca07a77ff17c7bfe82ba66f4"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/tickets.ts",
+      "contentFingerprint": "1d9f964ad34b54cbb0403bde16af58851e5e80111177ce73a27b6034e9af940e"
+    },
+    {
+      "kind": "file",
+      "path": "src/infra/text.ts",
+      "contentFingerprint": "70c9edb98139e3091d5e63d2ccf31d308c045f0510087a87517fbb3635cdd9e7"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/github-channel.ts",
+      "contentFingerprint": "6de9657465b8bae9a7cb4748d469fedff3c8d27fec6ed6b4dd52e620a239a0d1"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/github-pull.ts",
+      "contentFingerprint": "615856e7a6958eade1dbf28c9628adc7a8c7bb5392bee71346e471fb571595ec"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/github-read.ts",
+      "contentFingerprint": "4951cbcdf4079c28666972b7964f1121cafd691d1cc76970583f2c57ef9dc52b"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/github-trigger.ts",
+      "contentFingerprint": "c59d6c837e022693a59b3da5829499bc39673ad95879efe543bb7d81c073c21b"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/github.ts",
+      "contentFingerprint": "60bfc2c298cbef708553de5ca0c91c387fd633bc7440c6be0d1242478ef84e88"
+    },
+    {
+      "kind": "file",
+      "path": "tests/runtime.spec.ts",
+      "contentFingerprint": "e3c0cfb494307adca014d6c958f5c0f92ffcaaccdfb13b5dba2fb28ef6472752"
+    },
+    {
+      "kind": "file",
+      "path": "tests/sources.spec.ts",
+      "contentFingerprint": "81fe3decc59db85f2fc792a9a6d7026ed26f38a9d282c0f85cd7123155798d78"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "commentTrigger",
+      "limit": 30,
+      "resultFingerprint": "77a828b19307e6090601789a20fe2fac5f9b6dd36b2fb7fd327d7fecedee687f"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "\\bmentions\\b",
+      "limit": 30,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "github-trigger",
+      "limit": 50,
+      "resultFingerprint": "3ce8466d3776bddebdfaa1e4e039f5da86b9dc15e76551cebe243f758d90d373"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "githubChannel",
+      "limit": 30,
+      "resultFingerprint": "b655bb2469973644b15d23438061fb5c629b7b022fbf3b10e667566800f5574c"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "isHumanLogin",
+      "limit": 20,
+      "resultFingerprint": "993f596c698576cb5dc3a50467974e5606e385bc7a061323fc5dd1ced26ac129"
+    },
+    {
+      "kind": "search",
+      "path": "src/core",
+      "query": "ChannelRef",
+      "limit": 50,
+      "resultFingerprint": "5abcbc579ad99515c0e11aaa6268df6648eb56d4bdf413b1419dc02f799a192c"
+    },
+    {
+      "kind": "search",
+      "path": "src/core",
+      "query": "export function key",
+      "limit": 50,
+      "resultFingerprint": "85a6a0c34816c7b5d755d7b363e8bd7581016ac490296d1a93de08ce87123b78"
+    },
+    {
+      "kind": "search",
+      "path": "src/core",
+      "query": "export type Trigger",
+      "limit": 50,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "search",
+      "path": "src/core",
+      "query": "Trigger =",
+      "limit": 50,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-external-adapter:data-contract",
+      "contentFingerprint": "d4c3c9912d53be8b2da8d6e34b098836941a193e285a41485b6d1afd74c9e805"
+    }
+  ],
+  "infoFingerprint": "2ce317006bb865b3607c5df8dbbba095e3d5e18373bd4465eda1147c0206039c",
+  "artifacts": {
+    "info": ".fibo/analysis/src/sources/github-trigger.ts.info.md",
+    "structure": ".fibo/analysis/src/sources/github-trigger.ts.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "2ce317006bb865b3607c5df8dbbba095e3d5e18373bd4465eda1147c0206039c",
+    "structure": "efd887c277f4cdda040e22617a5dbb86914746cdb3156a3848903a8cf4dd21fa"
+  }
+}

@@ -1,0 +1,636 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/ticket.tsx",
+    "path": "src/client/ticket.tsx",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "ticket.tsx",
+    "file_path": "src/client/ticket.tsx",
+    "description": "Ticket detail page component for the panel: renders stage and available actions, Mandate details with decision evidence, undelivered/delivered Inputs, subscribed Threads, Assignments, environment variables, channels and identifiers.",
+    "file_type": "tsx",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ApiError",
+        "description": "Error class used to detect API failures such as a missing ticket",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "src/client/api.ts",
+        "alias": ""
+      },
+      {
+        "class_name": "ReactNode",
+        "description": "React type describing renderable node content (type-only import)",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "class_name": "TicketPageView",
+        "description": "View model describing the ticket detail payload (type-only import)",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "src/client/api.ts",
+        "alias": ""
+      },
+      {
+        "class_name": "IconName",
+        "description": "Union type of available icon names (type-only import)",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      }
+    ],
+    "import_function": [
+      {
+        "function_name": "useState",
+        "description": "React hook holding local component state",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "usePoll",
+        "description": "Hook that polls an API request and returns data, error and reload",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "src/client/api.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "DisclosureRow",
+        "description": "Collapsible row component with icon and title",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "Dot",
+        "description": "Small status indicator dot with a label",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "Icon",
+        "description": "Icon renderer component",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "Tag",
+        "description": "Small tonal label/tag component",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "decisionMark",
+        "description": "Builds display mark (label/tone) for a decision outcome",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "src/client/marks.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "reportDot",
+        "description": "Maps a report state to a dot state for display",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "src/client/marks.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "ticketMark",
+        "description": "Builds display mark (dot/icon/label) for a ticket",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "src/client/marks.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "usePanel",
+        "description": "Hook providing panel context (translator, navigation, API call)",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "src/client/provider.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "settingsRoute",
+        "description": "Builds a navigation route to a settings sub-page",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/route.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "Earlier",
+        "description": "Renders earlier/superseded items under a row",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/rows.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "ThreadLine",
+        "description": "Renders a single subscribed thread row",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/rows.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "automatedRuns",
+        "description": "Groups automatically produced items into runs with their earlier items",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/rows.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "actorName",
+        "description": "Formats an actor for display",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "localized",
+        "description": "Resolves a localized text value against the translator",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "readableMarkers",
+        "description": "Converts raw marker text into a readable preview string",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "reasonLabel",
+        "description": "Returns a localized label for a reason code",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "valueLabel",
+        "description": "Returns a localized label for an enumerated value in a namespace",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "when",
+        "description": "Formats a timestamp for display in the given language",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "ActionLink",
+        "description": "Link styled as a primary action",
+        "lines": [
+          10,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "ConfirmButton",
+        "description": "Button requiring confirmation before performing an action",
+        "lines": [
+          10,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "ExternalLink",
+        "description": "Link opening an external URL with an icon",
+        "lines": [
+          10,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "Hint",
+        "description": "Small muted helper text block",
+        "lines": [
+          10,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "KeyValues",
+        "description": "Renders a list of key/value rows",
+        "lines": [
+          10,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "LabelValue",
+        "description": "Renders a labelled value inline",
+        "lines": [
+          10,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "LoadState",
+        "description": "Renders loading or error state for a data request",
+        "lines": [
+          10,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "MarkdownLite",
+        "description": "Renders a limited subset of markdown",
+        "lines": [
+          10,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "PageHead",
+        "description": "Page header with title and action slot",
+        "lines": [
+          10,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "Section",
+        "description": "Titled content section with optional count",
+        "lines": [
+          10,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "SessionButton",
+        "description": "Button that opens a session view",
+        "lines": [
+          10,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "StageMark",
+        "description": "Renders a stage/state mark with icon and label",
+        "lines": [
+          10,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "When",
+        "description": "Renders a formatted timestamp element",
+        "lines": [
+          10,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      }
+    ],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "InputLine",
+        "function_id": "src/client/ticket.tsx:InputLine({ input: Input; earlier?: { id: string; at: string; preview: string }[] })",
+        "description": "Renders one ticket input row, linking trigger inputs to the trigger page and showing delivery state, quote text and handback hint",
+        "filepath": "src/client/ticket.tsx",
+        "lines": [
+          14,
+          31
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "input",
+            "param_type": "Input",
+            "description": "The input item to render",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "earlier",
+            "param_type": "{ id: string; at: string; preview: string }[]",
+            "description": "Previously superseded inputs belonging to the same automated run",
+            "default_value": "[]",
+            "is_optional": true
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "InputList",
+        "function_id": "src/client/ticket.tsx:InputList({ inputs: Input[] })",
+        "description": "Renders a list of input rows, grouping automated runs and supplying their earlier items",
+        "filepath": "src/client/ticket.tsx",
+        "lines": [
+          32,
+          38
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "inputs",
+            "param_type": "Input[]",
+            "description": "Input items to display",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "Details",
+        "function_id": "src/client/ticket.tsx:Details({ icon: IconName; title: ReactNode; open?: boolean; children: ReactNode })",
+        "description": "Collapsible details block with local open state wrapping DisclosureRow",
+        "filepath": "src/client/ticket.tsx",
+        "lines": [
+          40,
+          45
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "icon",
+            "param_type": "IconName",
+            "description": "Icon shown next to the title",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "title",
+            "param_type": "ReactNode",
+            "description": "Title content of the disclosure",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "open",
+            "param_type": "boolean",
+            "description": "Whether the disclosure starts expanded",
+            "default_value": "false",
+            "is_optional": true
+          },
+          {
+            "param_name": "children",
+            "param_type": "ReactNode",
+            "description": "Body content shown when expanded",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "Assignments",
+        "function_id": "src/client/ticket.tsx:Assignments({ ticket: TicketPageView })",
+        "description": "Lists ticket assignments in reverse order with state dots, report tags, time span, end reason and a session button",
+        "filepath": "src/client/ticket.tsx",
+        "lines": [
+          46,
+          67
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "ticket",
+            "param_type": "TicketPageView",
+            "description": "Ticket view model whose assignments are rendered",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "MandateDetails",
+        "function_id": "src/client/ticket.tsx:MandateDetails({ ticket: TicketPageView; actor: string })",
+        "description": "Renders the Mandate section: triggering input, decision outcome/reason/rules/direction evidence, scope, basis facts and policy version link",
+        "filepath": "src/client/ticket.tsx",
+        "lines": [
+          68,
+          106
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "ticket",
+            "param_type": "TicketPageView",
+            "description": "Ticket view model containing mandate and basis",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "actor",
+            "param_type": "string",
+            "description": "Formatted actor name, used to omit a duplicate sender fact",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "TicketPage",
+        "function_id": "src/client/ticket.tsx:TicketPage({ id: string })",
+        "description": "Ticket detail page component that polls the ticket endpoint and renders the status line, banners, mandate details, inputs, threads, assignments, environment, channels, identifiers and stop action",
+        "filepath": "src/client/ticket.tsx",
+        "lines": [
+          108,
+          198
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "id",
+            "param_type": "string",
+            "description": "Identifier of the ticket to display",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      }
+    ],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "Input",
+        "alias_id": "src/client/ticket.tsx:Input",
+        "description": "Single input item element of the ticket page view's inputs array",
+        "filepath": "src/client/ticket.tsx",
+        "lines": [
+          13,
+          13
+        ],
+        "target_type": "TicketPageView['inputs'][number]",
+        "generics": []
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

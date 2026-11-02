@@ -1,0 +1,348 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/sources/feishu-loops.ts",
+    "path": "src/sources/feishu-loops.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "feishu-loops.ts",
+    "file_path": "src/sources/feishu-loops.ts",
+    "description": "Feishu source loop orchestration: event consumption, chat name refresh, history backfill and thread polling",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "node:child_process",
+        "description": "Imports spawn to launch the Lark CLI subprocess",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "node:readline",
+        "description": "Imports createInterface for line-based reading of subprocess output",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "promises",
+        "description": "Imports promise-based setTimeout as delay for pacing loops",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "zod",
+        "description": "Imports zod for schema validation of CLI output",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports thread key helper and Thread/Trigger types from core",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports feishuChatLink helper for building chat URLs",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "./feishu-channel.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports FeishuBot type from deployment module",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "../deployment.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports validItems helper and Tally type from commands infrastructure",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "../infra/commands.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports readFeishu reader and FeishuRef type",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "./feishu-read.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports Feishu trigger schemas, events, ref/time helpers and SOURCE constant",
+        "lines": [
+          11,
+          12
+        ],
+        "source": "internal",
+        "filepath": "./feishu-trigger.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports health helper and SourceContext type from host",
+        "lines": [
+          13,
+          13
+        ],
+        "source": "internal",
+        "filepath": "./host.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports KV state key namespace",
+        "lines": [
+          14,
+          14
+        ],
+        "source": "internal",
+        "filepath": "../kv.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports polling helpers: cursorAt, POLL_HORIZON_MS, polled and pollThreads",
+        "lines": [
+          15,
+          15
+        ],
+        "source": "internal",
+        "filepath": "./poll.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports FeishuConfig type describing source options",
+        "lines": [
+          16,
+          16
+        ],
+        "source": "internal",
+        "filepath": "./feishu.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "receive",
+        "function_id": "src/sources/feishu-loops.ts:receive(ctx: SourceContext, trigger: Trigger)",
+        "description": "Receives a trigger, records it, and describes its chat/thread labels with links",
+        "filepath": "src/sources/feishu-loops.ts",
+        "lines": [
+          26,
+          33
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "available",
+        "function_id": "src/sources/feishu-loops.ts:available(ctx: SourceContext)",
+        "description": "Checks whether the Feishu source is configured and has a bot, otherwise reports paused state",
+        "filepath": "src/sources/feishu-loops.ts",
+        "lines": [
+          35,
+          40
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "watch",
+        "function_id": "src/sources/feishu-loops.ts:watch(ctx: SourceContext, signal: AbortSignal)",
+        "description": "Main loop that runs the Feishu event consumer with abort handling and backoff retry",
+        "filepath": "src/sources/feishu-loops.ts",
+        "lines": [
+          43,
+          66
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "consume",
+        "function_id": "src/sources/feishu-loops.ts:consume(ctx: SourceContext, signal: AbortSignal)",
+        "description": "Spawns the Lark CLI event consumer, parses streamed message events, and forwards them to handlers",
+        "filepath": "src/sources/feishu-loops.ts",
+        "lines": [
+          70,
+          105
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "refreshChatNames",
+        "function_id": "src/sources/feishu-loops.ts:refreshChatNames(ctx: SourceContext, signal?: AbortSignal)",
+        "description": "Fetches all Feishu chat names via CLI and stores them as source labels in state",
+        "filepath": "src/sources/feishu-loops.ts",
+        "lines": [
+          108,
+          115
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "chatNamesLoop",
+        "function_id": "src/sources/feishu-loops.ts:chatNamesLoop(ctx: SourceContext, signal: AbortSignal)",
+        "description": "Periodically refreshes cached Feishu chat name labels every minute",
+        "filepath": "src/sources/feishu-loops.ts",
+        "lines": [
+          117,
+          127
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "backfillLoop",
+        "function_id": "src/sources/feishu-loops.ts:backfillLoop(ctx: SourceContext, signal: AbortSignal)",
+        "description": "Recurring loop that backfills configured chats and known direct chats, reporting history health",
+        "filepath": "src/sources/feishu-loops.ts",
+        "lines": [
+          128,
+          161
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "backfillChat",
+        "function_id": "src/sources/feishu-loops.ts:backfillChat(ctx: SourceContext, chatId: string, direct: boolean, since: string, until: string, signal: AbortSignal, tally: Tally = { skipped: 0 })",
+        "description": "Backfills historical messages for a chat and its threads into triggers, pruning expired topics",
+        "filepath": "src/sources/feishu-loops.ts",
+        "lines": [
+          166,
+          206
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "threadRef",
+        "function_id": "src/sources/feishu-loops.ts:threadRef(ctx: SourceContext, thread: Thread)",
+        "description": "Resolves the Feishu ref (trigger, chat, message ids) for a thread from meta or latest trigger",
+        "filepath": "src/sources/feishu-loops.ts",
+        "lines": [
+          209,
+          216
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "pollThreads",
+        "function_id": "src/sources/feishu-loops.ts:pollThreads(ctx: SourceContext, signal?: AbortSignal, tally?: Tally)",
+        "description": "Polls every subscribed thread, delegating each to pollThread until aborted",
+        "filepath": "src/sources/feishu-loops.ts",
+        "lines": [
+          218,
+          220
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "pollThread",
+        "function_id": "src/sources/feishu-loops.ts:pollThread(ctx: SourceContext, thread: Thread, signal?: AbortSignal, tally?: Tally)",
+        "description": "Polls new messages for a single thread using checkpoints and emits history events",
+        "filepath": "src/sources/feishu-loops.ts",
+        "lines": [
+          221,
+          267
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "runFeishu",
+        "variable_id": "src/sources/feishu-loops.ts:runFeishu",
+        "description": "Runs watch, backfill and chat-name loops concurrently and returns their settled results",
+        "filepath": "src/sources/feishu-loops.ts",
+        "lines": [
+          18,
+          19
+        ]
+      },
+      {
+        "variable_name": "enabled",
+        "variable_id": "src/sources/feishu-loops.ts:enabled",
+        "description": "Reads the enabled Feishu source configuration, or undefined when disabled",
+        "filepath": "src/sources/feishu-loops.ts",
+        "lines": [
+          20,
+          20
+        ]
+      },
+      {
+        "variable_name": "bot",
+        "variable_id": "src/sources/feishu-loops.ts:bot",
+        "description": "Returns the resolved Feishu bot CLI or throws if none is available",
+        "filepath": "src/sources/feishu-loops.ts",
+        "lines": [
+          21,
+          25
+        ]
+      },
+      {
+        "variable_name": "chatLink",
+        "variable_id": "src/sources/feishu-loops.ts:chatLink",
+        "description": "Builds a Feishu chat URL for the configured brand and chat id",
+        "filepath": "src/sources/feishu-loops.ts",
+        "lines": [
+          34,
+          34
+        ]
+      },
+      {
+        "variable_name": "consumerRetry",
+        "variable_id": "src/sources/feishu-loops.ts:consumerRetry",
+        "description": "Computes the next consumer retry delay with exponential backoff capped at 60s",
+        "filepath": "src/sources/feishu-loops.ts",
+        "lines": [
+          68,
+          69
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

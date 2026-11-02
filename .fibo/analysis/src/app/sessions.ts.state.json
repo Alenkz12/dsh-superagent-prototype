@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/sessions.ts",
+    "path": "src/app/sessions.ts",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "50267e6f621f805de01448af7c9b8da55a78affa601320d664ef64e6deca3710",
+  "sourceFingerprint": "ca2b98e57e9f27b2abb0afab59d44ea744a96d8be4cf81d7b3776901b56cd36b",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/app",
+      "resultFingerprint": "c5d9a996b9b8fdf32bef10c15d47f0ba7a1c84c5d144bf4160f01af92915cf64"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/delivery.ts",
+      "contentFingerprint": "2a4f531e6ceca4fc98ed0203247f4abeaa10776e5b26909eb93f347b479f7a73"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/effects.ts",
+      "contentFingerprint": "d350590473299398b17c50dd641c72e1995dd95920c5138699491ab77e3ae481"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/http.ts",
+      "contentFingerprint": "5da39830429559975cae7ae6d39416acb2322ac8e31cfb4da3436df602cb7ec4"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/prompts.ts",
+      "contentFingerprint": "fd22f1b1e7c1571f2eae4299995a13cc0b04cb212e18ef23e9b27ed28a1a1de6"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/resources.ts",
+      "contentFingerprint": "cc09f56669b2ccacfc889aa98132590b618f77e6648a7ff8fe8454106c8c663f"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/retry-health.ts",
+      "contentFingerprint": "f7478818946e6e8ed8508152803eb7262a01f1d10a436549e3a867e0724eda3a"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/role-models.ts",
+      "contentFingerprint": "cdb07d492a3edf3e5f49c313136b706b95b9f6a8982930737b032a7f181333c6"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/runtime.ts",
+      "contentFingerprint": "5befef035b4a70978cd881b32282680260c6d2561679f890dd911214664cf515"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/sessions.ts",
+      "contentFingerprint": "ca2b98e57e9f27b2abb0afab59d44ea744a96d8be4cf81d7b3776901b56cd36b"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/settings.ts",
+      "contentFingerprint": "2c7cd780dd24ab6a99ddfd30f80b921db035e0d56e3e1d42a86371fe20423f3f"
+    },
+    {
+      "kind": "file",
+      "path": "src/executor/dsh.ts",
+      "contentFingerprint": "6445a03121fa9bd15fc437736bcc2acc6ab950c5fe732e5b99eb8ee2c8a9476b"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "delivery(",
+      "limit": 40,
+      "resultFingerprint": "01d094b10b8f716ab0ad85505ddaf6582ad338566dcddcf4ab01cda95135591b"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "new Sessions(",
+      "limit": 20,
+      "resultFingerprint": "e054787f6170d730a8db26edf09bb4299894ce7c71ab88f3e309785ac769fef2"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "promptedId(",
+      "limit": 40,
+      "resultFingerprint": "bebeae057ae80b815f62ea92ccac774fe05df2fa3636bdd393821f85451430b1"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "sessions.ensure(",
+      "limit": 60,
+      "resultFingerprint": "e30f7ebf1d8fbc238d1bd79aca6b2dde24c30b29fa8c80f984c485e18d2704c3"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "sessions.prompt(",
+      "limit": 60,
+      "resultFingerprint": "78c740a6113bb42ccd0782a51883891df7b481521678bc4c3f8c670e1d32aa9a"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "sessions.status()",
+      "limit": 30,
+      "resultFingerprint": "514d6d4e757789dbc1f79ce117622ce1a69ffe5a1ff7e0a1dd0d58be706e3599"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "sessions\\.",
+      "limit": 60,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "search",
+      "path": "src/app/effects.ts",
+      "query": "idle(",
+      "limit": 20,
+      "resultFingerprint": "c00d76d96606073e6ef917a0c4487d36ed887e5c3c8c7039887dbbf22f640016"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-orchestration:domain-rules",
+      "contentFingerprint": "033bd19fc1ab32eecbfbba64e2d7bdf7ddb45b5610721b8a0a9fbdcbba6387e2"
+    }
+  ],
+  "infoFingerprint": "d690f50cdb854abf821b2426eb99383a319fcc77a4f4d1e2aabbd8f1567847a8",
+  "artifacts": {
+    "info": ".fibo/analysis/src/app/sessions.ts.info.md",
+    "structure": ".fibo/analysis/src/app/sessions.ts.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "d690f50cdb854abf821b2426eb99383a319fcc77a4f4d1e2aabbd8f1567847a8",
+    "structure": "d660d3461511ec50e04b2a36c5f9e65475edcf641e084abbf58bf9eb0009aa43"
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/tools/executor.ts",
+    "path": "src/app/tools/executor.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "executor.ts",
+    "file_path": "src/app/tools/executor.ts",
+    "description": "Executor tool definitions module: declares the host interface and builds the tool set for an executor ticket.",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "zod",
+        "description": "Imports zod's schema builder `z`.",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports core ticket helpers and the engine/ticket types.",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "../../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports IM word/constant definitions from the text infra module.",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "../../infra/text.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports GitHub pull-request claim and read helpers.",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "../../sources/github-pull.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the source context type for GitHub rules.",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "../../sources/host.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the resource reader and its host interface.",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "../resources.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the store type for tickets and atomic updates.",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "../store.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports notice helpers for relaying reports and thread-followed notices.",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "../notices.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the sessions type used for relaying and notifying.",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "../sessions.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports tool helpers, schemas, and the Tool type.",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "./tool.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "executorTools",
+        "function_id": "src/app/tools/executor.ts:executorTools(host: ExecutorToolsHost, ticket: Ticket)",
+        "description": "Builds the array of tools (resource reading, acknowledgement, PR claim, reporting, replies) available to an executor for a given ticket.",
+        "filepath": "src/app/tools/executor.ts",
+        "lines": [
+          23,
+          105
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "ExecutorToolsHost",
+        "interface_id": "src/app/tools/executor.ts:ExecutorToolsHost",
+        "description": "Host dependencies for executor tools: engine, store, sessions, resources, GitHub source context, and reply flushing.",
+        "filepath": "src/app/tools/executor.ts",
+        "lines": [
+          13,
+          21
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

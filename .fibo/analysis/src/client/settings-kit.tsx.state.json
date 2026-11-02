@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/settings-kit.tsx",
+    "path": "src/client/settings-kit.tsx",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "fa9d91eefff6b5f110ff28a2131421464cc784cf79cab68f59a5f360ebb80536",
+  "sourceFingerprint": "4a75031188c08fb54fd8f45725a3530b3005920412004f5d9817757a72eb87a9",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/client",
+      "resultFingerprint": "7bf3ac2d009d046122c35f91b95f5cb11c1fc74f53cdfbb3bacbc80ac2b588dc"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/api.ts",
+      "contentFingerprint": "ceb0c76cb2d8680e2be4edf0f6ac42c90e6a4ff78e0e14ce4aa277357606ff04"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/api.ts",
+      "contentFingerprint": "800b0347183c39601b8b7cd33607dee2538eb8da5feb5f1c7e13a1a7c2268f36"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/controls.tsx",
+      "contentFingerprint": "be4d4eae4e1d811c027c04fdebfa55ef40e38d6a5b0711cfb2b0d30a9b646d79"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/deployment.tsx",
+      "contentFingerprint": "c37ebd5a24d0319a28d3d98a76dde23d9694b0fad4a7900df0eff85de82afb4b"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/draft.tsx",
+      "contentFingerprint": "e29c5acfd0edacb022bdffe13f6225d2a824fbd01af6554120567dd7beede4d1"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/eval.tsx",
+      "contentFingerprint": "44350064a4a7649e418ea5db25d98a58e31f77b8171393589c5b4644d03b8cc8"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/execution.tsx",
+      "contentFingerprint": "8d9200aab40f092972234fc5712a78f1db0c1ad581517d574f8b8143c289959c"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/provider.tsx",
+      "contentFingerprint": "5639db28e87c1fa0752a30b5280c2e492685bea0593809f72c975b5274d12a8f"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/route.ts",
+      "contentFingerprint": "457b3cf37c9678c085cf4685ae412ff92bc5510b4a5401e805e4762ad12a3a4c"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/settings-kit.tsx",
+      "contentFingerprint": "4a75031188c08fb54fd8f45725a3530b3005920412004f5d9817757a72eb87a9"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/settings.tsx",
+      "contentFingerprint": "cd1a57e27ac0d8d3a968c6abb0093ddd48a2b5e36b3d16fcb1f9be3930885ee4"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/source.tsx",
+      "contentFingerprint": "0e0d24f6b0695283d47f2127f71ab132533c64e21ac772f1f033a9ef77d29a5d"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/text.ts",
+      "contentFingerprint": "b5c4a264ea799f40598b66d175b434dcb37e2033cddffad8f3e0c8ec1e080c92"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/widgets.tsx",
+      "contentFingerprint": "6aa900da1203bb7c05a81f1aa8f98376ef6c5edbc6b8f6adce2719d18b1995f4"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/kind.ts",
+      "contentFingerprint": "4ea3d8eee14707e0ee9b67289a62b1a568bab64732bd04041da5ad89bc9a7e98"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "settings-kit",
+      "limit": 50,
+      "resultFingerprint": "a94b8a906ee5b54db59c6682f83863bdab5caadc1a0c15689b86198bcbd59ff1"
+    },
+    {
+      "kind": "search",
+      "path": "src/app/api.ts",
+      "query": "settings/:block",
+      "limit": 50,
+      "resultFingerprint": "1401a4ff26ecfd81a042ec18b945856d9cb2cbc7615049d159af712ccf1ac503"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/api.ts",
+      "query": "HistoryView",
+      "limit": 80,
+      "resultFingerprint": "fc2694e887dd24800645f22028d49e709f1605bcb51fd7841de80f7a1931ad0e"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/api.ts",
+      "query": "HistoryView|SettingsView|PUT settings|GET models|GET policy/history",
+      "limit": 60,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/api.ts",
+      "query": "settings/:block",
+      "limit": 40,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/controls.tsx",
+      "query": "export function DisclosureRow",
+      "limit": 50,
+      "resultFingerprint": "075fa4b72377435f6e896f631876addf5f003207356583e1e0e20441fd38060e"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/route.ts",
+      "query": "settingsRoute",
+      "limit": 50,
+      "resultFingerprint": "183381df601bb34b3dd72130638365b7de18d69dc0664242ac2cbb3a763b7deb"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/text.ts",
+      "query": "export const valueLabel",
+      "limit": 50,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/text.ts",
+      "query": "export const",
+      "limit": 60,
+      "resultFingerprint": "b9fc4a04cdff51e6d06fe10fb8f8fbd327e2d8bb76d28ef27cab5fab9823c35a"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/widgets.tsx",
+      "query": "export function",
+      "limit": 40,
+      "resultFingerprint": "8d17d28a2410f60d888f706befc33f75c39e7a2c84f2260ac5b4568609b94e0e"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-presentation:api-boundary,state-storage",
+      "contentFingerprint": "e6d8a93af875eddefaddc2deb49c32a410d40e73c4bca9b5cec633bcd548efd9"
+    }
+  ],
+  "infoFingerprint": "f300ddcd0ff7d991ac7c9c36c3a02e666639ff00c06bf19c9f86c3da3f969714",
+  "artifacts": {
+    "info": ".fibo/analysis/src/client/settings-kit.tsx.info.md",
+    "structure": ".fibo/analysis/src/client/settings-kit.tsx.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "f300ddcd0ff7d991ac7c9c36c3a02e666639ff00c06bf19c9f86c3da3f969714",
+    "structure": "23f09b51ab68697478b62c712743f2813c73bb25a21c8499696de2ef767384f3"
+  }
+}

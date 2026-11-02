@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/effects.ts",
+    "path": "src/app/effects.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "effects.ts",
+    "file_path": "src/app/effects.ts",
+    "description": "Effect dispatch system with queued, retried, health-tracked background effects",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Imported health board and health entry types from infra health module",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "../infra/health.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imported Store type used for persisting effect rows",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "./store.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [],
+    "classes": [
+      {
+        "class_name": "Later",
+        "class_id": "src/app/effects.ts:Later",
+        "description": "Error subclass used to defer or reschedule an effect for later",
+        "super_class": [],
+        "filepath": "src/app/effects.ts",
+        "lines": [
+          5,
+          5
+        ],
+        "function": [],
+        "variables": []
+      },
+      {
+        "class_name": "Effects",
+        "class_id": "src/app/effects.ts:Effects",
+        "description": "Effect dispatcher managing handlers, queues, retries, health status and scheduled tasks",
+        "super_class": [],
+        "filepath": "src/app/effects.ts",
+        "lines": [
+          46,
+          161
+        ],
+        "function": [],
+        "variables": []
+      }
+    ],
+    "interfaces": [
+      {
+        "interface_name": "EffectPayloads",
+        "interface_id": "src/app/effects.ts:EffectPayloads",
+        "description": "Payload shapes for each effect kind: assessment, launch, delivery, relay, notice, reply",
+        "filepath": "src/app/effects.ts",
+        "lines": [
+          11,
+          24
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "Handler",
+        "interface_id": "src/app/effects.ts:Handler",
+        "description": "Handler contract for an effect kind: run, concurrency limit, retry backoff, ordering, quiet mode",
+        "filepath": "src/app/effects.ts",
+        "lines": [
+          26,
+          36
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "Row",
+        "interface_id": "src/app/effects.ts:Row",
+        "description": "Persisted effect row with key, JSON value, sequence, generation, attempts and due time",
+        "filepath": "src/app/effects.ts",
+        "lines": [
+          39,
+          39
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "FAILURES_BEFORE_ERROR",
+        "variable_id": "src/app/effects.ts:FAILURES_BEFORE_ERROR",
+        "description": "Number of failed attempts before an effect kind's health is reported as error",
+        "filepath": "src/app/effects.ts",
+        "lines": [
+          7,
+          7
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "EffectKind",
+        "alias_id": "src/app/effects.ts:EffectKind",
+        "description": "Union of effect kinds derived from EffectPayloads keys",
+        "filepath": "src/app/effects.ts",
+        "lines": [
+          25,
+          25
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "Options",
+        "alias_id": "src/app/effects.ts:Options",
+        "description": "Partial handler overrides for limit, retry, ordered and quiet",
+        "filepath": "src/app/effects.ts",
+        "lines": [
+          37,
+          37
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "Task",
+        "alias_id": "src/app/effects.ts:Task",
+        "description": "In-flight task record pairing effect kind and key with its completion promise",
+        "filepath": "src/app/effects.ts",
+        "lines": [
+          40,
+          40
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

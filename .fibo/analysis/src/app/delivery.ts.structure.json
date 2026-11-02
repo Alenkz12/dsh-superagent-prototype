@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/delivery.ts",
+    "path": "src/app/delivery.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "delivery.ts",
+    "file_path": "src/app/delivery.ts",
+    "description": "Agent message delivery module that routes user messages into agent sessions and tracks delivered message IDs",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "cordis",
+        "description": "Type import of the Cordis framework Context used for plugin event hooks",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "dsh-agent",
+        "description": "Type import of the Agent interface that receives delivered messages",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "dsh-llm",
+        "description": "Imports LLM message utilities: freezeMessage, MessageId, and ContextFormed/UserMessage types",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "dsh-session",
+        "description": "Type import of the Session entity that owns the delivered messages",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "dsh-session-persistence",
+        "description": "Side-effect type import extending the session persistence service API",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "deliveryId",
+        "function_id": "src/app/delivery.ts:deliveryId(message: UserMessage)",
+        "description": "Resolves a deduplication ID for a user message based on its source kind and provenance, returning undefined when not attributable",
+        "filepath": "src/app/delivery.ts",
+        "lines": [
+          18,
+          24
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [
+      {
+        "class_name": "AgentDelivery",
+        "class_id": "src/app/delivery.ts:AgentDelivery",
+        "description": "Service that delivers user messages to agents by inject/steer/followup mode, tracking seen message IDs per session and flushing persistence",
+        "super_class": [],
+        "filepath": "src/app/delivery.ts",
+        "lines": [
+          31,
+          86
+        ],
+        "function": [],
+        "variables": []
+      }
+    ],
+    "interfaces": [
+      {
+        "interface_name": "MessageSourceMap",
+        "interface_id": "src/app/delivery.ts:MessageSourceMap",
+        "description": "Augments the message source map with the 'dsh-superagent' source variant",
+        "filepath": "src/app/delivery.ts",
+        "lines": [
+          9,
+          11
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "messageId",
+        "variable_id": "src/app/delivery.ts:messageId",
+        "description": "Builds a namespaced MessageId from an RPC request ID for superagent-originated messages",
+        "filepath": "src/app/delivery.ts",
+        "lines": [
+          16,
+          16
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "Seen",
+        "alias_id": "src/app/delivery.ts:Seen",
+        "description": "Per-session record of delivered message IDs plus an optional load promise",
+        "filepath": "src/app/delivery.ts",
+        "lines": [
+          14,
+          14
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

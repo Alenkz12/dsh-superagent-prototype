@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/views/settings.ts",
+    "path": "src/app/views/settings.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "settings.ts",
+    "file_path": "src/app/views/settings.ts",
+    "description": "Settings view module that assembles the settings page data (policy, eval, executor blocks, sources, and environment info)",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Imports SETUP_FIELDS configuration from the deployment module",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "internal",
+        "filepath": "../../deployment.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the KV key-value helper for reading stored settings",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "../../kv.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports policyVersion helper to compute the settings policy version",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "../../policy.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the SourceRegistry type for accessing source kinds and instances",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "../../sources/registry.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports declaredVariables and executionRoot helpers for environment info",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "../execution-environment.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Store type providing settings and block revisions",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "../store.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports problem and health helpers plus HealthMap and SetupState types from sources",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "./sources.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "policyOf",
+        "function_id": "src/app/views/settings.ts:policyOf(sources: SourceRegistry, id: string, health: HealthMap)",
+        "description": "Builds the policy details (fields, explicit rows, sync status) for a given source id",
+        "filepath": "src/app/views/settings.ts",
+        "lines": [
+          10,
+          18
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "settingsView",
+        "function_id": "src/app/views/settings.ts:settingsView(store: Store, sources: SourceRegistry, health: HealthMap, setup: SetupState, stateDir: string)",
+        "description": "Assembles the full settings view model from store settings, source registry, health and setup state",
+        "filepath": "src/app/views/settings.ts",
+        "lines": [
+          23,
+          41
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "SettingsView",
+        "alias_id": "src/app/views/settings.ts:SettingsView",
+        "description": "Type of the object returned by settingsView",
+        "filepath": "src/app/views/settings.ts",
+        "lines": [
+          42,
+          42
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "SourceSettingsView",
+        "alias_id": "src/app/views/settings.ts:SourceSettingsView",
+        "description": "Type of a single source entry within the settings view",
+        "filepath": "src/app/views/settings.ts",
+        "lines": [
+          43,
+          43
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

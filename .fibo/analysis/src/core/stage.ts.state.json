@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/core/stage.ts",
+    "path": "src/core/stage.ts",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "b7ea0b547aa691ec59bb544408619016e91fdcd4ea97d2b07c2b822a0b613128",
+  "sourceFingerprint": "b935012a654d2a68ca20cb27909ddc8dceafb704b56a16a23a08036a546141df",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/core",
+      "resultFingerprint": "be82a7cf8ea92859bf3f3d905a318cf2acf25b289109698a34e8e9c13ab4a02c"
+    },
+    {
+      "kind": "file",
+      "path": "docs/003-execution.md",
+      "contentFingerprint": "049aa22a717f75b9dec4cd6969356db6f736c127de4501c3ce1f6d846217f6eb"
+    },
+    {
+      "kind": "file",
+      "path": "docs/007-architecture.md",
+      "contentFingerprint": "e3747665587fdf88b28d4e9c1a1f8ac40cbc2c65a9999be1fce14b69ec44d748"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/cards.ts",
+      "contentFingerprint": "9d3522b787612ba129058b89f8a4c5f9a4e980321f69c3cc68607c5b111d8ef6"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/views/overview.ts",
+      "contentFingerprint": "c8eb087eb5e3586e924ff5df659aa1535d64e6723f2f5ffa8e721f4abbfabef8"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/views/records.ts",
+      "contentFingerprint": "5ed48ab5dfaaa729f0520c1dfc30d962f6a716d11d71088fd43ce9bedaa3cd39"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/views/tickets.ts",
+      "contentFingerprint": "7345a63859a81e525ba4341d8a7091053b8825f73215a028e144cd0dc8da5ccc"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/locales.ts",
+      "contentFingerprint": "d172c86d672b9244effe3590bc7c25ac71b80d3ccbb7d6c5fe76848ce31eba12"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/index.ts",
+      "contentFingerprint": "a5a1cf43f02eafaf520a5bfaf5e76b71ba521d04ee648cfcf12b3843cc474a3e"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/model.ts",
+      "contentFingerprint": "982155fe6a03c887a7ac4475c6d1592d12aa23c5fe3698403c93bbfd6469d44a"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/stage.ts",
+      "contentFingerprint": "b935012a654d2a68ca20cb27909ddc8dceafb704b56a16a23a08036a546141df"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/tickets.ts",
+      "contentFingerprint": "1d9f964ad34b54cbb0403bde16af58851e5e80111177ce73a27b6034e9af940e"
+    },
+    {
+      "kind": "file",
+      "path": "tests/core-engine.spec.ts",
+      "contentFingerprint": "e29358c139a2dbb1a2877e980e043f34cf39bca1905fb10ee14e0b4866bc1a6b"
+    },
+    {
+      "kind": "file",
+      "path": "tests/stage.spec.ts",
+      "contentFingerprint": "3df130eae87d70643f0c924caf66fbca8cb27ced50467e0c7283dee0a39436be"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "Awaiting review",
+      "limit": 10,
+      "resultFingerprint": "b036714140496124886c7984c070ccc06efd3f4641867da0c7ea1d7096f1bf19"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "canRetry",
+      "limit": 50,
+      "resultFingerprint": "d3151e469d4864cf931a61eca6ec9e675f2d202227a33086fbd8cf9ac6fd11ff"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "ticketStage",
+      "limit": 50,
+      "resultFingerprint": "02c67c124fbaa13d46ca28492a7930a802d3b06f81dffd89771e51fda49d664c"
+    },
+    {
+      "kind": "search",
+      "path": "docs/003-execution.md",
+      "query": "stage",
+      "limit": 60,
+      "resultFingerprint": "f2778566e2a5ba8f204b866cf62b23574b1aa802864cdc368e60ea633a546072"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-domain-rules:data-contract",
+      "contentFingerprint": "ad66491eedcd189c937ee62527c90f0f48ef13004b4f2596e925a6a2ed0899f1"
+    }
+  ],
+  "infoFingerprint": "f2fd07133fe6e68c3e198f95c2da0af5f04ddccf82d0d3673d5f0d894aa17619",
+  "artifacts": {
+    "info": ".fibo/analysis/src/core/stage.ts.info.md",
+    "structure": ".fibo/analysis/src/core/stage.ts.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "f2fd07133fe6e68c3e198f95c2da0af5f04ddccf82d0d3673d5f0d894aa17619",
+    "structure": "1aecca9b6f73dfc03383f4683c903cfe2eb9f1c0e94092509906166f74a97033"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/sources/admission-context.ts",
+    "path": "src/sources/admission-context.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "admission-context.ts",
+    "file_path": "src/sources/admission-context.ts",
+    "description": "Admission context source: builds a paginated thread context window for triggering messages",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Type-only import of the Commands interface from the infra commands module",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "internal",
+        "filepath": "../infra/commands.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Type-only import of ContextMessage and TriggerContext types from the kind module",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "./kind.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "threadWindow",
+        "function_id": "src/sources/admission-context.ts:threadWindow(messages: ContextMessage[], sourceId: string)",
+        "description": "Builds a window of messages around the trigger message, tracking omitted counts before/after",
+        "filepath": "src/sources/admission-context.ts",
+        "lines": [
+          6,
+          17
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "admissionContext",
+        "function_id": "src/sources/admission-context.ts:admissionContext(context: TriggerContext, commands: Commands, maxPages: number)",
+        "description": "Fetches paged thread messages up to maxPages with cursor loop detection and returns windowed context",
+        "filepath": "src/sources/admission-context.ts",
+        "lines": [
+          22,
+          42
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

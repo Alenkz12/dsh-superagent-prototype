@@ -1,0 +1,578 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/source.tsx",
+    "path": "src/client/source.tsx",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "source.tsx",
+    "file_path": "src/client/source.tsx",
+    "description": "Source panel views: the Source status page (health, filtered Triggers, dropped replies) and the Source settings cards (per-Source field forms with restart warnings and config history).",
+    "file_type": "tsx",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "FieldSpec",
+        "description": "Type-only import describing a single configurable Source field specification",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "src/sources/kind.ts",
+        "alias": ""
+      },
+      {
+        "class_name": "DroppedReply",
+        "description": "Type-only import describing a reply that was dropped before dispatch",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/client/api.ts",
+        "alias": ""
+      },
+      {
+        "class_name": "SourceStatusRow",
+        "description": "Type-only import describing one row of the Source status list (state, stats, health, filtered and dropped items)",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/client/api.ts",
+        "alias": ""
+      },
+      {
+        "class_name": "SourceView",
+        "description": "Type-only import describing a Source configuration view model (value, revision, fields, labels, facts)",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/client/api.ts",
+        "alias": ""
+      },
+      {
+        "class_name": "Route",
+        "description": "Type-only import describing a client-side navigation route",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "src/client/route.ts",
+        "alias": ""
+      }
+    ],
+    "import_function": [
+      {
+        "function_name": "useEffect",
+        "description": "React hook that performs a side effect after render",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "useState",
+        "description": "React hook that creates component-local state",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "usePoll",
+        "description": "Hook that periodically polls an async loader and returns its data and error",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/client/api.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "DisclosureRow",
+        "description": "Collapsible row component used for advanced fields, filtered messages and dropped replies",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "Dot",
+        "description": "Status dot component indicating row state",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "Icon",
+        "description": "Inline icon component",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "InfoTip",
+        "description": "Tooltip component that shows explanatory text",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "Switch",
+        "description": "Toggle switch component for enabling/disabling a Source",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "Tag",
+        "description": "Small label/tag component with tone variants",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "SaveBar",
+        "description": "Draft save/discard bar showing dirty/busy status",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "src/client/draft.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "sourceMark",
+        "description": "Maps a Source state to a dot state and localized label",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/marks.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "usePanel",
+        "description": "Hook exposing panel helpers such as translations, API call and navigation",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/provider.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "usePanelData",
+        "description": "Hook exposing shared panel data such as setup state and running Assignment count",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/provider.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "setupPage",
+        "description": "Resolves the route of the setup page for a given setup problem location",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "src/client/route.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "settingsRoute",
+        "description": "Builds the settings route for a settings section with optional focus parameters",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "src/client/route.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "ConfigHistory",
+        "description": "Component listing the configuration history of the given block prefixes",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "src/client/settings-kit.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "Fields",
+        "description": "Fieldset wrapper that disables its contents while saving",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "src/client/settings-kit.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "SourceField",
+        "description": "Renders a single Source config field with saved value, labels and derived facts",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "src/client/settings-kit.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "useBlockDraft",
+        "description": "Hook managing a draft value for a settings block including dirty/busy state and submit",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "src/client/settings-kit.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "useSettings",
+        "description": "Hook providing settings data and a reload function",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "src/client/settings-kit.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "actorName",
+        "description": "Renders a localized display name for a message actor",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "healthText",
+        "description": "Formats a health check item into display text",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "localized",
+        "description": "Resolves a localized string value via the translation function",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "readableMarkers",
+        "description": "Renders message marker tokens into human readable text",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "reasonLabel",
+        "description": "Returns the localized label for a drop/filter reason",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "valueLabel",
+        "description": "Returns a localized label for a namespaced value key",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "when",
+        "description": "Formats a timestamp relative to the current locale",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "CheckSetupButton",
+        "description": "Button that triggers a setup re-check",
+        "lines": [
+          12,
+          12
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "Hint",
+        "description": "Small hint text block component",
+        "lines": [
+          12,
+          12
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "LabelValue",
+        "description": "Renders a label paired with a value",
+        "lines": [
+          12,
+          12
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "LoadState",
+        "description": "Renders loading and error states for polled data",
+        "lines": [
+          12,
+          12
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "SetupMessage",
+        "description": "Renders a setup problem message",
+        "lines": [
+          12,
+          12
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "StatusHead",
+        "description": "Page header for a status view with intro hint and settings link",
+        "lines": [
+          12,
+          12
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "When",
+        "description": "Component rendering a formatted relative timestamp",
+        "lines": [
+          12,
+          12
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      }
+    ],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "SourceCard",
+        "function_id": "src/client/source.tsx:SourceCard({ source }: { source: SourceView })",
+        "description": "Renders the editable settings card for one Source, including basic/advanced fields, label refresh, restart warning and save bar.",
+        "filepath": "src/client/source.tsx",
+        "lines": [
+          14,
+          59
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "source",
+            "param_type": "{ source: SourceView }",
+            "description": "Source configuration view model being edited",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "SourceSettings",
+        "function_id": "src/client/source.tsx:SourceSettings({ focus }: { focus?: string })",
+        "description": "Renders the Source settings tab: one card per Source plus configuration history, scrolling to the focused Source when requested.",
+        "filepath": "src/client/source.tsx",
+        "lines": [
+          61,
+          68
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "focus",
+            "param_type": "{ focus?: string }",
+            "description": "Optional Source id to scroll into view",
+            "default_value": "",
+            "is_optional": true
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "DroppedReplies",
+        "function_id": "src/client/source.tsx:DroppedReplies({ items }: { items: DroppedReply[] })",
+        "description": "Collapsible list of dropped replies with reason, timestamp and a link to the related Ticket or Thread.",
+        "filepath": "src/client/source.tsx",
+        "lines": [
+          70,
+          94
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "items",
+            "param_type": "{ items: DroppedReply[] }",
+            "description": "Dropped replies to display",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "SourceRow",
+        "function_id": "src/client/source.tsx:SourceRow({ source }: { source: SourceStatusRow })",
+        "description": "Renders one Source status row with state dot, receive/filter statistics, health notes, filtered messages and dropped replies.",
+        "filepath": "src/client/source.tsx",
+        "lines": [
+          95,
+          139
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "source",
+            "param_type": "{ source: SourceStatusRow }",
+            "description": "Source status row data to render",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "SourceStatus",
+        "function_id": "src/client/source.tsx:SourceStatus()",
+        "description": "Renders the Source status page: global deployment setup problem banner, polling load state and the list of Source rows.",
+        "filepath": "src/client/source.tsx",
+        "lines": [
+          141,
+          156
+        ],
+        "code": null,
+        "parameters": [],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      }
+    ],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

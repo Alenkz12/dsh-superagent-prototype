@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/source-context.ts",
+    "path": "src/app/source-context.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "source-context.ts",
+    "file_path": "src/app/source-context.ts",
+    "description": "Source context module: assembles per-kind SourceContext from host dependencies",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Imports core source types: EngineForSources, ReceiveResult and Trigger",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "internal",
+        "filepath": "../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports Deployment type used for lazy deployment access",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "../deployment.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports Commands type exposed through the source context",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "../infra/commands.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports SetupProblem type for reporting setup issues to sources",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "../setup.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports SourceContext type that this module produces",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "../sources/host.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports SourceRegistry type used to look up source health entries",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "../sources/registry.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports Outbox type used for sending notifications",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "./outbox.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports Store type providing triggers and thread data access",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "./store.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "sourceContextOf",
+        "function_id": "src/app/source-context.ts:sourceContextOf(deps: SourceContextDeps, kind: { kind: string; health: readonly string[] })",
+        "description": "Builds a SourceContext exposing commands, triggers, notify, report and health entries for a Source kind",
+        "filepath": "src/app/source-context.ts",
+        "lines": [
+          33,
+          72
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "SourceContextDeps",
+        "interface_id": "src/app/source-context.ts:SourceContextDeps",
+        "description": "Dependency bundle required to construct a SourceContext (store, outbox, engine, commands, registry, setup)",
+        "filepath": "src/app/source-context.ts",
+        "lines": [
+          11,
+          27
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

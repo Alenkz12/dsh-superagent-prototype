@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "collection:src/app/tools",
+    "path": "src/app/tools",
+    "kind": "directory"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "aed380a245f835570311e58d9ad962b6deaad1ac416b2fde88f38aa7dd6a6ddd",
+  "children": [
+    {
+      "id": "file:src/app/tools/executor.ts",
+      "infoFingerprint": "a475f78b9b566a04ef58a5f1c5b2dd1aa8fb7037534ed90bae1372351cfd92a9"
+    },
+    {
+      "id": "file:src/app/tools/main.ts",
+      "infoFingerprint": "38a57bba9858fd132340226d1b186c44cae21b8f07e17cf9207582031696f3bc"
+    },
+    {
+      "id": "file:src/app/tools/tool.ts",
+      "infoFingerprint": "2c851f22c4458375a74f6174ab25e8e73bea422f503ae687eac939cc2b3c60e3"
+    }
+  ],
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/app/tools",
+      "resultFingerprint": "d6e5509b425007c5c96586ae85f7b7d749e96ab754221e6174bdd8e96cfff075"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/resources.ts",
+      "contentFingerprint": "cc09f56669b2ccacfc889aa98132590b618f77e6648a7ff8fe8454106c8c663f"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/runtime.ts",
+      "contentFingerprint": "5befef035b4a70978cd881b32282680260c6d2561679f890dd911214664cf515"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/sessions.ts",
+      "contentFingerprint": "ca2b98e57e9f27b2abb0afab59d44ea744a96d8be4cf81d7b3776901b56cd36b"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/tools/executor.ts",
+      "contentFingerprint": "9869d8a5043725847f18814e23b29c11ae93aa974defa72d2eab62c61a6def47"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/tools/main.ts",
+      "contentFingerprint": "88603eb5a94c67e93141e07bd09bde85d65f980a1f42503c53ab9c22ec5c538d"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/tools/tool.ts",
+      "contentFingerprint": "172dd8f1a3da82b8a6cfe966befd5204476cc44ac0a4d7fe278518e970b7f054"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "mainTools(",
+      "limit": 20,
+      "resultFingerprint": "27a3c1afc4bf9b3a8480eb24f2225db4672311dc11d006c87548f20a84d6f8de"
+    },
+    {
+      "kind": "search",
+      "path": "src/app/resources.ts",
+      "query": "resourceGrammar",
+      "limit": 20,
+      "resultFingerprint": "2f5bcd8f80627bfca6e8439f7554321e5b5074bebd74407c07b5c637e51404f1"
+    },
+    {
+      "kind": "search",
+      "path": "src/app/sessions.ts",
+      "query": "registerTool",
+      "limit": 20,
+      "resultFingerprint": "0141672369f81e0eb860ecf36268a7e004572a5e327c6a6a6bf7c643a00aa73e"
+    },
+    {
+      "kind": "template",
+      "key": "directory-language-gfgo-primary-api-boundary:data-contract,orchestration",
+      "contentFingerprint": "e3281890673176866990a90c1914536a49b570a2ad206c9f86dba66d53be077a"
+    }
+  ],
+  "infoFingerprint": "8e9e29a00944614397e027840abf35f840501b357439480d0eb3e3c5edbf92d4",
+  "artifacts": {
+    "info": ".fibo/analysis/src/app/tools/tools.info.md",
+    "structure": ".fibo/analysis/src/app/tools/tools.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "8e9e29a00944614397e027840abf35f840501b357439480d0eb3e3c5edbf92d4",
+    "structure": "19648606c9412ee2811c138fc5464d9799bafb49548f35eeec33e03396ddd857"
+  }
+}

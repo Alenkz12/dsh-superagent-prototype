@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/store-read.ts",
+    "path": "src/app/store-read.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "store-read.ts",
+    "file_path": "src/app/store-read.ts",
+    "description": "Read-side SQLite store accessors for triggers, outbox, and threads",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "node:sqlite",
+        "description": "Type imports DatabaseSync and SQLInputValue from node:sqlite",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Type imports Decision, Thread, and Trigger from core index",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Type imports Dropped, Receipt, and TimelinePlace from store",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "./store.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "storeReads",
+        "function_id": "src/app/store-read.ts:storeReads(db: DatabaseSync)",
+        "description": "Builds read-only query helpers over a SQLite database for stored triggers and threads",
+        "filepath": "src/app/store-read.ts",
+        "lines": [
+          6,
+          81
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

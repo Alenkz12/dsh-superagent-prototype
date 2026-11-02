@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/core/tickets.ts",
+    "path": "src/core/tickets.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "tickets.ts",
+    "file_path": "src/core/tickets.ts",
+    "description": "Ticket lifecycle engine part: ticket creation, inputs, subscriptions and status.",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Imports the `key` identifier helper from ids module.",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "internal",
+        "filepath": "./ids.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the UserError class for user-facing failures.",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "./errors.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports model helpers for assignments, reports, tickets, threads and policies.",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "./model.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports model types for tickets, assignments, triggers, threads and mandates.",
+        "lines": [
+          5,
+          6
+        ],
+        "source": "internal",
+        "filepath": "./model.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the AssessmentOutcome type from the ports module.",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "./ports.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the EnginePart base class and EngineOptions type.",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "./part.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Replies type used to send replies.",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "./replies.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports canRetry to check whether a stage can be retried.",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "./stage.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [],
+    "classes": [
+      {
+        "class_name": "Tickets",
+        "class_id": "src/core/tickets.ts:Tickets",
+        "description": "Engine part managing tickets: creation from accepts, thread subscriptions, inputs and status.",
+        "super_class": [],
+        "filepath": "src/core/tickets.ts",
+        "lines": [
+          29,
+          423
+        ],
+        "function": [],
+        "variables": []
+      }
+    ],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "sameChannel",
+        "variable_id": "src/core/tickets.ts:sameChannel",
+        "description": "Compares two ChannelRefs for structural equality via JSON serialization.",
+        "filepath": "src/core/tickets.ts",
+        "lines": [
+          12,
+          12
+        ]
+      },
+      {
+        "variable_name": "automatic",
+        "variable_id": "src/core/tickets.ts:automatic",
+        "description": "Tells whether a ticket input is automatic (a note or a non-human trigger).",
+        "filepath": "src/core/tickets.ts",
+        "lines": [
+          14,
+          14
+        ]
+      },
+      {
+        "variable_name": "readBefore",
+        "variable_id": "src/core/tickets.ts:readBefore",
+        "description": "Checks whether a trigger input was read or delivered before a given timestamp.",
+        "filepath": "src/core/tickets.ts",
+        "lines": [
+          19,
+          20
+        ]
+      },
+      {
+        "variable_name": "STATUS_REQUEST",
+        "variable_id": "src/core/tickets.ts:STATUS_REQUEST",
+        "description": "Prompt text for a status-only ticket report request without resuming work.",
+        "filepath": "src/core/tickets.ts",
+        "lines": [
+          21,
+          21
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

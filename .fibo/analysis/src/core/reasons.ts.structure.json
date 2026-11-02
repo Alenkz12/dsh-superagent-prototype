@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/core/reasons.ts",
+    "path": "src/core/reasons.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "reasons.ts",
+    "file_path": "src/core/reasons.ts",
+    "description": "Domain reasons module defining reason codes, message templates and text rendering helpers",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "reasonText",
+        "function_id": "src/core/reasons.ts:reasonText(reasons: readonly Reason[] | Reason | undefined)",
+        "description": "Renders one or more reasons into a single templated human-readable string, prefixed by trigger ID",
+        "filepath": "src/core/reasons.ts",
+        "lines": [
+          32,
+          38
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "Reason",
+        "interface_id": "src/core/reasons.ts:Reason",
+        "description": "Reason object shape with a code, optional template values and optional trigger ID",
+        "filepath": "src/core/reasons.ts",
+        "lines": [
+          29,
+          29
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "REASONS",
+        "variable_id": "src/core/reasons.ts:REASONS",
+        "description": "Constant map of reason codes to their message templates with placeholder slots",
+        "filepath": "src/core/reasons.ts",
+        "lines": [
+          5,
+          26
+        ]
+      },
+      {
+        "variable_name": "said",
+        "variable_id": "src/core/reasons.ts:said",
+        "description": "Factory returning a 'said' reason carrying the given text as a template value",
+        "filepath": "src/core/reasons.ts",
+        "lines": [
+          30,
+          30
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "ReasonCode",
+        "alias_id": "src/core/reasons.ts:ReasonCode",
+        "description": "Union of all valid reason-code keys derived from the REASONS template map",
+        "filepath": "src/core/reasons.ts",
+        "lines": [
+          27,
+          27
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

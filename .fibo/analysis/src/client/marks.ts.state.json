@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/marks.ts",
+    "path": "src/client/marks.ts",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "5ad4beafe220d7650a0be966900581ccfa18e9ea2213286877a8415fbb0d1628",
+  "sourceFingerprint": "e7e05436be442342fa6a2ba43a702563a88a46cdd07da50760d8b5ecd2fc06f6",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/client",
+      "resultFingerprint": "7bf3ac2d009d046122c35f91b95f5cb11c1fc74f53cdfbb3bacbc80ac2b588dc"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/api.ts",
+      "contentFingerprint": "800b0347183c39601b8b7cd33607dee2538eb8da5feb5f1c7e13a1a7c2268f36"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/app.tsx",
+      "contentFingerprint": "23cca247e0a67fb581df6fc517522ccf0026a4897cda109c9e57c367cb2b1051"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/controls.tsx",
+      "contentFingerprint": "be4d4eae4e1d811c027c04fdebfa55ef40e38d6a5b0711cfb2b0d30a9b646d79"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/execution.tsx",
+      "contentFingerprint": "8d9200aab40f092972234fc5712a78f1db0c1ad581517d574f8b8143c289959c"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/locales.ts",
+      "contentFingerprint": "d172c86d672b9244effe3590bc7c25ac71b80d3ccbb7d6c5fe76848ce31eba12"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/marks.ts",
+      "contentFingerprint": "e7e05436be442342fa6a2ba43a702563a88a46cdd07da50760d8b5ecd2fc06f6"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/rows.tsx",
+      "contentFingerprint": "905d0859ac8f7d7b6bf9375b30a9c1bcf2744c11f171e6e9070c6b0328490458"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/source.tsx",
+      "contentFingerprint": "0e0d24f6b0695283d47f2127f71ab132533c64e21ac772f1f033a9ef77d29a5d"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/text.ts",
+      "contentFingerprint": "b5c4a264ea799f40598b66d175b434dcb37e2033cddffad8f3e0c8ec1e080c92"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/thread.tsx",
+      "contentFingerprint": "6870694d97c1c1e75bbd43f0ed7efbf6e6eba50a19a27c60fef7b052a5a979f6"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/ticket.tsx",
+      "contentFingerprint": "0d78ec9067cb1e11169ae283b038ffa43859fe2380557a90ea980a492f28bc73"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/widgets.tsx",
+      "contentFingerprint": "6aa900da1203bb7c05a81f1aa8f98376ef6c5edbc6b8f6adce2719d18b1995f4"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/stage.ts",
+      "contentFingerprint": "b935012a654d2a68ca20cb27909ddc8dceafb704b56a16a23a08036a546141df"
+    },
+    {
+      "kind": "search",
+      "path": "src/client",
+      "query": "from './marks.ts'",
+      "limit": 50,
+      "resultFingerprint": "4b53917babe253387fe3cd3ca1f63c857539ba57f176a3550c2d88b790dd9a06"
+    },
+    {
+      "kind": "search",
+      "path": "src/client",
+      "query": "reportDot",
+      "limit": 50,
+      "resultFingerprint": "3b6f369f535f85e36647ee1ba41538cdd06ebfc18acfdba0ff2a645308d3520b"
+    },
+    {
+      "kind": "search",
+      "path": "src/client",
+      "query": "sourceMark",
+      "limit": 50,
+      "resultFingerprint": "2cdbd3d3303c5a54648e51a94f8919c821db245e23f1fcb4424e4b307597306d"
+    },
+    {
+      "kind": "search",
+      "path": "src/client",
+      "query": "StageMark",
+      "limit": 50,
+      "resultFingerprint": "8103dc7d2ec3f0b0af3f992a36ae6d185fc9889c95d1a0e87a8c9218842a8611"
+    },
+    {
+      "kind": "search",
+      "path": "src/client",
+      "query": "status.tone",
+      "limit": 50,
+      "resultFingerprint": "56d5997b2506a5e7a312e2d0340df53e8af57ef01595361c02fb6ccad24b94e8"
+    },
+    {
+      "kind": "search",
+      "path": "src/client",
+      "query": "ticketMark",
+      "limit": 50,
+      "resultFingerprint": "1c9e2da1c8611232e0ec49c578ec3799e210cde097d33c28a9b1f9aa56f1a175"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/api.ts",
+      "query": "stage",
+      "limit": 50,
+      "resultFingerprint": "7832bfa78cb11586519ef4b728718b82c02169405fb7eb0ddf5831217b6985c9"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/api.ts",
+      "query": "ThreadRow",
+      "limit": 50,
+      "resultFingerprint": "2b40b67a7c0943d7f68e7f229895a6d4242f9b7f5ff06386bc4b0d6a768e5650"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/controls.tsx",
+      "query": "DotState",
+      "limit": 50,
+      "resultFingerprint": "29509692f4845edd7440dd88fea056294daf1ee599732136933d3e25c6d384a2"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/locales.ts",
+      "query": "'decision.",
+      "limit": 50,
+      "resultFingerprint": "628216669bc4904574579df63855de27cd0e162854fc94183d1dd718f2e18af1"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/locales.ts",
+      "query": "'outcome.",
+      "limit": 50,
+      "resultFingerprint": "16189b1cc9bd908f90fb006fb0b33bd2b618b26643e0a91b1e222768a16ffafc"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/locales.ts",
+      "query": "stage.",
+      "limit": 50,
+      "resultFingerprint": "cc51c33e44e6c173a0664da469fe3a29e0ca97c41456ebf11c345d64852c8459"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/locales.ts",
+      "query": "wouldAccept",
+      "limit": 50,
+      "resultFingerprint": "7c359e63a36cc99798e28541740e10bd74b78c8e4b475787b0106a04514d950e"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/rows.tsx",
+      "query": "Mark",
+      "limit": 50,
+      "resultFingerprint": "0119e39a89ead2cbb82c950f0f9049daa05d377701ee58d495aff64f45f3f779"
+    },
+    {
+      "kind": "search",
+      "path": "src/core/stage.ts",
+      "query": "export",
+      "limit": 50,
+      "resultFingerprint": "c49f1837bf20a91eee61c5c64f6a86e91c4a576574c87adb271e07e904a15abf"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-presentation:",
+      "contentFingerprint": "ae7d40c7f1b112bcc2ef142c827d000538cd2a9badc1c07b245fcc59014b16c4"
+    }
+  ],
+  "infoFingerprint": "87b704095ac7221c2a09435571fb1bd148fae1a60c956497a0a18f0c13a8cac9",
+  "artifacts": {
+    "info": ".fibo/analysis/src/client/marks.ts.info.md",
+    "structure": ".fibo/analysis/src/client/marks.ts.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "87b704095ac7221c2a09435571fb1bd148fae1a60c956497a0a18f0c13a8cac9",
+    "structure": "d07a835f667e809b26af644443f86073630b3c98f736a83992974785d3bb8710"
+  }
+}

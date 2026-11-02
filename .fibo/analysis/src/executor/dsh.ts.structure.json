@@ -1,0 +1,545 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/executor/dsh.ts",
+    "path": "src/executor/dsh.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "dsh.ts",
+    "file_path": "src/executor/dsh.ts",
+    "description": "DSH executor module: drives worker sessions for tickets with slots, retries, inputs and background jobs",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "cordis",
+        "description": "Imports the Cordis Context type",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "dsh-session",
+        "description": "Imports the SessionId type",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "dsh-agent",
+        "description": "Imports the Agent type",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "promises",
+        "description": "Imports node:fs/promises helpers mkdir, rmdir, stat",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "node:path",
+        "description": "Imports node:path helpers dirname and join",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports core helpers for assignments, reports, tickets and threads",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports core domain types (Executor, Ticket, Trigger, Mandate, ...)",
+        "lines": [
+          8,
+          9
+        ],
+        "source": "internal",
+        "filepath": "../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the deployment Machine type",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "../deployment.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports environment helpers runAsWorker and verifyDirectory",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "../infra/environment.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the policy Settings type",
+        "lines": [
+          12,
+          12
+        ],
+        "source": "internal",
+        "filepath": "../policy.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Store type",
+        "lines": [
+          13,
+          13
+        ],
+        "source": "internal",
+        "filepath": "../app/store.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Later error and Effects type",
+        "lines": [
+          14,
+          14
+        ],
+        "source": "internal",
+        "filepath": "../app/effects.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports executionRoot and the Variable type",
+        "lines": [
+          15,
+          15
+        ],
+        "source": "internal",
+        "filepath": "../app/execution-environment.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Sessions type",
+        "lines": [
+          16,
+          16
+        ],
+        "source": "internal",
+        "filepath": "../app/sessions.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the WorktreeNameSchema validator",
+        "lines": [
+          17,
+          17
+        ],
+        "source": "internal",
+        "filepath": "../app/assessment.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the resultRelay notice helper",
+        "lines": [
+          18,
+          18
+        ],
+        "source": "internal",
+        "filepath": "../app/notices.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the HealthEntry type",
+        "lines": [
+          19,
+          19
+        ],
+        "source": "internal",
+        "filepath": "../infra/health.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports background job helpers (collectJob, killJobs, stopBackground, ...)",
+        "lines": [
+          20,
+          20
+        ],
+        "source": "internal",
+        "filepath": "./background.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "transient",
+        "function_id": "src/executor/dsh.ts:transient(error: unknown)",
+        "description": "Whether an error is transient (408/429/5xx or known network failure text)",
+        "filepath": "src/executor/dsh.ts",
+        "lines": [
+          50,
+          55
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "mandateInstructions",
+        "function_id": "src/executor/dsh.ts:mandateInstructions(mandate: Pick<Mandate, 'strength'>)",
+        "description": "Extra scope instructions for tickets accepted under an inferred mandate",
+        "filepath": "src/executor/dsh.ts",
+        "lines": [
+          91,
+          95
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "ticketExecution",
+        "function_id": "src/executor/dsh.ts:ticketExecution(ticket: Ticket, outcome: Extract<AssessmentOutcome, { kind: 'accept' }>, settings: Settings, stateDir: string)",
+        "description": "Builds the Execution (worktree name, directory, assignment text) for an accepted ticket",
+        "filepath": "src/executor/dsh.ts",
+        "lines": [
+          97,
+          111
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "triggerMessage",
+        "function_id": "src/executor/dsh.ts:triggerMessage(trigger: Trigger, link: { source_url?: string; source_url_read?: string }, note?: string, repliesTo?: Trigger)",
+        "description": "Formats a trigger into a truncated message payload for the worker",
+        "filepath": "src/executor/dsh.ts",
+        "lines": [
+          121,
+          125
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "policyMessage",
+        "function_id": "src/executor/dsh.ts:policyMessage(effect?: PolicyEffect)",
+        "description": "Renders a readable notice describing the effects of a policy change",
+        "filepath": "src/executor/dsh.ts",
+        "lines": [
+          138,
+          148
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "inputMessage",
+        "function_id": "src/executor/dsh.ts:inputMessage(input: TicketInput, trigger?: object)",
+        "description": "Converts a ticket input into the text or JSON delivered to the worker",
+        "filepath": "src/executor/dsh.ts",
+        "lines": [
+          156,
+          164
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [
+      {
+        "class_name": "PrepareFailed",
+        "class_id": "src/executor/dsh.ts:PrepareFailed",
+        "description": "Error indicating the workspace prepare command failed",
+        "super_class": [],
+        "filepath": "src/executor/dsh.ts",
+        "lines": [
+          43,
+          43
+        ],
+        "function": [],
+        "variables": []
+      },
+      {
+        "class_name": "WorkerSlots",
+        "class_id": "src/executor/dsh.ts:WorkerSlots",
+        "description": "Tracks concurrent worker slots, reserving a starting slot per ticket and freeing it",
+        "super_class": [],
+        "filepath": "src/executor/dsh.ts",
+        "lines": [
+          171,
+          199
+        ],
+        "function": [],
+        "variables": []
+      },
+      {
+        "class_name": "DshExecutor",
+        "class_id": "src/executor/dsh.ts:DshExecutor",
+        "description": "Executor implementation that launches, wakes and drives worker sessions for tickets",
+        "super_class": [],
+        "filepath": "src/executor/dsh.ts",
+        "lines": [
+          207,
+          673
+        ],
+        "function": [],
+        "variables": []
+      }
+    ],
+    "interfaces": [
+      {
+        "interface_name": "ExecutorHost",
+        "interface_id": "src/executor/dsh.ts:ExecutorHost",
+        "description": "Host services the executor relies on: context, engine, store, environment, links",
+        "filepath": "src/executor/dsh.ts",
+        "lines": [
+          59,
+          82
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "now",
+        "variable_id": "src/executor/dsh.ts:now",
+        "description": "Returns the current time as an ISO string",
+        "filepath": "src/executor/dsh.ts",
+        "lines": [
+          22,
+          22
+        ]
+      },
+      {
+        "variable_name": "workerSessionId",
+        "variable_id": "src/executor/dsh.ts:workerSessionId",
+        "description": "Builds the worker session ID for a given ticket",
+        "filepath": "src/executor/dsh.ts",
+        "lines": [
+          24,
+          24
+        ]
+      },
+      {
+        "variable_name": "ticketOfSession",
+        "variable_id": "src/executor/dsh.ts:ticketOfSession",
+        "description": "Extracts the ticket ID from a worker session ID",
+        "filepath": "src/executor/dsh.ts",
+        "lines": [
+          26,
+          26
+        ]
+      },
+      {
+        "variable_name": "PREPARE_TIMEOUT_MS",
+        "variable_id": "src/executor/dsh.ts:PREPARE_TIMEOUT_MS",
+        "description": "Timeout for the workspace prepare command (10 minutes)",
+        "filepath": "src/executor/dsh.ts",
+        "lines": [
+          28,
+          28
+        ]
+      },
+      {
+        "variable_name": "TRANSIENT_TRIES",
+        "variable_id": "src/executor/dsh.ts:TRANSIENT_TRIES",
+        "description": "Number of retries allowed for transient failures",
+        "filepath": "src/executor/dsh.ts",
+        "lines": [
+          30,
+          30
+        ]
+      },
+      {
+        "variable_name": "TRANSIENT_BACKOFF_MS",
+        "variable_id": "src/executor/dsh.ts:TRANSIENT_BACKOFF_MS",
+        "description": "Backoff delay before retrying a transient failure (15s)",
+        "filepath": "src/executor/dsh.ts",
+        "lines": [
+          30,
+          30
+        ]
+      },
+      {
+        "variable_name": "BACKGROUND_LIMIT_MS",
+        "variable_id": "src/executor/dsh.ts:BACKGROUND_LIMIT_MS",
+        "description": "Maximum runtime for background jobs (30 minutes)",
+        "filepath": "src/executor/dsh.ts",
+        "lines": [
+          32,
+          32
+        ]
+      },
+      {
+        "variable_name": "SHUTDOWN_STOP_MS",
+        "variable_id": "src/executor/dsh.ts:SHUTDOWN_STOP_MS",
+        "description": "Grace period for stopping workers during shutdown",
+        "filepath": "src/executor/dsh.ts",
+        "lines": [
+          34,
+          34
+        ]
+      },
+      {
+        "variable_name": "SLOT_WAIT_MS",
+        "variable_id": "src/executor/dsh.ts:SLOT_WAIT_MS",
+        "description": "How long to wait for a free worker slot",
+        "filepath": "src/executor/dsh.ts",
+        "lines": [
+          36,
+          36
+        ]
+      },
+      {
+        "variable_name": "fromPerson",
+        "variable_id": "src/executor/dsh.ts:fromPerson",
+        "description": "Whether a ticket input originates from a person rather than context",
+        "filepath": "src/executor/dsh.ts",
+        "lines": [
+          38,
+          38
+        ]
+      },
+      {
+        "variable_name": "PASSING",
+        "variable_id": "src/executor/dsh.ts:PASSING",
+        "description": "Regex matching transient error codes and messages",
+        "filepath": "src/executor/dsh.ts",
+        "lines": [
+          44,
+          45
+        ]
+      },
+      {
+        "variable_name": "ticketWorktreeName",
+        "variable_id": "src/executor/dsh.ts:ticketWorktreeName",
+        "description": "Builds the worktree name from an approved name plus shortened ticket ID",
+        "filepath": "src/executor/dsh.ts",
+        "lines": [
+          57,
+          57
+        ]
+      },
+      {
+        "variable_name": "sourceTrigger",
+        "variable_id": "src/executor/dsh.ts:sourceTrigger",
+        "description": "Looks up a ticket's origin trigger from the store",
+        "filepath": "src/executor/dsh.ts",
+        "lines": [
+          84,
+          85
+        ]
+      },
+      {
+        "variable_name": "ASSIGNMENT_CHARS",
+        "variable_id": "src/executor/dsh.ts:ASSIGNMENT_CHARS",
+        "description": "Maximum characters of assignment text sent to a worker",
+        "filepath": "src/executor/dsh.ts",
+        "lines": [
+          113,
+          113
+        ]
+      },
+      {
+        "variable_name": "TRIGGER_CHARS",
+        "variable_id": "src/executor/dsh.ts:TRIGGER_CHARS",
+        "description": "Maximum characters of trigger text sent to a worker",
+        "filepath": "src/executor/dsh.ts",
+        "lines": [
+          113,
+          113
+        ]
+      },
+      {
+        "variable_name": "capped",
+        "variable_id": "src/executor/dsh.ts:capped",
+        "description": "Truncates text to a limit, adding original length and read resource",
+        "filepath": "src/executor/dsh.ts",
+        "lines": [
+          115,
+          116
+        ]
+      },
+      {
+        "variable_name": "batchLine",
+        "variable_id": "src/executor/dsh.ts:batchLine",
+        "description": "Builds a compact preview line for a trigger batched with the ticket",
+        "filepath": "src/executor/dsh.ts",
+        "lines": [
+          127,
+          128
+        ]
+      },
+      {
+        "variable_name": "batchOf",
+        "variable_id": "src/executor/dsh.ts:batchOf",
+        "description": "Collects the additional triggers batched together with the origin trigger",
+        "filepath": "src/executor/dsh.ts",
+        "lines": [
+          130,
+          131
+        ]
+      },
+      {
+        "variable_name": "RESUMED",
+        "variable_id": "src/executor/dsh.ts:RESUMED",
+        "description": "Instruction text telling a worker how to resume a previously ended ticket",
+        "filepath": "src/executor/dsh.ts",
+        "lines": [
+          132,
+          135
+        ]
+      },
+      {
+        "variable_name": "RETRIED",
+        "variable_id": "src/executor/dsh.ts:RETRIED",
+        "description": "Instruction text for continuing after a person retried the ticket",
+        "filepath": "src/executor/dsh.ts",
+        "lines": [
+          136,
+          136
+        ]
+      },
+      {
+        "variable_name": "inputResource",
+        "variable_id": "src/executor/dsh.ts:inputResource",
+        "description": "Builds the resource path identifying a ticket input",
+        "filepath": "src/executor/dsh.ts",
+        "lines": [
+          150,
+          150
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

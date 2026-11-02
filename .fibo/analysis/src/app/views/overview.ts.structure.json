@@ -1,0 +1,171 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/views/overview.ts",
+    "path": "src/app/views/overview.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "overview.ts",
+    "file_path": "src/app/views/overview.ts",
+    "description": "Overview view module: builds the dashboard overview payload, including Eval health checks and headline metrics.",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Imports reasonText, ticketStage and the Decision/Thread types from the core module.",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "internal",
+        "filepath": "../../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Health type from the sources host module.",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "../../sources/host.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the SetupProblem type from the setup module.",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "../../setup.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the anyoneAllowed policy helper from the policy module.",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "../../policy.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Store type from the app store module.",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "../store.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports view-record helpers (awaitingEval, dayAgo, newestFirst, ownersOf, snapshot, threadSummary) and ViewHost type.",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "./records.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports sourceHealth helper and HealthMap type from the sources view module.",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "./sources.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports ticketRow helper and ExecutorLoad type from the tickets view module.",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "./tickets.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the preview text helper from the text view module.",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "./text.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "unjudged",
+        "function_id": "src/app/views/overview.ts:unjudged(store: Store, since: string)",
+        "description": "Collects threads whose latest decision is an unavailable Eval within the time window and still needs judgement.",
+        "filepath": "src/app/views/overview.ts",
+        "lines": [
+          13,
+          24
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "evalsHealth",
+        "function_id": "src/app/views/overview.ts:evalsHealth(store: Store, now = Date.now())",
+        "description": "Computes health status by checking for unavailable Evals in the last hour that lack a later judgement.",
+        "filepath": "src/app/views/overview.ts",
+        "lines": [
+          26,
+          33
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "overview",
+        "function_id": "src/app/views/overview.ts:overview(host: ViewHost, health: HealthMap, policyVersionValue: string, load: ExecutorLoad, setup?: SetupProblem)",
+        "description": "Assembles the overview view model: flow counts, executor load, source health, tickets and policy version.",
+        "filepath": "src/app/views/overview.ts",
+        "lines": [
+          38,
+          79
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "OverviewView",
+        "alias_id": "src/app/views/overview.ts:OverviewView",
+        "description": "Type alias for the return type of the overview view builder.",
+        "filepath": "src/app/views/overview.ts",
+        "lines": [
+          80,
+          80
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

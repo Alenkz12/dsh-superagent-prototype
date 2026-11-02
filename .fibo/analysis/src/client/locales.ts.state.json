@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/locales.ts",
+    "path": "src/client/locales.ts",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "0aede6cb325b09d2524c5169f8b21799382ccea7786a62f8f2c81e15faa2e108",
+  "sourceFingerprint": "d172c86d672b9244effe3590bc7c25ac71b80d3ccbb7d6c5fe76848ce31eba12",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/client",
+      "resultFingerprint": "7bf3ac2d009d046122c35f91b95f5cb11c1fc74f53cdfbb3bacbc80ac2b588dc"
+    },
+    {
+      "kind": "file",
+      "path": "docs/007-architecture.md",
+      "contentFingerprint": "e3747665587fdf88b28d4e9c1a1f8ac40cbc2c65a9999be1fce14b69ec44d748"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/app.tsx",
+      "contentFingerprint": "23cca247e0a67fb581df6fc517522ccf0026a4897cda109c9e57c367cb2b1051"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/index.tsx",
+      "contentFingerprint": "6a7e5a0295ecbbd047dbb619e0cdf9d1489a46c8dfcc56dbfd1cfe6f6d866529"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/locales.ts",
+      "contentFingerprint": "d172c86d672b9244effe3590bc7c25ac71b80d3ccbb7d6c5fe76848ce31eba12"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/marks.ts",
+      "contentFingerprint": "e7e05436be442342fa6a2ba43a702563a88a46cdd07da50760d8b5ecd2fc06f6"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/text.ts",
+      "contentFingerprint": "b5c4a264ea799f40598b66d175b434dcb37e2033cddffad8f3e0c8ec1e080c92"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/errors.ts",
+      "contentFingerprint": "aa7532a2d1f8c443608683ef1231bf3d81b842f67a87d9b77742b5c76d515009"
+    },
+    {
+      "kind": "file",
+      "path": "src/setup.ts",
+      "contentFingerprint": "eae13507edd63c331ccde9e979835202e742378cca2eb35fcd12af60e48fc6f2"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/host.ts",
+      "contentFingerprint": "b07998dad9194319a95a9436084cf1612aef9c4c6de22288cfa04258bbfbb1ce"
+    },
+    {
+      "kind": "file",
+      "path": "tests/client.spec.tsx",
+      "contentFingerprint": "d461100292003de600d2154c5273212cb07e571c03870ff5200b95c205fca99e"
+    },
+    {
+      "kind": "file",
+      "path": "tests/fixtures/panel.tsx",
+      "contentFingerprint": "c6ce5095b92dc5c0e9af1f1c19688ffae79240cd8cf201faaf2d3792d7e314f7"
+    },
+    {
+      "kind": "file",
+      "path": "tests/locales.spec.ts",
+      "contentFingerprint": "18d918f19e0fa5c129f51027d13fc1b7980f751bd31cbbe5b5db1e5e60684545"
+    },
+    {
+      "kind": "file",
+      "path": "tests/marks.spec.ts",
+      "contentFingerprint": "22cf8ea8cf16d80389d12946828d110af12820dda9a2b18d6fbb0e312b7759ef"
+    },
+    {
+      "kind": "file",
+      "path": "tests/panel-deployment.spec.tsx",
+      "contentFingerprint": "7635cf0906d308ced62532dc2b5e80e8c227a3d1f347364f5397c06365b8421c"
+    },
+    {
+      "kind": "file",
+      "path": "tests/panel-eval.spec.tsx",
+      "contentFingerprint": "c082a28400a3dc29c26ee1be8f699d57400d21e7ec655df3b446c13b685f91c4"
+    },
+    {
+      "kind": "file",
+      "path": "tests/panel-execution.spec.tsx",
+      "contentFingerprint": "081dcef113d52003adb61b6ac1a6cc910344416e77086452e4188e7d728252ba"
+    },
+    {
+      "kind": "file",
+      "path": "tests/panel-overview.spec.tsx",
+      "contentFingerprint": "7f8a9c395aa9577702b90e18c756c06fbb0a12f205f85ce78c36c2c7ac2bf1ce"
+    },
+    {
+      "kind": "file",
+      "path": "tests/panel-panel.spec.tsx",
+      "contentFingerprint": "6adbde04601057e2cc513374f46e58609e17c4d1eb766eb0f2211e0b3a6ee913"
+    },
+    {
+      "kind": "file",
+      "path": "tests/panel-prompts.spec.tsx",
+      "contentFingerprint": "d2bc0198f2fa5f0ee69a94f341e6b1787aad08bf1a179e1b9ef32ae727c7a932"
+    },
+    {
+      "kind": "file",
+      "path": "tests/panel-settings.spec.tsx",
+      "contentFingerprint": "927742c31e22e769fd5d8cfc6419b2cf9233086054cee19efea5b13683fc7dd5"
+    },
+    {
+      "kind": "file",
+      "path": "tests/panel-source.spec.tsx",
+      "contentFingerprint": "d4fa5c3d4bbcf2189021824f08be4d7aaca9006711995aa86fc63f93f75049a7"
+    },
+    {
+      "kind": "file",
+      "path": "tests/panel-trigger.spec.tsx",
+      "contentFingerprint": "27da19a6a9dad80967215a5dc3efb847e8ae1b4af277b4ff92b355299f7b548f"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "locales.ts",
+      "limit": 40,
+      "resultFingerprint": "24043084eed11a20f8685fbb1dc71b8f386fdc3daf715a0b06a2f0ca12cb1fb5"
+    },
+    {
+      "kind": "search",
+      "path": "src/client",
+      "query": "GLOSSARY",
+      "limit": 40,
+      "resultFingerprint": "c4f9ae675a8b813140d9f763bf282499cd92be9baf3ae8e266cc9ef7ec066006"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/locales.ts",
+      "query": "  // ",
+      "limit": 100,
+      "resultFingerprint": "a0a57952aa237bdf3a22a21396c4102687fa527b69148646e687bb5da07e2b24"
+    },
+    {
+      "kind": "search",
+      "path": "src/core/errors.ts",
+      "query": "USER_ERRORS",
+      "limit": 20,
+      "resultFingerprint": "de26172866b141a0e592c339b679b617176710002d24c223dff6f832b7c315a7"
+    },
+    {
+      "kind": "search",
+      "path": "src/setup.ts",
+      "query": "SETUP_PROBLEMS = {",
+      "limit": 20,
+      "resultFingerprint": "b40c20fc6ab2280b90430aca8b7b9fdb65c761107a9df25fc7a159d62a9a937f"
+    },
+    {
+      "kind": "search",
+      "path": "src/sources/host.ts",
+      "query": "HEALTH_TEXT",
+      "limit": 30,
+      "resultFingerprint": "33b9e019a8be4fabbbba137699eb1801cee3bcd354da57c965a60f4194574959"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-presentation:data-contract",
+      "contentFingerprint": "5898043d3b94ee93d1bc1119f3b213aebdafa317bfb58b7c1230e0e7f2f25311"
+    }
+  ],
+  "infoFingerprint": "6b30905e47c6124921aa36337c5e8cb4676db5b38322336c6a97718092cbd43a",
+  "artifacts": {
+    "info": ".fibo/analysis/src/client/locales.ts.info.md",
+    "structure": ".fibo/analysis/src/client/locales.ts.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "6b30905e47c6124921aa36337c5e8cb4676db5b38322336c6a97718092cbd43a",
+    "structure": "27bf75552fb73c66a99f30e89fde572baaeec913f34ecd89be68339d0f92050e"
+  }
+}

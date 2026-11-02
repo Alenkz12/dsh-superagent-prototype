@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/sources/admission-context.ts",
+    "path": "src/sources/admission-context.ts",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "a512950412cbd463cf16b8bf7700c301039ebf1d14c714cab28a7ae287e0b24b",
+  "sourceFingerprint": "c13b421c479f02dfc5846ef266081586afe33d685c742c37e62d69ccd182557f",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "docs",
+      "resultFingerprint": "8bca2be44cab62bf11e6c8581f442fe777036f5781ba9217a235318e82b588a2"
+    },
+    {
+      "kind": "directory-listing",
+      "path": "src/sources",
+      "resultFingerprint": "e13a5d7335d2907bee6071268ebe6f12a05e34a0f356774711e36baefff226d6"
+    },
+    {
+      "kind": "file",
+      "path": "docs/006-deployment.md",
+      "contentFingerprint": "92c5a1c6aecab6782a64b3847a2d6f36a48dc9865fa7b04b892fcdaf04f7de9d"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/assessment.ts",
+      "contentFingerprint": "5b2c2cf71093fd560f1f3a57cc476f122241b780fbeb2f6007e727943142b545"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/http.ts",
+      "contentFingerprint": "5da39830429559975cae7ae6d39416acb2322ac8e31cfb4da3436df602cb7ec4"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/deployment.tsx",
+      "contentFingerprint": "c37ebd5a24d0319a28d3d98a76dde23d9694b0fad4a7900df0eff85de82afb4b"
+    },
+    {
+      "kind": "file",
+      "path": "src/deployment.ts",
+      "contentFingerprint": "9984953f17592b267e386d4028552d413cfe9c9ac4df6dfb730b6be5115dbf77"
+    },
+    {
+      "kind": "file",
+      "path": "src/infra/commands.ts",
+      "contentFingerprint": "9d7593c5022e0c1813731c1f1cd8471b1536b0b5f42974a08ef2b2930c1e62b2"
+    },
+    {
+      "kind": "file",
+      "path": "src/limits.ts",
+      "contentFingerprint": "78e4171e6624580038996e3931888cd1cdbefa5c0e1035235c4dffdbb4af236f"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/admission-context.ts",
+      "contentFingerprint": "c13b421c479f02dfc5846ef266081586afe33d685c742c37e62d69ccd182557f"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/kind.ts",
+      "contentFingerprint": "4ea3d8eee14707e0ee9b67289a62b1a568bab64732bd04041da5ad89bc9a7e98"
+    },
+    {
+      "kind": "file",
+      "path": "tests/admission-context.spec.ts",
+      "contentFingerprint": "10d4febfefb890dcef404e3119bb1b4a27c78ff913c8d5b178170ef7be92c12d"
+    },
+    {
+      "kind": "file",
+      "path": "tests/client.spec.tsx",
+      "contentFingerprint": "d461100292003de600d2154c5273212cb07e571c03870ff5200b95c205fca99e"
+    },
+    {
+      "kind": "file",
+      "path": "tests/deployment.spec.ts",
+      "contentFingerprint": "8fcb5c03a8ff3212850c3d1c668f8506413e0e73ba0233d5b7f5320024496e55"
+    },
+    {
+      "kind": "file",
+      "path": "tests/fixtures/deployment.ts",
+      "contentFingerprint": "48a7af52fa153b2da58e952cce726bb40f4a4f5b59dbf41b0409fa581425faf7"
+    },
+    {
+      "kind": "file",
+      "path": "tests/fixtures/panel-server.ts",
+      "contentFingerprint": "02ea5bca9c55e17da1d88af7bd835a1c59a9ca099a9f2f9a05c7a490595d472c"
+    },
+    {
+      "kind": "file",
+      "path": "tests/panel-deployment.spec.tsx",
+      "contentFingerprint": "7635cf0906d308ced62532dc2b5e80e8c227a3d1f347364f5397c06365b8421c"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "admissionContext",
+      "limit": 50,
+      "resultFingerprint": "e17fe29cb802a541e351e32ae2df900e96634aa2fa8d6add1838ebed02755638"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "omitted_before",
+      "limit": 50,
+      "resultFingerprint": "4bd111b9c6188444a86617db224692c4ebafefdc4b6cbe46bbcbb61a17dae6fa"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "threadWindow",
+      "limit": 50,
+      "resultFingerprint": "30d2a0ca14915689bb11185d28f1a0905d2f0649a16434310335e95ec3b0ca31"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "window.entries",
+      "limit": 50,
+      "resultFingerprint": "a3ca44deef26473d19a56624e21149fbde5cbf3528e79374896ed97f3feee27e"
+    },
+    {
+      "kind": "search",
+      "path": "docs",
+      "query": "admission context",
+      "limit": 20,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-orchestration:data-contract",
+      "contentFingerprint": "391c2f8cd5780f3a909496bbb029fe5c7f982b4bd22c5a5787ecb268043e267d"
+    }
+  ],
+  "infoFingerprint": "34abd9c8c66f3b786f5df5954b004c88dee38de8699544a5d18565b06caba9d2",
+  "artifacts": {
+    "info": ".fibo/analysis/src/sources/admission-context.ts.info.md",
+    "structure": ".fibo/analysis/src/sources/admission-context.ts.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "34abd9c8c66f3b786f5df5954b004c88dee38de8699544a5d18565b06caba9d2",
+    "structure": "5b151609e496fb77ffc75d0982a936ece495ade21f5b8d93bc748d63b34352d9"
+  }
+}

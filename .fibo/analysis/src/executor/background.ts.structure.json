@@ -1,0 +1,288 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/executor/background.ts",
+    "path": "src/executor/background.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "background.ts",
+    "file_path": "src/executor/background.ts",
+    "description": "Utilities for stopping and draining background agents and shell jobs",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "cordis",
+        "description": "Imports the Context type from cordis",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "dsh-agent",
+        "description": "Imports the Agent type from dsh-agent",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "dsh-session",
+        "description": "Imports the SessionId type from dsh-session",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "until",
+        "function_id": "src/executor/background.ts:until(work: Promise<T>, signal?: AbortSignal, ms?: number)",
+        "description": "Races work against abort signal and optional timeout, returning false when stopped",
+        "filepath": "src/executor/background.ts",
+        "lines": [
+          36,
+          44
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "childrenEnd",
+        "function_id": "src/executor/background.ts:childrenEnd(subagents: Subagents, agent: Agent)",
+        "description": "Waits for an agent's child subagents to finish, caching the join promise",
+        "filepath": "src/executor/background.ts",
+        "lines": [
+          49,
+          56
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "jobsEnd",
+        "function_id": "src/executor/background.ts:jobsEnd(ctx: Context, sessionId: string, signal: AbortSignal, except?: ReadonlySet<string>)",
+        "description": "Waits until a session has no owned running jobs, respecting abort signals",
+        "filepath": "src/executor/background.ts",
+        "lines": [
+          70,
+          87
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "untilQuiet",
+        "function_id": "src/executor/background.ts:untilQuiet(ctx: Context, agent: Agent, signal: AbortSignal, except?: ReadonlySet<string>)",
+        "description": "Polls child and job completion until the agent is idle and background work ends",
+        "filepath": "src/executor/background.ts",
+        "lines": [
+          96,
+          104
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "killJobs",
+        "function_id": "src/executor/background.ts:killJobs(ctx: Context, sessionId: string, reason: string, except?: ReadonlySet<string>)",
+        "description": "Kills owned jobs for a session and waits for them to settle, aggregating failures",
+        "filepath": "src/executor/background.ts",
+        "lines": [
+          110,
+          119
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "collectJob",
+        "function_id": "src/executor/background.ts:collectJob(ctx: Context, sessionId: string, job: { id: string; name: string }, signal: AbortSignal)",
+        "description": "Waits for a job to finish and returns its name and status, or undefined on abort",
+        "filepath": "src/executor/background.ts",
+        "lines": [
+          125,
+          134
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "stopSubagents",
+        "function_id": "src/executor/background.ts:stopSubagents(ctx: Context, agent: Agent, keepInbox = false)",
+        "description": "Drains and cancels an agent's subagents, then waits until the agent is idle",
+        "filepath": "src/executor/background.ts",
+        "lines": [
+          141,
+          153
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "stopBackground",
+        "function_id": "src/executor/background.ts:stopBackground(ctx: Context, sessionId: string, reason: string, keepInbox = false)",
+        "description": "Stops a session's jobs and subagents, aggregating any failures",
+        "filepath": "src/executor/background.ts",
+        "lines": [
+          159,
+          165
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "Jobs",
+        "interface_id": "src/executor/background.ts:Jobs",
+        "description": "Job registry interface for listing, waiting on, killing, and observing jobs",
+        "filepath": "src/executor/background.ts",
+        "lines": [
+          10,
+          15
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "Subagents",
+        "interface_id": "src/executor/background.ts:Subagents",
+        "description": "Subagent interface for waiting on, listing, and draining child agents",
+        "filepath": "src/executor/background.ts",
+        "lines": [
+          17,
+          21
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "KILL_WAIT_MS",
+        "variable_id": "src/executor/background.ts:KILL_WAIT_MS",
+        "description": "Timeout in milliseconds for waiting on jobs after killing them",
+        "filepath": "src/executor/background.ts",
+        "lines": [
+          23,
+          23
+        ]
+      },
+      {
+        "variable_name": "DRAIN_LIMIT_MS",
+        "variable_id": "src/executor/background.ts:DRAIN_LIMIT_MS",
+        "description": "Timeout in milliseconds for draining subagents",
+        "filepath": "src/executor/background.ts",
+        "lines": [
+          25,
+          25
+        ]
+      },
+      {
+        "variable_name": "COLLECT_WAIT_MS",
+        "variable_id": "src/executor/background.ts:COLLECT_WAIT_MS",
+        "description": "Timeout in milliseconds for each job collection wait",
+        "filepath": "src/executor/background.ts",
+        "lines": [
+          27,
+          27
+        ]
+      },
+      {
+        "variable_name": "registry",
+        "variable_id": "src/executor/background.ts:registry",
+        "description": "Retrieves the jobs registry from the context",
+        "filepath": "src/executor/background.ts",
+        "lines": [
+          29,
+          29
+        ]
+      },
+      {
+        "variable_name": "subagentsOf",
+        "variable_id": "src/executor/background.ts:subagentsOf",
+        "description": "Retrieves the subagents service from the context",
+        "filepath": "src/executor/background.ts",
+        "lines": [
+          30,
+          30
+        ]
+      },
+      {
+        "variable_name": "running",
+        "variable_id": "src/executor/background.ts:running",
+        "description": "Checks whether a job status is running or stopping",
+        "filepath": "src/executor/background.ts",
+        "lines": [
+          31,
+          31
+        ]
+      },
+      {
+        "variable_name": "owned",
+        "variable_id": "src/executor/background.ts:owned",
+        "description": "Lists running jobs owned by a session, excluding specified job ids",
+        "filepath": "src/executor/background.ts",
+        "lines": [
+          33,
+          34
+        ]
+      },
+      {
+        "variable_name": "cancelled",
+        "variable_id": "src/executor/background.ts:cancelled",
+        "description": "Tracks agents whose subagents have been cancelled",
+        "filepath": "src/executor/background.ts",
+        "lines": [
+          46,
+          46
+        ]
+      },
+      {
+        "variable_name": "joins",
+        "variable_id": "src/executor/background.ts:joins",
+        "description": "Caches per-agent promises for waiting on child completion",
+        "filepath": "src/executor/background.ts",
+        "lines": [
+          48,
+          48
+        ]
+      },
+      {
+        "variable_name": "named",
+        "variable_id": "src/executor/background.ts:named",
+        "description": "Formats a job id with the first line of its label",
+        "filepath": "src/executor/background.ts",
+        "lines": [
+          59,
+          59
+        ]
+      },
+      {
+        "variable_name": "runningJobs",
+        "variable_id": "src/executor/background.ts:runningJobs",
+        "description": "Lists owned running jobs as id and name pairs",
+        "filepath": "src/executor/background.ts",
+        "lines": [
+          61,
+          64
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

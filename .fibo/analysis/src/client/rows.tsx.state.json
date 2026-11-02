@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/rows.tsx",
+    "path": "src/client/rows.tsx",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "75d61b194510e7c2f5b574856db667f41aa65ba25bebbd039499698144b4f38e",
+  "sourceFingerprint": "905d0859ac8f7d7b6bf9375b30a9c1bcf2744c11f171e6e9070c6b0328490458",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/client",
+      "resultFingerprint": "7bf3ac2d009d046122c35f91b95f5cb11c1fc74f53cdfbb3bacbc80ac2b588dc"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/api.ts",
+      "contentFingerprint": "800b0347183c39601b8b7cd33607dee2538eb8da5feb5f1c7e13a1a7c2268f36"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/app.tsx",
+      "contentFingerprint": "23cca247e0a67fb581df6fc517522ccf0026a4897cda109c9e57c367cb2b1051"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/client.css",
+      "contentFingerprint": "8de57c24e782831b713dd5221900ee3a45172285f8598b80b27797cd9799db32"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/controls.tsx",
+      "contentFingerprint": "be4d4eae4e1d811c027c04fdebfa55ef40e38d6a5b0711cfb2b0d30a9b646d79"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/eval.tsx",
+      "contentFingerprint": "44350064a4a7649e418ea5db25d98a58e31f77b8171393589c5b4644d03b8cc8"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/execution.tsx",
+      "contentFingerprint": "8d9200aab40f092972234fc5712a78f1db0c1ad581517d574f8b8143c289959c"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/locales.ts",
+      "contentFingerprint": "d172c86d672b9244effe3590bc7c25ac71b80d3ccbb7d6c5fe76848ce31eba12"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/markdown.ts",
+      "contentFingerprint": "5993337bd0b5c9672eab57628e1f94ecb6db5be4f1e13174d7f6336d60eb8a51"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/marks.ts",
+      "contentFingerprint": "e7e05436be442342fa6a2ba43a702563a88a46cdd07da50760d8b5ecd2fc06f6"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/overview.tsx",
+      "contentFingerprint": "316efe735bdfd6e109483916a5a2ba2f78a10618eff0caff59389af541c98f48"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/provider.tsx",
+      "contentFingerprint": "5639db28e87c1fa0752a30b5280c2e492685bea0593809f72c975b5274d12a8f"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/rows.tsx",
+      "contentFingerprint": "905d0859ac8f7d7b6bf9375b30a9c1bcf2744c11f171e6e9070c6b0328490458"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/text.ts",
+      "contentFingerprint": "b5c4a264ea799f40598b66d175b434dcb37e2033cddffad8f3e0c8ec1e080c92"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/thread.tsx",
+      "contentFingerprint": "6870694d97c1c1e75bbd43f0ed7efbf6e6eba50a19a27c60fef7b052a5a979f6"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/ticket.tsx",
+      "contentFingerprint": "0d78ec9067cb1e11169ae283b038ffa43859fe2380557a90ea980a492f28bc73"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/trigger.tsx",
+      "contentFingerprint": "934de63606db7721bbd18b829900a3b158f40330ad51b5223346477fba0794aa"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/widgets.tsx",
+      "contentFingerprint": "6aa900da1203bb7c05a81f1aa8f98376ef6c5edbc6b8f6adce2719d18b1995f4"
+    },
+    {
+      "kind": "search",
+      "path": "src/client",
+      "query": "automatedRuns",
+      "limit": 30,
+      "resultFingerprint": "95cdbe9c99fda7322ec1334edaf61da07e61ea52eeef663d20704cc7ccbb14c8"
+    },
+    {
+      "kind": "search",
+      "path": "src/client",
+      "query": "from './rows.tsx'",
+      "limit": 40,
+      "resultFingerprint": "b66f2b144589b7d9783a0a14b3ba8be2de2db125a800a74c47a98df7e408b4ab"
+    },
+    {
+      "kind": "search",
+      "path": "src/client",
+      "query": "question",
+      "limit": 30,
+      "resultFingerprint": "d5e8e078cfd1529361dd895cd61e3765ade9830054184d4008dff0cf0d5231f0"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/api.ts",
+      "query": "export interface TicketRow",
+      "limit": 50,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/api.ts",
+      "query": "TicketRow",
+      "limit": 20,
+      "resultFingerprint": "73416b953fd450ee716916a9281ac342a2cfc95ec3149284d31b7acdb2693395"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/client.css",
+      "query": ".dt-ticket-actions",
+      "limit": 25,
+      "resultFingerprint": "e4f1d3c2f680897f73c710a2e23873b54abf65fa25261a0c66052fee324526b7"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/controls.tsx",
+      "query": "export function Tag",
+      "limit": 20,
+      "resultFingerprint": "767d7d1c875780cf72ef626225652012779c3bad6b2300ab6f593ae0fb15c9ff"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/provider.tsx",
+      "query": "export function usePanel",
+      "limit": 40,
+      "resultFingerprint": "adb0cfbb23fb0ae40c69bbb464c340002add808e2911ba9b4f9643e1f5c277ac"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-presentation:utility",
+      "contentFingerprint": "c195027e8a6911d944f9dfce8cb94757b8c4d6fa0eafa14c2d1aba0e44485a3f"
+    }
+  ],
+  "infoFingerprint": "52c0bbe10705f80ed7c468a75ba3202c19ef5f93ba89aa2713d7cabae6e55fc1",
+  "artifacts": {
+    "info": ".fibo/analysis/src/client/rows.tsx.info.md",
+    "structure": ".fibo/analysis/src/client/rows.tsx.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "52c0bbe10705f80ed7c468a75ba3202c19ef5f93ba89aa2713d7cabae6e55fc1",
+    "structure": "164310271a36c8e66d509b357dda84811d9c9dd8545781784fa97acc12e05abb"
+  }
+}

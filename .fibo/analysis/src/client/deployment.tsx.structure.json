@@ -1,0 +1,504 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/deployment.tsx",
+    "path": "src/client/deployment.tsx",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "deployment.tsx",
+    "file_path": "src/client/deployment.tsx",
+    "description": "Deployment settings view shared between the panel Settings tab and the DSH Plugin Manager config page. Edits host-level plugin configuration limits through DSH ConfigForm when writable, and falls back to read-only display otherwise.",
+    "file_type": "tsx",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ConfigForm",
+        "description": "Generic config form object provided by the DSH client settings UI package (subscribe/getSnapshot/mutate API).",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "class_name": "ConfigPageForm",
+        "description": "Config page form type provided by the DSH plugin manager client UI package.",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "class_name": "SetupView",
+        "description": "Shape of the setup/installation information exposed by the panel client API.",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "src/client/api.ts",
+        "alias": ""
+      },
+      {
+        "class_name": "T",
+        "description": "Translation function type used by the panel client.",
+        "lines": [
+          14,
+          14
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      }
+    ],
+    "import_function": [
+      {
+        "function_name": "useCallback",
+        "description": "React hook that memoizes a callback function.",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "useMemo",
+        "description": "React hook that memoizes a computed value.",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "useSyncExternalStore",
+        "description": "React hook that subscribes to an external store and returns its snapshot.",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "LIMITS",
+        "description": "Numeric limit definitions (min/max) for the machine-level limit keys.",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/limits.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "InfoTip",
+        "description": "Small informational tooltip widget component.",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "Input",
+        "description": "Generic panel input control component.",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "SaveBar",
+        "description": "Bar rendering save/discard controls for a draft form.",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/draft.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "useDraft",
+        "description": "Hook managing draft state, dirty tracking, submit and discard for an editable form.",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/draft.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "PanelProvider",
+        "description": "React context provider supplying translation and notification helpers to panel components.",
+        "lines": [
+          12,
+          12
+        ],
+        "source": "internal",
+        "filepath": "src/client/provider.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "usePanel",
+        "description": "Hook returning panel context values such as `t` (translator) and `notify`.",
+        "lines": [
+          12,
+          12
+        ],
+        "source": "internal",
+        "filepath": "src/client/provider.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "usePanelData",
+        "description": "Hook returning panel data state (setup data, loading/error) polled by the provider.",
+        "lines": [
+          12,
+          12
+        ],
+        "source": "internal",
+        "filepath": "src/client/provider.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "Field",
+        "description": "Layout component rendering a labeled form field.",
+        "lines": [
+          13,
+          13
+        ],
+        "source": "internal",
+        "filepath": "src/client/settings-kit.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "Fields",
+        "description": "Layout container grouping multiple form fields, supports a disabled state.",
+        "lines": [
+          13,
+          13
+        ],
+        "source": "internal",
+        "filepath": "src/client/settings-kit.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "setupText",
+        "description": "Translates a setup problem/status descriptor into localized text.",
+        "lines": [
+          14,
+          14
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "CheckSetupButton",
+        "description": "Button that re-checks the setup state.",
+        "lines": [
+          15,
+          15
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "Hint",
+        "description": "Small hint/helper text component.",
+        "lines": [
+          15,
+          15
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "KeyValues",
+        "description": "Component rendering rows of label/value pairs.",
+        "lines": [
+          15,
+          15
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "Section",
+        "description": "Section container with title and optional hint.",
+        "lines": [
+          15,
+          15
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "SetupMessage",
+        "description": "Component rendering a setup problem message.",
+        "lines": [
+          15,
+          15
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      }
+    ],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "usePageForm",
+        "function_id": "src/client/deployment.tsx:usePageForm(ConfigForm<Record<string, unknown>> | undefined)",
+        "description": "Adapts a DSH ConfigForm into a stable DeploymentForm object by subscribing to its snapshot with useSyncExternalStore.",
+        "filepath": "src/client/deployment.tsx",
+        "lines": [
+          26,
+          30
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "form",
+            "param_type": "ConfigForm<Record<string, unknown>> | undefined",
+            "description": "DSH config form instance, or undefined when no form is available.",
+            "is_optional": true
+          }
+        ],
+        "return_type": "DeploymentForm",
+        "is_async": false,
+        "generics": [
+          "Record<string, unknown>"
+        ],
+        "decorators": []
+      },
+      {
+        "function_name": "DeploymentPage",
+        "function_id": "src/client/deployment.tsx:DeploymentPage({ setup: SetupView; form: DeploymentForm; accounts?: boolean })",
+        "description": "Renders the deployment configuration form: derived account info, state directory and editable machine limits, with read-only fallbacks and a save bar when writable.",
+        "filepath": "src/client/deployment.tsx",
+        "lines": [
+          33,
+          84
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "setup",
+            "param_type": "SetupView",
+            "description": "Current setup view data including machine info and account bindings.",
+            "is_optional": false
+          },
+          {
+            "param_name": "form",
+            "param_type": "DeploymentForm",
+            "description": "Deployment config form used to read and mutate limit values.",
+            "is_optional": false
+          },
+          {
+            "param_name": "accounts",
+            "param_type": "boolean",
+            "description": "Destructured as `showAccounts`; whether to render the derived repository/agent/Feishu section.",
+            "is_optional": true
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "PluginPage",
+        "function_id": "src/client/deployment.tsx:PluginPage({ form: DeploymentForm })",
+        "description": "Plugin Manager config page wrapper that loads panel data and renders DeploymentPage with derived accounts, or an error/loading message.",
+        "filepath": "src/client/deployment.tsx",
+        "lines": [
+          87,
+          94
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "form",
+            "param_type": "DeploymentForm",
+            "description": "Deployment config form passed through from the plugin manager.",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "PluginConfig",
+        "function_id": "src/client/deployment.tsx:PluginConfig({ t: T; view: 'page' | 'summary'; form: DeploymentForm })",
+        "description": "DSH Plugin Manager config view entry point; renders the PluginPage inside a PanelProvider in 'page' view and nothing in 'summary' view.",
+        "filepath": "src/client/deployment.tsx",
+        "lines": [
+          96,
+          98
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "t",
+            "param_type": "T",
+            "description": "Translator supplied by the DSH plugin manager host.",
+            "is_optional": false
+          },
+          {
+            "param_name": "view",
+            "param_type": "'page' | 'summary'",
+            "description": "Which plugin manager view variant is being rendered.",
+            "is_optional": false
+          },
+          {
+            "param_name": "form",
+            "param_type": "DeploymentForm",
+            "description": "Deployment config form passed through to the page.",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element | null",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "text",
+        "function_id": "src/client/deployment.tsx:text(value: unknown)",
+        "description": "Arrow helper converting a string or number value to a string, returning an empty string for other types.",
+        "filepath": "src/client/deployment.tsx",
+        "lines": [
+          22,
+          22
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "value",
+            "param_type": "unknown",
+            "description": "Value read from the config snapshot that should be normalized to a string.",
+            "is_optional": false
+          }
+        ],
+        "return_type": "string",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "limitsOf",
+        "function_id": "src/client/deployment.tsx:limitsOf(values: object | undefined)",
+        "description": "Arrow helper building a Limits record by stringifying each machine limit key from the given values object.",
+        "filepath": "src/client/deployment.tsx",
+        "lines": [
+          23,
+          24
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "values",
+            "param_type": "object | undefined",
+            "description": "Source object (config snapshot value or setup.machine) to read limit values from.",
+            "is_optional": true
+          }
+        ],
+        "return_type": "Limits",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      }
+    ],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [
+      {
+        "constant_name": "MACHINE_LIMITS",
+        "constant_id": "src/client/deployment.tsx:MACHINE_LIMITS",
+        "description": "Tuple of the machine-level limit keys edited by the deployment form.",
+        "filepath": "src/client/deployment.tsx",
+        "lines": [
+          20,
+          20
+        ],
+        "constant_type": "readonly ['promptMaxChars', 'admissionContextMaxPages', 'admissionContextTimeoutMs']",
+        "value": "['promptMaxChars', 'admissionContextMaxPages', 'admissionContextTimeoutMs'] as const"
+      }
+    ],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "DeploymentForm",
+        "alias_id": "src/client/deployment.tsx:DeploymentForm",
+        "description": "Either a DSH plugin-manager config page form or undefined when config forms are unavailable.",
+        "filepath": "src/client/deployment.tsx",
+        "lines": [
+          17,
+          17
+        ],
+        "target_type": "ConfigPageForm | undefined",
+        "generics": []
+      },
+      {
+        "alias_name": "Op",
+        "alias_id": "src/client/deployment.tsx:Op",
+        "description": "Single mutation operation extracted from the ConfigPageForm mutate signature.",
+        "filepath": "src/client/deployment.tsx",
+        "lines": [
+          18,
+          18
+        ],
+        "target_type": "Parameters<ConfigPageForm['mutate']>[0][number]",
+        "generics": []
+      },
+      {
+        "alias_name": "Limits",
+        "alias_id": "src/client/deployment.tsx:Limits",
+        "description": "Record mapping each machine limit key to its string (draft) representation.",
+        "filepath": "src/client/deployment.tsx",
+        "lines": [
+          21,
+          21
+        ],
+        "target_type": "Record<typeof MACHINE_LIMITS[number], string>",
+        "generics": []
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

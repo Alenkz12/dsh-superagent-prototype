@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/infra/text.ts",
+    "path": "src/infra/text.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "text.ts",
+    "file_path": "src/infra/text.ts",
+    "description": "Text utilities for word counting, IM length limits, templating and string helpers",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "wordCount",
+        "function_id": "src/infra/text.ts:wordCount(text: string)",
+        "description": "Counts word-like segments in text using an Intl.Segmenter",
+        "filepath": "src/infra/text.ts",
+        "lines": [
+          6,
+          10
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "checkedImText",
+        "function_id": "src/infra/text.ts:checkedImText(text: string)",
+        "description": "Validates text against the IM word limit and throws if exceeded, else returns it",
+        "filepath": "src/infra/text.ts",
+        "lines": [
+          12,
+          16
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "words",
+        "variable_id": "src/infra/text.ts:words",
+        "description": "Chinese word-granularity Intl.Segmenter used for word counting",
+        "filepath": "src/infra/text.ts",
+        "lines": [
+          2,
+          2
+        ]
+      },
+      {
+        "variable_name": "IM_WORDS",
+        "variable_id": "src/infra/text.ts:IM_WORDS",
+        "description": "Maximum allowed word count for an IM message (100)",
+        "filepath": "src/infra/text.ts",
+        "lines": [
+          3,
+          3
+        ]
+      },
+      {
+        "variable_name": "NOTE_WORDS",
+        "variable_id": "src/infra/text.ts:NOTE_WORDS",
+        "description": "Maximum allowed word count for a note (30)",
+        "filepath": "src/infra/text.ts",
+        "lines": [
+          4,
+          4
+        ]
+      },
+      {
+        "variable_name": "fill",
+        "variable_id": "src/infra/text.ts:fill",
+        "description": "Replaces {name} placeholders in a template with values, defaulting to empty",
+        "filepath": "src/infra/text.ts",
+        "lines": [
+          17,
+          17
+        ]
+      },
+      {
+        "variable_name": "sameName",
+        "variable_id": "src/infra/text.ts:sameName",
+        "description": "Case-insensitive comparison of two names",
+        "filepath": "src/infra/text.ts",
+        "lines": [
+          19,
+          19
+        ]
+      },
+      {
+        "variable_name": "escapeRegExp",
+        "variable_id": "src/infra/text.ts:escapeRegExp",
+        "description": "Escapes regex special characters in a string",
+        "filepath": "src/infra/text.ts",
+        "lines": [
+          20,
+          20
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

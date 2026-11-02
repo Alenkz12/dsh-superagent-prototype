@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/role-models.ts",
+    "path": "src/app/role-models.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "role-models.ts",
+    "file_path": "src/app/role-models.ts",
+    "description": "Role model resolution and initialization helpers for agent sessions",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "cordis",
+        "description": "Cordis framework Context type used for dependency injection",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "dsh-agent",
+        "description": "Agent and ModelSelection types from the dsh-agent package",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "dsh-llm",
+        "description": "ReasoningEffortId helper from the dsh-llm package for reasoning effort values",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "RoleModel type definition imported from the policy module",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "../policy.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "resolveRoleModel",
+        "function_id": "src/app/role-models.ts:resolveRoleModel(ctx: Context, model: RoleModel)",
+        "description": "Resolves a role model config into a concrete provider/model selection via the LLM service",
+        "filepath": "src/app/role-models.ts",
+        "lines": [
+          8,
+          12
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "initializeRoleModel",
+        "function_id": "src/app/role-models.ts:initializeRoleModel(ctx: Context, agent: Agent, model: RoleModel | null)",
+        "description": "Injects the resolved role model selection into an agent session for its initial request",
+        "filepath": "src/app/role-models.ts",
+        "lines": [
+          15,
+          44
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "collection:src/app/views",
+    "path": "src/app/views",
+    "kind": "directory"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "d957f1be2f934af2f68b857b5dec264229dfc446138242b1835397b52b1bff1d",
+  "children": [
+    {
+      "id": "file:src/app/views/overview.ts",
+      "infoFingerprint": "d3af0e0d40ae4968ac3b8b2ba9bbab5326aa2025a3a178f525c1114e8d051a71"
+    },
+    {
+      "id": "file:src/app/views/records.ts",
+      "infoFingerprint": "f4ae873c8a9c9d62c119ef73b74ac80bfd8aeda9897964e0f470a6079c9ff126"
+    },
+    {
+      "id": "file:src/app/views/settings.ts",
+      "infoFingerprint": "35c1b0e6e8e0cb5e2c5aaac4cb81236d3716479f6f35364c426f5017240b5e88"
+    },
+    {
+      "id": "file:src/app/views/sources.ts",
+      "infoFingerprint": "95e75c86d387abd55add98ee4336e8934070523a83a20d872add6ff7451416b3"
+    },
+    {
+      "id": "file:src/app/views/text.ts",
+      "infoFingerprint": "5d50e1e3863f2267d4ee0e8f1510b8b9c95e9161a0e85cdf4cd3ee84af13635c"
+    },
+    {
+      "id": "file:src/app/views/threads.ts",
+      "infoFingerprint": "fca3c79b0fca78054f3c3b1cfdb3b336337d97d075af9abc1ee0b34f7199a968"
+    },
+    {
+      "id": "file:src/app/views/tickets.ts",
+      "infoFingerprint": "64bbfb3f5df34cf3d6281faf2930cd8f386141c95e655b759dec35156cc4534f"
+    }
+  ],
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/app",
+      "resultFingerprint": "c5d9a996b9b8fdf32bef10c15d47f0ba7a1c84c5d144bf4160f01af92915cf64"
+    },
+    {
+      "kind": "directory-listing",
+      "path": "src/app/views",
+      "resultFingerprint": "3685033d10af6d43b7290e60d2ad302d992135cbe3b93fb851b4504d76bb1542"
+    },
+    {
+      "kind": "directory-listing",
+      "path": "src/client",
+      "resultFingerprint": "7bf3ac2d009d046122c35f91b95f5cb11c1fc74f53cdfbb3bacbc80ac2b588dc"
+    },
+    {
+      "kind": "file",
+      "path": "docs/001-domain.md",
+      "contentFingerprint": "cd010379e65cc428ffb335aee46529f2a524b8f573fc72359223060fb5a5111b"
+    },
+    {
+      "kind": "file",
+      "path": "docs/003-execution.md",
+      "contentFingerprint": "049aa22a717f75b9dec4cd6969356db6f736c127de4501c3ce1f6d846217f6eb"
+    },
+    {
+      "kind": "file",
+      "path": "docs/004-prompts.md",
+      "contentFingerprint": "186ec9307249deae11f7aec68ff21bf58fb0601a204ada0d2688253d58627bf7"
+    },
+    {
+      "kind": "file",
+      "path": "docs/007-architecture.md",
+      "contentFingerprint": "e3747665587fdf88b28d4e9c1a1f8ac40cbc2c65a9999be1fce14b69ec44d748"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/api.ts",
+      "contentFingerprint": "ceb0c76cb2d8680e2be4edf0f6ac42c90e6a4ff78e0e14ce4aa277357606ff04"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/http.ts",
+      "contentFingerprint": "5da39830429559975cae7ae6d39416acb2322ac8e31cfb4da3436df602cb7ec4"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/resources.ts",
+      "contentFingerprint": "cc09f56669b2ccacfc889aa98132590b618f77e6648a7ff8fe8454106c8c663f"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/runtime.ts",
+      "contentFingerprint": "5befef035b4a70978cd881b32282680260c6d2561679f890dd911214664cf515"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/views/overview.ts",
+      "contentFingerprint": "c8eb087eb5e3586e924ff5df659aa1535d64e6723f2f5ffa8e721f4abbfabef8"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/views/records.ts",
+      "contentFingerprint": "5ed48ab5dfaaa729f0520c1dfc30d962f6a716d11d71088fd43ce9bedaa3cd39"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/views/settings.ts",
+      "contentFingerprint": "5740ad427457aa501fa6cc706573ce5b6882c53d4cdc646f1ac6f02787cd25a3"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/views/sources.ts",
+      "contentFingerprint": "d81bbdba84c2a7bc49a53c95b0b96a340cc2231135f065eff59da648d0ec6798"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/views/text.ts",
+      "contentFingerprint": "aa577b5171ae15dc3905207ed7dbe36c6c1a3567d07599a81bc8b0bb28413aa6"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/views/threads.ts",
+      "contentFingerprint": "e0a0caa5364754a7d45426cafaacf315bda5124e39171f90fe67a26849931b5f"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/views/tickets.ts",
+      "contentFingerprint": "7345a63859a81e525ba4341d8a7091053b8825f73215a028e144cd0dc8da5ccc"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/api.ts",
+      "contentFingerprint": "800b0347183c39601b8b7cd33607dee2538eb8da5feb5f1c7e13a1a7c2268f36"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/execution.tsx",
+      "contentFingerprint": "8d9200aab40f092972234fc5712a78f1db0c1ad581517d574f8b8143c289959c"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/prompts.tsx",
+      "contentFingerprint": "ddc92a0db7d994c019e2efcb707dbbc04acb53e421ca04e9878d52de83ce6eff"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/route.ts",
+      "contentFingerprint": "457b3cf37c9678c085cf4685ae412ff92bc5510b4a5401e805e4762ad12a3a4c"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/settings-kit.tsx",
+      "contentFingerprint": "4a75031188c08fb54fd8f45725a3530b3005920412004f5d9817757a72eb87a9"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/trigger.tsx",
+      "contentFingerprint": "934de63606db7721bbd18b829900a3b158f40330ad51b5223346477fba0794aa"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/github-read.ts",
+      "contentFingerprint": "4951cbcdf4079c28666972b7964f1121cafd691d1cc76970583f2c57ef9dc52b"
+    },
+    {
+      "kind": "search",
+      "path": "docs",
+      "query": "views",
+      "limit": 40,
+      "resultFingerprint": "ffe651150cfaeb38e3ead73efe8015e1a2ff0b6648fe0a4816af75645ab8dbbb"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "ViewHost",
+      "limit": 60,
+      "resultFingerprint": "f4c468f205628cf05921ccadac11e0b838afb9ff1f2c93e8b041fd57ed011b4e"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "views/",
+      "limit": 60,
+      "resultFingerprint": "1baa4bbec54d8ba6db374c98a6434d9d438ea3aa21339dc74fb024e57a077ca1"
+    },
+    {
+      "kind": "search",
+      "path": "src/client",
+      "query": "from '../app/api.ts'",
+      "limit": 20,
+      "resultFingerprint": "916bc496ebccbdd1a89f5d97b0aa7b881ac74348e2967cfe5b47aeb9723f02c3"
+    },
+    {
+      "kind": "template",
+      "key": "directory-language-gfgo-primary-presentation:data-contract,orchestration",
+      "contentFingerprint": "4c7724bfc7beb44cc0014fedb36fe647a6c8a4bf878278a351a32e87c8284248"
+    }
+  ],
+  "infoFingerprint": "959098a68dfc7b5aa04c90207f134ad44d3992d6981e67638854d20a2e9a74f8",
+  "artifacts": {
+    "info": ".fibo/analysis/src/app/views/views.info.md",
+    "structure": ".fibo/analysis/src/app/views/views.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "959098a68dfc7b5aa04c90207f134ad44d3992d6981e67638854d20a2e9a74f8",
+    "structure": "e71d654d6506b53ecffb19beddea9cc9d46f100aeb7ec68c8cb66b402112c74a"
+  }
+}

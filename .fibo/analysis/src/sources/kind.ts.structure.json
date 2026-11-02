@@ -1,0 +1,284 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/sources/kind.ts",
+    "path": "src/sources/kind.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "kind.ts",
+    "file_path": "src/sources/kind.ts",
+    "description": "Type definitions describing the Source kind contract: policies, channels, threads and trigger contexts",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "dsh-agent",
+        "description": "Type import of the Agent type from the dsh-agent package",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "zod",
+        "description": "Type import of zod schema namespace for validation types",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Type imports of OutboundMessage, ScopeResult and Trigger from core",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Type import of Deployment from the deployment module",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "../deployment.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Type import of Commands from the infra commands module",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "../infra/commands.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Type imports of SourceContext and SourceHost from the host module",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "./host.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "Localized",
+        "interface_id": "src/sources/kind.ts:Localized",
+        "description": "Bilingual (Chinese/English) display text pair",
+        "filepath": "src/sources/kind.ts",
+        "lines": [
+          9,
+          9
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "FieldBase",
+        "interface_id": "src/sources/kind.ts:FieldBase",
+        "description": "Common form-field metadata: key, localized label, optional hint and advanced flag",
+        "filepath": "src/sources/kind.ts",
+        "lines": [
+          11,
+          11
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "VariableSpec",
+        "interface_id": "src/sources/kind.ts:VariableSpec",
+        "description": "Declares an environment variable with its key and localized description",
+        "filepath": "src/sources/kind.ts",
+        "lines": [
+          24,
+          24
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "EnvironmentInput",
+        "interface_id": "src/sources/kind.ts:EnvironmentInput",
+        "description": "Input for computing environment variables: deployment, config and optional trigger",
+        "filepath": "src/sources/kind.ts",
+        "lines": [
+          25,
+          25
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "AdmissionRowView",
+        "interface_id": "src/sources/kind.ts:AdmissionRowView",
+        "description": "Display view of one admission-table row with counts of listed/unlisted and addressed senders",
+        "filepath": "src/sources/kind.ts",
+        "lines": [
+          26,
+          26
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "SourcePolicyPart",
+        "interface_id": "src/sources/kind.ts:SourcePolicyPart",
+        "description": "Schema, form fields, labels, table rows and roster sync for a Source's policy section",
+        "filepath": "src/sources/kind.ts",
+        "lines": [
+          28,
+          41
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "ChannelLink",
+        "interface_id": "src/sources/kind.ts:ChannelLink",
+        "description": "Linkable channel address with URL, localized label and optional trigger ID",
+        "filepath": "src/sources/kind.ts",
+        "lines": [
+          43,
+          43
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "SourceChannel",
+        "interface_id": "src/sources/kind.ts:SourceChannel",
+        "description": "Channel contract: reply eligibility check, idempotent send and address-to-link resolution",
+        "filepath": "src/sources/kind.ts",
+        "lines": [
+          46,
+          56
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "ContextMessage",
+        "interface_id": "src/sources/kind.ts:ContextMessage",
+        "description": "Normalized thread message with sender, timestamp, text and optional flags or references",
+        "filepath": "src/sources/kind.ts",
+        "lines": [
+          58,
+          61
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "ContextPart",
+        "interface_id": "src/sources/kind.ts:ContextPart",
+        "description": "A page of context messages with cursor, raw body and optional status",
+        "filepath": "src/sources/kind.ts",
+        "lines": [
+          63,
+          63
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "ThreadContext",
+        "interface_id": "src/sources/kind.ts:ThreadContext",
+        "description": "Thread reading contract: message ID lookup, paged reads and optional image extraction/reading",
+        "filepath": "src/sources/kind.ts",
+        "lines": [
+          65,
+          75
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "TriggerContext",
+        "interface_id": "src/sources/kind.ts:TriggerContext",
+        "description": "Per-trigger context for reading thread parts, listing and reading images",
+        "filepath": "src/sources/kind.ts",
+        "lines": [
+          76,
+          83
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "SourceKind",
+        "interface_id": "src/sources/kind.ts:SourceKind",
+        "description": "Full Source kind contract: identity, config validation, status facts, policy, labels and environment variables",
+        "filepath": "src/sources/kind.ts",
+        "lines": [
+          85,
+          113
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "SourceInstance",
+        "interface_id": "src/sources/kind.ts:SourceInstance",
+        "description": "A stored Source instance with id, kind, enabled flag and configuration",
+        "filepath": "src/sources/kind.ts",
+        "lines": [
+          115,
+          115
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "FieldSpec",
+        "alias_id": "src/sources/kind.ts:FieldSpec",
+        "description": "Union of form-field variants (switch, select, number, text, fact, rows)",
+        "filepath": "src/sources/kind.ts",
+        "lines": [
+          16,
+          22
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "ChannelLinks",
+        "alias_id": "src/sources/kind.ts:ChannelLinks",
+        "description": "Optional repository and Feishu deployment links used to build channel URLs",
+        "filepath": "src/sources/kind.ts",
+        "lines": [
+          44,
+          44
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "ContextPartName",
+        "alias_id": "src/sources/kind.ts:ContextPartName",
+        "description": "Name of a thread context part: thread, root or parent",
+        "filepath": "src/sources/kind.ts",
+        "lines": [
+          62,
+          62
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

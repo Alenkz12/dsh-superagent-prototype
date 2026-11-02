@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/role-models.ts",
+    "path": "src/app/role-models.ts",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "15fea73798e1c2a26b843af9064f4a0377937ee53e1919b0c93e60ec1f55d6b2",
+  "sourceFingerprint": "cdb07d492a3edf3e5f49c313136b706b95b9f6a8982930737b032a7f181333c6",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/app",
+      "resultFingerprint": "c5d9a996b9b8fdf32bef10c15d47f0ba7a1c84c5d144bf4160f01af92915cf64"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/role-models.ts",
+      "contentFingerprint": "cdb07d492a3edf3e5f49c313136b706b95b9f6a8982930737b032a7f181333c6"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/sessions.ts",
+      "contentFingerprint": "ca2b98e57e9f27b2abb0afab59d44ea744a96d8be4cf81d7b3776901b56cd36b"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/settings.ts",
+      "contentFingerprint": "2c7cd780dd24ab6a99ddfd30f80b921db035e0d56e3e1d42a86371fe20423f3f"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/settings-kit.tsx",
+      "contentFingerprint": "4a75031188c08fb54fd8f45725a3530b3005920412004f5d9817757a72eb87a9"
+    },
+    {
+      "kind": "file",
+      "path": "src/policy.ts",
+      "contentFingerprint": "01cff8c333b341ee2943e644046f0da3ed9675af1c0029489b5f4bc8226d293d"
+    },
+    {
+      "kind": "file",
+      "path": "tests/role-models.spec.ts",
+      "contentFingerprint": "5143e10b5b10556e53eac202584501248d4d648a9568c67cd8f47032a9e6c0b5"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "initializeRoleModel",
+      "limit": 50,
+      "resultFingerprint": "123d9ebf32faf8c4ae8e191a0a52e365daecb6aa50c748da0c8865e1d6d4dad9"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "RoleModel",
+      "limit": 50,
+      "resultFingerprint": "780ce3c74fd8dfbc04194c91430bb2052f50b3c8eb075cca404e7a0e3dd04a64"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-domain-rules:orchestration",
+      "contentFingerprint": "bdb8e803f94c5307ba907a9e01e2945d638efdbf10cc1d562965f53257172ff9"
+    }
+  ],
+  "infoFingerprint": "cb4d558ef12a4610c46e59be66149b40f0aac36733f439fa6eae82d5aa51e6fa",
+  "artifacts": {
+    "info": ".fibo/analysis/src/app/role-models.ts.info.md",
+    "structure": ".fibo/analysis/src/app/role-models.ts.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "cb4d558ef12a4610c46e59be66149b40f0aac36733f439fa6eae82d5aa51e6fa",
+    "structure": "f8da8738775b82c95a9b80e1c7c51e3f4513c3acd30dbd063c142a3d4e30a75c"
+  }
+}

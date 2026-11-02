@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/infra/health.ts",
+    "path": "src/infra/health.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "health.ts",
+    "file_path": "src/infra/health.ts",
+    "description": "Infrastructure health module defining health entries and a registry board for tracking component health",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Imports the Health type from the sources host module for use in health entries and the board",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "internal",
+        "filepath": "../sources/host.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [],
+    "classes": [
+      {
+        "class_name": "HealthBoard",
+        "class_id": "src/infra/health.ts:HealthBoard",
+        "description": "Registry board that lets components claim named health entries, exposes all health records, and releases entries on disposal",
+        "super_class": [],
+        "filepath": "src/infra/health.ts",
+        "lines": [
+          15,
+          35
+        ],
+        "function": [],
+        "variables": []
+      }
+    ],
+    "interfaces": [
+      {
+        "interface_name": "HealthEntry",
+        "interface_id": "src/infra/health.ts:HealthEntry",
+        "description": "Contract for a claimed health entry providing get/set access and release to unregister it from the board",
+        "filepath": "src/infra/health.ts",
+        "lines": [
+          4,
+          9
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

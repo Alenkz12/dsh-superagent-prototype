@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/sources/feishu-trigger.ts",
+    "path": "src/sources/feishu-trigger.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "feishu-trigger.ts",
+    "file_path": "src/sources/feishu-trigger.ts",
+    "description": "Feishu source adapter: converts Feishu events/messages into normalized triggers and references",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "zod",
+        "description": "Imports the zod validation library",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports core trigger key helper and ChannelRef/Trigger types",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports Feishu message and reference types from the reader module",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "./feishu-read.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "feishuTime",
+        "function_id": "src/sources/feishu-trigger.ts:feishuTime(value: string)",
+        "description": "Converts a Feishu timestamp (epoch string or date string) to ISO format",
+        "filepath": "src/sources/feishu-trigger.ts",
+        "lines": [
+          25,
+          29
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "feishuTrigger",
+        "function_id": "src/sources/feishu-trigger.ts:feishuTrigger(input: unknown, botId: string, botAppId: string)",
+        "description": "Builds a Trigger from a raw Feishu event, skipping bot-authored messages and marking direct/mention addressing",
+        "filepath": "src/sources/feishu-trigger.ts",
+        "lines": [
+          31,
+          44
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "feishuRef",
+        "function_id": "src/sources/feishu-trigger.ts:feishuRef(trigger: Trigger)",
+        "description": "Extracts a Feishu reference (chat/message ids) from a Feishu-sourced trigger",
+        "filepath": "src/sources/feishu-trigger.ts",
+        "lines": [
+          47,
+          51
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "historyText",
+        "function_id": "src/sources/feishu-trigger.ts:historyText(message: HistoricalMessage)",
+        "description": "Parses a historical message body into readable plain text",
+        "filepath": "src/sources/feishu-trigger.ts",
+        "lines": [
+          67,
+          73
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "historyEvent",
+        "function_id": "src/sources/feishu-trigger.ts:historyEvent(message: HistoricalMessage, chatId: string, direct: boolean)",
+        "description": "Maps a historical Feishu message into a raw event payload with chat context",
+        "filepath": "src/sources/feishu-trigger.ts",
+        "lines": [
+          74,
+          79
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "topicEvent",
+        "function_id": "src/sources/feishu-trigger.ts:topicEvent(message: FeishuMessage, chatId: string, direct: boolean, root: string)",
+        "description": "Builds a raw event payload from a Feishu message pinned to a thread root",
+        "filepath": "src/sources/feishu-trigger.ts",
+        "lines": [
+          84,
+          89
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "SOURCE",
+        "variable_id": "src/sources/feishu-trigger.ts:SOURCE",
+        "description": "Source identifier constant, 'feishu'",
+        "filepath": "src/sources/feishu-trigger.ts",
+        "lines": [
+          6,
+          6
+        ]
+      },
+      {
+        "variable_name": "feishuChannel",
+        "variable_id": "src/sources/feishu-trigger.ts:feishuChannel",
+        "description": "Builds a ChannelRef (thread and address) from Feishu chat and message ids",
+        "filepath": "src/sources/feishu-trigger.ts",
+        "lines": [
+          8,
+          9
+        ]
+      },
+      {
+        "variable_name": "EventSchema",
+        "variable_id": "src/sources/feishu-trigger.ts:EventSchema",
+        "description": "Zod schema validating and normalizing inbound Feishu event payloads",
+        "filepath": "src/sources/feishu-trigger.ts",
+        "lines": [
+          11,
+          14
+        ]
+      },
+      {
+        "variable_name": "feishuThreadId",
+        "variable_id": "src/sources/feishu-trigger.ts:feishuThreadId",
+        "description": "Computes a thread id from chat id plus root or message id",
+        "filepath": "src/sources/feishu-trigger.ts",
+        "lines": [
+          16,
+          16
+        ]
+      },
+      {
+        "variable_name": "feishuTriggerId",
+        "variable_id": "src/sources/feishu-trigger.ts:feishuTriggerId",
+        "description": "Derives a stable trigger id from a Feishu message id",
+        "filepath": "src/sources/feishu-trigger.ts",
+        "lines": [
+          18,
+          18
+        ]
+      },
+      {
+        "variable_name": "withMentionNames",
+        "variable_id": "src/sources/feishu-trigger.ts:withMentionNames",
+        "description": "Replaces mention placeholder keys in text with readable @names",
+        "filepath": "src/sources/feishu-trigger.ts",
+        "lines": [
+          19,
+          20
+        ]
+      },
+      {
+        "variable_name": "feishuParent",
+        "variable_id": "src/sources/feishu-trigger.ts:feishuParent",
+        "description": "Returns the trigger id of the parent message for a Feishu trigger",
+        "filepath": "src/sources/feishu-trigger.ts",
+        "lines": [
+          45,
+          46
+        ]
+      },
+      {
+        "variable_name": "HistoricalMessageSchema",
+        "variable_id": "src/sources/feishu-trigger.ts:HistoricalMessageSchema",
+        "description": "Zod schema validating Feishu historical message records",
+        "filepath": "src/sources/feishu-trigger.ts",
+        "lines": [
+          54,
+          61
+        ]
+      },
+      {
+        "variable_name": "HistoryPageSchema",
+        "variable_id": "src/sources/feishu-trigger.ts:HistoryPageSchema",
+        "description": "Zod schema validating a paged Feishu history response",
+        "filepath": "src/sources/feishu-trigger.ts",
+        "lines": [
+          64,
+          66
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "FeishuEvent",
+        "alias_id": "src/sources/feishu-trigger.ts:FeishuEvent",
+        "description": "Inferred TypeScript type of the validated inbound Feishu event",
+        "filepath": "src/sources/feishu-trigger.ts",
+        "lines": [
+          15,
+          15
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "HistoricalMessage",
+        "alias_id": "src/sources/feishu-trigger.ts:HistoricalMessage",
+        "description": "Inferred TypeScript type of a historical Feishu message record",
+        "filepath": "src/sources/feishu-trigger.ts",
+        "lines": [
+          62,
+          62
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

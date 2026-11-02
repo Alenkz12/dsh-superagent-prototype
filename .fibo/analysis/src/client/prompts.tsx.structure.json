@@ -1,0 +1,942 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/prompts.tsx",
+    "path": "src/client/prompts.tsx",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "prompts.tsx",
+    "file_path": "src/client/prompts.tsx",
+    "description": "Prompts settings group UI: section/skill editor, full composed prompt preview with diffing, and revision history for the panel.",
+    "file_type": "tsx",
+    "language": "typescript",
+    "import_class": [],
+    "import_function": [
+      {
+        "function_name": "Fragment",
+        "description": "React fragment component used to group children in diff rendering",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "react",
+        "alias": ""
+      },
+      {
+        "function_name": "useCallback",
+        "description": "React hook to memoize the reload callback",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "react",
+        "alias": ""
+      },
+      {
+        "function_name": "useEffect",
+        "description": "React hook for side effects (data loading)",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "react",
+        "alias": ""
+      },
+      {
+        "function_name": "useState",
+        "description": "React hook for local component state",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "react",
+        "alias": ""
+      },
+      {
+        "function_name": "FormEvent",
+        "description": "React type for form submit events",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "react",
+        "alias": ""
+      },
+      {
+        "function_name": "ReactNode",
+        "description": "React type representing renderable node content",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "react",
+        "alias": ""
+      },
+      {
+        "function_name": "ApiResponse",
+        "description": "Type helper describing an API response by route key",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "src/app/api.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "PromptConfig",
+        "description": "Type describing the editable prompt configuration",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/client/api.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "PromptsView",
+        "description": "Type describing the prompts settings view payload",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/client/api.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "SaveBar",
+        "description": "Component rendering save/discard actions for a draft",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "src/client/draft.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "useDraft",
+        "description": "Hook managing draft state, conflicts and submission",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "src/client/draft.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "DraftWords",
+        "description": "Type describing draft UI label strings",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "src/client/draft.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "changedSections",
+        "description": "Compute which sections changed between configs",
+        "lines": [
+          6,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/prompt-config.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "isPart",
+        "description": "Check whether a name refers to a built-in part",
+        "lines": [
+          6,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/prompt-config.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "isSkill",
+        "description": "Check whether a name refers to a skill section",
+        "lines": [
+          6,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/prompt-config.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "lineDiff",
+        "description": "Compute a line-based diff between two texts",
+        "lines": [
+          6,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/prompt-config.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "partKey",
+        "description": "Extract the built-in part key from a section name",
+        "lines": [
+          6,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/prompt-config.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "partText",
+        "description": "Resolve the effective text of a built-in part",
+        "lines": [
+          6,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/prompt-config.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "partWith",
+        "description": "Return a preview part with a replaced text",
+        "lines": [
+          6,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/prompt-config.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "sectionLabel",
+        "description": "Resolve a human-readable label for a section",
+        "lines": [
+          6,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/prompt-config.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "sectionText",
+        "description": "Read a section's text from a config",
+        "lines": [
+          6,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/prompt-config.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "skillNameFree",
+        "description": "Check whether a new skill name is free/valid",
+        "lines": [
+          6,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/prompt-config.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "withOverride",
+        "description": "Return a config with a built-in part override set",
+        "lines": [
+          6,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/prompt-config.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "withOverrides",
+        "description": "Return a config with overrides resolved from view parts",
+        "lines": [
+          6,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/prompt-config.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "withSection",
+        "description": "Return a config with a section's text replaced",
+        "lines": [
+          6,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/prompt-config.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "withoutSkill",
+        "description": "Return a config with a skill removed",
+        "lines": [
+          6,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/prompt-config.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "BuiltInPart",
+        "description": "Type describing a built-in prompt part",
+        "lines": [
+          6,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/prompt-config.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "DiffLine",
+        "description": "Type describing a single diff line",
+        "lines": [
+          6,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/prompt-config.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "useAction",
+        "description": "Hook wrapping an async action with busy state",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/provider.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "usePanel",
+        "description": "Hook providing panel context (translate, call, notify)",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/provider.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "errorText",
+        "description": "Convert an error into display text",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "valueLabel",
+        "description": "Resolve a display label for an enumerated value",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "when",
+        "description": "Format a timestamp relative to the current language",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "T",
+        "description": "Type of the translate function",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "Hint",
+        "description": "Component rendering a hint text",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "LoadState",
+        "description": "Component rendering loading/error state",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "Button",
+        "description": "Button UI component",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "Icon",
+        "description": "Icon UI component",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "Input",
+        "description": "Text input UI component",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "SegmentedControl",
+        "description": "Segmented control UI component",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      }
+    ],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "originText",
+        "function_id": "src/client/prompts.tsx:originText(T,PromptsView,Origin|undefined)",
+        "description": "Resolve a human-readable label describing where the current draft originated",
+        "filepath": "src/client/prompts.tsx",
+        "lines": [
+          16,
+          18
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "t",
+            "param_type": "T",
+            "description": "Translate function",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "view",
+            "param_type": "PromptsView",
+            "description": "Prompts settings view payload",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "from",
+            "param_type": "Origin | undefined",
+            "description": "Origin of the draft, if any",
+            "default_value": "",
+            "is_optional": true
+          }
+        ],
+        "return_type": "string | undefined",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "PromptsPage",
+        "function_id": "src/client/prompts.tsx:PromptsPage()",
+        "description": "Page container that fetches the prompts view and renders the editor or a load state",
+        "filepath": "src/client/prompts.tsx",
+        "lines": [
+          20,
+          27
+        ],
+        "code": null,
+        "parameters": [],
+        "return_type": "ReactNode",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "PromptsEditor",
+        "function_id": "src/client/prompts.tsx:PromptsEditor({view,reload})",
+        "description": "Main prompts editor managing the draft, tabs and save bar",
+        "filepath": "src/client/prompts.tsx",
+        "lines": [
+          29,
+          68
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "view",
+            "param_type": "PromptsView",
+            "description": "Prompts settings view payload",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "reload",
+            "param_type": "() => Promise<void>",
+            "description": "Callback to reload the prompts view",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "ReactNode",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "PromptSections",
+        "function_id": "src/client/prompts.tsx:PromptSections({config,view,changed,selected,onSelect,onEdit})",
+        "description": "Renders the section/skill navigation and the matching editor pane",
+        "filepath": "src/client/prompts.tsx",
+        "lines": [
+          70,
+          113
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "config",
+            "param_type": "PromptConfig",
+            "description": "Current draft prompt configuration",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "view",
+            "param_type": "PromptsView",
+            "description": "Prompts settings view payload",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "changed",
+            "param_type": "string[]",
+            "description": "List of changed section names",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "selected",
+            "param_type": "string",
+            "description": "Currently selected section name",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "onSelect",
+            "param_type": "(name: string) => void",
+            "description": "Callback to select a section",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "onEdit",
+            "param_type": "(next: PromptConfig, note?: PromptNote) => void",
+            "description": "Callback to apply an edit to the draft",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "ReactNode",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "updated",
+        "function_id": "src/client/prompts.tsx:updated(PromptConfig,BuiltInPart)",
+        "description": "Check whether a built-in part's override was edited from a base text that has since changed",
+        "filepath": "src/client/prompts.tsx",
+        "lines": [
+          115,
+          118
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "config",
+            "param_type": "PromptConfig",
+            "description": "Current draft prompt configuration",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "part",
+            "param_type": "BuiltInPart",
+            "description": "Built-in part to check",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "boolean",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "TeamEditor",
+        "function_id": "src/client/prompts.tsx:TeamEditor({config,view,selected,onSelect,onEdit})",
+        "description": "Edits a team (or skill) section text with reset/remove actions",
+        "filepath": "src/client/prompts.tsx",
+        "lines": [
+          119,
+          139
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "config",
+            "param_type": "PromptConfig",
+            "description": "Current draft prompt configuration",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "view",
+            "param_type": "PromptsView",
+            "description": "Prompts settings view payload",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "selected",
+            "param_type": "string",
+            "description": "Currently selected section name",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "onSelect",
+            "param_type": "(name: string) => void",
+            "description": "Callback to select a section",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "onEdit",
+            "param_type": "(next: PromptConfig, note?: PromptNote) => void",
+            "description": "Callback to apply an edit to the draft",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "ReactNode",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "BuiltInEditor",
+        "function_id": "src/client/prompts.tsx:BuiltInEditor({config,view,part,onEdit})",
+        "description": "Edits a built-in part, showing template placeholders, a changed-default diff and keep/take actions",
+        "filepath": "src/client/prompts.tsx",
+        "lines": [
+          144,
+          175
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "config",
+            "param_type": "PromptConfig",
+            "description": "Current draft prompt configuration",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "view",
+            "param_type": "PromptsView",
+            "description": "Prompts settings view payload",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "part",
+            "param_type": "BuiltInPart",
+            "description": "Built-in part being edited",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "onEdit",
+            "param_type": "(next: PromptConfig, note?: PromptNote) => void",
+            "description": "Callback to apply an edit to the draft",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "ReactNode",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "FullPrompt",
+        "function_id": "src/client/prompts.tsx:FullPrompt({config,view,dirty,revision,onEdit})",
+        "description": "Shows the full composed prompt for a target with diffing against saved/defaults and a copy action",
+        "filepath": "src/client/prompts.tsx",
+        "lines": [
+          180,
+          248
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "config",
+            "param_type": "PromptConfig",
+            "description": "Current draft prompt configuration",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "view",
+            "param_type": "PromptsView",
+            "description": "Prompts settings view payload",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "dirty",
+            "param_type": "boolean",
+            "description": "Whether the draft has unsaved changes",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "revision",
+            "param_type": "number",
+            "description": "Revision number of the saved config",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "onEdit",
+            "param_type": "(name: string) => void",
+            "description": "Callback to open a section in the edit tab",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "ReactNode",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "Diff",
+        "function_id": "src/client/prompts.tsx:Diff({lines})",
+        "description": "Renders a line diff with insertions, deletions and folded unchanged runs",
+        "filepath": "src/client/prompts.tsx",
+        "lines": [
+          249,
+          255
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "lines",
+            "param_type": "DiffLine[]",
+            "description": "Diff lines to render",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "ReactNode",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "PromptHistory",
+        "function_id": "src/client/prompts.tsx:PromptHistory({view,from,onLoad})",
+        "description": "Lists prompt revision history with paging, restore, defaults and active sessions",
+        "filepath": "src/client/prompts.tsx",
+        "lines": [
+          257,
+          295
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "view",
+            "param_type": "PromptsView",
+            "description": "Prompts settings view payload",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "from",
+            "param_type": "Origin | undefined",
+            "description": "Current draft origin, if any",
+            "default_value": "",
+            "is_optional": true
+          },
+          {
+            "param_name": "onLoad",
+            "param_type": "(config: PromptConfig, from: Origin) => void",
+            "description": "Callback to load a config into the draft",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "ReactNode",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      }
+    ],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "PromptNote",
+        "interface_id": "src/client/prompts.tsx:PromptNote",
+        "description": "Metadata attached to a prompt draft edit describing its origin and selected section",
+        "extends": [],
+        "filepath": "src/client/prompts.tsx",
+        "lines": [
+          15,
+          15
+        ],
+        "methods": [],
+        "properties": [
+          "from?: Origin",
+          "selection?: string"
+        ],
+        "generics": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [
+      {
+        "constant_name": "KIND_LABEL",
+        "constant_id": "src/client/prompts.tsx:KIND_LABEL",
+        "description": "Maps a preview part kind to its translation key",
+        "filepath": "src/client/prompts.tsx",
+        "lines": [
+          179,
+          179
+        ],
+        "constant_type": "const",
+        "value": "{ team: 'promptPartTeam', fixed: 'promptPartFixed', generated: 'promptPartGenerated' }"
+      }
+    ],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "Tab",
+        "alias_id": "src/client/prompts.tsx:Tab",
+        "description": "Identifies the active prompts settings tab",
+        "filepath": "src/client/prompts.tsx",
+        "lines": [
+          13,
+          13
+        ],
+        "target_type": "'edit' | 'full' | 'history'",
+        "generics": []
+      },
+      {
+        "alias_name": "Origin",
+        "alias_id": "src/client/prompts.tsx:Origin",
+        "description": "Describes where a draft edit originated (a revision, defaults or a section reset)",
+        "filepath": "src/client/prompts.tsx",
+        "lines": [
+          14,
+          14
+        ],
+        "target_type": "{ revision: number } | 'defaults' | { reset: string }",
+        "generics": []
+      },
+      {
+        "alias_name": "Preview",
+        "alias_id": "src/client/prompts.tsx:Preview",
+        "description": "Response type of the prompts preview API call",
+        "filepath": "src/client/prompts.tsx",
+        "lines": [
+          177,
+          177
+        ],
+        "target_type": "ApiResponse<'POST prompts/preview'>",
+        "generics": []
+      },
+      {
+        "alias_name": "Target",
+        "alias_id": "src/client/prompts.tsx:Target",
+        "description": "Possible preview targets: orchestrator, worker, or a skill",
+        "filepath": "src/client/prompts.tsx",
+        "lines": [
+          178,
+          178
+        ],
+        "target_type": "'orchestrator' | 'worker' | `skill/${string}`",
+        "generics": []
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/index.tsx",
+    "path": "src/client/index.tsx",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "6223bc4afbc2dd260a4402833d9951af0150f6535024dad65cd220dfb044c402",
+  "sourceFingerprint": "6a7e5a0295ecbbd047dbb619e0cdf9d1489a46c8dfcc56dbfd1cfe6f6d866529",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/client",
+      "resultFingerprint": "7bf3ac2d009d046122c35f91b95f5cb11c1fc74f53cdfbb3bacbc80ac2b588dc"
+    },
+    {
+      "kind": "file",
+      "path": "package.json",
+      "contentFingerprint": "f5170d812137dd370c568decb481e19f4da9a3d1fd7bad341a0f07942020a559"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/app.tsx",
+      "contentFingerprint": "23cca247e0a67fb581df6fc517522ccf0026a4897cda109c9e57c367cb2b1051"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/deployment.tsx",
+      "contentFingerprint": "c37ebd5a24d0319a28d3d98a76dde23d9694b0fad4a7900df0eff85de82afb4b"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/index.tsx",
+      "contentFingerprint": "6a7e5a0295ecbbd047dbb619e0cdf9d1489a46c8dfcc56dbfd1cfe6f6d866529"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/locales.ts",
+      "contentFingerprint": "d172c86d672b9244effe3590bc7c25ac71b80d3ccbb7d6c5fe76848ce31eba12"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/provider.tsx",
+      "contentFingerprint": "5639db28e87c1fa0752a30b5280c2e492685bea0593809f72c975b5274d12a8f"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/route.ts",
+      "contentFingerprint": "457b3cf37c9678c085cf4685ae412ff92bc5510b4a5401e805e4762ad12a3a4c"
+    },
+    {
+      "kind": "file",
+      "path": "src/index.ts",
+      "contentFingerprint": "fbe2a1290be6f92f641592754e813a1fc0ffc164072a8ef2f1e57f8c151d44ec"
+    },
+    {
+      "kind": "file",
+      "path": "src/navigation.ts",
+      "contentFingerprint": "0185810fbfed59fb7c9d40936d36cb4746e6ce469948199d815f7f736ffcc13f"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/feishu.ts",
+      "contentFingerprint": "b8830aa06caa7ee13ffb7f5d31f8707392174e9e2920323582ee150a3abc6560"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/github.ts",
+      "contentFingerprint": "60bfc2c298cbef708553de5ca0c91c387fd633bc7440c6be0d1242478ef84e88"
+    },
+    {
+      "kind": "search",
+      "path": "package.json",
+      "query": "client",
+      "limit": 50,
+      "resultFingerprint": "542485ec658c0bee25e908841549a349aa16ab7035e6f184625bfab6757e6aa9"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "export const inject",
+      "limit": 50,
+      "resultFingerprint": "892d0397c27aaff2c8cecc82f3a769c3ad28a0abe6d93d3c71e0b0247083343f"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "plugins.row.config",
+      "limit": 50,
+      "resultFingerprint": "68a55ecfbab347d3c72f3249511991a75de4893b0d1c06da8b6d37eb57495e34"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/app.tsx",
+      "query": "export function App",
+      "limit": 50,
+      "resultFingerprint": "91abe7bd81f497a8c038965c90d5586a9e47bc62b6f5b9106a43ac1e863ed6a0"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/deployment.tsx",
+      "query": "export function PluginConfig",
+      "limit": 50,
+      "resultFingerprint": "d093e645848e416aa3686f1a07d0c8c2428cc7e6977ebc6c775299d3025d4b2d"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/deployment.tsx",
+      "query": "export function usePageForm",
+      "limit": 50,
+      "resultFingerprint": "58a6643c1a3297e0d1d5354ea74f32116a8c9eb26cc264346b10f994c2062279"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/route.ts",
+      "query": "export const TABS",
+      "limit": 50,
+      "resultFingerprint": "a0d08705c5b862f62deca40fffde57322f8e2dd2765e676992b6207710fb0ba2"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-entry:orchestration,presentation",
+      "contentFingerprint": "c0a7dc8ac94adbb294bc33eba98507c555896c5c1da14d39c9b28c359a5cdc71"
+    }
+  ],
+  "infoFingerprint": "f917449a703c479c8a4663b673e550eab3e85f1d278c52fccb25c172ba53dab8",
+  "artifacts": {
+    "info": ".fibo/analysis/src/client/index.tsx.info.md",
+    "structure": ".fibo/analysis/src/client/index.tsx.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "f917449a703c479c8a4663b673e550eab3e85f1d278c52fccb25c172ba53dab8",
+    "structure": "9d20ede54203cc3e58abb576eb48402eccda465600ed9d7a77565582e46ec505"
+  }
+}

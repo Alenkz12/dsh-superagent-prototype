@@ -1,0 +1,264 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/sources/github-channel.ts",
+    "path": "src/sources/github-channel.ts",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "813d48195266c04151ed4f7b610ae98ad700a6d920577b14ded12847fb399594",
+  "sourceFingerprint": "6de9657465b8bae9a7cb4748d469fedff3c8d27fec6ed6b4dd52e620a239a0d1",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/sources",
+      "resultFingerprint": "e13a5d7335d2907bee6071268ebe6f12a05e34a0f356774711e36baefff226d6"
+    },
+    {
+      "kind": "file",
+      "path": "docs/006-deployment.md",
+      "contentFingerprint": "92c5a1c6aecab6782a64b3847a2d6f36a48dc9865fa7b04b892fcdaf04f7de9d"
+    },
+    {
+      "kind": "file",
+      "path": "docs/008-cookbook.md",
+      "contentFingerprint": "adbdaa519f56bc7987ca6394950802cffcb855acff4ee715d10a26a9b0ccefec"
+    },
+    {
+      "kind": "file",
+      "path": "SETUP.md",
+      "contentFingerprint": "75ff78359142dad8bf257b732c1b11313a96c8d1bf0621c73fd4f160460a25ba"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/delivery.ts",
+      "contentFingerprint": "2a4f531e6ceca4fc98ed0203247f4abeaa10776e5b26909eb93f347b479f7a73"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/outbox.ts",
+      "contentFingerprint": "48d20062dd8c34c2b95e851c78265c9e403d1040894e97c7d9d0fa190d54415e"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/runtime.ts",
+      "contentFingerprint": "5befef035b4a70978cd881b32282680260c6d2561679f890dd911214664cf515"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/index.tsx",
+      "contentFingerprint": "6a7e5a0295ecbbd047dbb619e0cdf9d1489a46c8dfcc56dbfd1cfe6f6d866529"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/locales.ts",
+      "contentFingerprint": "d172c86d672b9244effe3590bc7c25ac71b80d3ccbb7d6c5fe76848ce31eba12"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/model.ts",
+      "contentFingerprint": "982155fe6a03c887a7ac4475c6d1592d12aa23c5fe3698403c93bbfd6469d44a"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/ports.ts",
+      "contentFingerprint": "0b44f1cd716d64776b0e3ea74a158cf0effd92e763b1b13c7705e766e9225a43"
+    },
+    {
+      "kind": "file",
+      "path": "src/infra/commands.ts",
+      "contentFingerprint": "9d7593c5022e0c1813731c1f1cd8471b1536b0b5f42974a08ef2b2930c1e62b2"
+    },
+    {
+      "kind": "file",
+      "path": "src/infra/text.ts",
+      "contentFingerprint": "70c9edb98139e3091d5e63d2ccf31d308c045f0510087a87517fbb3635cdd9e7"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/feishu-channel.ts",
+      "contentFingerprint": "c6fa722414256df055ae09e935ec402ccec9b63bdb5f73d2b5ff3f34d6d1abf7"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/github-channel.ts",
+      "contentFingerprint": "6de9657465b8bae9a7cb4748d469fedff3c8d27fec6ed6b4dd52e620a239a0d1"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/github-trigger.ts",
+      "contentFingerprint": "c59d6c837e022693a59b3da5829499bc39673ad95879efe543bb7d81c073c21b"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/github.ts",
+      "contentFingerprint": "60bfc2c298cbef708553de5ca0c91c387fd633bc7440c6be0d1242478ef84e88"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/host.ts",
+      "contentFingerprint": "b07998dad9194319a95a9436084cf1612aef9c4c6de22288cfa04258bbfbb1ce"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/kind.ts",
+      "contentFingerprint": "4ea3d8eee14707e0ee9b67289a62b1a568bab64732bd04041da5ad89bc9a7e98"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/registry.ts",
+      "contentFingerprint": "fe8a8fce0b00b65d4fb69b7cd2e5fbf4950b8dc32f0891169f9150c4a16eb5cd"
+    },
+    {
+      "kind": "file",
+      "path": "tests/commands.spec.ts",
+      "contentFingerprint": "1737430c702b23685c4820fc0878354b615f8b885c69faccdaaa52a9e352b1fb"
+    },
+    {
+      "kind": "file",
+      "path": "tests/delivery.spec.ts",
+      "contentFingerprint": "506cf7183fb1b1cceca58961de5fe1687e9256b8293a92f16ae05064da3b0d74"
+    },
+    {
+      "kind": "file",
+      "path": "tests/service-script.spec.ts",
+      "contentFingerprint": "57bf507d5bb7e8fd98beb6d250c7f459ff042eacbc39491d678138e07beaa84d"
+    },
+    {
+      "kind": "file",
+      "path": "tests/timeline.spec.ts",
+      "contentFingerprint": "d7a66e76f09ed1021645fa8af26aaf25f36e447f53489ed15d983efbb91295d8"
+    },
+    {
+      "kind": "file",
+      "path": "tests/views.spec.ts",
+      "contentFingerprint": "d9a149c90e71ee5718237bfa33858ff584c892a672f26b098c99516565fb576d"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "channel?: ChannelRef",
+      "limit": 50,
+      "resultFingerprint": "0f327213f1b5b269d58b4df6deff056ce4c2aac13984cc75ee278b79bdffcc55"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "channel.send",
+      "limit": 50,
+      "resultFingerprint": "eaa2068ceeff1df6b03c9fcd9d5a99738c230acd824628d5395ab5bd10f3d3ef"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "ChannelRef = ",
+      "limit": 50,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "dsh-superagent:",
+      "limit": 50,
+      "resultFingerprint": "9973cfffb8c4d993162fbee41dc279c10f38ed1177e4e2154541de1438436833"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "githubLink",
+      "limit": 50,
+      "resultFingerprint": "4b319c1ae555a233e4e19de5eb85e477360b38d301deeae96e093560208a4eba"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "sendGithub",
+      "limit": 50,
+      "resultFingerprint": "72fc45bfddd6bb160bf812d5bea97c18fa89f292b01e05491c317c78d3fd540b"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "'gone'",
+      "limit": 40,
+      "resultFingerprint": "493683b97f2c7e83dfd3be96730241f7338fb3ec3d7714d66bea40969bf0dd7e"
+    },
+    {
+      "kind": "search",
+      "path": "src/core",
+      "query": "export interface OutboundMessage",
+      "limit": 50,
+      "resultFingerprint": "c54233ebff783a9dda781c0d772c06d67c25d364dc75bfde6ed54df6aac22351"
+    },
+    {
+      "kind": "search",
+      "path": "src/core/model.ts",
+      "query": "ChannelRef",
+      "limit": 50,
+      "resultFingerprint": "cb2a0f116734b55e5e83d88974767df540912ce32dad550252058d676d9a5c8b"
+    },
+    {
+      "kind": "search",
+      "path": "src/core/ports.ts",
+      "query": "ChannelRef",
+      "limit": 50,
+      "resultFingerprint": "0e519751333efa85a24c41e5d9170a9ac83c57734522713b8d06c75d95ab0623"
+    },
+    {
+      "kind": "search",
+      "path": "src/core/ports.ts",
+      "query": "interface ChannelRef",
+      "limit": 50,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "search",
+      "path": "src/infra/commands.ts",
+      "query": "class CliError",
+      "limit": 50,
+      "resultFingerprint": "5fa76542bf882f5c96aab7952880a1e19571c2728d2ee024a77015ee5874d9a9"
+    },
+    {
+      "kind": "search",
+      "path": "src/infra/commands.ts",
+      "query": "pages",
+      "limit": 50,
+      "resultFingerprint": "7a88eeedb7aa6119e564127448f8f4ceb629e366ad05aa9eb39edee8035ee887"
+    },
+    {
+      "kind": "search",
+      "path": "src/infra/commands.ts",
+      "query": "pages(",
+      "limit": 50,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "search",
+      "path": "src/infra/text.ts",
+      "query": "export function sameName",
+      "limit": 50,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "search",
+      "path": "src/infra/text.ts",
+      "query": "sameName",
+      "limit": 50,
+      "resultFingerprint": "0036fdd14d0facc8b9bc060a80824f94182d170934c7fab24892684ff1011c3d"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-external-adapter:",
+      "contentFingerprint": "a3fb1c2ccd786a0e2a72f5bfb640b71f6f3b9722f15950a05b351ca6020a75fc"
+    }
+  ],
+  "infoFingerprint": "78dc16df781dc356372e9a6339b954611f86eaf7f7e01b12ef342df7b4533d67",
+  "artifacts": {
+    "info": ".fibo/analysis/src/sources/github-channel.ts.info.md",
+    "structure": ".fibo/analysis/src/sources/github-channel.ts.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "78dc16df781dc356372e9a6339b954611f86eaf7f7e01b12ef342df7b4533d67",
+    "structure": "109e0a6f82de42b68002f8f3aaab5506b2eb60c011ee909fe9dc0e627dd21210"
+  }
+}

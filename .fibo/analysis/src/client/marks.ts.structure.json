@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/marks.ts",
+    "path": "src/client/marks.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "marks.ts",
+    "file_path": "src/client/marks.ts",
+    "description": "UI mark helpers: builds label/tone/dot/icon descriptors for tickets, threads, sources and decisions",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Type imports of API row and ticket types from ./api.ts",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "internal",
+        "filepath": "./api.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Type import of translation key type from ./locales.ts",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "./locales.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports valueLabel helper and translation function type from ./text.ts",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "./text.ts"
+      },
+      {
+        "class_name": "tsx",
+        "description": "Type imports of dot state, icon name and tag tone from ./controls.tsx",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "./controls.tsx"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "ticketMark",
+        "function_id": "src/client/marks.ts:ticketMark(t: T, ticket: TicketStage & Pick<TicketSummary, 'ended'>)",
+        "description": "Builds a Mark (label, tone, dot, icon) for a ticket based on its stage and action",
+        "filepath": "src/client/marks.ts",
+        "lines": [
+          9,
+          23
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "threadMark",
+        "function_id": "src/client/marks.ts:threadMark(t: T, thread: Pick<ThreadRow, 'stage' | 'pending'>)",
+        "description": "Builds dot/icon/label mark for a thread using its stage and pending count",
+        "filepath": "src/client/marks.ts",
+        "lines": [
+          35,
+          38
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "decisionMark",
+        "function_id": "src/client/marks.ts:decisionMark(t: T, outcome: Outcome)",
+        "description": "Builds a Mark for a decision outcome using the decision mark table",
+        "filepath": "src/client/marks.ts",
+        "lines": [
+          55,
+          57
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "Mark",
+        "interface_id": "src/client/marks.ts:Mark",
+        "description": "Mark descriptor shape with label, tag tone, dot state and icon name",
+        "filepath": "src/client/marks.ts",
+        "lines": [
+          7,
+          7
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "reportDot",
+        "variable_id": "src/client/marks.ts:reportDot",
+        "description": "Maps a report status string to a dot state indicator",
+        "filepath": "src/client/marks.ts",
+        "lines": [
+          24,
+          25
+        ]
+      },
+      {
+        "variable_name": "THREAD_MARKS",
+        "variable_id": "src/client/marks.ts:THREAD_MARKS",
+        "description": "Lookup table mapping thread stage to dot, icon and i18n label key",
+        "filepath": "src/client/marks.ts",
+        "lines": [
+          27,
+          34
+        ]
+      },
+      {
+        "variable_name": "SOURCE_MARKS",
+        "variable_id": "src/client/marks.ts:SOURCE_MARKS",
+        "description": "Lookup table mapping source state to dot state and i18n label key",
+        "filepath": "src/client/marks.ts",
+        "lines": [
+          40,
+          45
+        ]
+      },
+      {
+        "variable_name": "sourceMark",
+        "variable_id": "src/client/marks.ts:sourceMark",
+        "description": "Returns dot and translated label for a source state",
+        "filepath": "src/client/marks.ts",
+        "lines": [
+          46,
+          46
+        ]
+      },
+      {
+        "variable_name": "DECISION_MARKS",
+        "variable_id": "src/client/marks.ts:DECISION_MARKS",
+        "description": "Lookup table mapping decision outcome to dot, icon and tone",
+        "filepath": "src/client/marks.ts",
+        "lines": [
+          49,
+          53
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "Outcome",
+        "alias_id": "src/client/marks.ts:Outcome",
+        "description": "Union type of decision row outcome values",
+        "filepath": "src/client/marks.ts",
+        "lines": [
+          48,
+          48
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

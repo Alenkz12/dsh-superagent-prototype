@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/ticket.tsx",
+    "path": "src/client/ticket.tsx",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "1a67ad0573597404bf696e8eead94ab8145a32ea2a21508141b73946f7c48406",
+  "sourceFingerprint": "0d78ec9067cb1e11169ae283b038ffa43859fe2380557a90ea980a492f28bc73",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/client",
+      "resultFingerprint": "7bf3ac2d009d046122c35f91b95f5cb11c1fc74f53cdfbb3bacbc80ac2b588dc"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/api.ts",
+      "contentFingerprint": "ceb0c76cb2d8680e2be4edf0f6ac42c90e6a4ff78e0e14ce4aa277357606ff04"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/cards.ts",
+      "contentFingerprint": "9d3522b787612ba129058b89f8a4c5f9a4e980321f69c3cc68607c5b111d8ef6"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/http.ts",
+      "contentFingerprint": "5da39830429559975cae7ae6d39416acb2322ac8e31cfb4da3436df602cb7ec4"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/views/tickets.ts",
+      "contentFingerprint": "7345a63859a81e525ba4341d8a7091053b8825f73215a028e144cd0dc8da5ccc"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/api.ts",
+      "contentFingerprint": "800b0347183c39601b8b7cd33607dee2538eb8da5feb5f1c7e13a1a7c2268f36"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/app.tsx",
+      "contentFingerprint": "23cca247e0a67fb581df6fc517522ccf0026a4897cda109c9e57c367cb2b1051"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/marks.ts",
+      "contentFingerprint": "e7e05436be442342fa6a2ba43a702563a88a46cdd07da50760d8b5ecd2fc06f6"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/provider.tsx",
+      "contentFingerprint": "5639db28e87c1fa0752a30b5280c2e492685bea0593809f72c975b5274d12a8f"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/route.ts",
+      "contentFingerprint": "457b3cf37c9678c085cf4685ae412ff92bc5510b4a5401e805e4762ad12a3a4c"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/rows.tsx",
+      "contentFingerprint": "905d0859ac8f7d7b6bf9375b30a9c1bcf2744c11f171e6e9070c6b0328490458"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/text.ts",
+      "contentFingerprint": "b5c4a264ea799f40598b66d175b434dcb37e2033cddffad8f3e0c8ec1e080c92"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/ticket.tsx",
+      "contentFingerprint": "0d78ec9067cb1e11169ae283b038ffa43859fe2380557a90ea980a492f28bc73"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/widgets.tsx",
+      "contentFingerprint": "6aa900da1203bb7c05a81f1aa8f98376ef6c5edbc6b8f6adce2719d18b1995f4"
+    },
+    {
+      "kind": "search",
+      "path": "src/app",
+      "query": "export function ticketDetail",
+      "limit": 50,
+      "resultFingerprint": "fb7191549cf2381d8fdff999a63b15b92f0e8875755f9e9cc49ff1094a1eb41e"
+    },
+    {
+      "kind": "search",
+      "path": "src/app/api.ts",
+      "query": "TicketPageView",
+      "limit": 50,
+      "resultFingerprint": "b79f39e9d85b8d36dcf021f2a4a0790d5690e21ccbca54f526ee7f0cb5997959"
+    },
+    {
+      "kind": "search",
+      "path": "src/app/api.ts",
+      "query": "tickets/:id",
+      "limit": 50,
+      "resultFingerprint": "44f0a43fd01ee8f60bcb54d92824642da06ab2f7efbb96f1099fb4443efc7f4c"
+    },
+    {
+      "kind": "search",
+      "path": "src/app/http.ts",
+      "query": "TicketPageView",
+      "limit": 50,
+      "resultFingerprint": "59e2edf9107f18f364fed6f6380a1e5d9f9383e79ff3699a13fc2d0903324750"
+    },
+    {
+      "kind": "search",
+      "path": "src/client",
+      "query": "TicketPage",
+      "limit": 50,
+      "resultFingerprint": "d5d20f0d76887b8ce420af0be177ea562c05a6c3a913cfd734770aa55278a9aa"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/api.ts",
+      "query": "TicketPageView",
+      "limit": 50,
+      "resultFingerprint": "d25a16619b95b1ab13fc10cb54d744ff2113f9aec190e0879bd6bbd918aafe78"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/marks.ts",
+      "query": "export function ticketMark",
+      "limit": 50,
+      "resultFingerprint": "7624b476befce43c5f326ac2e03a42d91f223a86abbf23114ed63a34c5721316"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/provider.tsx",
+      "query": "usePanel",
+      "limit": 50,
+      "resultFingerprint": "8ddf37a734c6e7d9ed07d16716172219b34edda1d65491401387e1fa8943257d"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/route.ts",
+      "query": "export function settingsRoute",
+      "limit": 50,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/route.ts",
+      "query": "settingsRoute",
+      "limit": 50,
+      "resultFingerprint": "183381df601bb34b3dd72130638365b7de18d69dc0664242ac2cbb3a763b7deb"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/rows.tsx",
+      "query": "automatedRuns",
+      "limit": 50,
+      "resultFingerprint": "419ce1807c2950130edf03ae784b9df2e4417fdd0ad6d052c3c85b0afe77f2c0"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/rows.tsx",
+      "query": "export function ThreadLine",
+      "limit": 50,
+      "resultFingerprint": "d2aa4a9810dbc051ebd3c7d5d1088005eafa6c176446ab52661fb3a15b5c7ebc"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/text.ts",
+      "query": "export function",
+      "limit": 50,
+      "resultFingerprint": "ebb0d9f70c77e88ab144d61a74b5479591dd2f7289b299675a6314fce658eac8"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/widgets.tsx",
+      "query": "export function ",
+      "limit": 60,
+      "resultFingerprint": "8d17d28a2410f60d888f706befc33f75c39e7a2c84f2260ac5b4568609b94e0e"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-presentation:orchestration",
+      "contentFingerprint": "29dd1b20f7e2daeae82095044d6c923a58677a7694d5c9a9157f1f60778a017d"
+    }
+  ],
+  "infoFingerprint": "a88750d485d1574f6e338e19bbc4f25fb79ee7f3686be18b42bfb39f78cd4ef2",
+  "artifacts": {
+    "info": ".fibo/analysis/src/client/ticket.tsx.info.md",
+    "structure": ".fibo/analysis/src/client/ticket.tsx.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "a88750d485d1574f6e338e19bbc4f25fb79ee7f3686be18b42bfb39f78cd4ef2",
+    "structure": "f7783f7f129f02a7f01a4d27e36090aa59c1721c292e286d35d3db870da89d91"
+  }
+}

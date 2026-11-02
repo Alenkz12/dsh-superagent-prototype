@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/retry-health.ts",
+    "path": "src/app/retry-health.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "retry-health.ts",
+    "file_path": "src/app/retry-health.ts",
+    "description": "Retry health tracking module: detects budget-exceeded failures and tracks per-session retry state from native events",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "budgetFailure",
+        "function_id": "src/app/retry-health.ts:budgetFailure(value: unknown)",
+        "description": "Determines whether an error value represents a provider budget-exceeded failure, ignoring auth/rate-limit errors",
+        "filepath": "src/app/retry-health.ts",
+        "lines": [
+          10,
+          23
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [
+      {
+        "class_name": "RetryHealth",
+        "class_id": "src/app/retry-health.ts:RetryHealth",
+        "description": "Tracks per-session retry health by replaying and observing native retry events, recording active chains with attempt counts",
+        "super_class": [],
+        "filepath": "src/app/retry-health.ts",
+        "lines": [
+          29,
+          91
+        ],
+        "function": [],
+        "variables": []
+      }
+    ],
+    "interfaces": [
+      {
+        "interface_name": "RetryHealthEvent",
+        "interface_id": "src/app/retry-health.ts:RetryHealthEvent",
+        "description": "Shape of an ordered native retry event with type, sequence number, time, and payload",
+        "filepath": "src/app/retry-health.ts",
+        "lines": [
+          2,
+          2
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "BudgetRetryStatus",
+        "interface_id": "src/app/retry-health.ts:BudgetRetryStatus",
+        "description": "Retry status for a session: provider, attempt count, start time, and last update time",
+        "filepath": "src/app/retry-health.ts",
+        "lines": [
+          3,
+          3
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "record",
+        "variable_id": "src/app/retry-health.ts:record",
+        "description": "Type guard that returns the value as a plain object record, or undefined for non-objects and arrays",
+        "filepath": "src/app/retry-health.ts",
+        "lines": [
+          6,
+          6
+        ]
+      },
+      {
+        "variable_name": "ordinal",
+        "variable_id": "src/app/retry-health.ts:ordinal",
+        "description": "Type guard checking that a value is a non-negative safe integer",
+        "filepath": "src/app/retry-health.ts",
+        "lines": [
+          7,
+          7
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "Chain",
+        "alias_id": "src/app/retry-health.ts:Chain",
+        "description": "Active retry chain descriptor pairing a retry id and provider with its status",
+        "filepath": "src/app/retry-health.ts",
+        "lines": [
+          4,
+          4
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "State",
+        "alias_id": "src/app/retry-health.ts:State",
+        "description": "Per-session tracking state with sequence, turn, step counters, ended/settled flags, and optional active chain",
+        "filepath": "src/app/retry-health.ts",
+        "lines": [
+          5,
+          5
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

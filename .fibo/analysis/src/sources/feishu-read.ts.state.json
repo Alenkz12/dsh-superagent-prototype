@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/sources/feishu-read.ts",
+    "path": "src/sources/feishu-read.ts",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "720ba1d7c064904752e6186ffbbadca14035a43a3fc3e578ec656882323c58f1",
+  "sourceFingerprint": "4c8fa546db21c8cf2dbc2b7dc7533e06eff3dfb41ee05a9657bd9a7975671907",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/sources",
+      "resultFingerprint": "e13a5d7335d2907bee6071268ebe6f12a05e34a0f356774711e36baefff226d6"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/links.ts",
+      "contentFingerprint": "7d17aef4fb89936467ad99d6c25417b03d7b4a66ad02e3b0981aed3cb2f0ffc2"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/resources.ts",
+      "contentFingerprint": "cc09f56669b2ccacfc889aa98132590b618f77e6648a7ff8fe8454106c8c663f"
+    },
+    {
+      "kind": "file",
+      "path": "src/infra/commands.ts",
+      "contentFingerprint": "9d7593c5022e0c1813731c1f1cd8471b1536b0b5f42974a08ef2b2930c1e62b2"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/feishu-image.ts",
+      "contentFingerprint": "6dd5cee8d8b00802b7e211fa536e44eaa7965a7b2bebb11c169c2512cd7ce4e5"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/feishu-read.ts",
+      "contentFingerprint": "4c8fa546db21c8cf2dbc2b7dc7533e06eff3dfb41ee05a9657bd9a7975671907"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/feishu-trigger.ts",
+      "contentFingerprint": "d605d1381da26509020f743b5945a768276aa81f9604ef0b5879aab3e535bf08"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/feishu.ts",
+      "contentFingerprint": "b8830aa06caa7ee13ffb7f5d31f8707392174e9e2920323582ee150a3abc6560"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/github-read.ts",
+      "contentFingerprint": "4951cbcdf4079c28666972b7964f1121cafd691d1cc76970583f2c57ef9dc52b"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/kind.ts",
+      "contentFingerprint": "4ea3d8eee14707e0ee9b67289a62b1a568bab64732bd04041da5ad89bc9a7e98"
+    },
+    {
+      "kind": "file",
+      "path": "tests/feishu-read.spec.ts",
+      "contentFingerprint": "e94c7759e4ab1fa95b2f4f550e327840d6c9664b9479077ca1368719ccfb7c13"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "feishuRead",
+      "limit": 50,
+      "resultFingerprint": "2a4b0be20686d7abd0ea7c98faa116d86b86817ab99c7119a5fdb743e33f9424"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "feishuReferences",
+      "limit": 50,
+      "resultFingerprint": "4a5e781c4e3c535b911e9e7883174eec7fcfe783b7519ecfb58468aa8dfe58c6"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "readFeishuLink",
+      "limit": 50,
+      "resultFingerprint": "8b13a7289bf2fd7f232cc6005fddfdbb4e87af69160db5a5af3235785e2ea0cc"
+    },
+    {
+      "kind": "search",
+      "path": "src/app/resources.ts",
+      "query": "sourcePage",
+      "limit": 50,
+      "resultFingerprint": "6fe1305f39c344302e94893e5e3e6f084256c031ddf7812d4a28b4eec388fee0"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-api-boundary:domain-rules,external-adapter",
+      "contentFingerprint": "3b84306f41c37eed4ac261f17e43acf6f0f4d86b587cc1c793043f80c2e56f66"
+    }
+  ],
+  "infoFingerprint": "0f863d43b4616a0ed054a6e144810b63e14f6fa10dfff28910fb4c908522f5fc",
+  "artifacts": {
+    "info": ".fibo/analysis/src/sources/feishu-read.ts.info.md",
+    "structure": ".fibo/analysis/src/sources/feishu-read.ts.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "0f863d43b4616a0ed054a6e144810b63e14f6fa10dfff28910fb4c908522f5fc",
+    "structure": "1de3e2036c2a49789837854726202b39c4805486a8e169643d12da67f5936215"
+  }
+}

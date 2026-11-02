@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/sources/github-pull.ts",
+    "path": "src/sources/github-pull.ts",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "9797ad1e318723f2387e796adff806d28df22bfe2c0bf7e5a5721df7fb3cd05d",
+  "sourceFingerprint": "615856e7a6958eade1dbf28c9628adc7a8c7bb5392bee71346e471fb571595ec",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/sources",
+      "resultFingerprint": "e13a5d7335d2907bee6071268ebe6f12a05e34a0f356774711e36baefff226d6"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/cards.ts",
+      "contentFingerprint": "9d3522b787612ba129058b89f8a4c5f9a4e980321f69c3cc68607c5b111d8ef6"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/runtime.ts",
+      "contentFingerprint": "5befef035b4a70978cd881b32282680260c6d2561679f890dd911214664cf515"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/source-context.ts",
+      "contentFingerprint": "909ad5cb9739e4143ddc9ad1d38a6b1b46b18d52c0bcd2b4f8e25b691d0b9047"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/tools/executor.ts",
+      "contentFingerprint": "9869d8a5043725847f18814e23b29c11ae93aa974defa72d2eab62c61a6def47"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/assignments.ts",
+      "contentFingerprint": "6acf4b858b35d95c875680e39b1e3c41557bbe6d39f65031bb26927289327065"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/engine.ts",
+      "contentFingerprint": "bd9a4caff834859877d1a08ccddebc990d0e1ca568674b80f9d59ce5adcac827"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/evals.ts",
+      "contentFingerprint": "38916de24ec6e1a27118dd5d7a7efa67bf7a2dfdbab26fb59d377516269e2fc8"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/intake.ts",
+      "contentFingerprint": "323aadefea69436ba23ed2de3bdbaad673d61915be9e239f3233ecf551a74179"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/model.ts",
+      "contentFingerprint": "982155fe6a03c887a7ac4475c6d1592d12aa23c5fe3698403c93bbfd6469d44a"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/ports.ts",
+      "contentFingerprint": "0b44f1cd716d64776b0e3ea74a158cf0effd92e763b1b13c7705e766e9225a43"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/replies.ts",
+      "contentFingerprint": "5a8821a1b9d951d2255709543e0be762c6d3204bca07a77ff17c7bfe82ba66f4"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/tickets.ts",
+      "contentFingerprint": "1d9f964ad34b54cbb0403bde16af58851e5e80111177ce73a27b6034e9af940e"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/github-pull.ts",
+      "contentFingerprint": "615856e7a6958eade1dbf28c9628adc7a8c7bb5392bee71346e471fb571595ec"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/github-trigger.ts",
+      "contentFingerprint": "c59d6c837e022693a59b3da5829499bc39673ad95879efe543bb7d81c073c21b"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/github.ts",
+      "contentFingerprint": "60bfc2c298cbef708553de5ca0c91c387fd633bc7440c6be0d1242478ef84e88"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/host.ts",
+      "contentFingerprint": "b07998dad9194319a95a9436084cf1612aef9c4c6de22288cfa04258bbfbb1ce"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "bindThread",
+      "limit": 50,
+      "resultFingerprint": "9eda10d4dbc96df256948d86c159c5446ce4c15a2476d954f66546888a845f43"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "github-pull",
+      "limit": 50,
+      "resultFingerprint": "6e6f3cb4a740ac2ebf6a7bb158531f69b99d7dce396d378ae6d8e43bb661eb17"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "pullEndNotices|observePull|claimPull",
+      "limit": 50,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "search",
+      "path": "src/app/cards.ts",
+      "query": "pullOf",
+      "limit": 50,
+      "resultFingerprint": "6c2babd728b328ae19c284ee47408998c918eb9736aa5f9c0f77469ceba019e1"
+    },
+    {
+      "kind": "search",
+      "path": "src/app/runtime.ts",
+      "query": "pullEndNotices",
+      "limit": 50,
+      "resultFingerprint": "fa32be2deca1d1ff1e93ea2d1fa258d922a6a627c5c236dd97353636b2dc9a6e"
+    },
+    {
+      "kind": "search",
+      "path": "src/core",
+      "query": "interface Follow",
+      "limit": 50,
+      "resultFingerprint": "978bd7f7873fafb5a4f52357a5b133a0bb8f6ebbd7efe287aae840eb2ffd66d7"
+    },
+    {
+      "kind": "search",
+      "path": "src/core",
+      "query": "interface OutboundMessage",
+      "limit": 50,
+      "resultFingerprint": "c54233ebff783a9dda781c0d772c06d67c25d364dc75bfde6ed54df6aac22351"
+    },
+    {
+      "kind": "search",
+      "path": "src/core",
+      "query": "interface ThreadFact",
+      "limit": 50,
+      "resultFingerprint": "01f75c88f9d5d7033b94767234c707d5490a6efb1dbc9533097641877e89d942"
+    },
+    {
+      "kind": "search",
+      "path": "src/core",
+      "query": "liveTicket",
+      "limit": 50,
+      "resultFingerprint": "6774ac38887ecc1944258733bf31a4939428aae934c79c4f0f972d209eaef1c0"
+    },
+    {
+      "kind": "search",
+      "path": "src/core/tickets.ts",
+      "query": "bindThread",
+      "limit": 50,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "search",
+      "path": "src/core/tickets.ts",
+      "query": "threadClosed",
+      "limit": 50,
+      "resultFingerprint": "539d9507b9d6d3b506e2bb7bf98b2457af9fa44c85e6965909b33cd985a160af"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-domain-rules:data-contract,presentation",
+      "contentFingerprint": "905312ebc8beb85abb2f1e03132bc775da44b69f4520971ddce81c7285bf6ba7"
+    }
+  ],
+  "infoFingerprint": "94edc1a22dd3ef01cdfe55dc85ff3574bf093909b9d9b7671e70e1c7b025df00",
+  "artifacts": {
+    "info": ".fibo/analysis/src/sources/github-pull.ts.info.md",
+    "structure": ".fibo/analysis/src/sources/github-pull.ts.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "94edc1a22dd3ef01cdfe55dc85ff3574bf093909b9d9b7671e70e1c7b025df00",
+    "structure": "d1070b273cbe7a03a4f7c8da405c2f376d7ba1fa9e72ecb22c3e30b9eb8b063d"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/retry-health.ts",
+    "path": "src/app/retry-health.ts",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "1c40163879c50769d001feee7090119dfa59fa34fa9b48ca915bde413f80b5fe",
+  "sourceFingerprint": "f7478818946e6e8ed8508152803eb7262a01f1d10a436549e3a867e0724eda3a",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/app",
+      "resultFingerprint": "c5d9a996b9b8fdf32bef10c15d47f0ba7a1c84c5d144bf4160f01af92915cf64"
+    },
+    {
+      "kind": "file",
+      "path": "docs/007-architecture.md",
+      "contentFingerprint": "e3747665587fdf88b28d4e9c1a1f8ac40cbc2c65a9999be1fce14b69ec44d748"
+    },
+    {
+      "kind": "file",
+      "path": "prompts/handoff.md",
+      "contentFingerprint": "19af7408d146d5a03ff81f155a5582acccd008f608692bcdd4babe8ffb3b6a41"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/retry-health.ts",
+      "contentFingerprint": "f7478818946e6e8ed8508152803eb7262a01f1d10a436549e3a867e0724eda3a"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/sessions.ts",
+      "contentFingerprint": "ca2b98e57e9f27b2abb0afab59d44ea744a96d8be4cf81d7b3776901b56cd36b"
+    },
+    {
+      "kind": "file",
+      "path": "tests/retry-health.spec.ts",
+      "contentFingerprint": "a549241ee55f456e7e82676039dd9669d534f43f70655587b5c4a698ba0e4053"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "BudgetRetryStatus",
+      "limit": 40,
+      "resultFingerprint": "7869357d0eac834330550fc196aed7443b0f405cf25af9e7ac9e27f351508d35"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "model_retry",
+      "limit": 30,
+      "resultFingerprint": "bb6e41e4c8bfdee7dba60f1f04b21f8bd8d59c3ef008000453a48e034248b21b"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "retryHealth",
+      "limit": 40,
+      "resultFingerprint": "17574cedb0f3c7e04e88082d9ee41988852df96ac2eca50100da6d5b397d8819"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "RetryHealth",
+      "limit": 40,
+      "resultFingerprint": "010efcee1eefb505a3951c4e4055f4e8ee42d381448cce866f92a23fb9641838"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-domain-rules:data-contract",
+      "contentFingerprint": "ad66491eedcd189c937ee62527c90f0f48ef13004b4f2596e925a6a2ed0899f1"
+    }
+  ],
+  "infoFingerprint": "50e1cc221a4d3158db2b8af5717e77b6c787bfdfa54a1db8880dcccdc64d25bd",
+  "artifacts": {
+    "info": ".fibo/analysis/src/app/retry-health.ts.info.md",
+    "structure": ".fibo/analysis/src/app/retry-health.ts.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "50e1cc221a4d3158db2b8af5717e77b6c787bfdfa54a1db8880dcccdc64d25bd",
+    "structure": "84c8079eac2021893f271272324e52e1122a40cb92a6d6402e3321f01e42eb2b"
+  }
+}

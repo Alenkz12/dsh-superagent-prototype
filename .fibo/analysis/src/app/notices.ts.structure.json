@@ -1,0 +1,268 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/notices.ts",
+    "path": "src/app/notices.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "notices.ts",
+    "file_path": "src/app/notices.ts",
+    "description": "Notice and Relay builders that turn domain events, tickets, and settings changes into notification payloads and relay messages",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "node:crypto",
+        "description": "Imports randomUUID for generating unique notice keys",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports core helpers and types: followupOwners, key, liveTicket, DomainEvent, Ticket, WorkerReport",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports triggerMessage from the executor dsh module",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "../executor/dsh.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the SourceRegistry type from the sources registry",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "../sources/registry.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports repliedTo helper from links module",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "./links.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Store type from the store module",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "./store.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports ticketCard helper from cards module",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "./cards.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "changedPaths",
+        "function_id": "src/app/notices.ts:changedPaths(before: unknown, after: unknown, path = '')",
+        "description": "Recursively compares two values and returns up to 20 dotted paths that differ",
+        "filepath": "src/app/notices.ts",
+        "lines": [
+          26,
+          32
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "brief",
+        "function_id": "src/app/notices.ts:brief(ticket: Ticket)",
+        "description": "Returns a ticket card without its preview field as a compact summary",
+        "filepath": "src/app/notices.ts",
+        "lines": [
+          34,
+          37
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "eventNotice",
+        "function_id": "src/app/notices.ts:eventNotice(event: DomainEvent, ticket: (id: string) => Ticket | undefined = () => undefined)",
+        "description": "Builds a receipt notice for events such as ticket end or requeued trigger, or returns undefined if unhandled",
+        "filepath": "src/app/notices.ts",
+        "lines": [
+          48,
+          68
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "followupNotice",
+        "function_id": "src/app/notices.ts:followupNotice(store: Store, sources: SourceRegistry, triggerId: string)",
+        "description": "Builds a follow-up relay for a trigger's live fanout tickets, or undefined when none apply",
+        "filepath": "src/app/notices.ts",
+        "lines": [
+          86,
+          97
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "followupRelay",
+        "function_id": "src/app/notices.ts:followupRelay(message: { trigger_id: string }, tickets: readonly { ticket_id: string; title: string; state: string; context?: boolean }[])",
+        "description": "Wraps a trigger message plus delivered ticket list into a follow-up relay payload",
+        "filepath": "src/app/notices.ts",
+        "lines": [
+          102,
+          106
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "resultRelay",
+        "function_id": "src/app/notices.ts:resultRelay(ticket: Ticket, state: string, text: string, replyTo?: string)",
+        "description": "Builds a worker report relay for a ticket result, truncating long text into a summary",
+        "filepath": "src/app/notices.ts",
+        "lines": [
+          108,
+          114
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "reportRelay",
+        "function_id": "src/app/notices.ts:reportRelay(ticket: Ticket, report: Pick<WorkerReport, 'state' | 'summary' | 'question' | 'answers'>)",
+        "description": "Builds an attention or result relay from a worker report, skipping progress reports without answers",
+        "filepath": "src/app/notices.ts",
+        "lines": [
+          121,
+          129
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "Relay",
+        "interface_id": "src/app/notices.ts:Relay",
+        "description": "Outgoing relay message shape with an id and JSON text body",
+        "filepath": "src/app/notices.ts",
+        "lines": [
+          77,
+          77
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "promptsNotice",
+        "variable_id": "src/app/notices.ts:promptsNotice",
+        "description": "Builds a notice recording a saved prompt configuration revision",
+        "filepath": "src/app/notices.ts",
+        "lines": [
+          16,
+          17
+        ]
+      },
+      {
+        "variable_name": "settingsNotice",
+        "variable_id": "src/app/notices.ts:settingsNotice",
+        "description": "Builds a notice for saved settings, optionally scoped to a block with changed keys",
+        "filepath": "src/app/notices.ts",
+        "lines": [
+          22,
+          24
+        ]
+      },
+      {
+        "variable_name": "receiptNotice",
+        "variable_id": "src/app/notices.ts:receiptNotice",
+        "description": "Builds a receipt notice with a unique generated key from a payload and summary",
+        "filepath": "src/app/notices.ts",
+        "lines": [
+          39,
+          39
+        ]
+      },
+      {
+        "variable_name": "subscriptionNotice",
+        "variable_id": "src/app/notices.ts:subscriptionNotice",
+        "description": "Builds a notice reporting removal of subscriptions on a thread",
+        "filepath": "src/app/notices.ts",
+        "lines": [
+          41,
+          42
+        ]
+      },
+      {
+        "variable_name": "threadFollowedNotice",
+        "variable_id": "src/app/notices.ts:threadFollowedNotice",
+        "description": "Builds a receipt notice that a ticket now follows a thread for context, with reason",
+        "filepath": "src/app/notices.ts",
+        "lines": [
+          71,
+          74
+        ]
+      },
+      {
+        "variable_name": "FOLLOWUP_NOTE",
+        "variable_id": "src/app/notices.ts:FOLLOWUP_NOTE",
+        "description": "Standard note telling the recipient the ticket's worker owns the follow-up and to act only on explicit stop requests",
+        "filepath": "src/app/notices.ts",
+        "lines": [
+          79,
+          80
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "Notice",
+        "alias_id": "src/app/notices.ts:Notice",
+        "description": "Tuple type of a notice: name key, value payload record, and human-readable summary",
+        "filepath": "src/app/notices.ts",
+        "lines": [
+          14,
+          14
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

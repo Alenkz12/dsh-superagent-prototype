@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/core/ids.ts",
+    "path": "src/core/ids.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "ids.ts",
+    "file_path": "src/core/ids.ts",
+    "description": "Identifier utility module providing deterministic hash key generation",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "node:crypto",
+        "description": "Node crypto module import providing the createHash hashing function",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "key",
+        "function_id": "src/core/ids.ts:key(...values: string[])",
+        "description": "Builds a 32-char hex SHA-256 key from the JSON of the given string values",
+        "filepath": "src/core/ids.ts",
+        "lines": [
+          3,
+          5
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

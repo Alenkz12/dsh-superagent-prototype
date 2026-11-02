@@ -1,0 +1,226 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/overview.tsx",
+    "path": "src/client/overview.tsx",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "overview.tsx",
+    "file_path": "src/client/overview.tsx",
+    "description": "Overview page of the panel: renders pending Tickets that need human action, active system problems, last-24-hour flow counters, and Executor load statistics, with navigation links to the relevant settings/execution views.",
+    "file_type": "tsx",
+    "language": "typescript",
+    "import_class": [],
+    "import_function": [
+      {
+        "function_name": "usePoll",
+        "description": "React hook that periodically polls an async data source and returns data/error/reload",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "src/client/api.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "Problem",
+        "description": "Type describing a system problem entry rendered in the overview (type-only import)",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "src/client/api.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "useAction",
+        "description": "React hook wrapping an async action with busy state and optional reload callback",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "src/client/provider.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "usePanel",
+        "description": "React hook exposing panel context helpers such as translation, API call and navigation",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "src/client/provider.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "usePanelData",
+        "description": "React hook exposing shared panel data including the setup status",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "src/client/provider.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "setupPage",
+        "description": "Builds the Route for the setup page of a given place (e.g. feishu)",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "src/client/route.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "settingsRoute",
+        "description": "Builds the Route for a settings sub-page (source, eval, etc.)",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "src/client/route.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "Route",
+        "description": "Type describing a navigable panel route (type-only import)",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "src/client/route.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "healthText",
+        "description": "Formats a source health object into human-readable text",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "localized",
+        "description": "Resolves a localized string value from a translation map",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "reasonLabel",
+        "description": "Returns a localized label for a decision/trigger reason",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "valueLabel",
+        "description": "Returns a localized label for an enumerated value of a given namespace",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "readableMarkers",
+        "description": "Renders thread markers as a human-readable string",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      }
+    ],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "ProblemLine",
+        "function_id": "src/client/overview.tsx:ProblemLine({ problem, onChanged }: { problem: Problem; onChanged: () => Promise<void> })",
+        "description": "Internal React component that renders one system problem row, switching on problem.kind to choose title, detail, navigation target and action buttons (setup check, source/eval links, resume executor, requeue/dismiss eval).",
+        "filepath": "src/client/overview.tsx",
+        "lines": [
+          11,
+          59
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "problem",
+            "param_type": "Problem",
+            "description": "The problem descriptor to render",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "onChanged",
+            "param_type": "() => Promise<void>",
+            "description": "Callback invoked after a mutating action succeeds so the page reloads its data",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "OverviewPage",
+        "function_id": "src/client/overview.tsx:OverviewPage()",
+        "description": "Exported overview page component: polls GET overview, renders pending human-action Tickets, active problems, 24-hour flow statistics and executor load, with links to filtered views.",
+        "filepath": "src/client/overview.tsx",
+        "lines": [
+          61,
+          103
+        ],
+        "code": null,
+        "parameters": [],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      }
+    ],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

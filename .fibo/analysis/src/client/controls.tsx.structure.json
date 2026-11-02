@@ -1,0 +1,937 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/controls.tsx",
+    "path": "src/client/controls.tsx",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "controls.tsx",
+    "file_path": "src/client/controls.tsx",
+    "description": "Context-free React UI primitive components (icons, buttons, tags, pills, tabs, segmented control, input, switch, state dots, disclosure rows, modal dialog, info tooltip) styled with --dsw-alias-* design tokens; mirrors DSH ui-primitives markup and keyboard behavior.",
+    "file_type": "tsx",
+    "language": "typescript",
+    "import_class": [],
+    "import_function": [
+      {
+        "function_name": "useCallback",
+        "description": "React hook used to memoize the tab overflow measurement callback so the ResizeObserver effect stays stable",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "useEffect",
+        "description": "React hook used for side effects such as ResizeObserver subscriptions, global key listeners and focus restoration",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "useLayoutEffect",
+        "description": "React hook used to position the tooltip bubble before paint",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "useRef",
+        "description": "React hook used to hold DOM element references (tablist, dialog, tooltip anchor/bubble) and mutable callback refs",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "useState",
+        "description": "React hook used for component local state (tab overflow indicator, tooltip open state)",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "ButtonHTMLAttributes",
+        "description": "Type-only import: React type describing native button attributes, extended by ButtonProps",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "InputHTMLAttributes",
+        "description": "Type-only import: React type describing native input attributes, extended by the Input component props",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "KeyboardEvent",
+        "description": "Type-only import: React synthetic keyboard event type used by the roving-focus helper",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "ReactNode",
+        "description": "Type-only import: React node type used for icon, title, children and className-driven props",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "createPortal",
+        "description": "Renders modal dialogs and tooltip bubbles into document.body to escape overflow/stacking contexts",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      }
+    ],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "Icon",
+        "function_id": "src/client/controls.tsx:Icon({ name, size })",
+        "description": "Renders a 24x24 stroke SVG icon from the ICON_PATHS registry, marked aria-hidden for decorative use",
+        "filepath": "src/client/controls.tsx",
+        "lines": [
+          49,
+          52
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "name",
+            "param_type": "IconName",
+            "description": "Key of the icon path to render",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "size",
+            "param_type": "number",
+            "description": "Rendered width and height in pixels",
+            "default_value": "16",
+            "is_optional": true
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "Button",
+        "function_id": "src/client/controls.tsx:Button(ButtonProps)",
+        "description": "Generic button primitive applying dt-btn variant/size classes and an optional leading icon slot",
+        "filepath": "src/client/controls.tsx",
+        "lines": [
+          56,
+          60
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "variant",
+            "param_type": "'primary' | 'ghost' | 'outline'",
+            "description": "Visual style variant of the button",
+            "default_value": "'ghost'",
+            "is_optional": true
+          },
+          {
+            "param_name": "size",
+            "param_type": "'md' | 'sm'",
+            "description": "Button size token",
+            "default_value": "'md'",
+            "is_optional": true
+          },
+          {
+            "param_name": "icon",
+            "param_type": "ReactNode",
+            "description": "Optional leading icon rendered before the label",
+            "default_value": "",
+            "is_optional": true
+          },
+          {
+            "param_name": "className",
+            "param_type": "string",
+            "description": "Extra CSS classes appended to the button",
+            "default_value": "",
+            "is_optional": true
+          },
+          {
+            "param_name": "children",
+            "param_type": "ReactNode",
+            "description": "Button label/content",
+            "default_value": "",
+            "is_optional": true
+          },
+          {
+            "param_name": "type",
+            "param_type": "'submit' | 'reset' | 'button'",
+            "description": "Native button type, defaults to button to prevent form submits",
+            "default_value": "'button'",
+            "is_optional": true
+          },
+          {
+            "param_name": "...rest",
+            "param_type": "ButtonHTMLAttributes<HTMLButtonElement>",
+            "description": "Remaining native button attributes forwarded to the DOM element",
+            "default_value": "",
+            "is_optional": true
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "Tag",
+        "function_id": "src/client/controls.tsx:Tag({ tone, title, children })",
+        "description": "Small inline label/chip styled via data-tone attribute",
+        "filepath": "src/client/controls.tsx",
+        "lines": [
+          63,
+          65
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "tone",
+            "param_type": "TagTone",
+            "description": "Semantic color tone of the tag",
+            "default_value": "'outline'",
+            "is_optional": true
+          },
+          {
+            "param_name": "title",
+            "param_type": "string",
+            "description": "Native tooltip text",
+            "default_value": "",
+            "is_optional": true
+          },
+          {
+            "param_name": "children",
+            "param_type": "ReactNode",
+            "description": "Tag content",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "Pill",
+        "function_id": "src/client/controls.tsx:Pill({ active, onClick, children })",
+        "description": "Toggleable pill button exposing aria-pressed for filter-style selections",
+        "filepath": "src/client/controls.tsx",
+        "lines": [
+          67,
+          70
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "active",
+            "param_type": "boolean",
+            "description": "Whether the pill is currently selected",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "onClick",
+            "param_type": "() => void",
+            "description": "Click handler toggling the pill state",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "children",
+            "param_type": "ReactNode",
+            "description": "Pill label content",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "walk",
+        "function_id": "src/client/controls.tsx:walk(event, values, value, onChange)",
+        "description": "Roving-focus keyboard helper handling ArrowLeft/ArrowRight/Home/End navigation over a value list and refocusing the selected tab",
+        "filepath": "src/client/controls.tsx",
+        "lines": [
+          72,
+          82
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "event",
+            "param_type": "KeyboardEvent",
+            "description": "React synthetic keyboard event from the tablist",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "values",
+            "param_type": "readonly V[]",
+            "description": "Ordered list of selectable values",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "value",
+            "param_type": "V",
+            "description": "Currently selected value",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "onChange",
+            "param_type": "(next: V) => void",
+            "description": "Callback invoked with the newly selected value",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "void",
+        "is_async": false,
+        "generics": [
+          "V"
+        ],
+        "decorators": []
+      },
+      {
+        "function_name": "SegmentedTabs",
+        "function_id": "src/client/controls.tsx:SegmentedTabs({ items, value, onChange, label, className })",
+        "description": "Page-level tab bar with ResizeObserver-driven overflow indicator, roving tabindex keyboard navigation and re-emitted onChange on active tab click",
+        "filepath": "src/client/controls.tsx",
+        "lines": [
+          85,
+          112
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "items",
+            "param_type": "readonly TabItem<V>[]",
+            "description": "Tab definitions including value, label and ARIA ids",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "value",
+            "param_type": "V",
+            "description": "Currently selected tab value",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "onChange",
+            "param_type": "(next: V) => void",
+            "description": "Called when a tab is activated (also for the active tab, so callers can reset to root)",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "label",
+            "param_type": "string",
+            "description": "Accessible label for the tablist",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "className",
+            "param_type": "string",
+            "description": "Extra CSS classes for the tablist container",
+            "default_value": "",
+            "is_optional": true
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [
+          "V"
+        ],
+        "decorators": []
+      },
+      {
+        "function_name": "SegmentedControl",
+        "function_id": "src/client/controls.tsx:SegmentedControl({ options, value, onChange, label, disabled, className })",
+        "description": "Compact segmented control built on the tablist pattern, supporting disabled state and per-option tooltips",
+        "filepath": "src/client/controls.tsx",
+        "lines": [
+          113,
+          125
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "options",
+            "param_type": "readonly { value: V; label: string; title?: string }[]",
+            "description": "Segments to render with optional tooltip titles",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "value",
+            "param_type": "V",
+            "description": "Currently selected segment value",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "onChange",
+            "param_type": "(next: V) => void",
+            "description": "Called when a different segment is chosen",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "label",
+            "param_type": "string",
+            "description": "Accessible label for the control",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "disabled",
+            "param_type": "boolean",
+            "description": "Disables all segments and keyboard navigation",
+            "default_value": "",
+            "is_optional": true
+          },
+          {
+            "param_name": "className",
+            "param_type": "string",
+            "description": "Extra CSS classes for the container",
+            "default_value": "",
+            "is_optional": true
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [
+          "V"
+        ],
+        "decorators": []
+      },
+      {
+        "function_name": "Input",
+        "function_id": "src/client/controls.tsx:Input({ icon, className, ...rest })",
+        "description": "Text input primitive wrapped in a styled span with an optional leading icon slot",
+        "filepath": "src/client/controls.tsx",
+        "lines": [
+          127,
+          130
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "icon",
+            "param_type": "ReactNode",
+            "description": "Optional icon rendered inside the input wrapper",
+            "default_value": "",
+            "is_optional": true
+          },
+          {
+            "param_name": "className",
+            "param_type": "string",
+            "description": "Extra CSS classes for the wrapper span",
+            "default_value": "",
+            "is_optional": true
+          },
+          {
+            "param_name": "...rest",
+            "param_type": "InputHTMLAttributes<HTMLInputElement>",
+            "description": "Remaining native input attributes forwarded to the input element",
+            "default_value": "",
+            "is_optional": true
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "Switch",
+        "function_id": "src/client/controls.tsx:Switch({ checked, onChange, label, className })",
+        "description": "Accessible switch toggle exposing role=switch and aria-checked",
+        "filepath": "src/client/controls.tsx",
+        "lines": [
+          132,
+          138
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "checked",
+            "param_type": "boolean",
+            "description": "Current on/off state",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "onChange",
+            "param_type": "(next: boolean) => void",
+            "description": "Called with the inverted state on click",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "label",
+            "param_type": "string",
+            "description": "Accessible label for the switch",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "className",
+            "param_type": "string",
+            "description": "Extra CSS classes",
+            "default_value": "",
+            "is_optional": true
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "StateDot",
+        "function_id": "src/client/controls.tsx:StateDot({ state, className })",
+        "description": "Status indicator rendering an animated spinner for 'ongoing' and a colored dot for other states",
+        "filepath": "src/client/controls.tsx",
+        "lines": [
+          141,
+          148
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "state",
+            "param_type": "DotState",
+            "description": "Status to visualize",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "className",
+            "param_type": "string",
+            "description": "Extra CSS classes",
+            "default_value": "",
+            "is_optional": true
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "Dot",
+        "function_id": "src/client/controls.tsx:Dot({ state, label })",
+        "description": "Wraps StateDot and, when a label is provided, exposes it as an accessible/tooltip-labelled image",
+        "filepath": "src/client/controls.tsx",
+        "lines": [
+          149,
+          152
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "state",
+            "param_type": "DotState",
+            "description": "Status to visualize",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "label",
+            "param_type": "string",
+            "description": "Optional accessible label and hover title",
+            "default_value": "",
+            "is_optional": true
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "DisclosureRow",
+        "function_id": "src/client/controls.tsx:DisclosureRow({ icon, title, open, onToggle, collapsedContent, children })",
+        "description": "Collapsible row with a rotating chevron; supports Enter/Space activation via keyboard and a condensed collapsed summary",
+        "filepath": "src/client/controls.tsx",
+        "lines": [
+          154,
+          169
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "icon",
+            "param_type": "ReactNode",
+            "description": "Leading icon for the row",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "title",
+            "param_type": "ReactNode",
+            "description": "Row title content",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "open",
+            "param_type": "boolean",
+            "description": "Whether the disclosure is expanded",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "onToggle",
+            "param_type": "() => void",
+            "description": "Toggle handler invoked on click, Enter or Space",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "collapsedContent",
+            "param_type": "ReactNode",
+            "description": "Compact summary rendered inside the row while collapsed",
+            "default_value": "",
+            "is_optional": true
+          },
+          {
+            "param_name": "children",
+            "param_type": "ReactNode",
+            "description": "Expanded body content",
+            "default_value": "",
+            "is_optional": true
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "trapTab",
+        "function_id": "src/client/controls.tsx:trapTab(event, dialog)",
+        "description": "Keeps Tab/Shift+Tab focus cycling inside an open modal by focusing the first or last focusable element",
+        "filepath": "src/client/controls.tsx",
+        "lines": [
+          172,
+          181
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "event",
+            "param_type": "globalThis.KeyboardEvent",
+            "description": "Native keydown event",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "dialog",
+            "param_type": "HTMLElement",
+            "description": "Modal dialog root element that contains the focusable elements",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "void",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "Modal",
+        "function_id": "src/client/controls.tsx:Modal({ open, onClose, title, closeLabel, description, footer, className, children })",
+        "description": "Accessible portaled modal dialog with focus trapping, Escape/backdrop dismissal, header/body/footer slots and focus restoration to the opener",
+        "filepath": "src/client/controls.tsx",
+        "lines": [
+          183,
+          215
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "open",
+            "param_type": "boolean",
+            "description": "Controls whether the dialog is mounted and focus-trapped",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "onClose",
+            "param_type": "() => void",
+            "description": "Dismissal handler for Escape, mask click and the close button",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "title",
+            "param_type": "string",
+            "description": "Dialog heading and accessible name",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "closeLabel",
+            "param_type": "string",
+            "description": "Accessible label for the close icon button",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "description",
+            "param_type": "string",
+            "description": "Optional descriptive text rendered under the header",
+            "default_value": "",
+            "is_optional": true
+          },
+          {
+            "param_name": "footer",
+            "param_type": "ReactNode",
+            "description": "Optional footer content (usually action buttons)",
+            "default_value": "",
+            "is_optional": true
+          },
+          {
+            "param_name": "className",
+            "param_type": "string",
+            "description": "Extra CSS classes for the dialog box",
+            "default_value": "",
+            "is_optional": true
+          },
+          {
+            "param_name": "children",
+            "param_type": "ReactNode",
+            "description": "Dialog body content",
+            "default_value": "",
+            "is_optional": true
+          }
+        ],
+        "return_type": "JSX.Element | null",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "InfoTip",
+        "function_id": "src/client/controls.tsx:InfoTip({ text, icon, warn })",
+        "description": "Portaled tooltip trigger supporting hover, keyboard focus-visible, touch toggling, viewport-clamped positioning and scroll/resize dismissal",
+        "filepath": "src/client/controls.tsx",
+        "lines": [
+          218,
+          250
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "text",
+            "param_type": "string",
+            "description": "Tooltip body text, also used as the trigger's accessible label",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "icon",
+            "param_type": "IconName",
+            "description": "Icon shown inside the trigger button",
+            "default_value": "'question'",
+            "is_optional": true
+          },
+          {
+            "param_name": "warn",
+            "param_type": "boolean",
+            "description": "Applies the warning styling variant to the trigger",
+            "default_value": "",
+            "is_optional": true
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      }
+    ],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "TabItem",
+        "interface_id": "src/client/controls.tsx:TabItem",
+        "description": "Describes a single tab entry (value, visible label, and ARIA id/panelId pair) consumed by SegmentedTabs",
+        "extends": [],
+        "filepath": "src/client/controls.tsx",
+        "lines": [
+          83,
+          83
+        ],
+        "methods": [],
+        "properties": [
+          "value: V",
+          "label: string",
+          "id: string",
+          "panelId: string"
+        ],
+        "generics": [
+          "V"
+        ]
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "cx",
+        "variable_id": "src/client/controls.tsx:cx",
+        "description": "Tiny classname joiner that filters out false/undefined values before joining",
+        "filepath": "src/client/controls.tsx",
+        "lines": [
+          9,
+          9
+        ],
+        "variable_type": "(...names: (string | false | undefined)[]) => string",
+        "initial_value": "(...names) => names.filter(Boolean).join(' ')",
+        "is_const": true
+      }
+    ],
+    "constants": [
+      {
+        "constant_name": "ICON_PATHS",
+        "constant_id": "src/client/controls.tsx:ICON_PATHS",
+        "description": "Registry mapping every icon name to its SVG path definition data",
+        "filepath": "src/client/controls.tsx",
+        "lines": [
+          11,
+          47
+        ],
+        "constant_type": "const satisfies Record<string, string>",
+        "value": "{ 'chevron-left', 'chevron-right', 'chevron-down', 'chevron-up', search, question, plus, trash, refresh, clock, history, shield, decision, message, inbox, hash, filter, user, close, settings, external, session, stop, pause, play, unsubscribe, dismiss, pull, copy, review, ask, alert, running, blocked, queue }"
+      },
+      {
+        "constant_name": "FOCUSABLE",
+        "constant_id": "src/client/controls.tsx:FOCUSABLE",
+        "description": "CSS selector listing all focusable element kinds used by the modal focus trap",
+        "filepath": "src/client/controls.tsx",
+        "lines": [
+          171,
+          171
+        ],
+        "constant_type": "string",
+        "value": "'a[href], button:not(:disabled), input:not(:disabled), select:not(:disabled), textarea:not(:disabled), [tabindex]:not([tabindex=\"-1\"])'"
+      }
+    ],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "IconName",
+        "alias_id": "src/client/controls.tsx:IconName",
+        "description": "Union of all available icon keys derived from the ICON_PATHS lookup table",
+        "filepath": "src/client/controls.tsx",
+        "lines": [
+          48,
+          48
+        ],
+        "target_type": "keyof typeof ICON_PATHS",
+        "generics": []
+      },
+      {
+        "alias_name": "ButtonProps",
+        "alias_id": "src/client/controls.tsx:ButtonProps",
+        "description": "Props for the Button primitive: variant/size/icon plus all native button attributes",
+        "filepath": "src/client/controls.tsx",
+        "lines": [
+          54,
+          55
+        ],
+        "target_type": "{ variant?: 'primary' | 'ghost' | 'outline'; size?: 'md' | 'sm'; icon?: ReactNode; className?: string } & ButtonHTMLAttributes<HTMLButtonElement>",
+        "generics": []
+      },
+      {
+        "alias_name": "TagTone",
+        "alias_id": "src/client/controls.tsx:TagTone",
+        "description": "Semantic color tones supported by the Tag primitive",
+        "filepath": "src/client/controls.tsx",
+        "lines": [
+          62,
+          62
+        ],
+        "target_type": "'outline' | 'neutral' | 'quiet' | 'success' | 'info' | 'warning' | 'danger'",
+        "generics": []
+      },
+      {
+        "alias_name": "DotState",
+        "alias_id": "src/client/controls.tsx:DotState",
+        "description": "Visual states supported by StateDot and Dot status indicators",
+        "filepath": "src/client/controls.tsx",
+        "lines": [
+          140,
+          140
+        ],
+        "target_type": "'done' | 'warning' | 'ongoing' | 'error' | 'idle'",
+        "generics": []
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

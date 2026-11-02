@@ -1,0 +1,188 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/settings-history.ts",
+    "path": "src/app/settings-history.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "settings-history.ts",
+    "file_path": "src/app/settings-history.ts",
+    "description": "Settings history module: diffs settings versions into human-readable change lists for the policy history view",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Type import of FieldSpec, the field descriptor for a source kind",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "internal",
+        "filepath": "../sources/kind.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Type import of SourceRegistry, the registry of source kinds",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "../sources/registry.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Import of KV key constants for key-value store lookups",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "../kv.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Type import of Store and SettingsVersion, the settings persistence types",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "./store.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "fieldChanges",
+        "function_id": "src/app/settings-history.ts:fieldChanges(id: string, fields: readonly FieldSpec[], a: Record<string, unknown>, b: Record<string, unknown>, part?: true)",
+        "description": "Computes per-field settings changes between two records, handling row-based fields as added/removed/changed items",
+        "filepath": "src/app/settings-history.ts",
+        "lines": [
+          19,
+          39
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "sourceChanges",
+        "function_id": "src/app/settings-history.ts:sourceChanges(id: string, before: SourceSettings | undefined, after: SourceSettings | undefined, sources: SourceRegistry)",
+        "description": "Computes changes for a single source, covering enabled/disabled toggles plus its schema field diffs",
+        "filepath": "src/app/settings-history.ts",
+        "lines": [
+          40,
+          46
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "settingsChanges",
+        "function_id": "src/app/settings-history.ts:settingsChanges(before: SettingsVersion['settings'], after: SettingsVersion['settings'], sources: SourceRegistry)",
+        "description": "Aggregates all changes between two settings versions: policy rules, executor options, paused state and sources",
+        "filepath": "src/app/settings-history.ts",
+        "lines": [
+          47,
+          76
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "changesOf",
+        "function_id": "src/app/settings-history.ts:changesOf(before: SettingsVersion['settings'], after: SettingsVersion['settings'], sources: SourceRegistry)",
+        "description": "Safely computes settings changes, returning null if diffing throws",
+        "filepath": "src/app/settings-history.ts",
+        "lines": [
+          78,
+          80
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "policyHistory",
+        "function_id": "src/app/settings-history.ts:policyHistory(store: Store, sources: SourceRegistry, policyVersionValue: string)",
+        "description": "Builds the settings history view from stored versions with per-revision change lists and notified ticket titles",
+        "filepath": "src/app/settings-history.ts",
+        "lines": [
+          82,
+          90
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "SettingsChange",
+        "interface_id": "src/app/settings-history.ts:SettingsChange",
+        "description": "Descriptor of a single settings change: code, affected field/source, from/to values and item lists",
+        "filepath": "src/app/settings-history.ts",
+        "lines": [
+          14,
+          17
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "same",
+        "variable_id": "src/app/settings-history.ts:same",
+        "description": "Deep equality helper comparing two values via JSON serialization",
+        "filepath": "src/app/settings-history.ts",
+        "lines": [
+          18,
+          18
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "SourceSettings",
+        "alias_id": "src/app/settings-history.ts:SourceSettings",
+        "description": "Settings configuration type of a single source entry",
+        "filepath": "src/app/settings-history.ts",
+        "lines": [
+          7,
+          7
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "SettingsChangeCode",
+        "alias_id": "src/app/settings-history.ts:SettingsChangeCode",
+        "description": "Union of all change codes identifying which setting was modified",
+        "filepath": "src/app/settings-history.ts",
+        "lines": [
+          9,
+          12
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "HistoryView",
+        "alias_id": "src/app/settings-history.ts:HistoryView",
+        "description": "Type of the policy history view returned by policyHistory",
+        "filepath": "src/app/settings-history.ts",
+        "lines": [
+          91,
+          91
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

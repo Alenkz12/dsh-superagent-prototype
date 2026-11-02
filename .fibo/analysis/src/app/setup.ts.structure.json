@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/setup.ts",
+    "path": "src/app/setup.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "setup.ts",
+    "file_path": "src/app/setup.ts",
+    "description": "Application setup module: verifies and applies the isolated deployment environment and host setup state",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "cordis",
+        "description": "Imported cordis Context type for the plugin/application context",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imported UserError class from core for user-facing failures",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imported deployment helpers and types (SETUP_FIELDS, resolveDeployment, resolveFeishuBot, workerProbe, Deployment, Machine)",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "../deployment.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imported environment helpers for agent variables, environment application/verification, path shims, and worker binaries",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "../infra/environment.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imported Settings and SettingsBlock types from the policy module",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "../policy.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imported SetupError and SetupProblem type from the setup module",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "../setup.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [],
+    "classes": [
+      {
+        "class_name": "Setup",
+        "class_id": "src/app/setup.ts:Setup",
+        "description": "Setup coordinator class that resolves deployment, applies/restores environment variables and PATH shims, and verifies the environment",
+        "super_class": [],
+        "filepath": "src/app/setup.ts",
+        "lines": [
+          24,
+          99
+        ],
+        "function": [],
+        "variables": []
+      }
+    ],
+    "interfaces": [
+      {
+        "interface_name": "SetupHost",
+        "interface_id": "src/app/setup.ts:SetupHost",
+        "description": "Host contract for setup, exposing context, machine, abort lifetime, and a restart method",
+        "filepath": "src/app/setup.ts",
+        "lines": [
+          9,
+          14
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "setupFields",
+        "variable_id": "src/app/setup.ts:setupFields",
+        "description": "Serializes setup-relevant settings fields from the configuration sources for comparison",
+        "filepath": "src/app/setup.ts",
+        "lines": [
+          16,
+          17
+        ]
+      },
+      {
+        "variable_name": "setupChanged",
+        "variable_id": "src/app/setup.ts:setupChanged",
+        "description": "Detects whether setup-relevant settings changed between two Settings snapshots",
+        "filepath": "src/app/setup.ts",
+        "lines": [
+          18,
+          18
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

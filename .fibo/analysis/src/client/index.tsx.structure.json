@@ -1,0 +1,250 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/index.tsx",
+    "path": "src/client/index.tsx",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "index.tsx",
+    "file_path": "src/client/index.tsx",
+    "description": "Browser plugin entry point that registers the sidebar icon, main management panel, and Plugin Manager config view.",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "SessionNavigationError",
+        "description": "Error class thrown when session navigation fails",
+        "lines": [
+          13,
+          13
+        ],
+        "source": "internal",
+        "filepath": "src/navigation.ts",
+        "alias": ""
+      },
+      {
+        "class_name": "App",
+        "description": "Main management panel React component",
+        "lines": [
+          14,
+          14
+        ],
+        "source": "internal",
+        "filepath": "src/client/app.tsx",
+        "alias": ""
+      },
+      {
+        "class_name": "PluginConfig",
+        "description": "Plugin Manager config view React component",
+        "lines": [
+          15,
+          15
+        ],
+        "source": "internal",
+        "filepath": "src/client/deployment.tsx",
+        "alias": ""
+      }
+    ],
+    "import_function": [
+      {
+        "function_name": "useCallback",
+        "description": "React hook that memoizes a callback function",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "useEffect",
+        "description": "React hook that runs side effects after render",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "useRef",
+        "description": "React hook that returns a mutable ref object",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "openKnownSession",
+        "description": "Opens a session that is known to the session list, with abort support",
+        "lines": [
+          13,
+          13
+        ],
+        "source": "internal",
+        "filepath": "src/navigation.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "usePageForm",
+        "description": "Hook providing the config page form object for a plugin entry",
+        "lines": [
+          15,
+          15
+        ],
+        "source": "internal",
+        "filepath": "src/client/deployment.tsx",
+        "alias": ""
+      }
+    ],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "HammerIcon",
+        "function_id": "src/client/index.tsx:HammerIcon(SidebarPanelIconOwnerProps)",
+        "description": "Sidebar panel icon component rendering a hammer SVG scaled to the given size",
+        "filepath": "src/client/index.tsx",
+        "lines": [
+          24,
+          28
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "size",
+            "param_type": "number",
+            "description": "Icon size in pixels provided by the sidebar owner props",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false
+      },
+      {
+        "function_name": "Mounted",
+        "function_id": "src/client/index.tsx:Mounted({ ctx, t })",
+        "description": "Mounted panel wrapper that cancels any pending session navigation when a new one starts or the panel unmounts",
+        "filepath": "src/client/index.tsx",
+        "lines": [
+          31,
+          46
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "ctx",
+            "param_type": "ClientContext",
+            "description": "Cordis client context providing sessions, workspace and config form services",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "t",
+            "param_type": "T",
+            "description": "Translation function bound to the plugin namespace",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false
+      },
+      {
+        "function_name": "apply",
+        "function_id": "src/client/index.tsx:apply(ClientContext)",
+        "description": "Registers the main panel, sidebar icon, and Plugin Manager config view; configForms is optional (without it, machine settings are read-only)",
+        "filepath": "src/client/index.tsx",
+        "lines": [
+          50,
+          58
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "ctx",
+            "param_type": "ClientContext",
+            "description": "Cordis client context used to register locale dictionaries and UI slots",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "void",
+        "is_async": false
+      }
+    ],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "NS",
+        "variable_id": "src/client/index.tsx:NS",
+        "description": "Locale namespace used by the plugin",
+        "filepath": "src/client/index.tsx",
+        "lines": [
+          20,
+          20
+        ],
+        "variable_type": "string literal",
+        "initial_value": "'dshSuperagent'",
+        "is_const": true
+      },
+      {
+        "variable_name": "PANEL_ID",
+        "variable_id": "src/client/index.tsx:PANEL_ID",
+        "description": "Identifier of the main panel and sidebar entry",
+        "filepath": "src/client/index.tsx",
+        "lines": [
+          21,
+          21
+        ],
+        "variable_type": "MainPanelId",
+        "initial_value": "'dsh-superagent' as MainPanelId",
+        "is_const": true
+      },
+      {
+        "variable_name": "ENTRY",
+        "variable_id": "src/client/index.tsx:ENTRY",
+        "description": "Plugin entry name used for config form lookup and Plugin Manager row key",
+        "filepath": "src/client/index.tsx",
+        "lines": [
+          22,
+          22
+        ],
+        "variable_type": "string literal",
+        "initial_value": "'dsh-superagent'",
+        "is_const": true
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "ClientContext",
+        "alias_id": "src/client/index.tsx:ClientContext",
+        "description": "Cordis context extended with the sessions service",
+        "filepath": "src/client/index.tsx",
+        "lines": [
+          19,
+          19
+        ],
+        "target_type": "Context & { sessions: ISessions }"
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

@@ -1,0 +1,542 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/runtime.ts",
+    "path": "src/app/runtime.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "runtime.ts",
+    "file_path": "src/app/runtime.ts",
+    "description": "Application runtime module: defines the Runtime service that wires up store, sessions, sources, tools and lifecycle handling.",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "cordis",
+        "description": "Imports the cordis Service base class and Context type.",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "dsh-agent",
+        "description": "Imports the Agent type from the dsh-agent package.",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "dsh-session",
+        "description": "Imports the SessionId type from the dsh-session package.",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "dsh-api-session-controller",
+        "description": "Type-only side-effect import of the dsh-api-session-controller package for module augmentation.",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "dsh-session-persistence",
+        "description": "Type-only side-effect import of the dsh-session-persistence package for module augmentation.",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "dsh-workspace",
+        "description": "Type-only side-effect import of the dsh-workspace package for module augmentation.",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "dsh-permission-presets",
+        "description": "Type-only side-effect import of the dsh-permission-presets package for module augmentation.",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "dsh-system-prompt",
+        "description": "Type-only side-effect import of the dsh-system-prompt package for module augmentation.",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "dsh-tools",
+        "description": "Type-only side-effect import of the dsh-tools package for module augmentation.",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "dsh-skill",
+        "description": "Type-only side-effect import of the dsh-skill package for module augmentation.",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "dsh-subprocess",
+        "description": "Type-only side-effect import of the dsh-subprocess package for module augmentation.",
+        "lines": [
+          12,
+          12
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "node:fs",
+        "description": "Imports mkdirSync from node:fs for directory creation.",
+        "lines": [
+          13,
+          13
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "node:path",
+        "description": "Imports join from node:path for path composition.",
+        "lines": [
+          14,
+          14
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "proper-lockfile",
+        "description": "Imports lockSync to acquire file-based directory locks.",
+        "lines": [
+          15,
+          15
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports core engine primitives (Engine, key, reasonText) and related types from the core module.",
+        "lines": [
+          16,
+          16
+        ],
+        "source": "internal",
+        "filepath": "../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports sender-permission and settings-policy helpers.",
+        "lines": [
+          17,
+          17
+        ],
+        "source": "internal",
+        "filepath": "../policy.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the SourceRegistry class for managing event sources.",
+        "lines": [
+          18,
+          18
+        ],
+        "source": "internal",
+        "filepath": "../sources/registry.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Commands infrastructure class.",
+        "lines": [
+          19,
+          19
+        ],
+        "source": "internal",
+        "filepath": "../infra/commands.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports Deployment and Machine types.",
+        "lines": [
+          20,
+          20
+        ],
+        "source": "internal",
+        "filepath": "../deployment.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports execution-environment helpers (environmentOf, ticketEnvironment) and Variable type.",
+        "lines": [
+          21,
+          21
+        ],
+        "source": "internal",
+        "filepath": "./execution-environment.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the SetupProblem type from the setup module.",
+        "lines": [
+          22,
+          22
+        ],
+        "source": "internal",
+        "filepath": "../setup.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the dsh executor and trigger/message helper functions.",
+        "lines": [
+          23,
+          23
+        ],
+        "source": "internal",
+        "filepath": "../executor/dsh.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the ticketCard view builder.",
+        "lines": [
+          24,
+          24
+        ],
+        "source": "internal",
+        "filepath": "./cards.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the MasterAssessor used for ticket assessment.",
+        "lines": [
+          25,
+          25
+        ],
+        "source": "internal",
+        "filepath": "./assessment.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the KV key-value store.",
+        "lines": [
+          26,
+          26
+        ],
+        "source": "internal",
+        "filepath": "../kv.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Store persistence class.",
+        "lines": [
+          27,
+          27
+        ],
+        "source": "internal",
+        "filepath": "./store.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the evalsHealth overview view.",
+        "lines": [
+          28,
+          28
+        ],
+        "source": "internal",
+        "filepath": "./views/overview.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the TextCache caching helper.",
+        "lines": [
+          29,
+          29
+        ],
+        "source": "internal",
+        "filepath": "./cache.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Effects manager.",
+        "lines": [
+          30,
+          30
+        ],
+        "source": "internal",
+        "filepath": "./effects.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Prompts manager.",
+        "lines": [
+          31,
+          31
+        ],
+        "source": "internal",
+        "filepath": "./prompts.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the HTTP route registration helper and HttpHost type.",
+        "lines": [
+          32,
+          32
+        ],
+        "source": "internal",
+        "filepath": "./http.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the LinkTarget type for record links.",
+        "lines": [
+          33,
+          33
+        ],
+        "source": "internal",
+        "filepath": "./views/records.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports link building helpers (candidateCard, repliedTo, sourceLink) and LinkHost type.",
+        "lines": [
+          34,
+          34
+        ],
+        "source": "internal",
+        "filepath": "./links.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports event and follow-up notice constructors.",
+        "lines": [
+          35,
+          35
+        ],
+        "source": "internal",
+        "filepath": "./notices.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports pullEndNotices for GitHub pull source end notices.",
+        "lines": [
+          36,
+          36
+        ],
+        "source": "internal",
+        "filepath": "../sources/github-pull.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the HealthBoard infrastructure component.",
+        "lines": [
+          37,
+          37
+        ],
+        "source": "internal",
+        "filepath": "../infra/health.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Outbox message queue.",
+        "lines": [
+          38,
+          38
+        ],
+        "source": "internal",
+        "filepath": "./outbox.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Passes scheduler component.",
+        "lines": [
+          39,
+          39
+        ],
+        "source": "internal",
+        "filepath": "./passes.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Setup configuration manager.",
+        "lines": [
+          40,
+          40
+        ],
+        "source": "internal",
+        "filepath": "./setup.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports feishu source settings.",
+        "lines": [
+          41,
+          41
+        ],
+        "source": "internal",
+        "filepath": "../sources/feishu.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports source host health helpers and SourceHost/SourceContext types.",
+        "lines": [
+          42,
+          42
+        ],
+        "source": "internal",
+        "filepath": "../sources/host.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Sessions manager.",
+        "lines": [
+          43,
+          43
+        ],
+        "source": "internal",
+        "filepath": "./sessions.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Settings manager.",
+        "lines": [
+          44,
+          44
+        ],
+        "source": "internal",
+        "filepath": "./settings.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports source-context factory helpers and SourceContextDeps type.",
+        "lines": [
+          45,
+          45
+        ],
+        "source": "internal",
+        "filepath": "./source-context.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the ResourceHost type.",
+        "lines": [
+          46,
+          46
+        ],
+        "source": "internal",
+        "filepath": "./resources.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports main tool definitions and MainToolsHost type.",
+        "lines": [
+          47,
+          47
+        ],
+        "source": "internal",
+        "filepath": "./tools/main.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports executor tool definitions and ExecutorToolsHost type.",
+        "lines": [
+          48,
+          48
+        ],
+        "source": "internal",
+        "filepath": "./tools/executor.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [],
+    "classes": [
+      {
+        "class_name": "Runtime",
+        "class_id": "src/app/runtime.ts:Runtime",
+        "description": "Core runtime service extending Service, owning store, setup, prompts, effects, source registry, commands and sessions, with state-directory lock release on dispose.",
+        "super_class": [],
+        "filepath": "src/app/runtime.ts",
+        "lines": [
+          59,
+          254
+        ],
+        "function": [],
+        "variables": []
+      }
+    ],
+    "interfaces": [
+      {
+        "interface_name": "Context",
+        "interface_id": "src/app/runtime.ts:Context",
+        "description": "Module augmentation adding an `orchestrator: SourceHost` field to the cordis Context interface.",
+        "filepath": "src/app/runtime.ts",
+        "lines": [
+          51,
+          51
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "now",
+        "variable_id": "src/app/runtime.ts:now",
+        "description": "Helper returning the current time as an ISO 8601 string.",
+        "filepath": "src/app/runtime.ts",
+        "lines": [
+          52,
+          52
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

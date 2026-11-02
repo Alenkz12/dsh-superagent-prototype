@@ -1,0 +1,662 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/http.ts",
+    "path": "src/app/http.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "http.ts",
+    "file_path": "src/app/http.ts",
+    "description": "HTTP management API for the orchestrator: route table, request parsing, views and loopback-only server registration",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "cordis",
+        "description": "Imports the cordis Context type",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "dsh-host-webserver",
+        "description": "Imports type augmentations from the dsh host webserver package",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "node:http",
+        "description": "Imports Node HTTP request and response types",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "zod",
+        "description": "Imports the zod schema validation library",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports API types and thread/ticket filter constants from api.ts",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "./api.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports built-in skill sources from context.ts",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "./context.ts"
+      },
+      {
+        "class_name": "types",
+        "description": "Imports the ModelCatalog type from the session controller API types",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports prompt helpers, constants and Prompts type from prompts.ts",
+        "lines": [
+          9,
+          10
+        ],
+        "source": "internal",
+        "filepath": "./prompts.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports policyVersion from the policy module",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "../policy.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports SettingsConflict error and Settings type from settings.ts",
+        "lines": [
+          12,
+          12
+        ],
+        "source": "internal",
+        "filepath": "./settings.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports setup error types and problem type from setup.ts",
+        "lines": [
+          13,
+          13
+        ],
+        "source": "internal",
+        "filepath": "../setup.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports user error and core engine types from core index",
+        "lines": [
+          14,
+          14
+        ],
+        "source": "internal",
+        "filepath": "../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports Deployment and Machine types from deployment.ts",
+        "lines": [
+          15,
+          15
+        ],
+        "source": "internal",
+        "filepath": "../deployment.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the DshExecutor type from the executor module",
+        "lines": [
+          16,
+          16
+        ],
+        "source": "internal",
+        "filepath": "../executor/dsh.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Health type from the sources host module",
+        "lines": [
+          17,
+          17
+        ],
+        "source": "internal",
+        "filepath": "../sources/host.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the SourceRegistry type from the sources registry",
+        "lines": [
+          18,
+          18
+        ],
+        "source": "internal",
+        "filepath": "../sources/registry.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Sessions type from sessions.ts",
+        "lines": [
+          19,
+          19
+        ],
+        "source": "internal",
+        "filepath": "./sessions.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Store type from store.ts",
+        "lines": [
+          20,
+          20
+        ],
+        "source": "internal",
+        "filepath": "./store.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the TextCache type from cache.ts",
+        "lines": [
+          21,
+          21
+        ],
+        "source": "internal",
+        "filepath": "./cache.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports LinkTarget and ViewHost view types from views/records.ts",
+        "lines": [
+          22,
+          22
+        ],
+        "source": "internal",
+        "filepath": "./views/records.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Variable type from execution-environment.ts",
+        "lines": [
+          23,
+          23
+        ],
+        "source": "internal",
+        "filepath": "./execution-environment.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports policyHistory from the settings history module",
+        "lines": [
+          24,
+          24
+        ],
+        "source": "internal",
+        "filepath": "./settings-history.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the overview view builder",
+        "lines": [
+          25,
+          25
+        ],
+        "source": "internal",
+        "filepath": "./views/overview.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the settings view builder",
+        "lines": [
+          26,
+          26
+        ],
+        "source": "internal",
+        "filepath": "./views/settings.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports sources status view and SetupState type",
+        "lines": [
+          27,
+          27
+        ],
+        "source": "internal",
+        "filepath": "./views/sources.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports thread list/detail, search and decision list view builders",
+        "lines": [
+          28,
+          28
+        ],
+        "source": "internal",
+        "filepath": "./views/threads.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports ticket list/detail and executor load view builders",
+        "lines": [
+          29,
+          29
+        ],
+        "source": "internal",
+        "filepath": "./views/tickets.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "readBody",
+        "function_id": "src/app/http.ts:readBody(req: IncomingMessage, maxBytes = 128 * 1024)",
+        "description": "Reads and JSON-parses the request body, enforcing a maximum byte size",
+        "filepath": "src/app/http.ts",
+        "lines": [
+          62,
+          71
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "json",
+        "function_id": "src/app/http.ts:json(res: ServerResponse, status: number, value: unknown)",
+        "description": "Writes a JSON response with given status and no-store/nosniff headers",
+        "filepath": "src/app/http.ts",
+        "lines": [
+          72,
+          74
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "sameOrigin",
+        "function_id": "src/app/http.ts:sameOrigin(req: Pick<IncomingMessage, 'headers'>, port: number)",
+        "description": "Checks request is loopback host with orchestrator header and matching origin",
+        "filepath": "src/app/http.ts",
+        "lines": [
+          75,
+          79
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "failure",
+        "function_id": "src/app/http.ts:failure(error: unknown)",
+        "description": "Maps known error types to HTTP status codes and JSON error payloads",
+        "filepath": "src/app/http.ts",
+        "lines": [
+          81,
+          91
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "machineView",
+        "function_id": "src/app/http.ts:machineView({ stateDir, promptMaxChars, admissionContextMaxPages, admissionContextTimeoutMs }: Machine)",
+        "description": "Builds a snapshot of machine configuration values for the API",
+        "filepath": "src/app/http.ts",
+        "lines": [
+          93,
+          96
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "setupView",
+        "function_id": "src/app/http.ts:setupView(runtime: HttpHost)",
+        "description": "Builds setup status view with machine config, problems and resolved accounts",
+        "filepath": "src/app/http.ts",
+        "lines": [
+          97,
+          103
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "stateView",
+        "function_id": "src/app/http.ts:stateView(runtime: HttpHost)",
+        "description": "Builds overall state view combining setup, load, master id, pause and health",
+        "filepath": "src/app/http.ts",
+        "lines": [
+          105,
+          110
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "ticketPage",
+        "function_id": "src/app/http.ts:ticketPage(runtime: HttpHost, id: string)",
+        "description": "Builds ticket detail page view including environment variables, 404 if missing",
+        "filepath": "src/app/http.ts",
+        "lines": [
+          116,
+          120
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "promptsView",
+        "function_id": "src/app/http.ts:promptsView(runtime: HttpHost, revision: number | undefined, offset: number)",
+        "description": "Builds prompts view with current revision, defaults, built-in parts and history",
+        "filepath": "src/app/http.ts",
+        "lines": [
+          122,
+          131
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "routes",
+        "function_id": "src/app/http.ts:routes(runtime: HttpHost)",
+        "description": "Defines the API route table mapping method+path keys to handlers",
+        "filepath": "src/app/http.ts",
+        "lines": [
+          151,
+          214
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "decoded",
+        "function_id": "src/app/http.ts:decoded(segment: string)",
+        "description": "URL-decodes a path segment, throwing 400 RouteError on malformed escapes",
+        "filepath": "src/app/http.ts",
+        "lines": [
+          215,
+          217
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "match",
+        "function_id": "src/app/http.ts:match(table: Routes, method: string, segments: string[])",
+        "description": "Matches method and path segments against route table, extracting params",
+        "filepath": "src/app/http.ts",
+        "lines": [
+          218,
+          229
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "registerHttp",
+        "function_id": "src/app/http.ts:registerHttp(ctx: Context, runtime: HttpHost)",
+        "description": "Registers loopback-only /orchestrator API handler and returns a disposer",
+        "filepath": "src/app/http.ts",
+        "lines": [
+          230,
+          247
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [
+      {
+        "class_name": "RouteError",
+        "class_id": "src/app/http.ts:RouteError",
+        "description": "Error carrying an HTTP status code (400/404) thrown by route handlers",
+        "super_class": [],
+        "filepath": "src/app/http.ts",
+        "lines": [
+          61,
+          61
+        ],
+        "function": [],
+        "variables": []
+      }
+    ],
+    "interfaces": [
+      {
+        "interface_name": "HttpHost",
+        "interface_id": "src/app/http.ts:HttpHost",
+        "description": "Dependency interface exposing store, prompts, sessions, settings and host capabilities",
+        "filepath": "src/app/http.ts",
+        "lines": [
+          31,
+          56
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "Input",
+        "interface_id": "src/app/http.ts:Input",
+        "description": "Input passed to route handlers: path params, query strings and lazy body reader",
+        "filepath": "src/app/http.ts",
+        "lines": [
+          134,
+          136
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "views",
+        "variable_id": "src/app/http.ts:views",
+        "description": "Factory building a ViewHost view context from the runtime",
+        "filepath": "src/app/http.ts",
+        "lines": [
+          111,
+          111
+        ]
+      },
+      {
+        "variable_name": "setupState",
+        "variable_id": "src/app/http.ts:setupState",
+        "description": "Factory building SetupState with deployment and setup problems",
+        "filepath": "src/app/http.ts",
+        "lines": [
+          112,
+          113
+        ]
+      },
+      {
+        "variable_name": "offset",
+        "variable_id": "src/app/http.ts:offset",
+        "description": "Zod schema coercing query offset to a non-negative integer, defaulting to 0",
+        "filepath": "src/app/http.ts",
+        "lines": [
+          138,
+          138
+        ]
+      },
+      {
+        "variable_name": "limit",
+        "variable_id": "src/app/http.ts:limit",
+        "description": "Factory for a coerced positive limit schema with fallback and max clamp",
+        "filepath": "src/app/http.ts",
+        "lines": [
+          139,
+          139
+        ]
+      },
+      {
+        "variable_name": "TicketsQuery",
+        "variable_id": "src/app/http.ts:TicketsQuery",
+        "description": "Zod schema for ticket list query: state filter, offset and limit",
+        "filepath": "src/app/http.ts",
+        "lines": [
+          140,
+          140
+        ]
+      },
+      {
+        "variable_name": "ThreadsQuery",
+        "variable_id": "src/app/http.ts:ThreadsQuery",
+        "description": "Zod schema for thread list query: filter, offset and limit",
+        "filepath": "src/app/http.ts",
+        "lines": [
+          141,
+          141
+        ]
+      },
+      {
+        "variable_name": "ThreadQuery",
+        "variable_id": "src/app/http.ts:ThreadQuery",
+        "description": "Zod schema for thread detail query: limit, before and around cursors",
+        "filepath": "src/app/http.ts",
+        "lines": [
+          142,
+          142
+        ]
+      },
+      {
+        "variable_name": "DecisionsQuery",
+        "variable_id": "src/app/http.ts:DecisionsQuery",
+        "description": "Zod schema for decision list query: kind, 24h window, offset and limit",
+        "filepath": "src/app/http.ts",
+        "lines": [
+          143,
+          144
+        ]
+      },
+      {
+        "variable_name": "count",
+        "variable_id": "src/app/http.ts:count",
+        "description": "Zod schema coercing values to a non-negative integer count",
+        "filepath": "src/app/http.ts",
+        "lines": [
+          145,
+          145
+        ]
+      },
+      {
+        "variable_name": "PromptsQuery",
+        "variable_id": "src/app/http.ts:PromptsQuery",
+        "description": "Zod schema for prompts query: optional revision and offset",
+        "filepath": "src/app/http.ts",
+        "lines": [
+          146,
+          146
+        ]
+      },
+      {
+        "variable_name": "SourceBlock",
+        "variable_id": "src/app/http.ts:SourceBlock",
+        "description": "Zod schema for a settings block key of form 'source:<slug>'",
+        "filepath": "src/app/http.ts",
+        "lines": [
+          147,
+          147
+        ]
+      },
+      {
+        "variable_name": "SettingsBlockSchema",
+        "variable_id": "src/app/http.ts:SettingsBlockSchema",
+        "description": "Zod schema for a settings block: policy/eval/executor or a source block",
+        "filepath": "src/app/http.ts",
+        "lines": [
+          148,
+          148
+        ]
+      },
+      {
+        "variable_name": "SaveRequest",
+        "variable_id": "src/app/http.ts:SaveRequest",
+        "description": "Zod schema for a save request with value and revision",
+        "filepath": "src/app/http.ts",
+        "lines": [
+          149,
+          149
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "StateView",
+        "alias_id": "src/app/http.ts:StateView",
+        "description": "Return type of the stateView function",
+        "filepath": "src/app/http.ts",
+        "lines": [
+          114,
+          114
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "TicketPageView",
+        "alias_id": "src/app/http.ts:TicketPageView",
+        "description": "Return type of the ticketPage function",
+        "filepath": "src/app/http.ts",
+        "lines": [
+          121,
+          121
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "PromptsView",
+        "alias_id": "src/app/http.ts:PromptsView",
+        "description": "Return type of the promptsView function",
+        "filepath": "src/app/http.ts",
+        "lines": [
+          132,
+          132
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "Routes",
+        "alias_id": "src/app/http.ts:Routes",
+        "description": "Mapped type of all API routes to their handler functions",
+        "filepath": "src/app/http.ts",
+        "lines": [
+          137,
+          137
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

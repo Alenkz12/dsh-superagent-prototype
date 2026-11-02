@@ -1,0 +1,284 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/cards.ts",
+    "path": "src/app/cards.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "cards.ts",
+    "file_path": "src/app/cards.ts",
+    "description": "Card/view builders that serialize tickets, triggers, threads, and decisions into read-model JSON for the app UI.",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Imports core helpers and types (latestReport, reasonText, threadKey, ticketStage, Decision, Ticket, etc.).",
+        "lines": [
+          2,
+          3
+        ],
+        "source": "internal",
+        "filepath": "../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports pullOf helper for resolving GitHub pull numbers.",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "../sources/github-pull.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports batchLine and inputResource helpers from the executor module.",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "../executor/dsh.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "preview",
+        "function_id": "src/app/cards.ts:preview(text: string)",
+        "description": "Collapse whitespace in text and truncate to a 160-char preview string.",
+        "filepath": "src/app/cards.ts",
+        "lines": [
+          8,
+          8
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "triggerCard",
+        "function_id": "src/app/cards.ts:triggerCard(trigger: Trigger, disposition?: TriggerDisposition)",
+        "description": "Build a trigger card with source, actor, thread, preview, and optional disposition info.",
+        "filepath": "src/app/cards.ts",
+        "lines": [
+          9,
+          15
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "cardState",
+        "function_id": "src/app/cards.ts:cardState(ticket: Ticket)",
+        "description": "Derive the ticket card state label from ended outcome or current stage/action.",
+        "filepath": "src/app/cards.ts",
+        "lines": [
+          20,
+          25
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "ticketCard",
+        "function_id": "src/app/cards.ts:ticketCard(ticket: Ticket)",
+        "description": "Build a ticket summary card with state, strength, ended, attention, and preview.",
+        "filepath": "src/app/cards.ts",
+        "lines": [
+          26,
+          33
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "inputLine",
+        "function_id": "src/app/cards.ts:inputLine(ticket: Ticket, input: TicketInput, worker = false)",
+        "description": "Build a single ticket input line, truncating long text and marking undelivered inputs.",
+        "filepath": "src/app/cards.ts",
+        "lines": [
+          39,
+          47
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "assignmentLine",
+        "function_id": "src/app/cards.ts:assignmentLine(ticket: Ticket, item: Ticket['assignments'][number])",
+        "description": "Build a single assignment line with state, ended reason, and optional report preview.",
+        "filepath": "src/app/cards.ts",
+        "lines": [
+          48,
+          52
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "newestPage",
+        "function_id": "src/app/cards.ts:newestPage(items: readonly T[], offset: number, size: number, line: (item: T) => L, next: string)",
+        "description": "Paginate items newest-first, mapping each to a line and adding next-page cursor fields.",
+        "filepath": "src/app/cards.ts",
+        "lines": [
+          53,
+          57
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "ticketDetails",
+        "function_id": "src/app/cards.ts:ticketDetails(ticket: Ticket, threads: TicketThread[], batch: readonly Trigger[], worker = false)",
+        "description": "Build full ticket detail payload with batch, threads, mandate scope, paginated assignments and inputs.",
+        "filepath": "src/app/cards.ts",
+        "lines": [
+          60,
+          69
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "threadCard",
+        "function_id": "src/app/cards.ts:threadCard(thread: Thread, label: string)",
+        "description": "Build a thread card with label, source, subscriptions, evaluating state, and error info.",
+        "filepath": "src/app/cards.ts",
+        "lines": [
+          71,
+          77
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "decisionCard",
+        "function_id": "src/app/cards.ts:decisionCard(decision: Decision)",
+        "description": "Build a decision card with kind, reason, strength, thread, and trigger ids.",
+        "filepath": "src/app/cards.ts",
+        "lines": [
+          78,
+          83
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "decisionDetails",
+        "function_id": "src/app/cards.ts:decisionDetails(decision: Decision)",
+        "description": "Extend a decision card with optional mandate and audit details.",
+        "filepath": "src/app/cards.ts",
+        "lines": [
+          84,
+          87
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "textPage",
+        "function_id": "src/app/cards.ts:textPage(resource: string, text: string, offset: number, limit: number)",
+        "description": "Return a slice of text with offset, total length, and next offset for pagination.",
+        "filepath": "src/app/cards.ts",
+        "lines": [
+          89,
+          92
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "relatedTickets",
+        "function_id": "src/app/cards.ts:relatedTickets(tickets: readonly Ticket[])",
+        "description": "Sort related tickets (active first, newest first), cap at 8, and return cards with total count.",
+        "filepath": "src/app/cards.ts",
+        "lines": [
+          93,
+          96
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "TicketThread",
+        "interface_id": "src/app/cards.ts:TicketThread",
+        "description": "Linked thread reference entry with key and optional context/bound flags.",
+        "filepath": "src/app/cards.ts",
+        "lines": [
+          58,
+          58
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "TICKET_STATES",
+        "variable_id": "src/app/cards.ts:TICKET_STATES",
+        "description": "Constant list of all valid ticket state labels.",
+        "filepath": "src/app/cards.ts",
+        "lines": [
+          17,
+          18
+        ]
+      },
+      {
+        "variable_name": "mandateOf",
+        "variable_id": "src/app/cards.ts:mandateOf",
+        "description": "Strip policy version from a mandate, returning the remaining fields.",
+        "filepath": "src/app/cards.ts",
+        "lines": [
+          35,
+          35
+        ]
+      },
+      {
+        "variable_name": "INPUTS",
+        "variable_id": "src/app/cards.ts:INPUTS",
+        "description": "Page size constants: 10 inputs and 3 assignments per page.",
+        "filepath": "src/app/cards.ts",
+        "lines": [
+          36,
+          36
+        ]
+      },
+      {
+        "variable_name": "ASSIGNMENTS",
+        "variable_id": "src/app/cards.ts:ASSIGNMENTS",
+        "description": "Page size constants: 10 inputs and 3 assignments per page.",
+        "filepath": "src/app/cards.ts",
+        "lines": [
+          36,
+          36
+        ]
+      },
+      {
+        "variable_name": "INPUT_TEXT",
+        "variable_id": "src/app/cards.ts:INPUT_TEXT",
+        "description": "Max character length (80) for inline input text before truncating to preview.",
+        "filepath": "src/app/cards.ts",
+        "lines": [
+          37,
+          37
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "TicketCardState",
+        "alias_id": "src/app/cards.ts:TicketCardState",
+        "description": "Union type of valid ticket card state strings.",
+        "filepath": "src/app/cards.ts",
+        "lines": [
+          19,
+          19
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

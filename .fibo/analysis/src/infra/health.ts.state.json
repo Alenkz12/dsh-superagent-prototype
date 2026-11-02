@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/infra/health.ts",
+    "path": "src/infra/health.ts",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "49325b317527e05be90a05f80ad6ce87989e546401e03ad2cef02de4ab2fa0c3",
+  "sourceFingerprint": "dcd84306e795866ffb66ecb5274edf50114ba77052d260b4b530a1a81022d76e",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/infra",
+      "resultFingerprint": "812201e003213df01502321bd5f8990ab3aee224858775929593aacc6c6dd8f8"
+    },
+    {
+      "kind": "file",
+      "path": "docs/007-architecture.md",
+      "contentFingerprint": "e3747665587fdf88b28d4e9c1a1f8ac40cbc2c65a9999be1fce14b69ec44d748"
+    },
+    {
+      "kind": "file",
+      "path": "docs/008-cookbook.md",
+      "contentFingerprint": "adbdaa519f56bc7987ca6394950802cffcb855acff4ee715d10a26a9b0ccefec"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/effects.ts",
+      "contentFingerprint": "d350590473299398b17c50dd641c72e1995dd95920c5138699491ab77e3ae481"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/http.ts",
+      "contentFingerprint": "5da39830429559975cae7ae6d39416acb2322ac8e31cfb4da3436df602cb7ec4"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/runtime.ts",
+      "contentFingerprint": "5befef035b4a70978cd881b32282680260c6d2561679f890dd911214664cf515"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/sessions.ts",
+      "contentFingerprint": "ca2b98e57e9f27b2abb0afab59d44ea744a96d8be4cf81d7b3776901b56cd36b"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/settings.ts",
+      "contentFingerprint": "2c7cd780dd24ab6a99ddfd30f80b921db035e0d56e3e1d42a86371fe20423f3f"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/source-context.ts",
+      "contentFingerprint": "909ad5cb9739e4143ddc9ad1d38a6b1b46b18d52c0bcd2b4f8e25b691d0b9047"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/views/overview.ts",
+      "contentFingerprint": "c8eb087eb5e3586e924ff5df659aa1535d64e6723f2f5ffa8e721f4abbfabef8"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/views/settings.ts",
+      "contentFingerprint": "5740ad427457aa501fa6cc706573ce5b6882c53d4cdc646f1ac6f02787cd25a3"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/views/sources.ts",
+      "contentFingerprint": "d81bbdba84c2a7bc49a53c95b0b96a340cc2231135f065eff59da648d0ec6798"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/eval.tsx",
+      "contentFingerprint": "44350064a4a7649e418ea5db25d98a58e31f77b8171393589c5b4644d03b8cc8"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/overview.tsx",
+      "contentFingerprint": "316efe735bdfd6e109483916a5a2ba2f78a10618eff0caff59389af541c98f48"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/source.tsx",
+      "contentFingerprint": "0e0d24f6b0695283d47f2127f71ab132533c64e21ac772f1f033a9ef77d29a5d"
+    },
+    {
+      "kind": "file",
+      "path": "src/infra/health.ts",
+      "contentFingerprint": "dcd84306e795866ffb66ecb5274edf50114ba77052d260b4b530a1a81022d76e"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/github.ts",
+      "contentFingerprint": "60bfc2c298cbef708553de5ca0c91c387fd633bc7440c6be0d1242478ef84e88"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/host.ts",
+      "contentFingerprint": "b07998dad9194319a95a9436084cf1612aef9c4c6de22288cfa04258bbfbb1ce"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/registry.ts",
+      "contentFingerprint": "fe8a8fce0b00b65d4fb69b7cd2e5fbf4950b8dc32f0891169f9150c4a16eb5cd"
+    },
+    {
+      "kind": "file",
+      "path": "tests/effects.spec.ts",
+      "contentFingerprint": "2f43ec3af1da76c933aba941f4bf6525c973308646cd0ea9811bb9cc5b0ffb3b"
+    },
+    {
+      "kind": "file",
+      "path": "tests/passes.spec.ts",
+      "contentFingerprint": "08f2b57d4676672aaa3dd9e5896c1654fe16a6c42ff3323d4d8f3ed3296b5743"
+    },
+    {
+      "kind": "file",
+      "path": "tests/registry.spec.ts",
+      "contentFingerprint": "2eb3101a681ff53508c748bff53c9283d3d14421609866e8f1ab27079c097d8c"
+    },
+    {
+      "kind": "file",
+      "path": "tests/runtime-concurrency.spec.ts",
+      "contentFingerprint": "c29f5528381a30f27d9ee9bbf4af451dd32eeed8b2e66ab049137d87a02c0d2a"
+    },
+    {
+      "kind": "file",
+      "path": "tests/sources.spec.ts",
+      "contentFingerprint": "81fe3decc59db85f2fc792a9a6d7026ed26f38a9d282c0f85cd7123155798d78"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "board.all",
+      "limit": 30,
+      "resultFingerprint": "122278a156597c4fb5cb500984ffa8becb92653b9647a544b311f06e6f4776cf"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "claim(",
+      "limit": 40,
+      "resultFingerprint": "2d56f0cb87d9346dc123bd6fbb93dca809f08c8abd4d82e22f89d1154de8f3e8"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "HealthBoard",
+      "limit": 60,
+      "resultFingerprint": "44c93d50b9c817cfcb865bd8003c946a89346816a06b3c3380fb10b4e9b6d667"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "type Health",
+      "limit": 20,
+      "resultFingerprint": "bfecaac35eb98a28b28ae7a758e5397ecac0829185a0c73a1f1a0dd970523f26"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": ".health",
+      "limit": 30,
+      "resultFingerprint": "c9ca3fd3f49c24e1b98f273cc1cc6157e6ca1ffa5395095db9cb58ddde807786"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-infrastructure:api-boundary",
+      "contentFingerprint": "861e6d6261098358039e26d59a3e88f9631deeb24d94c4a323f821ab5d8c9f5f"
+    }
+  ],
+  "infoFingerprint": "1494910fe74b50e65f486780ae77f7066dc392ccba53fecd7a2815fee35decca",
+  "artifacts": {
+    "info": ".fibo/analysis/src/infra/health.ts.info.md",
+    "structure": ".fibo/analysis/src/infra/health.ts.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "1494910fe74b50e65f486780ae77f7066dc392ccba53fecd7a2815fee35decca",
+    "structure": "136f495137509b787c37f6e216af0176af502ff556e0f6b653e6bb3f65ed58dd"
+  }
+}

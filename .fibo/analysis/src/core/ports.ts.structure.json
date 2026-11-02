@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/core/ports.ts",
+    "path": "src/core/ports.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "ports.ts",
+    "file_path": "src/core/ports.ts",
+    "description": "Core port interfaces file defining domain-level contracts for sources, policy, assessment, execution, messaging, events and repositories",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Type-only imports of domain model types such as Assignment, Decision, Mandate, Thread and Ticket",
+        "lines": [
+          2,
+          3
+        ],
+        "source": "internal",
+        "filepath": "./model.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Type-only import of the Reason type from the reasons module",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "./reasons.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "SourceScope",
+        "interface_id": "src/core/ports.ts:SourceScope",
+        "description": "Port that scopes an inbound source and reports whether it was listened to and observed",
+        "filepath": "src/core/ports.ts",
+        "lines": [
+          12,
+          14
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "Policy",
+        "interface_id": "src/core/ports.ts:Policy",
+        "description": "Policy port exposing version, pause state, gate evaluation, mandate revalidation, inferred acceptance rules and eval timeout",
+        "filepath": "src/core/ports.ts",
+        "lines": [
+          17,
+          27
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "Candidate",
+        "interface_id": "src/core/ports.ts:Candidate",
+        "description": "Data shape describing a candidate eval: eval id, thread, triggers, strength, policy version and all thread tickets",
+        "filepath": "src/core/ports.ts",
+        "lines": [
+          30,
+          38
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "Assessor",
+        "interface_id": "src/core/ports.ts:Assessor",
+        "description": "Port for requesting assessment of a candidate and releasing evaluator-held state when an eval ends",
+        "filepath": "src/core/ports.ts",
+        "lines": [
+          49,
+          53
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "Executor",
+        "interface_id": "src/core/ports.ts:Executor",
+        "description": "Port for starting, delivering inputs to, and stopping ticket assignments, reporting back via engine events",
+        "filepath": "src/core/ports.ts",
+        "lines": [
+          59,
+          69
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "OutboundMessage",
+        "interface_id": "src/core/ports.ts:OutboundMessage",
+        "description": "Shape of an outbound message with id, channel, text, kind and optional ticket id",
+        "filepath": "src/core/ports.ts",
+        "lines": [
+          72,
+          72
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "Outbox",
+        "interface_id": "src/core/ports.ts:Outbox",
+        "description": "Port for idempotently queueing outbound messages, querying their status and withdrawing unsent ones",
+        "filepath": "src/core/ports.ts",
+        "lines": [
+          76,
+          83
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "DomainEvents",
+        "interface_id": "src/core/ports.ts:DomainEvents",
+        "description": "Map of domain event names to their payload shapes, such as trigger, eval, decision, ticket and policy events",
+        "filepath": "src/core/ports.ts",
+        "lines": [
+          86,
+          102
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "Repositories",
+        "interface_id": "src/core/ports.ts:Repositories",
+        "description": "Repository port aggregating atomic transactions and accessors for triggers, tickets, assignments and decisions",
+        "filepath": "src/core/ports.ts",
+        "lines": [
+          106,
+          134
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "GateResult",
+        "alias_id": "src/core/ports.ts:GateResult",
+        "description": "Result of a policy gate check: rejected with reason, or admissible with strength and mandate basis",
+        "filepath": "src/core/ports.ts",
+        "lines": [
+          7,
+          7
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "ScopeResult",
+        "alias_id": "src/core/ports.ts:ScopeResult",
+        "description": "Result of source scoping: listened and observed with optional row, or not listened with a reason",
+        "filepath": "src/core/ports.ts",
+        "lines": [
+          10,
+          10
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "AssessmentOutcome",
+        "alias_id": "src/core/ports.ts:AssessmentOutcome",
+        "description": "Outcome of an assessment: ignore, unavailable, accept with ticket details, or stop with ticket id",
+        "filepath": "src/core/ports.ts",
+        "lines": [
+          40,
+          46
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "ReplyStatus",
+        "alias_id": "src/core/ports.ts:ReplyStatus",
+        "description": "Status of a queued reply message: pending, sent or dropped",
+        "filepath": "src/core/ports.ts",
+        "lines": [
+          74,
+          74
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "DomainEvent",
+        "alias_id": "src/core/ports.ts:DomainEvent",
+        "description": "Discriminated union of domain events, each with its type, timestamp and payload data",
+        "filepath": "src/core/ports.ts",
+        "lines": [
+          103,
+          103
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

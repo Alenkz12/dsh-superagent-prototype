@@ -1,0 +1,235 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/text.ts",
+    "path": "src/client/text.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "text.ts",
+    "file_path": "src/client/text.ts",
+    "description": "Localization and text-formatting helpers for client UI labels, reasons, markers and timestamps",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "dsh-client-ui-slots",
+        "description": "Imported Translate type from the client UI slots package",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imported DshSuperagentKey type for locale message keys",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "./locales.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imported Localized type for bilingual text values",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "../sources/kind.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imported SetupProblem type describing setup issue codes",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "../setup.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imported Health type describing host health status",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "../sources/host.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imported reasonText helper and Reason type for reason rendering",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "../core/reasons.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "valueLabel",
+        "function_id": "src/client/text.ts:valueLabel(t: T, group: string, key: string | undefined)",
+        "description": "Returns translated text for a group.key label, falling back to the key itself",
+        "filepath": "src/client/text.ts",
+        "lines": [
+          15,
+          20
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "reasonLabel",
+        "function_id": "src/client/text.ts:reasonLabel(t: T, reason: string | Reason | readonly Reason[] | undefined)",
+        "description": "Formats a reason or list of reasons into a localized, joined string",
+        "filepath": "src/client/text.ts",
+        "lines": [
+          22,
+          25
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "label",
+        "function_id": "src/client/text.ts:label(t: T, reason: Reason)",
+        "description": "Resolves a single Reason to localized text, truncating verbose error messages",
+        "filepath": "src/client/text.ts",
+        "lines": [
+          26,
+          33
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "readableMarkers",
+        "function_id": "src/client/text.ts:readableMarkers(t: T, text: string)",
+        "description": "Replaces raw media/mention markers in text with localized readable labels",
+        "filepath": "src/client/text.ts",
+        "lines": [
+          38,
+          43
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "when",
+        "function_id": "src/client/text.ts:when(value: string | undefined, lang: string)",
+        "description": "Formats a timestamp as relative time or localized date-time based on locale",
+        "filepath": "src/client/text.ts",
+        "lines": [
+          45,
+          59
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "fullTime",
+        "function_id": "src/client/text.ts:fullTime(value: string | undefined, lang: string)",
+        "description": "Formats a timestamp as a full localized date-time, empty if invalid",
+        "filepath": "src/client/text.ts",
+        "lines": [
+          60,
+          63
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "errorText",
+        "variable_id": "src/client/text.ts:errorText",
+        "description": "Extracts a displayable message string from an unknown error value",
+        "filepath": "src/client/text.ts",
+        "lines": [
+          10,
+          10
+        ]
+      },
+      {
+        "variable_name": "localized",
+        "variable_id": "src/client/text.ts:localized",
+        "description": "Resolves a Localized value to a string using current language preference",
+        "filepath": "src/client/text.ts",
+        "lines": [
+          11,
+          12
+        ]
+      },
+      {
+        "variable_name": "actorName",
+        "variable_id": "src/client/text.ts:actorName",
+        "description": "Returns an actor's localized name or a fallback automated notice",
+        "filepath": "src/client/text.ts",
+        "lines": [
+          13,
+          14
+        ]
+      },
+      {
+        "variable_name": "setupText",
+        "variable_id": "src/client/text.ts:setupText",
+        "description": "Translates a setup problem code with its values into display text",
+        "filepath": "src/client/text.ts",
+        "lines": [
+          34,
+          34
+        ]
+      },
+      {
+        "variable_name": "healthText",
+        "variable_id": "src/client/text.ts:healthText",
+        "description": "Translates a health code to text, or falls back to the detail string",
+        "filepath": "src/client/text.ts",
+        "lines": [
+          35,
+          36
+        ]
+      },
+      {
+        "variable_name": "timeLocale",
+        "variable_id": "src/client/text.ts:timeLocale",
+        "description": "Maps a language code to a locale identifier for date formatting",
+        "filepath": "src/client/text.ts",
+        "lines": [
+          44,
+          44
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "T",
+        "alias_id": "src/client/text.ts:T",
+        "description": "Translation function type bound to superagent locale keys",
+        "filepath": "src/client/text.ts",
+        "lines": [
+          9,
+          9
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

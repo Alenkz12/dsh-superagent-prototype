@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/index.ts",
+    "path": "src/index.ts",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "f5e7d171e5bd832c1b3891d153fae00582835e545b40c17c41266e27012818a0",
+  "sourceFingerprint": "fbe2a1290be6f92f641592754e813a1fc0ffc164072a8ef2f1e57f8c151d44ec",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src",
+      "resultFingerprint": "e17b6d8ec5aecd9176b3ffda9aabd0329f88456cdae8ef4e381964a8cae1ea63"
+    },
+    {
+      "kind": "directory-listing",
+      "path": "src/app",
+      "resultFingerprint": "c5d9a996b9b8fdf32bef10c15d47f0ba7a1c84c5d144bf4160f01af92915cf64"
+    },
+    {
+      "kind": "file",
+      "path": "docs/006-deployment.md",
+      "contentFingerprint": "92c5a1c6aecab6782a64b3847a2d6f36a48dc9865fa7b04b892fcdaf04f7de9d"
+    },
+    {
+      "kind": "file",
+      "path": "docs/007-architecture.md",
+      "contentFingerprint": "e3747665587fdf88b28d4e9c1a1f8ac40cbc2c65a9999be1fce14b69ec44d748"
+    },
+    {
+      "kind": "file",
+      "path": "docs/008-cookbook.md",
+      "contentFingerprint": "adbdaa519f56bc7987ca6394950802cffcb855acff4ee715d10a26a9b0ccefec"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/runtime.ts",
+      "contentFingerprint": "5befef035b4a70978cd881b32282680260c6d2561679f890dd911214664cf515"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/setup.ts",
+      "contentFingerprint": "d1de51b048d352345d4837a5911ba4d0158979c8073575feddc064670c8a697a"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/index.ts",
+      "contentFingerprint": "a5a1cf43f02eafaf520a5bfaf5e76b71ba521d04ee648cfcf12b3843cc474a3e"
+    },
+    {
+      "kind": "file",
+      "path": "src/deployment.ts",
+      "contentFingerprint": "9984953f17592b267e386d4028552d413cfe9c9ac4df6dfb730b6be5115dbf77"
+    },
+    {
+      "kind": "file",
+      "path": "src/index.ts",
+      "contentFingerprint": "fbe2a1290be6f92f641592754e813a1fc0ffc164072a8ef2f1e57f8c151d44ec"
+    },
+    {
+      "kind": "file",
+      "path": "tests/index.spec.ts",
+      "contentFingerprint": "35e540ddfbd679ba458d4f42bea7e96891b1df4f2fdbebf1dc4377fe82d364f5"
+    },
+    {
+      "kind": "file",
+      "path": "tsdown.config.ts",
+      "contentFingerprint": "39163d8b6b8bd8e7eb723e535da60ce6840fa83930f4c92e1de916d3cfdfd211"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "src/index.ts",
+      "limit": 50,
+      "resultFingerprint": "36bc3cf936c8c316b511104a858b578b8e9e537fa5846823c7bfbacf05c8a12e"
+    },
+    {
+      "kind": "search",
+      "path": "docs/006-deployment.md",
+      "query": "stateDir",
+      "limit": 30,
+      "resultFingerprint": "7b290371721ee5388139fe0117a233df183bc0dfa506543d2f50a4c0c70c3fa3"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-entry:configuration",
+      "contentFingerprint": "34059e33f106a1adc078b262030738b8657298a30c171ddc2b1eaec10d0d32f1"
+    }
+  ],
+  "infoFingerprint": "35a6e13bfee93ab5d8b61cd05c0c2e9bc9afc70c4242a7847e4f458addda882c",
+  "artifacts": {
+    "info": ".fibo/analysis/src/index.ts.info.md",
+    "structure": ".fibo/analysis/src/index.ts.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "35a6e13bfee93ab5d8b61cd05c0c2e9bc9afc70c4242a7847e4f458addda882c",
+    "structure": "d01629bb1a340130ff1a29bfa555b7f4495fc6da73213626efc9b3839fbe610e"
+  }
+}

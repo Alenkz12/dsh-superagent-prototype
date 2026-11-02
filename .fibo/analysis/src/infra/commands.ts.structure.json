@@ -1,0 +1,190 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/infra/commands.ts",
+    "path": "src/infra/commands.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "commands.ts",
+    "file_path": "src/infra/commands.ts",
+    "description": "Command execution infrastructure: runs child CLI processes (git, Feishu) and normalizes errors",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "node:child_process",
+        "description": "Node child_process execFile import for spawning commands",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "node:path",
+        "description": "Node path basename helper import for program names",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "node:util",
+        "description": "Node util promisify import for callback conversion",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "zod",
+        "description": "Zod schema library import for validation",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Type-only import of the Deployment type from deployment module",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "../deployment.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "commandError",
+        "function_id": "src/infra/commands.ts:commandError(error: unknown, program = 'command')",
+        "description": "Normalizes an unknown failure from a child process into a CliError with stderr/message details",
+        "filepath": "src/infra/commands.ts",
+        "lines": [
+          18,
+          32
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "ended",
+        "function_id": "src/infra/commands.ts:ended(error: unknown)",
+        "description": "Describes how a child process ended (timeout, signal, output overflow, exit code) as text",
+        "filepath": "src/infra/commands.ts",
+        "lines": [
+          33,
+          41
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "validItems",
+        "function_id": "src/infra/commands.ts:validItems(item: z.ZodType<T>, list: readonly unknown[], tally?: Tally)",
+        "description": "Filters a list through a Zod schema, optionally counting skipped entries in a tally",
+        "filepath": "src/infra/commands.ts",
+        "lines": [
+          44,
+          48
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "membership",
+        "function_id": "src/infra/commands.ts:membership(error: unknown)",
+        "description": "Rewrites Feishu bot-not-in-chat errors (code 232011) into an actionable hint",
+        "filepath": "src/infra/commands.ts",
+        "lines": [
+          50,
+          54
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [
+      {
+        "class_name": "CliError",
+        "class_id": "src/infra/commands.ts:CliError",
+        "description": "Error subclass carrying an optional application code and process exit code",
+        "super_class": [],
+        "filepath": "src/infra/commands.ts",
+        "lines": [
+          14,
+          16
+        ],
+        "function": [],
+        "variables": []
+      },
+      {
+        "class_name": "Commands",
+        "class_id": "src/infra/commands.ts:Commands",
+        "description": "Wrapper exposing deployment info and running commands as JSON-returning child processes",
+        "super_class": [],
+        "filepath": "src/infra/commands.ts",
+        "lines": [
+          59,
+          115
+        ],
+        "function": [],
+        "variables": []
+      }
+    ],
+    "interfaces": [
+      {
+        "interface_name": "Tally",
+        "interface_id": "src/infra/commands.ts:Tally",
+        "description": "Counter interface tracking how many items were skipped during validation",
+        "filepath": "src/infra/commands.ts",
+        "lines": [
+          42,
+          42
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "exec",
+        "variable_id": "src/infra/commands.ts:exec",
+        "description": "Promisified execFile used to run child processes asynchronously",
+        "filepath": "src/infra/commands.ts",
+        "lines": [
+          8,
+          8
+        ]
+      },
+      {
+        "variable_name": "TIMEOUT_MS",
+        "variable_id": "src/infra/commands.ts:TIMEOUT_MS",
+        "description": "Default 90-second timeout for executed commands",
+        "filepath": "src/infra/commands.ts",
+        "lines": [
+          9,
+          9
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

@@ -1,0 +1,303 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/sources/github-read.ts",
+    "path": "src/sources/github-read.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "github-read.ts",
+    "file_path": "src/sources/github-read.ts",
+    "description": "GitHub source reader: fetches PR/issue conversations, review threads and CI check status via the gh API",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "zod",
+        "description": "Zod validation library import",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Type import of ThreadFact from core",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Import of command helpers: validItems, Commands and Tally types",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "../infra/commands.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Import of GitHub schemas and comment helpers from github-trigger",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "./github-trigger.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Type import of ContextMessage and ThreadContext",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "./kind.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "ciCounts",
+        "function_id": "src/sources/github-read.ts:ciCounts(snapshot: CiSnapshot)",
+        "description": "Counts failed and running CI checks/statuses in a snapshot",
+        "filepath": "src/sources/github-read.ts",
+        "lines": [
+          16,
+          22
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "ciSummary",
+        "function_id": "src/sources/github-read.ts:ciSummary(snapshot: CiSnapshot, where: string, read: string)",
+        "description": "Builds a one-line CI status summary naming failed or running checks",
+        "filepath": "src/sources/github-read.ts",
+        "lines": [
+          23,
+          36
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "ciFailures",
+        "function_id": "src/sources/github-read.ts:ciFailures(snapshot: CiSnapshot)",
+        "description": "Returns sorted names of failed checks and commit statuses",
+        "filepath": "src/sources/github-read.ts",
+        "lines": [
+          37,
+          40
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "ciFact",
+        "function_id": "src/sources/github-read.ts:ciFact(counts: { failed: number; running: number })",
+        "description": "Converts CI counts into a thread fact with localized label and value",
+        "filepath": "src/sources/github-read.ts",
+        "lines": [
+          41,
+          45
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "readRepositoryPath",
+        "function_id": "src/sources/github-read.ts:readRepositoryPath(commands: Commands, path: string, kind: 'file' | 'directory')",
+        "description": "Reads a repository file's raw content or a directory's entry names, rejecting hidden paths",
+        "filepath": "src/sources/github-read.ts",
+        "lines": [
+          48,
+          57
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "pullChecks",
+        "function_id": "src/sources/github-read.ts:pullChecks(commands: Commands, head: string, tally?: Tally)",
+        "description": "Fetches check runs and commit statuses for a head SHA into a CI snapshot",
+        "filepath": "src/sources/github-read.ts",
+        "lines": [
+          60,
+          70
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "githubMessage",
+        "function_id": "src/sources/github-read.ts:githubMessage(item: GithubComment, text: string, id: string)",
+        "description": "Maps a GitHub comment/review into a context message with author, bot flag, url and path info",
+        "filepath": "src/sources/github-read.ts",
+        "lines": [
+          73,
+          78
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "reviewThread",
+        "function_id": "src/sources/github-read.ts:reviewThread(commands: Commands, number: number, comment: number, tally?: Tally)",
+        "description": "Collects a review comment thread (root plus replies) sorted by creation time",
+        "filepath": "src/sources/github-read.ts",
+        "lines": [
+          85,
+          90
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "threadMessages",
+        "function_id": "src/sources/github-read.ts:threadMessages(thread: GithubComment[], id: (comment: GithubComment) => string)",
+        "description": "Converts a review thread into context messages, marking replies with reply_to",
+        "filepath": "src/sources/github-read.ts",
+        "lines": [
+          91,
+          96
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "readGithub",
+        "function_id": "src/sources/github-read.ts:readGithub(commands: Commands, resource: string)",
+        "description": "Parses a github/... resource and returns comments, reviews, threads or CI check data",
+        "filepath": "src/sources/github-read.ts",
+        "lines": [
+          102,
+          141
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "conversationPage",
+        "function_id": "src/sources/github-read.ts:conversationPage(commands: Commands, number: number, page: number)",
+        "description": "Fetches one page of an issue/PR conversation with title/body and comments",
+        "filepath": "src/sources/github-read.ts",
+        "lines": [
+          143,
+          154
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "CiSnapshot",
+        "interface_id": "src/sources/github-read.ts:CiSnapshot",
+        "description": "CI snapshot shape: head SHA with check runs and commit statuses",
+        "filepath": "src/sources/github-read.ts",
+        "lines": [
+          13,
+          13
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "CheckSchema",
+        "variable_id": "src/sources/github-read.ts:CheckSchema",
+        "description": "Zod schema for a GitHub check run entry",
+        "filepath": "src/sources/github-read.ts",
+        "lines": [
+          8,
+          8
+        ]
+      },
+      {
+        "variable_name": "StatusSchema",
+        "variable_id": "src/sources/github-read.ts:StatusSchema",
+        "description": "Zod schema for a GitHub commit status entry",
+        "filepath": "src/sources/github-read.ts",
+        "lines": [
+          9,
+          9
+        ]
+      },
+      {
+        "variable_name": "FAILING",
+        "variable_id": "src/sources/github-read.ts:FAILING",
+        "description": "Set of conclusion/state values treated as CI failures",
+        "filepath": "src/sources/github-read.ts",
+        "lines": [
+          15,
+          15
+        ]
+      },
+      {
+        "variable_name": "reviewText",
+        "variable_id": "src/sources/github-read.ts:reviewText",
+        "description": "Formats a review's state and body into message text",
+        "filepath": "src/sources/github-read.ts",
+        "lines": [
+          79,
+          80
+        ]
+      },
+      {
+        "variable_name": "DescriptionSchema",
+        "variable_id": "src/sources/github-read.ts:DescriptionSchema",
+        "description": "Issue schema extended with labels, draft/merged flags and branch refs",
+        "filepath": "src/sources/github-read.ts",
+        "lines": [
+          81,
+          84
+        ]
+      },
+      {
+        "variable_name": "githubThreadContext",
+        "variable_id": "src/sources/github-read.ts:githubThreadContext",
+        "description": "Thread context implementation reading branch CI, review threads and conversation pages",
+        "filepath": "src/sources/github-read.ts",
+        "lines": [
+          159,
+          177
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "Check",
+        "alias_id": "src/sources/github-read.ts:Check",
+        "description": "Check run projection with name, status and conclusion",
+        "filepath": "src/sources/github-read.ts",
+        "lines": [
+          10,
+          10
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "Status",
+        "alias_id": "src/sources/github-read.ts:Status",
+        "description": "Commit status projection with context and state",
+        "filepath": "src/sources/github-read.ts",
+        "lines": [
+          11,
+          11
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

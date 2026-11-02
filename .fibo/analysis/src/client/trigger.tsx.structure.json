@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/trigger.tsx",
+    "path": "src/client/trigger.tsx",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "trigger.tsx",
+    "file_path": "src/client/trigger.tsx",
+    "description": "Trigger status view that lists Threads filtered by subscription and evaluation activity, with filter pills, polling data loading and paginated \"load more\" support.",
+    "file_type": "tsx",
+    "language": "typescript",
+    "import_class": [],
+    "import_function": [
+      {
+        "function_name": "useState",
+        "description": "React hook used to keep the local page size (limit) state",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "usePoll",
+        "description": "Client hook that polls the panel API with the given request factory and dependency list",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/client/api.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "Pill",
+        "description": "Reusable pill/toggle button component used to render the thread filter buttons",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "usePanel",
+        "description": "Panel context hook exposing translation, API call and navigation helpers",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "src/client/provider.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "ThreadLine",
+        "description": "Row component rendering a single thread entry",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/rows.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "Hint",
+        "description": "Small hint/empty-state text component",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "LoadMore",
+        "description": "Button/component that triggers loading more items",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "LoadState",
+        "description": "Component that renders loading and error states for polled data",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "StatusHead",
+        "description": "Header component showing the status page title plus a hint",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      }
+    ],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "TriggerStatus",
+        "function_id": "src/client/trigger.tsx:TriggerStatus",
+        "description": "React function component that renders the trigger status page: filter pills, polled thread list and load-more control.",
+        "filepath": "src/client/trigger.tsx",
+        "lines": [
+          10,
+          27
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "filter",
+            "param_type": "ThreadFilter",
+            "description": "Currently selected thread filter used for the API query and pill highlighting",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      }
+    ],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "THREAD_FILTERS",
+        "variable_id": "src/app/api.ts:THREAD_FILTERS",
+        "description": "List of available thread filter values used to render the filter pills",
+        "filepath": "src/app/api.ts",
+        "lines": [
+          3,
+          3
+        ],
+        "variable_type": "ThreadFilter[]",
+        "initial_value": "",
+        "is_const": true
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "ThreadFilter",
+        "alias_id": "src/app/api.ts:ThreadFilter",
+        "description": "Union type of the supported thread filter values",
+        "filepath": "src/app/api.ts",
+        "lines": [
+          3,
+          3
+        ],
+        "target_type": "string union",
+        "generics": []
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

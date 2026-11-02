@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/kv.ts",
+    "path": "src/kv.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "kv.ts",
+    "file_path": "src/kv.ts",
+    "description": "Typed key-value store keys and key families grouped by the single component that owns and writes each family. Readers and writers refer to a record by its entry here so each key is spelled once with its value type.",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "record",
+        "function_id": "src/kv.ts:record(key: string)",
+        "description": "Define a single typed KV key; external Source plugins use `record` and `family` to type their own keys.",
+        "filepath": "src/kv.ts",
+        "lines": [
+          15,
+          15
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "key",
+            "param_type": "string",
+            "description": "The raw KV key string.",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "Key<V>",
+        "is_async": false,
+        "generics": [
+          "V"
+        ],
+        "decorators": []
+      },
+      {
+        "function_name": "family",
+        "function_id": "src/kv.ts:family(prefix: string, format?: (...name: A) => string)",
+        "description": "Define a KV key family whose keys join `prefix` and name parts with `:` (or a custom `format`).",
+        "filepath": "src/kv.ts",
+        "lines": [
+          17,
+          19
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "prefix",
+            "param_type": "string",
+            "description": "Prefix shared by all keys in the family.",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "format",
+            "param_type": "(...name: A) => string",
+            "description": "Formatter that joins the family name parts into the key suffix.",
+            "default_value": "(...name: A) => name.join(':')",
+            "is_optional": true
+          }
+        ],
+        "return_type": "Family<V, A>",
+        "is_async": false,
+        "generics": [
+          "V",
+          "A"
+        ],
+        "decorators": []
+      }
+    ],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "KV",
+        "variable_id": "src/kv.ts:KV",
+        "description": "Registry of typed KV record keys and key families grouped by the owning component.",
+        "filepath": "src/kv.ts",
+        "lines": [
+          21,
+          58
+        ],
+        "variable_type": "object",
+        "initial_value": "KV key registry object",
+        "is_const": true
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "Key",
+        "alias_id": "src/kv.ts:Key",
+        "description": "Key of a KV record whose value has type `V`; a plain string represents an untyped key.",
+        "filepath": "src/kv.ts",
+        "lines": [
+          11,
+          11
+        ],
+        "target_type": "string & { readonly __value?: V }",
+        "generics": [
+          "V"
+        ]
+      },
+      {
+        "alias_name": "Family",
+        "alias_id": "src/kv.ts:Family",
+        "description": "Family of KV records sharing a prefix: callable to build a key from its name parts, and exposing `prefix` for listing.",
+        "filepath": "src/kv.ts",
+        "lines": [
+          13,
+          13
+        ],
+        "target_type": "((...name: A) => Key<V>) & { readonly prefix: string }",
+        "generics": [
+          "V",
+          "A"
+        ]
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/limits.ts",
+    "path": "src/limits.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "limits.ts",
+    "file_path": "src/limits.ts",
+    "description": "Configuration limits file defining validation bounds and size/time constraints.",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "LIMITS",
+        "variable_id": "src/limits.ts:LIMITS",
+        "description": "Frozen constants object holding name, instruction, timeout, worker, prompt, and context limits.",
+        "filepath": "src/limits.ts",
+        "lines": [
+          2,
+          11
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/sources/feishu.ts",
+    "path": "src/sources/feishu.ts",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "3dcbeb45a14ad9ba6b899dbb1e0998cc4773279a03fee6dc52c217424d5146d1",
+  "sourceFingerprint": "b8830aa06caa7ee13ffb7f5d31f8707392174e9e2920323582ee150a3abc6560",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/sources",
+      "resultFingerprint": "e13a5d7335d2907bee6071268ebe6f12a05e34a0f356774711e36baefff226d6"
+    },
+    {
+      "kind": "file",
+      "path": "docs/007-architecture.md",
+      "contentFingerprint": "e3747665587fdf88b28d4e9c1a1f8ac40cbc2c65a9999be1fce14b69ec44d748"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/links.ts",
+      "contentFingerprint": "7d17aef4fb89936467ad99d6c25417b03d7b4a66ad02e3b0981aed3cb2f0ffc2"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/runtime.ts",
+      "contentFingerprint": "5befef035b4a70978cd881b32282680260c6d2561679f890dd911214664cf515"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/ports.ts",
+      "contentFingerprint": "0b44f1cd716d64776b0e3ea74a158cf0effd92e763b1b13c7705e766e9225a43"
+    },
+    {
+      "kind": "file",
+      "path": "src/deployment.ts",
+      "contentFingerprint": "9984953f17592b267e386d4028552d413cfe9c9ac4df6dfb730b6be5115dbf77"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/feishu-channel.ts",
+      "contentFingerprint": "c6fa722414256df055ae09e935ec402ccec9b63bdb5f73d2b5ff3f34d6d1abf7"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/feishu-loops.ts",
+      "contentFingerprint": "5a1dae9297f491fda39ff3950de843b2464a6e223ccf496deba80ba1935f7a6f"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/feishu-trigger.ts",
+      "contentFingerprint": "d605d1381da26509020f743b5945a768276aa81f9604ef0b5879aab3e535bf08"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/feishu.ts",
+      "contentFingerprint": "b8830aa06caa7ee13ffb7f5d31f8707392174e9e2920323582ee150a3abc6560"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/host.ts",
+      "contentFingerprint": "b07998dad9194319a95a9436084cf1612aef9c4c6de22288cfa04258bbfbb1ce"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/kind.ts",
+      "contentFingerprint": "4ea3d8eee14707e0ee9b67289a62b1a568bab64732bd04041da5ad89bc9a7e98"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/registry.ts",
+      "contentFingerprint": "fe8a8fce0b00b65d4fb69b7cd2e5fbf4950b8dc32f0891169f9150c4a16eb5cd"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "feishuSettings",
+      "limit": 40,
+      "resultFingerprint": "8c88976a85b514504ad2beffb7e1368baf4ab35eb4e14a5047b4a01357a14ac4"
+    },
+    {
+      "kind": "search",
+      "path": "src/core",
+      "query": "ScopeResult",
+      "limit": 20,
+      "resultFingerprint": "1f094ad21c6a818eff36369fdf0d62dd1399174d81270c1e248a2837491ac98c"
+    },
+    {
+      "kind": "search",
+      "path": "src/deployment.ts",
+      "query": "FeishuBotSchema",
+      "limit": 50,
+      "resultFingerprint": "fcc4f5ef33921d80f3a49de6f272155f1fc0dd9534e5ea23f4df4a76cfaf4681"
+    },
+    {
+      "kind": "search",
+      "path": "src/sources/feishu-channel.ts",
+      "query": "export const feishuChatLink|export const feishuLink|export async function sendFeishu|export const sendFeishu",
+      "limit": 50,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "search",
+      "path": "src/sources/feishu-channel.ts",
+      "query": "export",
+      "limit": 30,
+      "resultFingerprint": "3807b8ae1f53803fd58f69468d68c5d41b5df1b82669ad3009c089a033f5d36a"
+    },
+    {
+      "kind": "search",
+      "path": "src/sources/feishu-loops.ts",
+      "query": "refreshChatNames",
+      "limit": 10,
+      "resultFingerprint": "74b25c66c9bfdb8c6250fbde7fa7483a6bf2c08bb35517c74f6075383950c8d6"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-configuration:domain-rules,external-adapter",
+      "contentFingerprint": "ca98b8f18892a4cac7c655e183874b7110555c088de701e2be58d5ccfb4ca205"
+    }
+  ],
+  "infoFingerprint": "abdda781c1be63c7e6844956fe2922754298cd1a86fbf1a49161459a5c667f00",
+  "artifacts": {
+    "info": ".fibo/analysis/src/sources/feishu.ts.info.md",
+    "structure": ".fibo/analysis/src/sources/feishu.ts.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "abdda781c1be63c7e6844956fe2922754298cd1a86fbf1a49161459a5c667f00",
+    "structure": "b4c3c195d054bd699fa2d0d647f88909c60b8f904d87462015a8d218e153b466"
+  }
+}

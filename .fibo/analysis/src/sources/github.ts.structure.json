@@ -1,0 +1,572 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/sources/github.ts",
+    "path": "src/sources/github.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "github.ts",
+    "file_path": "src/sources/github.ts",
+    "description": "GitHub source integration polling notifications, issues, PRs, comments, and CI",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "cordis",
+        "description": "Imports the cordis Context type",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports core key helper and Thread type",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the sameName text helper",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "../infra/text.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the GitHub accounts schema",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "../deployment.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports CLI error, item validation, and tally types",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "../infra/commands.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports GitHub read and CI summary helpers",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "./github-read.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports GitHub trigger helpers, schemas, and source constant",
+        "lines": [
+          8,
+          9
+        ],
+        "source": "internal",
+        "filepath": "./github-trigger.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports GitHub channel link and send helpers",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "./github-channel.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports GitHub comment and pull reference types",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "./github-trigger.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports pull observation, lookup, and type helpers",
+        "lines": [
+          12,
+          12
+        ],
+        "source": "internal",
+        "filepath": "./github-pull.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports source context and health helpers",
+        "lines": [
+          13,
+          13
+        ],
+        "source": "internal",
+        "filepath": "./host.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the KV state helper",
+        "lines": [
+          14,
+          14
+        ],
+        "source": "internal",
+        "filepath": "../kv.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports polling cursor, pause, horizon, and thread helpers",
+        "lines": [
+          15,
+          15
+        ],
+        "source": "internal",
+        "filepath": "./poll.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports localized text and source kind types",
+        "lines": [
+          16,
+          16
+        ],
+        "source": "internal",
+        "filepath": "./kind.ts"
+      },
+      {
+        "class_name": "zod",
+        "description": "Imports the zod validation library",
+        "lines": [
+          17,
+          17
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Re-exports comment trigger and GitHub comment type",
+        "lines": [
+          19,
+          19
+        ],
+        "source": "internal",
+        "filepath": "./github-trigger.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "scopeOf",
+        "function_id": "src/sources/github.ts:scopeOf(meta: Record<string, unknown>)",
+        "description": "Maps thread metadata to its observed GitHub scope",
+        "filepath": "src/sources/github.ts",
+        "lines": [
+          32,
+          37
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "apply",
+        "function_id": "src/sources/github.ts:apply(ctx: Context)",
+        "description": "Registers the GitHub source kind and starts its polling effect",
+        "filepath": "src/sources/github.ts",
+        "lines": [
+          112,
+          122
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "pollFailure",
+        "function_id": "src/sources/github.ts:pollFailure(failures: number, threshold: number, error: unknown)",
+        "description": "Returns error health after polling failures reach the threshold",
+        "filepath": "src/sources/github.ts",
+        "lines": [
+          124,
+          126
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "watch",
+        "function_id": "src/sources/github.ts:watch(ctx: SourceContext, signal: AbortSignal)",
+        "description": "Runs the main GitHub polling loop and reports source health",
+        "filepath": "src/sources/github.ts",
+        "lines": [
+          127,
+          146
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "failed",
+        "function_id": "src/sources/github.ts:failed(ctx: SourceContext, round: Round, number: number, error: unknown, abandoned = false)",
+        "description": "Records a failed issue or PR read in the poll round",
+        "filepath": "src/sources/github.ts",
+        "lines": [
+          160,
+          165
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "included",
+        "function_id": "src/sources/github.ts:included(raw: string)",
+        "description": "Splits a raw GitHub response into headers and body",
+        "filepath": "src/sources/github.ts",
+        "lines": [
+          166,
+          170
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "pollRepository",
+        "function_id": "src/sources/github.ts:pollRepository(ctx: SourceContext, round: Round)",
+        "description": "Polls configured repository streams and default branch CI",
+        "filepath": "src/sources/github.ts",
+        "lines": [
+          179,
+          196
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "readStream",
+        "function_id": "src/sources/github.ts:readStream(ctx: SourceContext, round: Round, id: string, path: string, config: GithubConfig)",
+        "description": "Reads one repository stream and advances its cursor and ETag",
+        "filepath": "src/sources/github.ts",
+        "lines": [
+          203,
+          249
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "pollBranchCi",
+        "function_id": "src/sources/github.ts:pollBranchCi(ctx: SourceContext, round: Round)",
+        "description": "Polls default branch head CI and emits triggers on change",
+        "filepath": "src/sources/github.ts",
+        "lines": [
+          251,
+          272
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "pollRound",
+        "function_id": "src/sources/github.ts:pollRound(ctx: SourceContext, signal?: AbortSignal)",
+        "description": "Runs one full GitHub poll round and reports readiness",
+        "filepath": "src/sources/github.ts",
+        "lines": [
+          280,
+          296
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "pollNotifications",
+        "function_id": "src/sources/github.ts:pollNotifications(ctx: SourceContext, round: Round)",
+        "description": "Polls GitHub notifications, handles retries, and updates the cursor",
+        "filepath": "src/sources/github.ts",
+        "lines": [
+          298,
+          343
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "readNotified",
+        "function_id": "src/sources/github.ts:readNotified(ctx: SourceContext, round: Round, number: number, item: Retry)",
+        "description": "Reads a notified issue or PR and intakes its comments",
+        "filepath": "src/sources/github.ts",
+        "lines": [
+          344,
+          374
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "pull",
+        "function_id": "src/sources/github.ts:pull(ctx: SourceContext, round: Round, number: number)",
+        "description": "Memoizes reading and observing a pull request in a round",
+        "filepath": "src/sources/github.ts",
+        "lines": [
+          376,
+          383
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "intakeComments",
+        "function_id": "src/sources/github.ts:intakeComments(ctx: SourceContext, ref: PullRef, since: string, round: Round)",
+        "description": "Fetches new comments or reviews and forwards them as triggers",
+        "filepath": "src/sources/github.ts",
+        "lines": [
+          384,
+          403
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "pollTicketPulls",
+        "function_id": "src/sources/github.ts:pollTicketPulls(ctx: SourceContext, signal?: AbortSignal, round = newRound(signal))",
+        "description": "Polls pull requests referenced by open tickets and their checks",
+        "filepath": "src/sources/github.ts",
+        "lines": [
+          404,
+          413
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "pollChecks",
+        "function_id": "src/sources/github.ts:pollChecks(ctx: SourceContext, round: Round, number: number, pr: Pull)",
+        "description": "Polls PR check status and emits CI triggers on changes",
+        "filepath": "src/sources/github.ts",
+        "lines": [
+          415,
+          424
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "nameThread",
+        "function_id": "src/sources/github.ts:nameThread(ctx: SourceContext, number: number, title: string)",
+        "description": "Sets a GitHub thread title, label, and number facts",
+        "filepath": "src/sources/github.ts",
+        "lines": [
+          425,
+          428
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "pollThreads",
+        "function_id": "src/sources/github.ts:pollThreads(ctx: SourceContext, signal?: AbortSignal, round = newRound(signal))",
+        "description": "Polls all subscribed GitHub threads in a round",
+        "filepath": "src/sources/github.ts",
+        "lines": [
+          430,
+          439
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "pollThread",
+        "function_id": "src/sources/github.ts:pollThread(ctx: SourceContext, round: Round, thread: Thread)",
+        "description": "Polls one subscribed issue or PR thread for new comments",
+        "filepath": "src/sources/github.ts",
+        "lines": [
+          440,
+          459
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "Round",
+        "interface_id": "src/sources/github.ts:Round",
+        "description": "State for a single GitHub poll round",
+        "filepath": "src/sources/github.ts",
+        "lines": [
+          147,
+          151
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "Retry",
+        "interface_id": "src/sources/github.ts:Retry",
+        "description": "Notification retry record with cursor and PR flag",
+        "filepath": "src/sources/github.ts",
+        "lines": [
+          155,
+          155
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "NotificationSchema",
+        "variable_id": "src/sources/github.ts:NotificationSchema",
+        "description": "Zod schema for a GitHub notification",
+        "filepath": "src/sources/github.ts",
+        "lines": [
+          21,
+          23
+        ]
+      },
+      {
+        "variable_name": "GithubConfigSchema",
+        "variable_id": "src/sources/github.ts:GithubConfigSchema",
+        "description": "Zod schema for GitHub source configuration",
+        "filepath": "src/sources/github.ts",
+        "lines": [
+          25,
+          28
+        ]
+      },
+      {
+        "variable_name": "OBSERVED",
+        "variable_id": "src/sources/github.ts:OBSERVED",
+        "description": "Maps observed scopes to configuration flags",
+        "filepath": "src/sources/github.ts",
+        "lines": [
+          30,
+          30
+        ]
+      },
+      {
+        "variable_name": "githubKind",
+        "variable_id": "src/sources/github.ts:githubKind",
+        "description": "Source kind definition for the GitHub source",
+        "filepath": "src/sources/github.ts",
+        "lines": [
+          38,
+          109
+        ]
+      },
+      {
+        "variable_name": "name",
+        "variable_id": "src/sources/github.ts:name",
+        "description": "Plugin name constant for the GitHub source",
+        "filepath": "src/sources/github.ts",
+        "lines": [
+          110,
+          110
+        ]
+      },
+      {
+        "variable_name": "inject",
+        "variable_id": "src/sources/github.ts:inject",
+        "description": "Required injected services for the plugin",
+        "filepath": "src/sources/github.ts",
+        "lines": [
+          111,
+          111
+        ]
+      },
+      {
+        "variable_name": "newRound",
+        "variable_id": "src/sources/github.ts:newRound",
+        "description": "Creates a fresh GitHub poll round state",
+        "filepath": "src/sources/github.ts",
+        "lines": [
+          152,
+          153
+        ]
+      },
+      {
+        "variable_name": "stopped",
+        "variable_id": "src/sources/github.ts:stopped",
+        "description": "Checks whether polling should stop for a round",
+        "filepath": "src/sources/github.ts",
+        "lines": [
+          154,
+          154
+        ]
+      },
+      {
+        "variable_name": "RETRY_WINDOW_MS",
+        "variable_id": "src/sources/github.ts:RETRY_WINDOW_MS",
+        "description": "Retry window constant of twenty-four hours",
+        "filepath": "src/sources/github.ts",
+        "lines": [
+          156,
+          156
+        ]
+      },
+      {
+        "variable_name": "deleted",
+        "variable_id": "src/sources/github.ts:deleted",
+        "description": "Detects GitHub HTTP 410 deleted errors",
+        "filepath": "src/sources/github.ts",
+        "lines": [
+          158,
+          158
+        ]
+      },
+      {
+        "variable_name": "ListedSchema",
+        "variable_id": "src/sources/github.ts:ListedSchema",
+        "description": "Comment schema extended with issue and PR URLs",
+        "filepath": "src/sources/github.ts",
+        "lines": [
+          171,
+          171
+        ]
+      },
+      {
+        "variable_name": "STREAMS",
+        "variable_id": "src/sources/github.ts:STREAMS",
+        "description": "Repository poll stream definitions",
+        "filepath": "src/sources/github.ts",
+        "lines": [
+          173,
+          177
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "GithubConfig",
+        "alias_id": "src/sources/github.ts:GithubConfig",
+        "description": "GitHub source configuration inferred from its schema",
+        "filepath": "src/sources/github.ts",
+        "lines": [
+          29,
+          29
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "Scope",
+        "alias_id": "src/sources/github.ts:Scope",
+        "description": "Observed GitHub scope key",
+        "filepath": "src/sources/github.ts",
+        "lines": [
+          31,
+          31
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

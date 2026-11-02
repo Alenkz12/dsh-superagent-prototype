@@ -1,0 +1,255 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/core/engine.ts",
+    "path": "src/core/engine.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "engine.ts",
+    "file_path": "src/core/engine.ts",
+    "description": "Core engine module: central Engine class orchestrating tickets, replies, evaluations, and narrow per-consumer type views.",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Imports the UserError error type from the local errors module.",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "internal",
+        "filepath": "./errors.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports isoTime and liveTicket helpers from the model module.",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "./model.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports model types: ChannelRef, Decision, PolicyEffect, ThreadRef, Ticket, and Trigger.",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "./model.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports port types Candidate and Repositories.",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "./ports.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the EngineOptions type from the part module.",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "./part.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Assignments component and the WorkerReport type.",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "./assignments.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Evals component and the Outcome type.",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "./evals.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Intake component and the ReceiveResult type.",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "./intake.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Replies component and the Reply and ReplyRequest types.",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "./replies.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Tickets component.",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "./tickets.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Re-exports the EngineOptions type from the part module.",
+        "lines": [
+          13,
+          13
+        ],
+        "source": "internal",
+        "filepath": "./part.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Re-exports the WorkerReport type from the assignments module.",
+        "lines": [
+          14,
+          14
+        ],
+        "source": "internal",
+        "filepath": "./assignments.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Re-exports the Outcome type from the evals module.",
+        "lines": [
+          15,
+          15
+        ],
+        "source": "internal",
+        "filepath": "./evals.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Re-exports the ReceiveResult type from the intake module.",
+        "lines": [
+          16,
+          16
+        ],
+        "source": "internal",
+        "filepath": "./intake.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Re-exports the Reply and ReplyRequest types from the replies module.",
+        "lines": [
+          17,
+          17
+        ],
+        "source": "internal",
+        "filepath": "./replies.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [],
+    "classes": [
+      {
+        "class_name": "Engine",
+        "class_id": "src/core/engine.ts:Engine",
+        "description": "Main engine aggregating repositories, replies, tickets, assignments, evals, and intake, exposing the domain use cases.",
+        "super_class": [],
+        "filepath": "src/core/engine.ts",
+        "lines": [
+          24,
+          258
+        ],
+        "function": [],
+        "variables": []
+      }
+    ],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "EngineForSources",
+        "alias_id": "src/core/engine.ts:EngineForSources",
+        "description": "Engine view restricted to source-facing methods receive, bindThread, and threadClosed.",
+        "filepath": "src/core/engine.ts",
+        "lines": [
+          261,
+          261
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "EngineForMainSession",
+        "alias_id": "src/core/engine.ts:EngineForMainSession",
+        "description": "Engine view for the main session: candidate handling, decide, attach, reply, requestStatus, and note.",
+        "filepath": "src/core/engine.ts",
+        "lines": [
+          263,
+          263
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "EngineForPeople",
+        "alias_id": "src/core/engine.ts:EngineForPeople",
+        "description": "Engine view for people-facing actions: stop, retry, reevaluate, unsubscribe, and dismiss tickets.",
+        "filepath": "src/core/engine.ts",
+        "lines": [
+          265,
+          265
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "EngineForSettings",
+        "alias_id": "src/core/engine.ts:EngineForSettings",
+        "description": "Engine view for settings, exposing only the policyChanged notification.",
+        "filepath": "src/core/engine.ts",
+        "lines": [
+          267,
+          267
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "EngineForExecutor",
+        "alias_id": "src/core/engine.ts:EngineForExecutor",
+        "description": "Engine view for executors: assignment lifecycle, input delivery, reports, handback, and reply.",
+        "filepath": "src/core/engine.ts",
+        "lines": [
+          269,
+          270
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

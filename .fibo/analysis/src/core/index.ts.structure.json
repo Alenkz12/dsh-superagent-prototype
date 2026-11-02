@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/core/index.ts",
+    "path": "src/core/index.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "index.ts",
+    "file_path": "src/core/index.ts",
+    "description": "Barrel entry exposing the core module's public API",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Re-exports all model types from model.ts",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "internal",
+        "filepath": "./model.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Re-exports all port interfaces from ports.ts",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "./ports.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Re-exports Engine class and engine-related types",
+        "lines": [
+          4,
+          5
+        ],
+        "source": "internal",
+        "filepath": "./engine.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Re-exports user error types and constants",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "./errors.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Re-exports reason codes, helpers, and types",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "./reasons.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Re-exports MemoryRepositories implementation",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "./memory.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Re-exports ticket stage helpers and types",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "./stage.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Re-exports the key ID helper",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "./ids.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

@@ -1,0 +1,972 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/widgets.tsx",
+    "path": "src/client/widgets.tsx",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "widgets.tsx",
+    "file_path": "src/client/widgets.tsx",
+    "description": "Context-aware shared UI widgets for the panel client: page/section headers, timestamps, Markdown-lite rendering, status/stage marks, loading states, confirmation modals, external links and setup re-check controls.",
+    "file_type": "tsx",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "Fragment",
+        "description": "React fragment component used to group inline parts without extra DOM nodes",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "class_name": "ReactNode",
+        "description": "React type describing any renderable node",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "class_name": "SetupProblem",
+        "description": "Type describing a setup problem with a code and associated values",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "src/setup.ts",
+        "alias": ""
+      },
+      {
+        "class_name": "Button",
+        "description": "Shared button component with variants, sizes and optional icon",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "class_name": "Icon",
+        "description": "Named SVG icon component with configurable size",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "class_name": "InfoTip",
+        "description": "Inline hint tooltip component",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "class_name": "Modal",
+        "description": "Modal dialog component with title, description and footer slots",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "class_name": "StateDot",
+        "description": "Small colored status dot component",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "class_name": "DotState",
+        "description": "Type union of possible status dot states",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "class_name": "IconName",
+        "description": "Type union of supported icon names",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "class_name": "Inline",
+        "description": "Type describing a parsed inline Markdown fragment (plain, bold, code or link)",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "src/client/markdown.ts",
+        "alias": ""
+      },
+      {
+        "class_name": "SettingsGroup",
+        "description": "Type describing a settings group used to build settings routes",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/route.ts",
+        "alias": ""
+      }
+    ],
+    "import_function": [
+      {
+        "function_name": "useState",
+        "description": "React hook returning local component state and its setter",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "inlines",
+        "description": "Parses a text line into inline Markdown fragments",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "src/client/markdown.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "linkify",
+        "description": "Converts plain text URLs into link inline fragments",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "src/client/markdown.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "markdownBlocks",
+        "description": "Splits Markdown text into block structures (headings, lists, paragraphs)",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "src/client/markdown.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "useAction",
+        "description": "Hook wrapping an async action with busy state and run helper",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "src/client/provider.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "usePanel",
+        "description": "Hook exposing panel context (translator, navigation, notifications, actions)",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "src/client/provider.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "usePanelData",
+        "description": "Hook exposing current panel data snapshot such as running assignments",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "src/client/provider.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "settingsRoute",
+        "description": "Builds the route object for a settings group",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/route.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "errorText",
+        "description": "Extracts a human readable message from an unknown error value",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "fullTime",
+        "description": "Formats a timestamp fully in the given language for tooltips",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "readableMarkers",
+        "description": "Replaces internal markers in text with localized readable text",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "setupText",
+        "description": "Renders a localized message for a setup problem code and values",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "when",
+        "description": "Formats a timestamp as a relative/short localized time string",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      }
+    ],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "When",
+        "function_id": "src/client/widgets.tsx:When(at: string | undefined)",
+        "description": "Renders a localized relative time element with a full timestamp tooltip",
+        "filepath": "src/client/widgets.tsx",
+        "lines": [
+          12,
+          15
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "at",
+            "param_type": "{ at: string | undefined }",
+            "description": "Timestamp to display; may be undefined",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "SetupMessage",
+        "function_id": "src/client/widgets.tsx:SetupMessage(problem: Pick<SetupProblem, 'code' | 'values'>, lead?: boolean)",
+        "description": "Renders a localized setup problem message, optionally as a lead sentence, plus raw output details",
+        "filepath": "src/client/widgets.tsx",
+        "lines": [
+          16,
+          23
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "problem",
+            "param_type": "Pick<SetupProblem, 'code' | 'values'>",
+            "description": "Setup problem with its code and values used for localization",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "lead",
+            "param_type": "boolean",
+            "description": "When true wraps the text in the leading setupProblem sentence",
+            "default_value": "",
+            "is_optional": true
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "Section",
+        "function_id": "src/client/widgets.tsx:Section({title, count, children, action, hint, badge, icon})",
+        "description": "Renders a titled section container with optional count, hint tooltip, badge, icon and right-aligned action",
+        "filepath": "src/client/widgets.tsx",
+        "lines": [
+          24,
+          35
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "title",
+            "param_type": "string",
+            "description": "Section heading text",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "count",
+            "param_type": "number | string",
+            "description": "Optional item count displayed next to the title",
+            "default_value": "",
+            "is_optional": true
+          },
+          {
+            "param_name": "children",
+            "param_type": "ReactNode",
+            "description": "Section body content",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "action",
+            "param_type": "ReactNode",
+            "description": "Optional action rendered at the right side of the heading",
+            "default_value": "",
+            "is_optional": true
+          },
+          {
+            "param_name": "hint",
+            "param_type": "string",
+            "description": "Optional hint text shown in an info tooltip",
+            "default_value": "",
+            "is_optional": true
+          },
+          {
+            "param_name": "badge",
+            "param_type": "ReactNode",
+            "description": "Optional badge element shown after the title",
+            "default_value": "",
+            "is_optional": true
+          },
+          {
+            "param_name": "icon",
+            "param_type": "IconName",
+            "description": "Optional icon name rendered before the title",
+            "default_value": "",
+            "is_optional": true
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "Hint",
+        "function_id": "src/client/widgets.tsx:Hint({children})",
+        "description": "Renders a paragraph styled as a subdued hint",
+        "filepath": "src/client/widgets.tsx",
+        "lines": [
+          36,
+          36
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "children",
+            "param_type": "ReactNode",
+            "description": "Hint content",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "LabelValue",
+        "function_id": "src/client/widgets.tsx:LabelValue({label, value})",
+        "description": "Renders an inline label/value pair",
+        "filepath": "src/client/widgets.tsx",
+        "lines": [
+          37,
+          39
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "label",
+            "param_type": "string",
+            "description": "Label text",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "value",
+            "param_type": "ReactNode",
+            "description": "Value rendered next to the label",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "KeyValues",
+        "function_id": "src/client/widgets.tsx:KeyValues({rows})",
+        "description": "Renders a definition list from key/value rows",
+        "filepath": "src/client/widgets.tsx",
+        "lines": [
+          40,
+          43
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "rows",
+            "param_type": "[string, ReactNode][]",
+            "description": "Array of key/value pairs to render",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "Inlines",
+        "function_id": "src/client/widgets.tsx:Inlines({parts}: { parts: Inline[] })",
+        "description": "Internal component rendering parsed inline Markdown fragments as strong/code/link/plain nodes",
+        "filepath": "src/client/widgets.tsx",
+        "lines": [
+          45,
+          50
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "parts",
+            "param_type": "Inline[]",
+            "description": "Inline fragments to render",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "MarkdownLite",
+        "function_id": "src/client/widgets.tsx:MarkdownLite({text}: { text: string })",
+        "description": "Renders a safe Markdown subset (headings, lists, paragraphs, bold, inline code, links) without interpreting raw HTML",
+        "filepath": "src/client/widgets.tsx",
+        "lines": [
+          52,
+          60
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "text",
+            "param_type": "string",
+            "description": "Markdown source text to render",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "MoreToggle",
+        "function_id": "src/client/widgets.tsx:MoreToggle({open, onToggle}: { open: boolean; onToggle: () => void })",
+        "description": "Internal toggle button switching between expand and collapse labels",
+        "filepath": "src/client/widgets.tsx",
+        "lines": [
+          61,
+          65
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "open",
+            "param_type": "boolean",
+            "description": "Whether the clamped text is currently expanded",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "onToggle",
+            "param_type": "() => void",
+            "description": "Callback invoked when the toggle is clicked",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "ClampText",
+        "function_id": "src/client/widgets.tsx:ClampText({text}: { text: string })",
+        "description": "Renders text with links, clamping long content and offering an expand/collapse toggle",
+        "filepath": "src/client/widgets.tsx",
+        "lines": [
+          66,
+          73
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "text",
+            "param_type": "string",
+            "description": "Text to render and possibly clamp",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "ConfirmButton",
+        "function_id": "src/client/widgets.tsx:ConfirmButton({label, title, message, onConfirm, variant, icon})",
+        "description": "Renders a button that opens a confirmation modal before running an async action",
+        "filepath": "src/client/widgets.tsx",
+        "lines": [
+          75,
+          90
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "label",
+            "param_type": "string",
+            "description": "Button label text",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "title",
+            "param_type": "string",
+            "description": "Confirmation modal title",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "message",
+            "param_type": "string",
+            "description": "Confirmation modal description explaining the consequence",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "onConfirm",
+            "param_type": "() => Promise<unknown>",
+            "description": "Async action executed when the user confirms",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "variant",
+            "param_type": "'ghost' | 'outline'",
+            "description": "Visual variant of the trigger button",
+            "default_value": "'ghost'",
+            "is_optional": true
+          },
+          {
+            "param_name": "icon",
+            "param_type": "IconName",
+            "description": "Optional icon name for the trigger button",
+            "default_value": "",
+            "is_optional": true
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "SessionButton",
+        "function_id": "src/client/widgets.tsx:SessionButton({sessionId, label, variant})",
+        "description": "Renders a button that opens a session and reports errors via notification",
+        "filepath": "src/client/widgets.tsx",
+        "lines": [
+          91,
+          96
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "sessionId",
+            "param_type": "string",
+            "description": "Identifier of the session to open",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "label",
+            "param_type": "string",
+            "description": "Optional custom button label; defaults to the localized openSession label",
+            "default_value": "",
+            "is_optional": true
+          },
+          {
+            "param_name": "variant",
+            "param_type": "'ghost' | 'outline'",
+            "description": "Visual variant of the button",
+            "default_value": "'ghost'",
+            "is_optional": true
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "ExternalLink",
+        "function_id": "src/client/widgets.tsx:ExternalLink({href, children, icon})",
+        "description": "Renders an inline external link opened in a new tab with an icon",
+        "filepath": "src/client/widgets.tsx",
+        "lines": [
+          97,
+          99
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "href",
+            "param_type": "string",
+            "description": "Target URL",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "children",
+            "param_type": "ReactNode",
+            "description": "Link text content",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "icon",
+            "param_type": "IconName",
+            "description": "Icon name displayed before the text",
+            "default_value": "'external'",
+            "is_optional": true
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "ActionLink",
+        "function_id": "src/client/widgets.tsx:ActionLink({href, children, icon})",
+        "description": "Renders a button-styled external link opened in a new tab",
+        "filepath": "src/client/widgets.tsx",
+        "lines": [
+          100,
+          103
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "href",
+            "param_type": "string",
+            "description": "Target URL",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "children",
+            "param_type": "ReactNode",
+            "description": "Link label content",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "icon",
+            "param_type": "IconName",
+            "description": "Icon name displayed before the label",
+            "default_value": "'external'",
+            "is_optional": true
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "StageMark",
+        "function_id": "src/client/widgets.tsx:StageMark({state, icon, label})",
+        "description": "Renders a stage marker showing an ongoing dot or a state icon next to a label",
+        "filepath": "src/client/widgets.tsx",
+        "lines": [
+          104,
+          107
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "state",
+            "param_type": "DotState",
+            "description": "State used to color the marker and decide between dot and icon",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "icon",
+            "param_type": "IconName",
+            "description": "Icon shown when the state is not ongoing",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "label",
+            "param_type": "string",
+            "description": "Stage label text",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "LoadState",
+        "function_id": "src/client/widgets.tsx:LoadState({error, loading})",
+        "description": "Renders an error alert or a loading hint depending on the given state",
+        "filepath": "src/client/widgets.tsx",
+        "lines": [
+          108,
+          112
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "error",
+            "param_type": "Error | undefined",
+            "description": "Optional error to display as an alert",
+            "default_value": "",
+            "is_optional": true
+          },
+          {
+            "param_name": "loading",
+            "param_type": "boolean",
+            "description": "Whether data is currently loading",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element | null",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "LoadMore",
+        "function_id": "src/client/widgets.tsx:LoadMore({onMore})",
+        "description": "Renders a button to load more items",
+        "filepath": "src/client/widgets.tsx",
+        "lines": [
+          113,
+          116
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "onMore",
+            "param_type": "() => void",
+            "description": "Callback invoked when more items should be loaded",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "StatusHead",
+        "function_id": "src/client/widgets.tsx:StatusHead({hint, settings})",
+        "description": "Renders the status page header with a hint tooltip and an optional settings shortcut button",
+        "filepath": "src/client/widgets.tsx",
+        "lines": [
+          118,
+          125
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "hint",
+            "param_type": "string",
+            "description": "Hint text shown in the info tooltip",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "settings",
+            "param_type": "SettingsGroup",
+            "description": "Optional settings group the shortcut button navigates to",
+            "default_value": "",
+            "is_optional": true
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "PageHead",
+        "function_id": "src/client/widgets.tsx:PageHead({title, children})",
+        "description": "Renders a page header with a back button, title and optional action area",
+        "filepath": "src/client/widgets.tsx",
+        "lines": [
+          126,
+          132
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "title",
+            "param_type": "ReactNode",
+            "description": "Page title content",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "children",
+            "param_type": "ReactNode",
+            "description": "Optional actions rendered next to the title",
+            "default_value": "",
+            "is_optional": true
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "CheckSetupButton",
+        "function_id": "src/client/widgets.tsx:CheckSetupButton()",
+        "description": "Triggers a host setup re-check and restart, asking for confirmation when running assignments would be interrupted",
+        "filepath": "src/client/widgets.tsx",
+        "lines": [
+          134,
+          147
+        ],
+        "code": null,
+        "parameters": [],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      }
+    ],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [
+      {
+        "constant_name": "external",
+        "constant_id": "src/client/widgets.tsx:external",
+        "description": "Shared anchor attributes for opening links safely in a new tab",
+        "filepath": "src/client/widgets.tsx",
+        "lines": [
+          10,
+          10
+        ],
+        "constant_type": "{ readonly target: '_blank'; readonly rel: 'noopener noreferrer' }",
+        "value": "{ target: '_blank', rel: 'noopener noreferrer' }"
+      }
+    ],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

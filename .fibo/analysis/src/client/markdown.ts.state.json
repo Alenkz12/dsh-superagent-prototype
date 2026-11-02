@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/markdown.ts",
+    "path": "src/client/markdown.ts",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "81e5b24b4408079c2956bf49386bd4d8b78070203807c0685593eab72ad8fc93",
+  "sourceFingerprint": "5993337bd0b5c9672eab57628e1f94ecb6db5be4f1e13174d7f6336d60eb8a51",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/client",
+      "resultFingerprint": "7bf3ac2d009d046122c35f91b95f5cb11c1fc74f53cdfbb3bacbc80ac2b588dc"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/markdown.ts",
+      "contentFingerprint": "5993337bd0b5c9672eab57628e1f94ecb6db5be4f1e13174d7f6336d60eb8a51"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/widgets.tsx",
+      "contentFingerprint": "6aa900da1203bb7c05a81f1aa8f98376ef6c5edbc6b8f6adce2719d18b1995f4"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "from './markdown'",
+      "limit": 30,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "search",
+      "path": "src/client",
+      "query": "markdown",
+      "limit": 50,
+      "resultFingerprint": "5c6ae14f6271b56d21292082ff67aee58f844349a6f992343a70d227e20642be"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-presentation:data-contract",
+      "contentFingerprint": "5898043d3b94ee93d1bc1119f3b213aebdafa317bfb58b7c1230e0e7f2f25311"
+    }
+  ],
+  "infoFingerprint": "514fd8d8162fba4def54c780d4da06d018e8d7fbc64a45aa2784952bcdc55baa",
+  "artifacts": {
+    "info": ".fibo/analysis/src/client/markdown.ts.info.md",
+    "structure": ".fibo/analysis/src/client/markdown.ts.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "514fd8d8162fba4def54c780d4da06d018e8d7fbc64a45aa2784952bcdc55baa",
+    "structure": "defa6b941c4df11e0c8d67039da5df9b0d9f348e49e7456aa6e88b7aec44da89"
+  }
+}

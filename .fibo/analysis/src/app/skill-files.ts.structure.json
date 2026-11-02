@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/skill-files.ts",
+    "path": "src/app/skill-files.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "skill-files.ts",
+    "file_path": "src/app/skill-files.ts",
+    "description": "Skill and prompt file loader that reads packaged skill and prompt assets from disk",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "node:fs",
+        "description": "Node.js file system module, used for synchronous file reads",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Path helper module providing packagePath for resolving packaged asset paths",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "../infra/paths.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "packaged",
+        "function_id": "src/app/skill-files.ts:packaged(...parts: string[])",
+        "description": "Reads a packaged file's path and normalized text, throwing on missing or empty files",
+        "filepath": "src/app/skill-files.ts",
+        "lines": [
+          8,
+          17
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "load",
+        "function_id": "src/app/skill-files.ts:load(name: string)",
+        "description": "Loads and parses a packaged SKILL.md into name, description, content, and path",
+        "filepath": "src/app/skill-files.ts",
+        "lines": [
+          18,
+          23
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "promptFile",
+        "function_id": "src/app/skill-files.ts:promptFile(name: string)",
+        "description": "Reads a prompt markdown file and returns it flattened into single-line paragraphs",
+        "filepath": "src/app/skill-files.ts",
+        "lines": [
+          29,
+          32
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "bundledSkills",
+        "variable_id": "src/app/skill-files.ts:bundledSkills",
+        "description": "Exported map of bundled skills (feishu, github) loaded at module init",
+        "filepath": "src/app/skill-files.ts",
+        "lines": [
+          24,
+          24
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

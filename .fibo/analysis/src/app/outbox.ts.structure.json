@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/outbox.ts",
+    "path": "src/app/outbox.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "outbox.ts",
+    "file_path": "src/app/outbox.ts",
+    "description": "Outbox module: defines the outbox host dependencies and the outbox that records receipts and delivers outbound messages.",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Imports outbound message, outbox port and reply status types from core.",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "internal",
+        "filepath": "../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Commands type used by senders.",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "../infra/commands.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports checkedImText to validate Feishu IM reply text length.",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "../infra/text.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the SourceRegistry type for resolving and sending to sources.",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "../sources/registry.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports failure threshold, Later retry signal and Effects type from effects.",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "./effects.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Store type for receipts and atomic transactions.",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "./store.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [],
+    "classes": [
+      {
+        "class_name": "Outbox",
+        "class_id": "src/app/outbox.ts:Outbox",
+        "description": "Outbox implementation of OutboxPort; sends messages, records receipts atomically and registers the reply delivery effect.",
+        "super_class": [],
+        "filepath": "src/app/outbox.ts",
+        "lines": [
+          22,
+          52
+        ],
+        "function": [],
+        "variables": []
+      }
+    ],
+    "interfaces": [
+      {
+        "interface_name": "OutboxHost",
+        "interface_id": "src/app/outbox.ts:OutboxHost",
+        "description": "Host dependencies of the outbox: store, effects, source registry, commands and pause check.",
+        "filepath": "src/app/outbox.ts",
+        "lines": [
+          9,
+          15
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

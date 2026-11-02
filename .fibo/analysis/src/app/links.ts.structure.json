@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/links.ts",
+    "path": "src/app/links.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "links.ts",
+    "file_path": "src/app/links.ts",
+    "description": "Link resolution helpers for triggers, building source links, reply chains, referenced tickets and candidate cards.",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Imports core domain types Candidate, Ticket and Trigger.",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "internal",
+        "filepath": "../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Commands type from the infra commands module.",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "../infra/commands.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports readFeishuLink, which reads a Feishu message link.",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "../sources/feishu-read.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports Feishu helpers feishuRef and feishuSettings.",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "../sources/feishu.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the SourceRegistry type for source lookups.",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "../sources/registry.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports triggerMessage, which renders a trigger message payload.",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "../executor/dsh.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports card builders relatedTickets, ticketCard and triggerCard.",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "./cards.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Store type for state access.",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "./store.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the TextCache type used for cached source links.",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "./cache.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "sourceLink",
+        "function_id": "src/app/links.ts:sourceLink(host: LinkHost, trigger: Trigger, signal?: AbortSignal)",
+        "description": "Resolves a trigger's source URL, using cached links, message references and optional Feishu link enrichment.",
+        "filepath": "src/app/links.ts",
+        "lines": [
+          21,
+          40
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "repliedTo",
+        "function_id": "src/app/links.ts:repliedTo({ store, sources }: { store: Pick<Store, 'triggers'>; sources: Pick<SourceRegistry, 'repliesTo'> }, trigger: Trigger)",
+        "description": "Finds the parent trigger this trigger replies to, via the source registry and trigger store.",
+        "filepath": "src/app/links.ts",
+        "lines": [
+          42,
+          46
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "referencedTickets",
+        "function_id": "src/app/links.ts:referencedTickets(host: LinkHost, trigger: Trigger, known: readonly Ticket[])",
+        "description": "Collects ticket IDs referenced in a trigger's text through threads/subscriptions, excluding known tickets, capped at 4.",
+        "filepath": "src/app/links.ts",
+        "lines": [
+          48,
+          53
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "candidateCard",
+        "function_id": "src/app/links.ts:candidateCard(host: LinkHost, candidate: Candidate)",
+        "description": "Builds the candidate card payload: source link, reply context, batch triggers, handbacks, related/referenced tickets and next action.",
+        "filepath": "src/app/links.ts",
+        "lines": [
+          55,
+          71
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "LinkHost",
+        "interface_id": "src/app/links.ts:LinkHost",
+        "description": "Host dependencies for link resolution: store, text cache, commands, source registry and an abort lifetime signal.",
+        "filepath": "src/app/links.ts",
+        "lines": [
+          12,
+          18
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

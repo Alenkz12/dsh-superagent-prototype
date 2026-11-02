@@ -1,0 +1,319 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/tools/main.ts",
+    "path": "src/app/tools/main.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "main.ts",
+    "file_path": "src/app/tools/main.ts",
+    "description": "Main-session tool definitions: routing of trigger candidates, ticket retry, prompts, and resource reading",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "cordis",
+        "description": "Imports the cordis Context type",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "dsh-agent",
+        "description": "Imports the Agent type from dsh-agent",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "zod",
+        "description": "Imports the zod schema builder",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports core types and helpers: errors, decision, engine interfaces",
+        "lines": [
+          5,
+          6
+        ],
+        "source": "internal",
+        "filepath": "../../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports word limit constants and word counting helper",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "../../infra/text.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports assessment schemas and the MasterAssessor type",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "../assessment.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the ticket card formatter",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "../cards.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports prompt config schema, prompt saving and Prompts type",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "../prompts.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports resource reading helper and resource host types",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "../resources.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Sessions type",
+        "lines": [
+          12,
+          12
+        ],
+        "source": "internal",
+        "filepath": "../sessions.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Settings type",
+        "lines": [
+          13,
+          13
+        ],
+        "source": "internal",
+        "filepath": "../settings.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Store type",
+        "lines": [
+          14,
+          14
+        ],
+        "source": "internal",
+        "filepath": "../store.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports tool helpers, acknowledgement schema and the Tool type",
+        "lines": [
+          15,
+          15
+        ],
+        "source": "internal",
+        "filepath": "./tool.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "routed",
+        "function_id": "src/app/tools/main.ts:routed(host: MainToolsHost, result: { decision?: DecisionKind; reason: string; ticketId?: string | undefined })",
+        "description": "Formats a routing decision result into decision, reason and optional ticket card fields",
+        "filepath": "src/app/tools/main.ts",
+        "lines": [
+          36,
+          41
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "invalid",
+        "function_id": "src/app/tools/main.ts:invalid(item: RouteItem)",
+        "description": "Validates a route item against field rules, returning the first error message or undefined",
+        "filepath": "src/app/tools/main.ts",
+        "lines": [
+          70,
+          82
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "route",
+        "function_id": "src/app/tools/main.ts:route(host: MainToolsHost, item: RouteItem, decided: ReadonlyMap<string, string>)",
+        "description": "Applies one route item through the engine, returning a decision result or a refusal reason",
+        "filepath": "src/app/tools/main.ts",
+        "lines": [
+          88,
+          120
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "routeTool",
+        "function_id": "src/app/tools/main.ts:routeTool(host: MainToolsHost)",
+        "description": "Builds the orchestrator_route tool that decides up to 20 route items in order in one call",
+        "filepath": "src/app/tools/main.ts",
+        "lines": [
+          125,
+          153
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "mainTools",
+        "function_id": "src/app/tools/main.ts:mainTools(host: MainToolsHost, agent: Agent)",
+        "description": "Assembles the list of tools exposed to the main session, including read, route, retry and prompt tools",
+        "filepath": "src/app/tools/main.ts",
+        "lines": [
+          155,
+          301
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "MainToolsHost",
+        "interface_id": "src/app/tools/main.ts:MainToolsHost",
+        "description": "Host dependencies for main tools: context, engine, store, prompts, sessions, settings, assessor and resources",
+        "filepath": "src/app/tools/main.ts",
+        "lines": [
+          20,
+          34
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "RoutingNoteSchema",
+        "variable_id": "src/app/tools/main.ts:RoutingNoteSchema",
+        "description": "Schema for an optional routing note limited by word count, with guidance text",
+        "filepath": "src/app/tools/main.ts",
+        "lines": [
+          17,
+          19
+        ]
+      },
+      {
+        "variable_name": "fromDecision",
+        "variable_id": "src/app/tools/main.ts:fromDecision",
+        "description": "Maps an engine decision object to a compact routing result fragment",
+        "filepath": "src/app/tools/main.ts",
+        "lines": [
+          42,
+          42
+        ]
+      },
+      {
+        "variable_name": "RouteItemSchema",
+        "variable_id": "src/app/tools/main.ts:RouteItemSchema",
+        "description": "Zod schema describing one route item with kind, trigger_id and optional per-kind fields",
+        "filepath": "src/app/tools/main.ts",
+        "lines": [
+          47,
+          56
+        ]
+      },
+      {
+        "variable_name": "FIELDS",
+        "variable_id": "src/app/tools/main.ts:FIELDS",
+        "description": "Per-field validation rules stating which route kinds read or require each field",
+        "filepath": "src/app/tools/main.ts",
+        "lines": [
+          61,
+          68
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "RouteItem",
+        "alias_id": "src/app/tools/main.ts:RouteItem",
+        "description": "Inferred type of a validated route item from RouteItemSchema",
+        "filepath": "src/app/tools/main.ts",
+        "lines": [
+          57,
+          57
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "Kind",
+        "alias_id": "src/app/tools/main.ts:Kind",
+        "description": "Union of route item kinds: accept, attach, ignore or stop",
+        "filepath": "src/app/tools/main.ts",
+        "lines": [
+          58,
+          58
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "Field",
+        "alias_id": "src/app/tools/main.ts:Field",
+        "description": "Route item field names other than kind and trigger_id",
+        "filepath": "src/app/tools/main.ts",
+        "lines": [
+          59,
+          59
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "Routed",
+        "alias_id": "src/app/tools/main.ts:Routed",
+        "description": "Shape of a successful routing result with decision, reason, ticket id and trigger ids",
+        "filepath": "src/app/tools/main.ts",
+        "lines": [
+          83,
+          83
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

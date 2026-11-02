@@ -1,0 +1,221 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/views/tickets.ts",
+    "path": "src/app/views/tickets.ts",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "e3aaf967f3c54cd11b2722a5d5e92402c5565d1c5c3382a5d6cfa1d42714bd82",
+  "sourceFingerprint": "7345a63859a81e525ba4341d8a7091053b8825f73215a028e144cd0dc8da5ccc",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/app/views",
+      "resultFingerprint": "3685033d10af6d43b7290e60d2ad302d992135cbe3b93fb851b4504d76bb1542"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/api.ts",
+      "contentFingerprint": "ceb0c76cb2d8680e2be4edf0f6ac42c90e6a4ff78e0e14ce4aa277357606ff04"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/cards.ts",
+      "contentFingerprint": "9d3522b787612ba129058b89f8a4c5f9a4e980321f69c3cc68607c5b111d8ef6"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/http.ts",
+      "contentFingerprint": "5da39830429559975cae7ae6d39416acb2322ac8e31cfb4da3436df602cb7ec4"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/resources.ts",
+      "contentFingerprint": "cc09f56669b2ccacfc889aa98132590b618f77e6648a7ff8fe8454106c8c663f"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/store.ts",
+      "contentFingerprint": "c124de893fbe260571b18b0ac4875bc7647e44e72062ba38b02c809e0012d583"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/views/records.ts",
+      "contentFingerprint": "5ed48ab5dfaaa729f0520c1dfc30d962f6a716d11d71088fd43ce9bedaa3cd39"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/views/text.ts",
+      "contentFingerprint": "aa577b5171ae15dc3905207ed7dbe36c6c1a3567d07599a81bc8b0bb28413aa6"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/views/tickets.ts",
+      "contentFingerprint": "7345a63859a81e525ba4341d8a7091053b8825f73215a028e144cd0dc8da5ccc"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/api.ts",
+      "contentFingerprint": "800b0347183c39601b8b7cd33607dee2538eb8da5feb5f1c7e13a1a7c2268f36"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/client.css",
+      "contentFingerprint": "8de57c24e782831b713dd5221900ee3a45172285f8598b80b27797cd9799db32"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/execution.tsx",
+      "contentFingerprint": "8d9200aab40f092972234fc5712a78f1db0c1ad581517d574f8b8143c289959c"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/locales.ts",
+      "contentFingerprint": "d172c86d672b9244effe3590bc7c25ac71b80d3ccbb7d6c5fe76848ce31eba12"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/route.ts",
+      "contentFingerprint": "457b3cf37c9678c085cf4685ae412ff92bc5510b4a5401e805e4762ad12a3a4c"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/ticket.tsx",
+      "contentFingerprint": "0d78ec9067cb1e11169ae283b038ffa43859fe2380557a90ea980a492f28bc73"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/model.ts",
+      "contentFingerprint": "982155fe6a03c887a7ac4475c6d1592d12aa23c5fe3698403c93bbfd6469d44a"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/stage.ts",
+      "contentFingerprint": "b935012a654d2a68ca20cb27909ddc8dceafb704b56a16a23a08036a546141df"
+    },
+    {
+      "kind": "file",
+      "path": "tests/cards.spec.ts",
+      "contentFingerprint": "cc5a8b75490bef2f91af7f6ccfe58a9093b13d815277a6886bbcd8ddb21041e7"
+    },
+    {
+      "kind": "file",
+      "path": "tests/fixtures/panel-server.ts",
+      "contentFingerprint": "02ea5bca9c55e17da1d88af7bd835a1c59a9ca099a9f2f9a05c7a490595d472c"
+    },
+    {
+      "kind": "file",
+      "path": "tests/panel-execution.spec.tsx",
+      "contentFingerprint": "081dcef113d52003adb61b6ac1a6cc910344416e77086452e4188e7d728252ba"
+    },
+    {
+      "kind": "file",
+      "path": "tests/runtime.spec.ts",
+      "contentFingerprint": "e3c0cfb494307adca014d6c958f5c0f92ffcaaccdfb13b5dba2fb28ef6472752"
+    },
+    {
+      "kind": "file",
+      "path": "tests/views.spec.ts",
+      "contentFingerprint": "d9a149c90e71ee5718237bfa33858ff584c892a672f26b098c99516565fb576d"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "basisFacts",
+      "limit": 40,
+      "resultFingerprint": "aae90b5f502f91663d89977654e0312da45b4ce63c7deed23bcdc857b6351581"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "executorLoad",
+      "limit": 40,
+      "resultFingerprint": "fd56732544c43748fd28f7a2e74ef7537b330fb45a3bcf67b63bb0b5b4b6ec81"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "export function ticketStage",
+      "limit": 30,
+      "resultFingerprint": "1a453eb21712a2fa4e9eb887168f71ea3129c1682969e88f52cdd84024b112d3"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "export type MandateBasis",
+      "limit": 30,
+      "resultFingerprint": "cfbc80602a75870defb6ffd045015eef8c49e07c14c875dc79f4e63976beb148"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "TICKET_FILTERS",
+      "limit": 30,
+      "resultFingerprint": "203bca0430fb9ae40b03248056f84a5f7c292930a8079d92e2aa646252aba24d"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "ticketDetail",
+      "limit": 40,
+      "resultFingerprint": "11bb28954340c739b6bfe08c8e0c6a9d987e46b6da3abe57e5d3e97a167b8597"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "TicketListView",
+      "limit": 30,
+      "resultFingerprint": "eb6e7a8fbf809bfa412b9e629e2b88697be4ea797fbc3d04caf3430914280f99"
+    },
+    {
+      "kind": "search",
+      "path": "src/app/store.ts",
+      "query": "open():",
+      "limit": 20,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "search",
+      "path": "src/app/store.ts",
+      "query": "tickets",
+      "limit": 20,
+      "resultFingerprint": "200315f6ccaa8ca60d33ce8b37e57dec9f56f36e030f4af588a3610d79fb94ec"
+    },
+    {
+      "kind": "search",
+      "path": "src/client",
+      "query": "basis",
+      "limit": 30,
+      "resultFingerprint": "15b7050bc7b646aa16a8c5ab182d0c6a9b51f1170ca448a54600520b43d5e26e"
+    },
+    {
+      "kind": "search",
+      "path": "src/client",
+      "query": "GET tickets",
+      "limit": 30,
+      "resultFingerprint": "f8c22ebd1b4a4725c20b759f5c1e039cb880a315cc956718683246de63f1c973"
+    },
+    {
+      "kind": "search",
+      "path": "src/client",
+      "query": "turnEndedAt",
+      "limit": 30,
+      "resultFingerprint": "e4b487e6d96d99eb2047e9fd1260d9bfa912fc8491cf0677d41335ce586e0d96"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-presentation:",
+      "contentFingerprint": "ae7d40c7f1b112bcc2ef142c827d000538cd2a9badc1c07b245fcc59014b16c4"
+    }
+  ],
+  "infoFingerprint": "64bbfb3f5df34cf3d6281faf2930cd8f386141c95e655b759dec35156cc4534f",
+  "artifacts": {
+    "info": ".fibo/analysis/src/app/views/tickets.ts.info.md",
+    "structure": ".fibo/analysis/src/app/views/tickets.ts.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "64bbfb3f5df34cf3d6281faf2930cd8f386141c95e655b759dec35156cc4534f",
+    "structure": "a5b6c6621653e520d08b6214afa4ad302b2f47bad44344f57f613e1fbeb91d85"
+  }
+}

@@ -1,0 +1,347 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/assessment.ts",
+    "path": "src/app/assessment.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "assessment.ts",
+    "file_path": "src/app/assessment.ts",
+    "description": "Assessment app module: schema definitions, host interfaces, and the MasterAssessor that evaluates candidate triggers into decisions",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "dsh-agent",
+        "description": "Type-only import of the Agent class from the dsh-agent package",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "zod",
+        "description": "Imports the zod schema library as z",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports core assessor types and helpers: reasonText, threadKey, Assessor, AssessmentOutcome, Candidate, EngineForMainSession, Trigger",
+        "lines": [
+          4,
+          5
+        ],
+        "source": "internal",
+        "filepath": "../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports policy items: AdmissionDirectionSchema, RuleAssessmentSchema, assessmentOutcome, directionAllowed, Settings",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "../policy.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports checkedImText helper for validating immediate-reply text",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "../infra/text.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Commands type for repository and thread read commands",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "../infra/commands.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Deployment type",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "../deployment.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports admissionContext to build the assessment context for a trigger",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "../sources/admission-context.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports readRepositoryPath for reading repository files and directories",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "../sources/github-read.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the TriggerContext type for source thread context",
+        "lines": [
+          12,
+          12
+        ],
+        "source": "internal",
+        "filepath": "../sources/kind.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports relatedTickets to look up related ticket cards",
+        "lines": [
+          13,
+          13
+        ],
+        "source": "internal",
+        "filepath": "./cards.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports textPage for paginating text excerpts",
+        "lines": [
+          14,
+          14
+        ],
+        "source": "internal",
+        "filepath": "./context.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports AcknowledgementSchema for validating acknowledgement text",
+        "lines": [
+          15,
+          15
+        ],
+        "source": "internal",
+        "filepath": "./tools/tool.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Effects type for the durable effect queue",
+        "lines": [
+          16,
+          16
+        ],
+        "source": "internal",
+        "filepath": "./effects.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [],
+    "classes": [
+      {
+        "class_name": "MasterAssessor",
+        "class_id": "src/app/assessment.ts:MasterAssessor",
+        "description": "Assessor implementation that reads thread/repository context per eval, applies policy rules, and decides accept/ignore/unavailable outcomes",
+        "super_class": [],
+        "filepath": "src/app/assessment.ts",
+        "lines": [
+          89,
+          282
+        ],
+        "function": [],
+        "variables": []
+      }
+    ],
+    "interfaces": [
+      {
+        "interface_name": "EvalReads",
+        "interface_id": "src/app/assessment.ts:EvalReads",
+        "description": "Per-evaluation read state: snapshot cache, optional assessment context, error, and in-flight loading promise",
+        "filepath": "src/app/assessment.ts",
+        "lines": [
+          45,
+          45
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "AssessorHost",
+        "interface_id": "src/app/assessment.ts:AssessorHost",
+        "description": "Host interface exposing engine, commands, deployment, effect queue, settings, pause state, thread context, and candidate delivery",
+        "filepath": "src/app/assessment.ts",
+        "lines": [
+          49,
+          64
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "WorktreeNameSchema",
+        "variable_id": "src/app/assessment.ts:WorktreeNameSchema",
+        "description": "Zod schema validating a short lowercase kebab-case English worktree/ticket name up to 32 chars",
+        "filepath": "src/app/assessment.ts",
+        "lines": [
+          19,
+          19
+        ]
+      },
+      {
+        "variable_name": "AssessmentSchema",
+        "variable_id": "src/app/assessment.ts:AssessmentSchema",
+        "description": "Zod schema for the assessment result: decision, rule assessments, direction, title, worktree name, scope, evidence, acknowledgement, reason",
+        "filepath": "src/app/assessment.ts",
+        "lines": [
+          21,
+          34
+        ]
+      },
+      {
+        "variable_name": "TRIGGER_CHARS",
+        "variable_id": "src/app/assessment.ts:TRIGGER_CHARS",
+        "description": "Character budget for including the trigger text in the assessment prompt",
+        "filepath": "src/app/assessment.ts",
+        "lines": [
+          37,
+          37
+        ]
+      },
+      {
+        "variable_name": "NEAR_CHARS",
+        "variable_id": "src/app/assessment.ts:NEAR_CHARS",
+        "description": "Character budget for nearby context included around the trigger",
+        "filepath": "src/app/assessment.ts",
+        "lines": [
+          37,
+          37
+        ]
+      },
+      {
+        "variable_name": "WINDOW_CHARS",
+        "variable_id": "src/app/assessment.ts:WINDOW_CHARS",
+        "description": "Character budget for each thread window excerpt",
+        "filepath": "src/app/assessment.ts",
+        "lines": [
+          37,
+          37
+        ]
+      },
+      {
+        "variable_name": "STUB_CHARS",
+        "variable_id": "src/app/assessment.ts:STUB_CHARS",
+        "description": "Character budget for stub summaries in the assessment prompt",
+        "filepath": "src/app/assessment.ts",
+        "lines": [
+          37,
+          37
+        ]
+      },
+      {
+        "variable_name": "FINISHED",
+        "variable_id": "src/app/assessment.ts:FINISHED",
+        "description": "Prompt text telling the model the assessment is already decided, timed out, or restarted",
+        "filepath": "src/app/assessment.ts",
+        "lines": [
+          38,
+          38
+        ]
+      },
+      {
+        "variable_name": "EXPLICIT",
+        "variable_id": "src/app/assessment.ts:EXPLICIT",
+        "description": "Prompt text stating an explicit request must be routed via orchestrator_route instead of assessed",
+        "filepath": "src/app/assessment.ts",
+        "lines": [
+          39,
+          39
+        ]
+      },
+      {
+        "variable_name": "NO_CONTEXT",
+        "variable_id": "src/app/assessment.ts:NO_CONTEXT",
+        "description": "Prompt text telling the model the source has no thread context, so rely on the trigger text and batch",
+        "filepath": "src/app/assessment.ts",
+        "lines": [
+          47,
+          47
+        ]
+      },
+      {
+        "variable_name": "EvalReadSchema",
+        "variable_id": "src/app/assessment.ts:EvalReadSchema",
+        "description": "Zod schema validating a single resource read request (message, thread, file, directory, image) with cross-field constraints",
+        "filepath": "src/app/assessment.ts",
+        "lines": [
+          67,
+          80
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "AssessmentContext",
+        "alias_id": "src/app/assessment.ts:AssessmentContext",
+        "description": "Type of the admission context value awaited from admissionContext",
+        "filepath": "src/app/assessment.ts",
+        "lines": [
+          40,
+          40
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "ReadCache",
+        "alias_id": "src/app/assessment.ts:ReadCache",
+        "description": "Cache maps for snapshots, images, messages, and consumed cursors used to avoid re-reading",
+        "filepath": "src/app/assessment.ts",
+        "lines": [
+          41,
+          43
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "EvalRead",
+        "alias_id": "src/app/assessment.ts:EvalRead",
+        "description": "Inferred type of a validated evaluation read request from EvalReadSchema",
+        "filepath": "src/app/assessment.ts",
+        "lines": [
+          82,
+          82
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

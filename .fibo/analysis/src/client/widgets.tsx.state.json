@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/widgets.tsx",
+    "path": "src/client/widgets.tsx",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "9b14dd654435696ddf798ce0090039fcc77997f6184d1d1b84e682ffa512b02b",
+  "sourceFingerprint": "6aa900da1203bb7c05a81f1aa8f98376ef6c5edbc6b8f6adce2719d18b1995f4",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/client",
+      "resultFingerprint": "7bf3ac2d009d046122c35f91b95f5cb11c1fc74f53cdfbb3bacbc80ac2b588dc"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/app.tsx",
+      "contentFingerprint": "23cca247e0a67fb581df6fc517522ccf0026a4897cda109c9e57c367cb2b1051"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/controls.tsx",
+      "contentFingerprint": "be4d4eae4e1d811c027c04fdebfa55ef40e38d6a5b0711cfb2b0d30a9b646d79"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/deployment.tsx",
+      "contentFingerprint": "c37ebd5a24d0319a28d3d98a76dde23d9694b0fad4a7900df0eff85de82afb4b"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/eval.tsx",
+      "contentFingerprint": "44350064a4a7649e418ea5db25d98a58e31f77b8171393589c5b4644d03b8cc8"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/execution.tsx",
+      "contentFingerprint": "8d9200aab40f092972234fc5712a78f1db0c1ad581517d574f8b8143c289959c"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/markdown.ts",
+      "contentFingerprint": "5993337bd0b5c9672eab57628e1f94ecb6db5be4f1e13174d7f6336d60eb8a51"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/overview.tsx",
+      "contentFingerprint": "316efe735bdfd6e109483916a5a2ba2f78a10618eff0caff59389af541c98f48"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/prompts.tsx",
+      "contentFingerprint": "ddc92a0db7d994c019e2efcb707dbbc04acb53e421ca04e9878d52de83ce6eff"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/provider.tsx",
+      "contentFingerprint": "5639db28e87c1fa0752a30b5280c2e492685bea0593809f72c975b5274d12a8f"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/route.ts",
+      "contentFingerprint": "457b3cf37c9678c085cf4685ae412ff92bc5510b4a5401e805e4762ad12a3a4c"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/rows.tsx",
+      "contentFingerprint": "905d0859ac8f7d7b6bf9375b30a9c1bcf2744c11f171e6e9070c6b0328490458"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/settings-kit.tsx",
+      "contentFingerprint": "4a75031188c08fb54fd8f45725a3530b3005920412004f5d9817757a72eb87a9"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/source.tsx",
+      "contentFingerprint": "0e0d24f6b0695283d47f2127f71ab132533c64e21ac772f1f033a9ef77d29a5d"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/text.ts",
+      "contentFingerprint": "b5c4a264ea799f40598b66d175b434dcb37e2033cddffad8f3e0c8ec1e080c92"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/thread.tsx",
+      "contentFingerprint": "6870694d97c1c1e75bbd43f0ed7efbf6e6eba50a19a27c60fef7b052a5a979f6"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/ticket.tsx",
+      "contentFingerprint": "0d78ec9067cb1e11169ae283b038ffa43859fe2380557a90ea980a492f28bc73"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/trigger.tsx",
+      "contentFingerprint": "934de63606db7721bbd18b829900a3b158f40330ad51b5223346477fba0794aa"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/widgets.tsx",
+      "contentFingerprint": "6aa900da1203bb7c05a81f1aa8f98376ef6c5edbc6b8f6adce2719d18b1995f4"
+    },
+    {
+      "kind": "search",
+      "path": "src/client",
+      "query": "from './widgets.tsx'",
+      "limit": 40,
+      "resultFingerprint": "77f9ae0a1048327fbb89dfd788fec07b28a6cd399f05fd3bb2e37eb1b3f38c6d"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/controls.tsx",
+      "query": "export function Modal",
+      "limit": 50,
+      "resultFingerprint": "4d46fa5a66920bdf5ff921951803c2f1f5d6a31b7d3e1790c6190d962e08097d"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-presentation:",
+      "contentFingerprint": "ae7d40c7f1b112bcc2ef142c827d000538cd2a9badc1c07b245fcc59014b16c4"
+    }
+  ],
+  "infoFingerprint": "8f4fa36cb691a0fd291bdc8395067fb81af3fc548c71e140736b7b4a8ac6c5a8",
+  "artifacts": {
+    "info": ".fibo/analysis/src/client/widgets.tsx.info.md",
+    "structure": ".fibo/analysis/src/client/widgets.tsx.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "8f4fa36cb691a0fd291bdc8395067fb81af3fc548c71e140736b7b4a8ac6c5a8",
+    "structure": "bf0cf9b00d36bc199b111fa1bcaf1a730e6168ab6e3c621a72e9f5289280ce43"
+  }
+}

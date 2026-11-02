@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/sources/feishu-image.ts",
+    "path": "src/sources/feishu-image.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "feishu-image.ts",
+    "file_path": "src/sources/feishu-image.ts",
+    "description": "Feishu image source module: extracts image keys from messages and reads admitted images as attachments",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "promises",
+        "description": "Node fs/promises helpers for temp dirs, reading, resolving, stat, and cleanup",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "node:path",
+        "description": "Node path utilities for directory, extension, and path joining",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "dsh-agent",
+        "description": "Agent type from dsh-agent, providing context and session access",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "dsh-attachment",
+        "description": "Attachment service types for image references and media types",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "dsh-llm",
+        "description": "Type-only side-effect import of dsh-llm for module augmentation",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "zod",
+        "description": "Zod schema validation library",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Commands infrastructure type from local infra module",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "../infra/commands.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "FeishuRef type from the Feishu read module",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "./feishu-read.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "admissionImageKeys",
+        "function_id": "src/sources/feishu-image.ts:admissionImageKeys(text: string)",
+        "description": "Extracts unique image keys (img_*) from message text",
+        "filepath": "src/sources/feishu-image.ts",
+        "lines": [
+          12,
+          14
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "readAdmissionImage",
+        "function_id": "src/sources/feishu-image.ts:readAdmissionImage(agent: Agent, commands: Commands, ref: FeishuRef, text: string, imageKey: string, stateDir: string, signal: AbortSignal)",
+        "description": "Reads an admitted Feishu image by key and saves it as an image attachment",
+        "filepath": "src/sources/feishu-image.ts",
+        "lines": [
+          22,
+          55
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "AdmissionImage",
+        "interface_id": "src/sources/feishu-image.ts:AdmissionImage",
+        "description": "Result shape holding source message id, image key, and saved image reference",
+        "filepath": "src/sources/feishu-image.ts",
+        "lines": [
+          16,
+          20
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

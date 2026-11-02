@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/core/memory.ts",
+    "path": "src/core/memory.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "memory.ts",
+    "file_path": "src/core/memory.ts",
+    "description": "In-memory repository implementations backed by maps, with cloning for isolation",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Imports domain model types and latestAssignment helper from model module",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "internal",
+        "filepath": "./model.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports Repositories port interface type",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "./ports.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [],
+    "classes": [
+      {
+        "class_name": "MemoryRepositories",
+        "class_id": "src/core/memory.ts:MemoryRepositories",
+        "description": "In-memory Repositories implementation storing triggers, threads, tickets and decisions in maps with atomic work execution",
+        "super_class": [],
+        "filepath": "src/core/memory.ts",
+        "lines": [
+          10,
+          50
+        ],
+        "function": [],
+        "variables": []
+      }
+    ],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "clone",
+        "variable_id": "src/core/memory.ts:clone",
+        "description": "Deep-clones a value using structuredClone",
+        "filepath": "src/core/memory.ts",
+        "lines": [
+          5,
+          5
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

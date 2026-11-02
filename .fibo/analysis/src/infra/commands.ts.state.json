@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/infra/commands.ts",
+    "path": "src/infra/commands.ts",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "38ec3e83084f6801e4b080a1dfea2e7ce4a3412395c53cebbf546ddd1bd507c3",
+  "sourceFingerprint": "9d7593c5022e0c1813731c1f1cd8471b1536b0b5f42974a08ef2b2930c1e62b2",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/infra",
+      "resultFingerprint": "812201e003213df01502321bd5f8990ab3aee224858775929593aacc6c6dd8f8"
+    },
+    {
+      "kind": "file",
+      "path": "docs/008-cookbook.md",
+      "contentFingerprint": "adbdaa519f56bc7987ca6394950802cffcb855acff4ee715d10a26a9b0ccefec"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/assessment.ts",
+      "contentFingerprint": "5b2c2cf71093fd560f1f3a57cc476f122241b780fbeb2f6007e727943142b545"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/links.ts",
+      "contentFingerprint": "7d17aef4fb89936467ad99d6c25417b03d7b4a66ad02e3b0981aed3cb2f0ffc2"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/outbox.ts",
+      "contentFingerprint": "48d20062dd8c34c2b95e851c78265c9e403d1040894e97c7d9d0fa190d54415e"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/resources.ts",
+      "contentFingerprint": "cc09f56669b2ccacfc889aa98132590b618f77e6648a7ff8fe8454106c8c663f"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/runtime.ts",
+      "contentFingerprint": "5befef035b4a70978cd881b32282680260c6d2561679f890dd911214664cf515"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/source-context.ts",
+      "contentFingerprint": "909ad5cb9739e4143ddc9ad1d38a6b1b46b18d52c0bcd2b4f8e25b691d0b9047"
+    },
+    {
+      "kind": "file",
+      "path": "src/deployment.ts",
+      "contentFingerprint": "9984953f17592b267e386d4028552d413cfe9c9ac4df6dfb730b6be5115dbf77"
+    },
+    {
+      "kind": "file",
+      "path": "src/infra/commands.ts",
+      "contentFingerprint": "9d7593c5022e0c1813731c1f1cd8471b1536b0b5f42974a08ef2b2930c1e62b2"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/admission-context.ts",
+      "contentFingerprint": "c13b421c479f02dfc5846ef266081586afe33d685c742c37e62d69ccd182557f"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/feishu-channel.ts",
+      "contentFingerprint": "c6fa722414256df055ae09e935ec402ccec9b63bdb5f73d2b5ff3f34d6d1abf7"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/feishu-image.ts",
+      "contentFingerprint": "6dd5cee8d8b00802b7e211fa536e44eaa7965a7b2bebb11c169c2512cd7ce4e5"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/feishu-loops.ts",
+      "contentFingerprint": "5a1dae9297f491fda39ff3950de843b2464a6e223ccf496deba80ba1935f7a6f"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/feishu-read.ts",
+      "contentFingerprint": "4c8fa546db21c8cf2dbc2b7dc7533e06eff3dfb41ee05a9657bd9a7975671907"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/feishu.ts",
+      "contentFingerprint": "b8830aa06caa7ee13ffb7f5d31f8707392174e9e2920323582ee150a3abc6560"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/github-channel.ts",
+      "contentFingerprint": "6de9657465b8bae9a7cb4748d469fedff3c8d27fec6ed6b4dd52e620a239a0d1"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/github-pull.ts",
+      "contentFingerprint": "615856e7a6958eade1dbf28c9628adc7a8c7bb5392bee71346e471fb571595ec"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/github-read.ts",
+      "contentFingerprint": "4951cbcdf4079c28666972b7964f1121cafd691d1cc76970583f2c57ef9dc52b"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/github.ts",
+      "contentFingerprint": "60bfc2c298cbef708553de5ca0c91c387fd633bc7440c6be0d1242478ef84e88"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/host.ts",
+      "contentFingerprint": "b07998dad9194319a95a9436084cf1612aef9c4c6de22288cfa04258bbfbb1ce"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/kind.ts",
+      "contentFingerprint": "4ea3d8eee14707e0ee9b67289a62b1a568bab64732bd04041da5ad89bc9a7e98"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/registry.ts",
+      "contentFingerprint": "fe8a8fce0b00b65d4fb69b7cd2e5fbf4950b8dc32f0891169f9150c4a16eb5cd"
+    },
+    {
+      "kind": "file",
+      "path": "tests/admission-context.spec.ts",
+      "contentFingerprint": "10d4febfefb890dcef404e3119bb1b4a27c78ff913c8d5b178170ef7be92c12d"
+    },
+    {
+      "kind": "file",
+      "path": "tests/assessment.spec.ts",
+      "contentFingerprint": "3d1c5c2dd12bfd5ae2e7545d602231e0145dc66d3cc135b0eee76283a26d9a60"
+    },
+    {
+      "kind": "file",
+      "path": "tests/commands.spec.ts",
+      "contentFingerprint": "1737430c702b23685c4820fc0878354b615f8b885c69faccdaaa52a9e352b1fb"
+    },
+    {
+      "kind": "file",
+      "path": "tests/feishu-image.spec.ts",
+      "contentFingerprint": "3bc0e9b4a6cc06c492a161506994c8686167cbfb903c15a5aecc5f715a1ff7e4"
+    },
+    {
+      "kind": "file",
+      "path": "tests/feishu-read.spec.ts",
+      "contentFingerprint": "e94c7759e4ab1fa95b2f4f550e327840d6c9664b9479077ca1368719ccfb7c13"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": ".git(",
+      "limit": 15,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": ".git(['",
+      "limit": 15,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "132011",
+      "limit": 10,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "commands.git",
+      "limit": 15,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "commands.pages(",
+      "limit": 15,
+      "resultFingerprint": "390c024af782e58db38482f18bbb6d39cab216075555610a1215c353acb442b5"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "commands.run(",
+      "limit": 20,
+      "resultFingerprint": "8abfa7b60b9b55c6b95514c7068c83f8d5a1ebc00278662df4b297606b5d37ec"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "from '../infra/commands.ts'",
+      "limit": 60,
+      "resultFingerprint": "d56924835536a52a061463e0fab42cc83869be8af969cff7508bc51737fd2456"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "git(args",
+      "limit": 20,
+      "resultFingerprint": "c487f59cad33682a2e9d544f9b452f160043ade2cb7895a6a811eb5f2c52fafa"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "interface Deployment",
+      "limit": 10,
+      "resultFingerprint": "37626d090c957e0905e8a1d879a8708c9906ddc441983ed2e9173e16597da9f6"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "new Commands(",
+      "limit": 20,
+      "resultFingerprint": "8fd3044f062703a179482f9d191c1ad293ee36256c31656f5db970db842fffcb"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "withSignal(",
+      "limit": 20,
+      "resultFingerprint": "d88f448425b9bb8c5246e5d4a9b2c1649b0b1cdabf6c1d8108fc5d2052366a06"
+    },
+    {
+      "kind": "search",
+      "path": "src/app",
+      "query": "git(",
+      "limit": 15,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "search",
+      "path": "src/app/runtime.ts",
+      "query": "commands",
+      "limit": 40,
+      "resultFingerprint": "9ce799f0898d73a125330c726d9812074a4d92f334e1b9f9b702a48d00aedb1b"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-infrastructure:external-adapter",
+      "contentFingerprint": "c562ef6ed054713d029ad4a7ea4a59cd289d4e5dd5fef895fa53d21b8be5fed2"
+    }
+  ],
+  "infoFingerprint": "31708d079bb0d2917495f464e86b8030b663a437c5763b4e389ce52080960099",
+  "artifacts": {
+    "info": ".fibo/analysis/src/infra/commands.ts.info.md",
+    "structure": ".fibo/analysis/src/infra/commands.ts.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "31708d079bb0d2917495f464e86b8030b663a437c5763b4e389ce52080960099",
+    "structure": "efde273b9dd356827b0f7d47a5397726b3bf38b3572bd65a359ff6beb19f66f4"
+  }
+}

@@ -1,0 +1,461 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/api.ts",
+    "path": "src/client/api.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "api.ts",
+    "file_path": "src/client/api.ts",
+    "description": "API client module for orchestrator HTTP requests, polling hooks, and view types",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "react",
+        "description": "Imports React hooks used by the polling hook",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Type-only import of API request and response types",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "../app/api.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports user error codes and constants",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "../core/errors.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Type-only import of the ticket stage type",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "../core/stage.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Type-only import of the setup problem type",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "../setup.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "api",
+        "function_id": "src/client/api.ts:api(messages: ApiMessages, path: string, method: string, body?: unknown)",
+        "description": "Low-level fetch wrapper handling JSON requests and mapping failures to ApiError",
+        "filepath": "src/client/api.ts",
+        "lines": [
+          33,
+          58
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "usePoll",
+        "function_id": "src/client/api.ts:usePoll(load: () => Promise<T>, deps: readonly unknown[], intervalMs = 5000)",
+        "description": "React hook polling an async loader with interval, visibility handling, and reload",
+        "filepath": "src/client/api.ts",
+        "lines": [
+          67,
+          98
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "caller",
+        "function_id": "src/client/api.ts:caller(messages: () => ApiMessages)",
+        "description": "Builds a typed API caller that interpolates route params and query strings",
+        "filepath": "src/client/api.ts",
+        "lines": [
+          108,
+          117
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [
+      {
+        "class_name": "ApiError",
+        "class_id": "src/client/api.ts:ApiError",
+        "description": "Error subclass carrying HTTP status, request details, and failure metadata",
+        "super_class": [],
+        "filepath": "src/client/api.ts",
+        "lines": [
+          16,
+          24
+        ],
+        "function": [],
+        "variables": []
+      }
+    ],
+    "interfaces": [
+      {
+        "interface_name": "UserFailure",
+        "interface_id": "src/client/api.ts:UserFailure",
+        "description": "User-facing error payload containing an error code and values",
+        "filepath": "src/client/api.ts",
+        "lines": [
+          9,
+          9
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "ApiMessages",
+        "interface_id": "src/client/api.ts:ApiMessages",
+        "description": "Message builders for offline, server, setup, and user-facing API errors",
+        "filepath": "src/client/api.ts",
+        "lines": [
+          25,
+          29
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "isUserError",
+        "variable_id": "src/client/api.ts:isUserError",
+        "description": "Type guard checking whether a value is a known user error code",
+        "filepath": "src/client/api.ts",
+        "lines": [
+          30,
+          30
+        ]
+      },
+      {
+        "variable_name": "HIDDEN_FACTOR",
+        "variable_id": "src/client/api.ts:HIDDEN_FACTOR",
+        "description": "Constant factor of 6 for hidden items",
+        "filepath": "src/client/api.ts",
+        "lines": [
+          60,
+          60
+        ]
+      },
+      {
+        "variable_name": "same",
+        "variable_id": "src/client/api.ts:same",
+        "description": "Equality helper comparing primitives directly or via JSON serialization",
+        "filepath": "src/client/api.ts",
+        "lines": [
+          61,
+          61
+        ]
+      },
+      {
+        "variable_name": "DECISION_FILTERS",
+        "variable_id": "src/client/api.ts:DECISION_FILTERS",
+        "description": "Allowed decision filter values",
+        "filepath": "src/client/api.ts",
+        "lines": [
+          100,
+          100
+        ]
+      },
+      {
+        "variable_name": "DECISION_KINDS",
+        "variable_id": "src/client/api.ts:DECISION_KINDS",
+        "description": "Maps decision filters to comma-separated decision kinds",
+        "filepath": "src/client/api.ts",
+        "lines": [
+          102,
+          103
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "DecisionFilter",
+        "alias_id": "src/client/api.ts:DecisionFilter",
+        "description": "Union of allowed decision filter values",
+        "filepath": "src/client/api.ts",
+        "lines": [
+          101,
+          101
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "Call",
+        "alias_id": "src/client/api.ts:Call",
+        "description": "Typed API call signature mapping routes to request and response types",
+        "filepath": "src/client/api.ts",
+        "lines": [
+          105,
+          106
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "StateView",
+        "alias_id": "src/client/api.ts:StateView",
+        "description": "Response type for the GET state route",
+        "filepath": "src/client/api.ts",
+        "lines": [
+          119,
+          119
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "SetupView",
+        "alias_id": "src/client/api.ts:SetupView",
+        "description": "Setup portion of the state response",
+        "filepath": "src/client/api.ts",
+        "lines": [
+          120,
+          120
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "SettingsView",
+        "alias_id": "src/client/api.ts:SettingsView",
+        "description": "Response type for the GET settings route",
+        "filepath": "src/client/api.ts",
+        "lines": [
+          121,
+          121
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "Settings",
+        "alias_id": "src/client/api.ts:Settings",
+        "description": "Mapped settings values extracted from settings blocks",
+        "filepath": "src/client/api.ts",
+        "lines": [
+          122,
+          122
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "SourceView",
+        "alias_id": "src/client/api.ts:SourceView",
+        "description": "Source entry from the settings view",
+        "filepath": "src/client/api.ts",
+        "lines": [
+          123,
+          123
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "SourceStatusRow",
+        "alias_id": "src/client/api.ts:SourceStatusRow",
+        "description": "Source status row from the GET sources response",
+        "filepath": "src/client/api.ts",
+        "lines": [
+          124,
+          124
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "TicketRow",
+        "alias_id": "src/client/api.ts:TicketRow",
+        "description": "Ticket item from the GET tickets response",
+        "filepath": "src/client/api.ts",
+        "lines": [
+          125,
+          125
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "TicketPageView",
+        "alias_id": "src/client/api.ts:TicketPageView",
+        "description": "Response type for the GET tickets/:id route",
+        "filepath": "src/client/api.ts",
+        "lines": [
+          126,
+          126
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "ThreadRow",
+        "alias_id": "src/client/api.ts:ThreadRow",
+        "description": "Thread item from the GET threads response",
+        "filepath": "src/client/api.ts",
+        "lines": [
+          127,
+          127
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "ThreadPageView",
+        "alias_id": "src/client/api.ts:ThreadPageView",
+        "description": "Response type for the GET threads/:key route",
+        "filepath": "src/client/api.ts",
+        "lines": [
+          128,
+          128
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "TriggerRow",
+        "alias_id": "src/client/api.ts:TriggerRow",
+        "description": "Timeline trigger entry from the thread page view",
+        "filepath": "src/client/api.ts",
+        "lines": [
+          129,
+          129
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "DecisionRow",
+        "alias_id": "src/client/api.ts:DecisionRow",
+        "description": "Decision item from the GET decisions response",
+        "filepath": "src/client/api.ts",
+        "lines": [
+          130,
+          130
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "Problem",
+        "alias_id": "src/client/api.ts:Problem",
+        "description": "Problem entry from the overview response",
+        "filepath": "src/client/api.ts",
+        "lines": [
+          131,
+          131
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "DroppedReply",
+        "alias_id": "src/client/api.ts:DroppedReply",
+        "description": "Dropped reply entry from a source status row",
+        "filepath": "src/client/api.ts",
+        "lines": [
+          132,
+          132
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "SearchView",
+        "alias_id": "src/client/api.ts:SearchView",
+        "description": "Response type for the GET search route",
+        "filepath": "src/client/api.ts",
+        "lines": [
+          133,
+          133
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "TicketSummary",
+        "alias_id": "src/client/api.ts:TicketSummary",
+        "description": "Ticket summary item from the search view",
+        "filepath": "src/client/api.ts",
+        "lines": [
+          134,
+          134
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "HistoryView",
+        "alias_id": "src/client/api.ts:HistoryView",
+        "description": "Response type for the GET policy/history route",
+        "filepath": "src/client/api.ts",
+        "lines": [
+          136,
+          136
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "PromptsView",
+        "alias_id": "src/client/api.ts:PromptsView",
+        "description": "Response type for the GET prompts route",
+        "filepath": "src/client/api.ts",
+        "lines": [
+          137,
+          137
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "PromptConfig",
+        "alias_id": "src/client/api.ts:PromptConfig",
+        "description": "Default prompt configuration from the prompts view",
+        "filepath": "src/client/api.ts",
+        "lines": [
+          138,
+          138
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "ThreadFacts",
+        "alias_id": "src/client/api.ts:ThreadFacts",
+        "description": "Thread facts entry from a ticket row",
+        "filepath": "src/client/api.ts",
+        "lines": [
+          139,
+          139
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "Actor",
+        "alias_id": "src/client/api.ts:Actor",
+        "description": "Actor associated with a trigger row",
+        "filepath": "src/client/api.ts",
+        "lines": [
+          140,
+          140
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

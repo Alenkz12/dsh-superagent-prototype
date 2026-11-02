@@ -1,0 +1,504 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/core/model.ts",
+    "path": "src/core/model.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "model.ts",
+    "file_path": "src/core/model.ts",
+    "description": "Core domain model for the ticket system: types, interfaces, and helpers for triggers, decisions, tickets, assignments, and threads",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Type-only import of Reason from the reasons module",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "internal",
+        "filepath": "./reasons.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "isoTime",
+        "function_id": "src/core/model.ts:isoTime(value: string)",
+        "description": "Normalizes a timestamp string to ISO format, returning the input unchanged if it cannot be parsed",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          17,
+          20
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "followupOwners",
+        "function_id": "src/core/model.ts:followupOwners(trigger: Pick<Trigger, 'id' | 'human' | 'threads'>, records: FollowupRecords)",
+        "description": "Determines which tickets should receive a human follow-up trigger based on disposition and ticket state",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          75,
+          88
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "reached",
+        "function_id": "src/core/model.ts:reached(ticket: Ticket, trigger: Trigger, thread: (key: string) => Thread | undefined, context = true)",
+        "description": "Checks whether a trigger reached a ticket via origin, inputs, or thread subscription fan-out",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          326,
+          333
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "readUntil",
+        "function_id": "src/core/model.ts:readUntil(ticket: Pick<Ticket, 'assignments'>, progress = true)",
+        "description": "Computes the latest timestamp up to which a ticket has been read, from reports and idle times",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          341,
+          344
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "waitsForPerson",
+        "function_id": "src/core/model.ts:waitsForPerson(ticket: Ticket)",
+        "description": "Checks whether a ticket's latest report is blocked or failed and no newer human trigger arrived",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          349,
+          353
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "ActorRef",
+        "interface_id": "src/core/model.ts:ActorRef",
+        "description": "Reference to an actor by source and id",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          5,
+          5
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "ThreadRef",
+        "interface_id": "src/core/model.ts:ThreadRef",
+        "description": "Reference to a thread by source and id",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          7,
+          7
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "ChannelRef",
+        "interface_id": "src/core/model.ts:ChannelRef",
+        "description": "Reference to a channel with source, thread, and address attributes",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          9,
+          9
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "Trigger",
+        "interface_id": "src/core/model.ts:Trigger",
+        "description": "Incoming event (message) with source, threads, actor, human flag, timing, text, and channel metadata",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          23,
+          39
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "TriggerDisposition",
+        "interface_id": "src/core/model.ts:TriggerDisposition",
+        "description": "Tracks how a trigger was processed: filtering, eval/decision links, reached tickets, requeue, handbacks, and acks",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          42,
+          61
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "FollowupRecords",
+        "interface_id": "src/core/model.ts:FollowupRecords",
+        "description": "Lookup accessors for tickets, threads, and trigger dispositions used in follow-up computation",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          63,
+          67
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "Received",
+        "interface_id": "src/core/model.ts:Received",
+        "description": "Source, scope, and row metadata describing where a message was received",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          105,
+          105
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "Mandate",
+        "interface_id": "src/core/model.ts:Mandate",
+        "description": "Authority under which a ticket was accepted, including strength, policy version, basis, actor, and scope",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          126,
+          133
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "Evaluation",
+        "interface_id": "src/core/model.ts:Evaluation",
+        "description": "Batch evaluation of triggers by the assessor, with strength, timing, delivery, and deadline info",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          136,
+          154
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "Thread",
+        "interface_id": "src/core/model.ts:Thread",
+        "description": "Conversation thread with key, ref, subscriptions, expiration count, and source-native metadata",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          157,
+          182
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "ThreadFact",
+        "interface_id": "src/core/model.ts:ThreadFact",
+        "description": "Single thread fact with label, text value, and an optional problem flag",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          186,
+          186
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "Decision",
+        "interface_id": "src/core/model.ts:Decision",
+        "description": "Assessor decision on an evaluation (ignore/accept/reopen/stop/unavailable) with mandate and audit data",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          192,
+          209
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "Assignment",
+        "interface_id": "src/core/model.ts:Assignment",
+        "description": "A work assignment to a worker with state, timing, report, and delivery/idle timestamps",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          218,
+          233
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "PolicyEffect",
+        "interface_id": "src/core/model.ts:PolicyEffect",
+        "description": "Effect of a policy change on rules, proactivity, and requester permissions",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          264,
+          269
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "Attention",
+        "interface_id": "src/core/model.ts:Attention",
+        "description": "Question raised that needs attention, optionally tied to a trigger",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          275,
+          275
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "Ticket",
+        "interface_id": "src/core/model.ts:Ticket",
+        "description": "Accepted unit of work with mandate, channels, end state, origin triggers, execution, and delivery info",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          277,
+          308
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "Follow",
+        "interface_id": "src/core/model.ts:Follow",
+        "description": "Follow relationship of a thread, marking whether it is owned and how it closed",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          314,
+          314
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "Execution",
+        "interface_id": "src/core/model.ts:Execution",
+        "description": "Executor's chosen name, working directory, and assignment text for a ticket",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          315,
+          315
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "threadKey",
+        "variable_id": "src/core/model.ts:threadKey",
+        "description": "Builds a unique thread key from a ThreadRef as source:id",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          12,
+          12
+        ]
+      },
+      {
+        "variable_name": "settled",
+        "variable_id": "src/core/model.ts:settled",
+        "description": "Checks whether a decision is settled, i.e. not a stop/unavailable and without blocking reason codes",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          93,
+          94
+        ]
+      },
+      {
+        "variable_name": "liveTicket",
+        "variable_id": "src/core/model.ts:liveTicket",
+        "description": "Checks whether a ticket has not ended",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          318,
+          318
+        ]
+      },
+      {
+        "variable_name": "ticketOutcome",
+        "variable_id": "src/core/model.ts:ticketOutcome",
+        "description": "Returns the outcome of a ticket if it has ended",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          320,
+          320
+        ]
+      },
+      {
+        "variable_name": "runningAssignment",
+        "variable_id": "src/core/model.ts:runningAssignment",
+        "description": "Finds the currently running assignment of a ticket",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          321,
+          321
+        ]
+      },
+      {
+        "variable_name": "latestAssignment",
+        "variable_id": "src/core/model.ts:latestAssignment",
+        "description": "Returns the most recent assignment of a ticket",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          334,
+          334
+        ]
+      },
+      {
+        "variable_name": "latestReport",
+        "variable_id": "src/core/model.ts:latestReport",
+        "description": "Returns the most recent report among a ticket's assignments",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          336,
+          336
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "Strength",
+        "alias_id": "src/core/model.ts:Strength",
+        "description": "Strength of a mandate: explicit or inferred",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          96,
+          96
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "AdmissionCell",
+        "alias_id": "src/core/model.ts:AdmissionCell",
+        "description": "Classification cell for admission of unlisted/listed and addressed/unaddressed messages",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          98,
+          98
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "AcceptMode",
+        "alias_id": "src/core/model.ts:AcceptMode",
+        "description": "Accept mode for admissions: off, observe, or auto",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          103,
+          103
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "MandateBasis",
+        "alias_id": "src/core/model.ts:MandateBasis",
+        "description": "Union describing how a message was admitted (addressed, followup, admission, listed, or bot) with audit details",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          116,
+          123
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "Text",
+        "alias_id": "src/core/model.ts:Text",
+        "description": "Localized text as a plain string or a zh/en pair",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          184,
+          184
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "ThreadFacts",
+        "alias_id": "src/core/model.ts:ThreadFacts",
+        "description": "Map of fact names to thread facts",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          188,
+          188
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "DecisionKind",
+        "alias_id": "src/core/model.ts:DecisionKind",
+        "description": "Possible decision kinds: ignore, accept, reopen, stop, unavailable",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          190,
+          190
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "AssignmentState",
+        "alias_id": "src/core/model.ts:AssignmentState",
+        "description": "Assignment lifecycle state: pending, running, or ended",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          211,
+          211
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "ReportState",
+        "alias_id": "src/core/model.ts:ReportState",
+        "description": "Worker report state: progress, waiting, ready, blocked, failed, or dropped",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          216,
+          216
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "TicketInput",
+        "alias_id": "src/core/model.ts:TicketInput",
+        "description": "Union of inputs a ticket can receive: triggers, policy changes, reopen, resume, text, and notes",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          235,
+          257
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "TicketEndBy",
+        "alias_id": "src/core/model.ts:TicketEndBy",
+        "description": "Who ended a ticket: executor or human",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          271,
+          271
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "TicketOutcome",
+        "alias_id": "src/core/model.ts:TicketOutcome",
+        "description": "Final outcome of a ticket: completed, merged, closed, dropped, or stopped",
+        "filepath": "src/core/model.ts",
+        "lines": [
+          273,
+          273
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

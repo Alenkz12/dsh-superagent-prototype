@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/core/engine.ts",
+    "path": "src/core/engine.ts",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "4807e4a226bf13ef1bae0c1c1605719527479ef049678e7418e090d15ae1d9e3",
+  "sourceFingerprint": "bd9a4caff834859877d1a08ccddebc990d0e1ca568674b80f9d59ce5adcac827",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/core",
+      "resultFingerprint": "be82a7cf8ea92859bf3f3d905a318cf2acf25b289109698a34e8e9c13ab4a02c"
+    },
+    {
+      "kind": "file",
+      "path": "docs/007-architecture.md",
+      "contentFingerprint": "e3747665587fdf88b28d4e9c1a1f8ac40cbc2c65a9999be1fce14b69ec44d748"
+    },
+    {
+      "kind": "file",
+      "path": "docs/008-cookbook.md",
+      "contentFingerprint": "adbdaa519f56bc7987ca6394950802cffcb855acff4ee715d10a26a9b0ccefec"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/assessment.ts",
+      "contentFingerprint": "5b2c2cf71093fd560f1f3a57cc476f122241b780fbeb2f6007e727943142b545"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/http.ts",
+      "contentFingerprint": "5da39830429559975cae7ae6d39416acb2322ac8e31cfb4da3436df602cb7ec4"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/runtime.ts",
+      "contentFingerprint": "5befef035b4a70978cd881b32282680260c6d2561679f890dd911214664cf515"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/settings.ts",
+      "contentFingerprint": "2c7cd780dd24ab6a99ddfd30f80b921db035e0d56e3e1d42a86371fe20423f3f"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/source-context.ts",
+      "contentFingerprint": "909ad5cb9739e4143ddc9ad1d38a6b1b46b18d52c0bcd2b4f8e25b691d0b9047"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/tools/executor.ts",
+      "contentFingerprint": "9869d8a5043725847f18814e23b29c11ae93aa974defa72d2eab62c61a6def47"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/tools/main.ts",
+      "contentFingerprint": "88603eb5a94c67e93141e07bd09bde85d65f980a1f42503c53ab9c22ec5c538d"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/engine.ts",
+      "contentFingerprint": "bd9a4caff834859877d1a08ccddebc990d0e1ca568674b80f9d59ce5adcac827"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/index.ts",
+      "contentFingerprint": "a5a1cf43f02eafaf520a5bfaf5e76b71ba521d04ee648cfcf12b3843cc474a3e"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/intake.ts",
+      "contentFingerprint": "323aadefea69436ba23ed2de3bdbaad673d61915be9e239f3233ecf551a74179"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/part.ts",
+      "contentFingerprint": "437c4f4bcc05e836c056cdb45bbf451e55242d62b602b489f4df902be112e73e"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/ports.ts",
+      "contentFingerprint": "0b44f1cd716d64776b0e3ea74a158cf0effd92e763b1b13c7705e766e9225a43"
+    },
+    {
+      "kind": "file",
+      "path": "src/executor/dsh.ts",
+      "contentFingerprint": "6445a03121fa9bd15fc437736bcc2acc6ab950c5fe732e5b99eb8ee2c8a9476b"
+    },
+    {
+      "kind": "file",
+      "path": "tests/assessment.spec.ts",
+      "contentFingerprint": "3d1c5c2dd12bfd5ae2e7545d602231e0145dc66d3cc135b0eee76283a26d9a60"
+    },
+    {
+      "kind": "file",
+      "path": "tests/core-engine.spec.ts",
+      "contentFingerprint": "e29358c139a2dbb1a2877e980e043f34cf39bca1905fb10ee14e0b4866bc1a6b"
+    },
+    {
+      "kind": "file",
+      "path": "tests/sources.spec.ts",
+      "contentFingerprint": "81fe3decc59db85f2fc792a9a6d7026ed26f38a9d282c0f85cd7123155798d78"
+    },
+    {
+      "kind": "file",
+      "path": "tests/timeline.spec.ts",
+      "contentFingerprint": "d7a66e76f09ed1021645fa8af26aaf25f36e447f53489ed15d983efbb91295d8"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "EngineFor",
+      "limit": 40,
+      "resultFingerprint": "245faeb26914f46dc23ec3567b563aef5638bb9040eea8d002f81ee0efdfa1bd"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "EngineForSources\\|EngineForMainSession\\|EngineForExecutor",
+      "limit": 40,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "new Engine(",
+      "limit": 30,
+      "resultFingerprint": "1876f06a3b3bcc4e9ef4520d13f3d2d130289e7764337a3c7041d9bbdcc3ae2c"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-orchestration:api-boundary",
+      "contentFingerprint": "6535c7d92bfd9576ec067957c6596178697d2a5cad9c5291d750f1fdd8c02739"
+    }
+  ],
+  "infoFingerprint": "db206457604c5060cc333f780711906b19474d1ca75fd5d83dd4edd2ada55285",
+  "artifacts": {
+    "info": ".fibo/analysis/src/core/engine.ts.info.md",
+    "structure": ".fibo/analysis/src/core/engine.ts.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "db206457604c5060cc333f780711906b19474d1ca75fd5d83dd4edd2ada55285",
+    "structure": "1df1abd89e7dc504e12a2df0e121233b1e69ae5f3592ce6efba0769f3ee34e05"
+  }
+}

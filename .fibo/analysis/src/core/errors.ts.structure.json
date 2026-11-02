@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/core/errors.ts",
+    "path": "src/core/errors.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "errors.ts",
+    "file_path": "src/core/errors.ts",
+    "description": "Error definitions file providing user-facing error codes, messages, and the UserError class",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [],
+    "classes": [
+      {
+        "class_name": "UserError",
+        "class_id": "src/core/errors.ts:UserError",
+        "description": "Custom Error subclass carrying an error code, template values, and a missing flag",
+        "super_class": [],
+        "filepath": "src/core/errors.ts",
+        "lines": [
+          54,
+          61
+        ],
+        "function": [],
+        "variables": []
+      }
+    ],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "USER_ERRORS",
+        "variable_id": "src/core/errors.ts:USER_ERRORS",
+        "description": "Constant map of error codes to their kind (missing/refused) and templated message text",
+        "filepath": "src/core/errors.ts",
+        "lines": [
+          2,
+          47
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "UserErrorCode",
+        "alias_id": "src/core/errors.ts:UserErrorCode",
+        "description": "Union type of all valid error code keys derived from USER_ERRORS",
+        "filepath": "src/core/errors.ts",
+        "lines": [
+          48,
+          48
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/core/evals.ts",
+    "path": "src/core/evals.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "evals.ts",
+    "file_path": "src/core/evals.ts",
+    "description": "Evaluation engine part: runs assessments, issues decisions, and manages eval expiry/requeue",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Imports the key generator helper from ids module",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "internal",
+        "filepath": "./ids.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports UserError error class from errors module",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "./errors.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports liveTicket and threadKey model helpers",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "./model.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports model types: Decision, Evaluation, Mandate, Strength, Thread, Trigger",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "./model.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports port types: AssessmentOutcome, Candidate, Policy",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "./ports.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the said() reason builder and Reason type",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "./reasons.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports EnginePart base class and EngineOptions type",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "./part.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Tickets type for ticket lookup",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "./tickets.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [],
+    "classes": [
+      {
+        "class_name": "Evals",
+        "class_id": "src/core/evals.ts:Evals",
+        "description": "Engine part that evaluates tickets, records decisions, and expires evals past their deadline",
+        "super_class": [],
+        "filepath": "src/core/evals.ts",
+        "lines": [
+          27,
+          340
+        ],
+        "function": [],
+        "variables": []
+      }
+    ],
+    "interfaces": [
+      {
+        "interface_name": "Finished",
+        "interface_id": "src/core/evals.ts:Finished",
+        "description": "Shape of a finished decision: kind, reasons, optional audit data, ticket id and mandate",
+        "filepath": "src/core/evals.ts",
+        "lines": [
+          14,
+          14
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "reasonOf",
+        "variable_id": "src/core/evals.ts:reasonOf",
+        "description": "Helper normalizing a string or Reason into a Reason array",
+        "filepath": "src/core/evals.ts",
+        "lines": [
+          16,
+          16
+        ]
+      },
+      {
+        "variable_name": "stronger",
+        "variable_id": "src/core/evals.ts:stronger",
+        "description": "Helper returning the stronger of two strengths ('explicit' beats 'inferred')",
+        "filepath": "src/core/evals.ts",
+        "lines": [
+          17,
+          17
+        ]
+      },
+      {
+        "variable_name": "REQUEUES",
+        "variable_id": "src/core/evals.ts:REQUEUES",
+        "description": "Constant maximum number of requeue attempts (2)",
+        "filepath": "src/core/evals.ts",
+        "lines": [
+          19,
+          19
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "Outcome",
+        "alias_id": "src/core/evals.ts:Outcome",
+        "description": "Assessment outcome extended with an optional eval id",
+        "filepath": "src/core/evals.ts",
+        "lines": [
+          12,
+          12
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

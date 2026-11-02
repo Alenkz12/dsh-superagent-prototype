@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/navigation.ts",
+    "path": "src/navigation.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "navigation.ts",
+    "file_path": "src/navigation.ts",
+    "description": "Session navigation helpers: open a known session by id with readiness checks.",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "client",
+        "description": "Type import of ISessions, the sessions controller interface with list and refresh.",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "types",
+        "description": "Type import of the SessionId type from the session package.",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "openKnownSession",
+        "function_id": "src/navigation.ts:openKnownSession(sessions: Pick<ISessions, 'list' | 'refresh'>, id: SessionId, open: (id: SessionId) => void, signal: AbortSignal)",
+        "description": "Refreshes the session list if needed, validates the session id, then opens it, returning false when aborted.",
+        "filepath": "src/navigation.ts",
+        "lines": [
+          14,
+          23
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [
+      {
+        "class_name": "SessionNavigationError",
+        "class_id": "src/navigation.ts:SessionNavigationError",
+        "description": "Error with code 'not-ready' or 'not-listed' for failed session navigation.",
+        "super_class": [],
+        "filepath": "src/navigation.ts",
+        "lines": [
+          9,
+          11
+        ],
+        "function": [],
+        "variables": []
+      }
+    ],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

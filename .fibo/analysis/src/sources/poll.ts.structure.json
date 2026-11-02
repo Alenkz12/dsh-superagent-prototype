@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/sources/poll.ts",
+    "path": "src/sources/poll.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "poll.ts",
+    "file_path": "src/sources/poll.ts",
+    "description": "Polling utilities for thread sources: liveness checks, batch polling, and abortable pauses",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Imports ticket liveness helper and Thread type from core index",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "internal",
+        "filepath": "../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the SourceContext type from the sources host module",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "./host.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "polled",
+        "function_id": "src/sources/poll.ts:polled(ctx: SourceContext, thread: Thread, now = Date.now())",
+        "description": "Determines whether a thread is still active based on live tickets or recent activity within the poll horizon",
+        "filepath": "src/sources/poll.ts",
+        "lines": [
+          8,
+          14
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "pollThreads",
+        "function_id": "src/sources/poll.ts:pollThreads(ctx: SourceContext, source: string, stopped: () => boolean, poll: (thread: Thread) => Promise<void>, skip: (thread: Thread) => boolean = () => false)",
+        "description": "Iterates subscribed threads, polls each eligible one, and records or clears poll errors",
+        "filepath": "src/sources/poll.ts",
+        "lines": [
+          18,
+          31
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "pause",
+        "function_id": "src/sources/poll.ts:pause(ms: number, signal: AbortSignal)",
+        "description": "Returns a promise that resolves after a delay or immediately when the abort signal fires",
+        "filepath": "src/sources/poll.ts",
+        "lines": [
+          33,
+          40
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "POLL_HORIZON_MS",
+        "variable_id": "src/sources/poll.ts:POLL_HORIZON_MS",
+        "description": "Poll horizon constant of 14 days in milliseconds",
+        "filepath": "src/sources/poll.ts",
+        "lines": [
+          6,
+          6
+        ]
+      },
+      {
+        "variable_name": "cursorAt",
+        "variable_id": "src/sources/poll.ts:cursorAt",
+        "description": "Computes a cursor timestamp 5 seconds before the given start time as an ISO string",
+        "filepath": "src/sources/poll.ts",
+        "lines": [
+          16,
+          16
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

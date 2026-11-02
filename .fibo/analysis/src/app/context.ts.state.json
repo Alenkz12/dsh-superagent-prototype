@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/context.ts",
+    "path": "src/app/context.ts",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "f1ebee3b31c8ca385c49ff1e39beb2f06cc38d11298b2fe13d7a82e964ec453b",
+  "sourceFingerprint": "7442ebc5acc1267fc801665e36351e13a91d0bb97c2674b045330b5b8bb6d2cd",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "prompts",
+      "resultFingerprint": "20edf45e0757dabe839ebcdb914372251fbb5f0d1ffc4a9c1aec370c375b8db0"
+    },
+    {
+      "kind": "directory-listing",
+      "path": "src/app",
+      "resultFingerprint": "c5d9a996b9b8fdf32bef10c15d47f0ba7a1c84c5d144bf4160f01af92915cf64"
+    },
+    {
+      "kind": "file",
+      "path": "docs/007-architecture.md",
+      "contentFingerprint": "e3747665587fdf88b28d4e9c1a1f8ac40cbc2c65a9999be1fce14b69ec44d748"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/assessment.ts",
+      "contentFingerprint": "5b2c2cf71093fd560f1f3a57cc476f122241b780fbeb2f6007e727943142b545"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/cards.ts",
+      "contentFingerprint": "9d3522b787612ba129058b89f8a4c5f9a4e980321f69c3cc68607c5b111d8ef6"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/context.ts",
+      "contentFingerprint": "7442ebc5acc1267fc801665e36351e13a91d0bb97c2674b045330b5b8bb6d2cd"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/http.ts",
+      "contentFingerprint": "5da39830429559975cae7ae6d39416acb2322ac8e31cfb4da3436df602cb7ec4"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/migration.ts",
+      "contentFingerprint": "b479546845852ac670ae8fe592b8564f96bb78d30dd2370f767ba2050bab8d9b"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/prompts.ts",
+      "contentFingerprint": "fd22f1b1e7c1571f2eae4299995a13cc0b04cb212e18ef23e9b27ed28a1a1de6"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/resources.ts",
+      "contentFingerprint": "cc09f56669b2ccacfc889aa98132590b618f77e6648a7ff8fe8454106c8c663f"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/skill-files.ts",
+      "contentFingerprint": "c95a1bb606bb9c7d932c807c4a9597ed7e0f8a02dbb1e16adb4133c0f1bfccf1"
+    },
+    {
+      "kind": "file",
+      "path": "tests/assessment.spec.ts",
+      "contentFingerprint": "3d1c5c2dd12bfd5ae2e7545d602231e0145dc66d3cc135b0eee76283a26d9a60"
+    },
+    {
+      "kind": "file",
+      "path": "tests/cards.spec.ts",
+      "contentFingerprint": "cc5a8b75490bef2f91af7f6ccfe58a9093b13d815277a6886bbcd8ddb21041e7"
+    },
+    {
+      "kind": "file",
+      "path": "tests/migration.spec.ts",
+      "contentFingerprint": "5c8fa242dc206ddfca61d3d2aee84ff1e462f64d6f950c7f50730a20be0ef7b1"
+    },
+    {
+      "kind": "file",
+      "path": "tests/prompts.spec.ts",
+      "contentFingerprint": "5c9e26761d1fde35f7153a3fb95e89f72ab69e5eb97c52413f53838210ef4f40"
+    },
+    {
+      "kind": "file",
+      "path": "tests/runtime.spec.ts",
+      "contentFingerprint": "e3c0cfb494307adca014d6c958f5c0f92ffcaaccdfb13b5dba2fb28ef6472752"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "app/context.ts",
+      "limit": 50,
+      "resultFingerprint": "91be9df9e037bd10e81a42e416bbc699002acd508e20ba8de7e101e989be5979"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "autoMergeThreshold",
+      "limit": 20,
+      "resultFingerprint": "b1d684bae9933e744230d13bdda14950ae5a064287e6a8c117fff4f77ebc48ef"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "autoMergeThreshold|teamDefaults|sourceSkills",
+      "limit": 40,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "from './context.ts'",
+      "limit": 50,
+      "resultFingerprint": "5ff49a3233c43c03a39875fedba6f7e9df8bebdf5034e214e6bfbc12f4e4453d"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "mainAdmissionPolicy",
+      "limit": 20,
+      "resultFingerprint": "231b6ef91b0e9f7d4effcdd557f4312fe657fd834559007e09deaebe3ab22b24"
+    },
+    {
+      "kind": "search",
+      "path": "src/app/assessment.ts",
+      "query": "textPage",
+      "limit": 50,
+      "resultFingerprint": "0c9d237463f82f02ff4eb96b47bb34f2a0b1ca6c25905738c57cea66d566771e"
+    },
+    {
+      "kind": "search",
+      "path": "src/app/http.ts",
+      "query": "sourceSkills",
+      "limit": 50,
+      "resultFingerprint": "2d209090b8714a2043cf7a0300743301f8b583fdb025a8a00eab4827c4e894f6"
+    },
+    {
+      "kind": "search",
+      "path": "src/app/resources.ts",
+      "query": "transcriptEntry",
+      "limit": 50,
+      "resultFingerprint": "0073fe5842e5f409463b93b89c99ebc950101099132f53b499bb08238c3fcb81"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-configuration:utility",
+      "contentFingerprint": "69db8b0fba603cf3bf78328b2ec2913343d095718e5744f32c251c80d707f849"
+    }
+  ],
+  "infoFingerprint": "63871d60887855a2ce868450b942660655b1e08e8b021f965916db01b5715178",
+  "artifacts": {
+    "info": ".fibo/analysis/src/app/context.ts.info.md",
+    "structure": ".fibo/analysis/src/app/context.ts.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "63871d60887855a2ce868450b942660655b1e08e8b021f965916db01b5715178",
+    "structure": "4d05464d24cb1ecf2a1277087a577799bc96bdb3714945090831a356962b8603"
+  }
+}

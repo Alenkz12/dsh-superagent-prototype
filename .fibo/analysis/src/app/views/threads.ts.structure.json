@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/views/threads.ts",
+    "path": "src/app/views/threads.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "threads.ts",
+    "file_path": "src/app/views/threads.ts",
+    "description": "Thread view module: builds read-model views for thread lists, thread detail, search, and decisions",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Imports thread key helper and Thread, Ticket, Trigger core types",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "internal",
+        "filepath": "../../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the ThreadFilter type from the API module",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "../api.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the TextCache type from the cache module",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "../cache.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports view helpers (snapshot, paging, summaries, trigger/decision views) and ViewHost type from records",
+        "lines": [
+          5,
+          6
+        ],
+        "source": "internal",
+        "filepath": "./records.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the attribute helper from the text view module",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "./text.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "threadList",
+        "function_id": "src/app/views/threads.ts:threadList(host: ViewHost, filter: ThreadFilter, offset: number, limit: number)",
+        "description": "Builds a paged, filtered thread list (recent/all/subscribed/evaluating) with summaries, sorted by last activity",
+        "filepath": "src/app/views/threads.ts",
+        "lines": [
+          9,
+          23
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "threadDetail",
+        "function_id": "src/app/views/threads.ts:threadDetail(host: ViewHost, key: string, before: string | undefined, limit: number, around?: string)",
+        "description": "Builds a thread detail view with timeline triggers, tickets, related threads and decisions using timestamp|id cursors",
+        "filepath": "src/app/views/threads.ts",
+        "lines": [
+          29,
+          53
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "search",
+        "function_id": "src/app/views/threads.ts:search(host: ViewHost, query: string, links: Pick<TextCache, 'entries'>)",
+        "description": "Searches tickets, triggers and threads by query or source link and returns top 20 ranked results",
+        "filepath": "src/app/views/threads.ts",
+        "lines": [
+          59,
+          88
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "decisionList",
+        "function_id": "src/app/views/threads.ts:decisionList(host: ViewHost, kinds: string[], offset: number, limit: number, since = '')",
+        "description": "Returns a paged list of decisions filtered by kinds and since, with next offset",
+        "filepath": "src/app/views/threads.ts",
+        "lines": [
+          90,
+          94
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "ThreadListView",
+        "alias_id": "src/app/views/threads.ts:ThreadListView",
+        "description": "Type of the thread list view returned by threadList",
+        "filepath": "src/app/views/threads.ts",
+        "lines": [
+          24,
+          24
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "ThreadDetailView",
+        "alias_id": "src/app/views/threads.ts:ThreadDetailView",
+        "description": "Type of the non-null thread detail view returned by threadDetail",
+        "filepath": "src/app/views/threads.ts",
+        "lines": [
+          54,
+          54
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "SearchView",
+        "alias_id": "src/app/views/threads.ts:SearchView",
+        "description": "Type of the search result view returned by search",
+        "filepath": "src/app/views/threads.ts",
+        "lines": [
+          89,
+          89
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "DecisionListView",
+        "alias_id": "src/app/views/threads.ts:DecisionListView",
+        "description": "Type of the decision list view returned by decisionList",
+        "filepath": "src/app/views/threads.ts",
+        "lines": [
+          95,
+          95
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

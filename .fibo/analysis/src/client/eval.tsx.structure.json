@@ -1,0 +1,622 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/eval.tsx",
+    "path": "src/client/eval.tsx",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "eval.tsx",
+    "file_path": "src/client/eval.tsx",
+    "description": "React views for the eval status/decision log and eval settings, including policy rules, per-source admission configuration, and assessor settings.",
+    "file_type": "tsx",
+    "language": "typescript",
+    "import_class": [],
+    "import_function": [
+      {
+        "function_name": "useState",
+        "description": "React hook for local component state.",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "function_name": "usePoll",
+        "description": "Polling hook for API queries.",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "src/client/api.ts"
+      },
+      {
+        "function_name": "Button",
+        "description": "Button component with variants and icon support.",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx"
+      },
+      {
+        "function_name": "DisclosureRow",
+        "description": "Expandable disclosure row component.",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx"
+      },
+      {
+        "function_name": "Icon",
+        "description": "SVG icon component.",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx"
+      },
+      {
+        "function_name": "InfoTip",
+        "description": "Informational tooltip component.",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx"
+      },
+      {
+        "function_name": "Input",
+        "description": "Text or numeric input component.",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx"
+      },
+      {
+        "function_name": "Pill",
+        "description": "Filter pill button component.",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx"
+      },
+      {
+        "function_name": "SegmentedControl",
+        "description": "Segmented option control component.",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx"
+      },
+      {
+        "function_name": "Switch",
+        "description": "Boolean toggle switch component.",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx"
+      },
+      {
+        "function_name": "SaveBar",
+        "description": "Draft save/discard action bar.",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/draft.tsx"
+      },
+      {
+        "function_name": "useAction",
+        "description": "Hook for running an async action with busy state and reload callback.",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "src/client/provider.tsx"
+      },
+      {
+        "function_name": "usePanel",
+        "description": "Panel context hook providing translations, API calls, navigation, and notifications.",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "src/client/provider.tsx"
+      },
+      {
+        "function_name": "DecisionLine",
+        "description": "Renders a decision log entry.",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "src/client/rows.tsx"
+      },
+      {
+        "function_name": "ConfigHistory",
+        "description": "Renders configuration version history.",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/settings-kit.tsx"
+      },
+      {
+        "function_name": "Field",
+        "description": "Form field wrapper with label and hint.",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/settings-kit.tsx"
+      },
+      {
+        "function_name": "Fields",
+        "description": "Form fields wrapper that can disable all fields.",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/settings-kit.tsx"
+      },
+      {
+        "function_name": "ModelField",
+        "description": "Model selector form field.",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/settings-kit.tsx"
+      },
+      {
+        "function_name": "SourceField",
+        "description": "Renders a source-specific policy field.",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/settings-kit.tsx"
+      },
+      {
+        "function_name": "numberOf",
+        "description": "Converts a value to a number.",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/settings-kit.tsx"
+      },
+      {
+        "function_name": "useBlockDraft",
+        "description": "Hook managing a settings block draft, dirty state, and submit.",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/settings-kit.tsx"
+      },
+      {
+        "function_name": "useSettings",
+        "description": "Settings context hook exposing blocks, sources, and reload.",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/settings-kit.tsx"
+      },
+      {
+        "function_name": "localized",
+        "description": "Returns localized text for a localized value.",
+        "lines": [
+          12,
+          12
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts"
+      },
+      {
+        "function_name": "valueLabel",
+        "description": "Localizes a label for a given value category.",
+        "lines": [
+          12,
+          12
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts"
+      },
+      {
+        "function_name": "when",
+        "description": "Formats a timestamp using the locale language.",
+        "lines": [
+          12,
+          12
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts"
+      },
+      {
+        "function_name": "Hint",
+        "description": "Muted hint text component.",
+        "lines": [
+          13,
+          13
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx"
+      },
+      {
+        "function_name": "LabelValue",
+        "description": "Label and value display pair.",
+        "lines": [
+          13,
+          13
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx"
+      },
+      {
+        "function_name": "LoadMore",
+        "description": "Load-more button for paginated lists.",
+        "lines": [
+          13,
+          13
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx"
+      },
+      {
+        "function_name": "LoadState",
+        "description": "Loading and error state display.",
+        "lines": [
+          13,
+          13
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx"
+      },
+      {
+        "function_name": "Section",
+        "description": "Titled section wrapper with optional action.",
+        "lines": [
+          13,
+          13
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx"
+      },
+      {
+        "function_name": "StatusHead",
+        "description": "Status page header with hint and settings link.",
+        "lines": [
+          13,
+          13
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx"
+      }
+    ],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "EvalStatus",
+        "function_id": "src/client/eval.tsx:EvalStatus(DecisionFilter, '24h' | undefined, boolean)",
+        "description": "Renders the eval status/decision log view with filters, polling, and pagination.",
+        "filepath": "src/client/eval.tsx",
+        "lines": [
+          15,
+          39
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "filter",
+            "param_type": "DecisionFilter",
+            "description": "Active decision kind filter.",
+            "is_optional": false
+          },
+          {
+            "param_name": "window",
+            "param_type": "'24h' | undefined",
+            "description": "Time window filter; undefined when no window is selected.",
+            "is_optional": false
+          },
+          {
+            "param_name": "paused",
+            "param_type": "boolean",
+            "description": "Whether eval execution is paused.",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false
+      },
+      {
+        "function_name": "RuleRow",
+        "function_id": "src/client/eval.tsx:RuleRow(Rule, boolean, () => void, (rule: Rule) => void, () => void, () => void)",
+        "description": "Renders an editable policy rule row with disclosure, fields, and enable switch.",
+        "filepath": "src/client/eval.tsx",
+        "lines": [
+          42,
+          68
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "rule",
+            "param_type": "Rule",
+            "description": "The policy rule being edited.",
+            "is_optional": false
+          },
+          {
+            "param_name": "expanded",
+            "param_type": "boolean",
+            "description": "Whether rule details are expanded.",
+            "is_optional": false
+          },
+          {
+            "param_name": "onToggle",
+            "param_type": "() => void",
+            "description": "Toggles expanded/collapsed state.",
+            "is_optional": false
+          },
+          {
+            "param_name": "onChange",
+            "param_type": "(rule: Rule) => void",
+            "description": "Updates the rule value.",
+            "is_optional": false
+          },
+          {
+            "param_name": "onDuplicate",
+            "param_type": "() => void",
+            "description": "Duplicates this rule.",
+            "is_optional": false
+          },
+          {
+            "param_name": "onRemove",
+            "param_type": "() => void",
+            "description": "Removes this rule.",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false
+      },
+      {
+        "function_name": "SourcePart",
+        "function_id": "src/client/eval.tsx:SourcePart(SourceView, Part, Part, boolean, (next: Part) => void, () => Promise<void>)",
+        "description": "Renders policy fields and the admission matrix for a single source, including the sync action.",
+        "filepath": "src/client/eval.tsx",
+        "lines": [
+          71,
+          96
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "source",
+            "param_type": "SourceView",
+            "description": "Installed source being configured.",
+            "is_optional": false
+          },
+          {
+            "param_name": "part",
+            "param_type": "Part",
+            "description": "Draft policy source part.",
+            "is_optional": false
+          },
+          {
+            "param_name": "saved",
+            "param_type": "Part",
+            "description": "Saved policy source part for dirty comparison.",
+            "is_optional": false
+          },
+          {
+            "param_name": "dirty",
+            "param_type": "boolean",
+            "description": "Whether the policy block has unsaved changes.",
+            "is_optional": false
+          },
+          {
+            "param_name": "onChange",
+            "param_type": "(next: Part) => void",
+            "description": "Updates the source policy part.",
+            "is_optional": false
+          },
+          {
+            "param_name": "reload",
+            "param_type": "() => Promise<void>",
+            "description": "Reloads settings after a sync action.",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false
+      },
+      {
+        "function_name": "AdmissionTable",
+        "function_id": "src/client/eval.tsx:AdmissionTable(AdmissionRowView[], Record<string, string>, AdmissionTable, string, (table: AdmissionTable) => void)",
+        "description": "Renders the admission matrix table for source policy configuration.",
+        "filepath": "src/client/eval.tsx",
+        "lines": [
+          100,
+          134
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "rows",
+            "param_type": "AdmissionRowView[]",
+            "description": "Admission matrix rows.",
+            "is_optional": false
+          },
+          {
+            "param_name": "labels",
+            "param_type": "Record<string, string>",
+            "description": "Localized row labels keyed by id.",
+            "is_optional": false
+          },
+          {
+            "param_name": "table",
+            "param_type": "AdmissionTable",
+            "description": "Current admission matrix values.",
+            "is_optional": false
+          },
+          {
+            "param_name": "explicit",
+            "param_type": "string",
+            "description": "Explicit request policy summary text.",
+            "is_optional": false
+          },
+          {
+            "param_name": "onChange",
+            "param_type": "(table: AdmissionTable) => void",
+            "description": "Updates the admission matrix.",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false
+      },
+      {
+        "function_name": "PolicyBlock",
+        "function_id": "src/client/eval.tsx:PolicyBlock()",
+        "description": "Policy settings block for editing rules and per-source policy/admission configuration.",
+        "filepath": "src/client/eval.tsx",
+        "lines": [
+          136,
+          190
+        ],
+        "code": null,
+        "parameters": [],
+        "return_type": "JSX.Element",
+        "is_async": false
+      },
+      {
+        "function_name": "EvalBlock",
+        "function_id": "src/client/eval.tsx:EvalBlock()",
+        "description": "Eval settings block for accept mode, timeout, and assessor model.",
+        "filepath": "src/client/eval.tsx",
+        "lines": [
+          192,
+          217
+        ],
+        "code": null,
+        "parameters": [],
+        "return_type": "JSX.Element",
+        "is_async": false
+      },
+      {
+        "function_name": "EvalSettings",
+        "function_id": "src/client/eval.tsx:EvalSettings(string | undefined)",
+        "description": "Eval settings page combining policy, eval block, and configuration history.",
+        "filepath": "src/client/eval.tsx",
+        "lines": [
+          219,
+          225
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "version",
+            "param_type": "string | undefined",
+            "description": "Optional settings version to focus in history.",
+            "is_optional": true
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false
+      }
+    ],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [
+      {
+        "constant_name": "CELLS",
+        "constant_id": "src/client/eval.tsx:CELLS",
+        "description": "Ordered admission matrix cell identifiers.",
+        "filepath": "src/client/eval.tsx",
+        "lines": [
+          99,
+          99
+        ],
+        "constant_type": "readonly AdmissionCell[]",
+        "value": "['listedUnaddressed', 'unlistedAddressed', 'unlistedUnaddressed']"
+      }
+    ],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "Rule",
+        "alias_id": "src/client/eval.tsx:Rule",
+        "description": "Type of a policy rule from settings.",
+        "filepath": "src/client/eval.tsx",
+        "lines": [
+          41,
+          41
+        ],
+        "target_type": "Settings['policy']['rules'][number]"
+      },
+      {
+        "alias_name": "Part",
+        "alias_id": "src/client/eval.tsx:Part",
+        "description": "Generic source policy part map.",
+        "filepath": "src/client/eval.tsx",
+        "lines": [
+          70,
+          70
+        ],
+        "target_type": "Record<string, unknown>"
+      },
+      {
+        "alias_name": "AdmissionTable",
+        "alias_id": "src/client/eval.tsx:AdmissionTable",
+        "description": "Admission matrix values keyed by row id and admission cell.",
+        "filepath": "src/client/eval.tsx",
+        "lines": [
+          98,
+          98
+        ],
+        "target_type": "Record<string, Partial<Record<AdmissionCell, Admission>>>"
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/infra/text.ts",
+    "path": "src/infra/text.ts",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "5f15fd9be34186c8026fa37b32e2f49d0da4dec965e13e0bc105e1c2265ecabd",
+  "sourceFingerprint": "70c9edb98139e3091d5e63d2ccf31d308c045f0510087a87517fbb3635cdd9e7",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/infra",
+      "resultFingerprint": "812201e003213df01502321bd5f8990ab3aee224858775929593aacc6c6dd8f8"
+    },
+    {
+      "kind": "file",
+      "path": "docs/007-architecture.md",
+      "contentFingerprint": "e3747665587fdf88b28d4e9c1a1f8ac40cbc2c65a9999be1fce14b69ec44d748"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/assessment.ts",
+      "contentFingerprint": "5b2c2cf71093fd560f1f3a57cc476f122241b780fbeb2f6007e727943142b545"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/outbox.ts",
+      "contentFingerprint": "48d20062dd8c34c2b95e851c78265c9e403d1040894e97c7d9d0fa190d54415e"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/prompts.ts",
+      "contentFingerprint": "fd22f1b1e7c1571f2eae4299995a13cc0b04cb212e18ef23e9b27ed28a1a1de6"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/settings-history.ts",
+      "contentFingerprint": "a20acbb1e121b41f355970c738047b3b89a75979d216079657f40bdbd2366023"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/tools/main.ts",
+      "contentFingerprint": "88603eb5a94c67e93141e07bd09bde85d65f980a1f42503c53ab9c22ec5c538d"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/tools/tool.ts",
+      "contentFingerprint": "172dd8f1a3da82b8a6cfe966befd5204476cc44ac0a4d7fe278518e970b7f054"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/prompt-config.ts",
+      "contentFingerprint": "148a3c6ecb0e9fba57812135ab4a812a70be168481cd3a3ca083085da005f2d3"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/thread.tsx",
+      "contentFingerprint": "6870694d97c1c1e75bbd43f0ed7efbf6e6eba50a19a27c60fef7b052a5a979f6"
+    },
+    {
+      "kind": "file",
+      "path": "src/infra/text.ts",
+      "contentFingerprint": "70c9edb98139e3091d5e63d2ccf31d308c045f0510087a87517fbb3635cdd9e7"
+    },
+    {
+      "kind": "file",
+      "path": "src/policy.ts",
+      "contentFingerprint": "01cff8c333b341ee2943e644046f0da3ed9675af1c0029489b5f4bc8226d293d"
+    },
+    {
+      "kind": "file",
+      "path": "src/setup.ts",
+      "contentFingerprint": "eae13507edd63c331ccde9e979835202e742378cca2eb35fcd12af60e48fc6f2"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/feishu-channel.ts",
+      "contentFingerprint": "c6fa722414256df055ae09e935ec402ccec9b63bdb5f73d2b5ff3f34d6d1abf7"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/github-channel.ts",
+      "contentFingerprint": "6de9657465b8bae9a7cb4748d469fedff3c8d27fec6ed6b4dd52e620a239a0d1"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/github-pull.ts",
+      "contentFingerprint": "615856e7a6958eade1dbf28c9628adc7a8c7bb5392bee71346e471fb571595ec"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/github-trigger.ts",
+      "contentFingerprint": "c59d6c837e022693a59b3da5829499bc39673ad95879efe543bb7d81c073c21b"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/github.ts",
+      "contentFingerprint": "60bfc2c298cbef708553de5ca0c91c387fd633bc7440c6be0d1242478ef84e88"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/host.ts",
+      "contentFingerprint": "b07998dad9194319a95a9436084cf1612aef9c4c6de22288cfa04258bbfbb1ce"
+    },
+    {
+      "kind": "file",
+      "path": "tests/model-surface.spec.ts",
+      "contentFingerprint": "aa1226f72359a42764c2c58f1681b93693e6909a9e2f9ea521cf47e1ee778114"
+    },
+    {
+      "kind": "file",
+      "path": "tests/tools.spec.ts",
+      "contentFingerprint": "44b163705d397c18ec8fda277ed0bf6f91aea1228a47c6e15cc1918a87ff55a5"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "checkedImText",
+      "limit": 50,
+      "resultFingerprint": "c2ac8452b4976b4581bd68449a0c57f63159f261c47766ceee1c8c85b90e570b"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "escapeRegExp",
+      "limit": 50,
+      "resultFingerprint": "fa7609d8f9ceda9a09260bc436bde731cc20bdc53284b00a0f2106899a742184"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "fill(",
+      "limit": 20,
+      "resultFingerprint": "df7e1c2bdb1911dee5f618bf16d47ddf97808241274b2607dc2edef1921cdbe3"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "NOTE_WORDS",
+      "limit": 50,
+      "resultFingerprint": "72d4c3eecd1a6c4f84463a98934c5cb3463dfc462020d2781fa3b5eb2f03193d"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "sameName",
+      "limit": 50,
+      "resultFingerprint": "8f509acb36c01a838fbac8414304fda68762743ce96605556d80ff10e3b058d3"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "wordCount",
+      "limit": 50,
+      "resultFingerprint": "413c994e6af4c3003a50643788868271642a3799834852bea1e9a8ed79943c4a"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-utility:domain-rules",
+      "contentFingerprint": "11c42f2ee08300a8a6dfdabb66f977bb218ed9ed697a5ae253863084bcff3eb0"
+    }
+  ],
+  "infoFingerprint": "7e32bb22855a8e7a7da50f8f5d8d5523f9a4afc21bfc798e01b3c5036bd2532e",
+  "artifacts": {
+    "info": ".fibo/analysis/src/infra/text.ts.info.md",
+    "structure": ".fibo/analysis/src/infra/text.ts.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "7e32bb22855a8e7a7da50f8f5d8d5523f9a4afc21bfc798e01b3c5036bd2532e",
+    "structure": "83a38c7928f4343c520a205fbf281eaa9e328809ca4140bb1a4e7e2b685d3bf0"
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/prompt-config.ts",
+    "path": "src/client/prompt-config.ts",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "e980ceaaa643f7859d828d86b27ae53c91defe0be8d2954196da94d0af70238f",
+  "sourceFingerprint": "148a3c6ecb0e9fba57812135ab4a812a70be168481cd3a3ca083085da005f2d3",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/client",
+      "resultFingerprint": "7bf3ac2d009d046122c35f91b95f5cb11c1fc74f53cdfbb3bacbc80ac2b588dc"
+    },
+    {
+      "kind": "file",
+      "path": "docs/006-deployment.md",
+      "contentFingerprint": "92c5a1c6aecab6782a64b3847a2d6f36a48dc9865fa7b04b892fcdaf04f7de9d"
+    },
+    {
+      "kind": "file",
+      "path": "docs/007-architecture.md",
+      "contentFingerprint": "e3747665587fdf88b28d4e9c1a1f8ac40cbc2c65a9999be1fce14b69ec44d748"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/http.ts",
+      "contentFingerprint": "5da39830429559975cae7ae6d39416acb2322ac8e31cfb4da3436df602cb7ec4"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/prompts.ts",
+      "contentFingerprint": "fd22f1b1e7c1571f2eae4299995a13cc0b04cb212e18ef23e9b27ed28a1a1de6"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/api.ts",
+      "contentFingerprint": "800b0347183c39601b8b7cd33607dee2538eb8da5feb5f1c7e13a1a7c2268f36"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/locales.ts",
+      "contentFingerprint": "d172c86d672b9244effe3590bc7c25ac71b80d3ccbb7d6c5fe76848ce31eba12"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/prompt-config.ts",
+      "contentFingerprint": "148a3c6ecb0e9fba57812135ab4a812a70be168481cd3a3ca083085da005f2d3"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/prompts.tsx",
+      "contentFingerprint": "ddc92a0db7d994c019e2efcb707dbbc04acb53e421ca04e9878d52de83ce6eff"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/text.ts",
+      "contentFingerprint": "b5c4a264ea799f40598b66d175b434dcb37e2033cddffad8f3e0c8ec1e080c92"
+    },
+    {
+      "kind": "file",
+      "path": "tests/fixtures/panel-server.ts",
+      "contentFingerprint": "02ea5bca9c55e17da1d88af7bd835a1c59a9ca099a9f2f9a05c7a490595d472c"
+    },
+    {
+      "kind": "file",
+      "path": "tests/model-surface.spec.ts",
+      "contentFingerprint": "aa1226f72359a42764c2c58f1681b93693e6909a9e2f9ea521cf47e1ee778114"
+    },
+    {
+      "kind": "file",
+      "path": "tests/panel-execution.spec.tsx",
+      "contentFingerprint": "081dcef113d52003adb61b6ac1a6cc910344416e77086452e4188e7d728252ba"
+    },
+    {
+      "kind": "file",
+      "path": "tests/panel-prompts.spec.tsx",
+      "contentFingerprint": "d2bc0198f2fa5f0ee69a94f341e6b1787aad08bf1a179e1b9ef32ae727c7a932"
+    },
+    {
+      "kind": "file",
+      "path": "tests/panel-settings.spec.tsx",
+      "contentFingerprint": "927742c31e22e769fd5d8cfc6419b2cf9233086054cee19efea5b13683fc7dd5"
+    },
+    {
+      "kind": "file",
+      "path": "tests/prompt-config.spec.ts",
+      "contentFingerprint": "e21dd7f2add599536aef767056ff10ab4ba3e06399f10f0ec814463e21e5d4af"
+    },
+    {
+      "kind": "file",
+      "path": "tests/prompts.spec.ts",
+      "contentFingerprint": "5c9e26761d1fde35f7153a3fb95e89f72ab69e5eb97c52413f53838210ef4f40"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "lineDiff",
+      "limit": 40,
+      "resultFingerprint": "71adf47dcdd2a5e81bc61d5ebe2465959a7ed724f94269c96434809d452bc6d1"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "prompt-config",
+      "limit": 40,
+      "resultFingerprint": "fe7022ad5a6959dbc543cff37d2db46cabeb45e9caa635a3de7289be78b8a61b"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "promptPart",
+      "limit": 40,
+      "resultFingerprint": "02ed24eebce71bde72b74f0143132fb9e4eee2b4530209e5823bc65bf94d7130"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "skillPrefix",
+      "limit": 40,
+      "resultFingerprint": "44f10df75dc18664424103868ea7761c6724f09891b1fd76f354d6b029c30f68"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "withOverrides",
+      "limit": 20,
+      "resultFingerprint": "4817cd3c5170eea9b6e1baf8c35a56074169afa6c2bc55a041ede26b6c5fc1d0"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/api.ts",
+      "query": "PromptConfig",
+      "limit": 50,
+      "resultFingerprint": "19b6e2279acbe8ac545fb0a72c127cc93d4d201148b3b4e4c804dd20d1e76837"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-domain-rules:utility",
+      "contentFingerprint": "9ea6b67d3b93a41026e298bcbd04f1e3b702b266e72a5cbd232d6eedec613399"
+    }
+  ],
+  "infoFingerprint": "f2323f42a6e74067c531579e410b70aad1c0b5a25d41c90dccf729988cedb423",
+  "artifacts": {
+    "info": ".fibo/analysis/src/client/prompt-config.ts.info.md",
+    "structure": ".fibo/analysis/src/client/prompt-config.ts.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "f2323f42a6e74067c531579e410b70aad1c0b5a25d41c90dccf729988cedb423",
+    "structure": "c3cdddc49c1122743c114ed6d704389a9537b6713235c461d6f25bfa7c20ce0b"
+  }
+}

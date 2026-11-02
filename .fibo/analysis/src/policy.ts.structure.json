@@ -1,0 +1,559 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/policy.ts",
+    "path": "src/policy.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "policy.ts",
+    "file_path": "src/policy.ts",
+    "description": "Policy module: zod schemas, defaults and evaluation logic for rules, admission, settings and policy effects",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Imports numeric limits constants from the limits module",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "./limits.ts"
+      },
+      {
+        "class_name": "zod",
+        "description": "Imports the zod schema library",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports admission defaults and admission-related types",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "./admission.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports core helpers and shared types such as Policy, Mandate, Ticket and GateResult",
+        "lines": [
+          8,
+          9
+        ],
+        "source": "internal",
+        "filepath": "./core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the name-comparison helper from text utilities",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "./infra/text.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the list of worker command names from the environment module",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "./infra/environment.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "directionAllowed",
+        "function_id": "src/policy.ts:directionAllowed(value: unknown)",
+        "description": "Type guard checking an unknown value is an AdmissionDirection requiring implementation with determined basis and no design decision",
+        "filepath": "src/policy.ts",
+        "lines": [
+          26,
+          29
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "assessmentOutcome",
+        "function_id": "src/policy.ts:assessmentOutcome(assessment: Assessment, settings: Pick<Settings, 'policy' | 'eval'>, strength: Strength)",
+        "description": "Validates rule assessments against enabled rules and derives accept/ignore outcome, honoring inferred-strength gating",
+        "filepath": "src/policy.ts",
+        "lines": [
+          40,
+          61
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "policyVersion",
+        "function_id": "src/policy.ts:policyVersion(settings: Settings)",
+        "description": "Computes a stable version hash string from rules, eval mode and source policy",
+        "filepath": "src/policy.ts",
+        "lines": [
+          116,
+          118
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "allowedSender",
+        "function_id": "src/policy.ts:allowedSender(settings: Settings, actor: ActorRef)",
+        "description": "Returns the allowed-sender entry matching an actor in its source policy, if any",
+        "filepath": "src/policy.ts",
+        "lines": [
+          119,
+          121
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "listedBot",
+        "function_id": "src/policy.ts:listedBot(settings: Settings, actor: ActorRef)",
+        "description": "Returns the listed bot entry matching an actor for its source, tolerant of malformed data",
+        "filepath": "src/policy.ts",
+        "lines": [
+          123,
+          126
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "admissionCell",
+        "function_id": "src/policy.ts:admissionCell(allowed: boolean, addressed: boolean)",
+        "description": "Maps allowed/addressed booleans to the corresponding admission table cell key",
+        "filepath": "src/policy.ts",
+        "lines": [
+          135,
+          137
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "admissionOf",
+        "function_id": "src/policy.ts:admissionOf(settings: Settings, source: string, row: string | undefined, cell: AdmissionCell)",
+        "description": "Resolves an admission level from settings for a source/row/cell, falling back to defaults",
+        "filepath": "src/policy.ts",
+        "lines": [
+          138,
+          140
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "policyEffects",
+        "function_id": "src/policy.ts:policyEffects(tickets: readonly Ticket[], old: Settings, now: Settings, scope: (settings: Settings) => SourceScope)",
+        "description": "Computes per-ticket policy effects (rule changes, requester/admission loss) between old and new settings",
+        "filepath": "src/policy.ts",
+        "lines": [
+          144,
+          165
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "settingsPolicy",
+        "function_id": "src/policy.ts:settingsPolicy(settings: Settings, sources: SourceScope)",
+        "description": "Builds the runtime Policy from settings and source scope, including machine gating, admission and revalidation rules",
+        "filepath": "src/policy.ts",
+        "lines": [
+          167,
+          242
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "Assessment",
+        "interface_id": "src/policy.ts:Assessment",
+        "description": "Assessor output describing decision, per-rule assessments, direction and acceptance metadata",
+        "filepath": "src/policy.ts",
+        "lines": [
+          30,
+          33
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "RuleIdSchema",
+        "variable_id": "src/policy.ts:RuleIdSchema",
+        "description": "Zod schema validating rule identifier strings against an alphanumeric pattern",
+        "filepath": "src/policy.ts",
+        "lines": [
+          13,
+          13
+        ]
+      },
+      {
+        "variable_name": "RuleMatchSchema",
+        "variable_id": "src/policy.ts:RuleMatchSchema",
+        "description": "Zod schema for a rule match: rule id plus non-empty reason",
+        "filepath": "src/policy.ts",
+        "lines": [
+          14,
+          14
+        ]
+      },
+      {
+        "variable_name": "RuleAssessmentSchema",
+        "variable_id": "src/policy.ts:RuleAssessmentSchema",
+        "description": "Zod schema extending a rule match with a matched boolean",
+        "filepath": "src/policy.ts",
+        "lines": [
+          16,
+          16
+        ]
+      },
+      {
+        "variable_name": "AdmissionDirectionSchema",
+        "variable_id": "src/policy.ts:AdmissionDirectionSchema",
+        "description": "Zod schema validating admission direction fields (implementation requested, target basis, design decision, evidence)",
+        "filepath": "src/policy.ts",
+        "lines": [
+          18,
+          23
+        ]
+      },
+      {
+        "variable_name": "DEFAULT_RULES",
+        "variable_id": "src/policy.ts:DEFAULT_RULES",
+        "description": "Built-in default rules for copy fixes and visual fixes",
+        "filepath": "src/policy.ts",
+        "lines": [
+          62,
+          65
+        ]
+      },
+      {
+        "variable_name": "RuleSchema",
+        "variable_id": "src/policy.ts:RuleSchema",
+        "description": "Zod schema validating a rule definition object",
+        "filepath": "src/policy.ts",
+        "lines": [
+          67,
+          68
+        ]
+      },
+      {
+        "variable_name": "RoleModelSchema",
+        "variable_id": "src/policy.ts:RoleModelSchema",
+        "description": "Zod schema validating a provider/model/reasoning-effort role configuration",
+        "filepath": "src/policy.ts",
+        "lines": [
+          70,
+          70
+        ]
+      },
+      {
+        "variable_name": "AllowedSchema",
+        "variable_id": "src/policy.ts:AllowedSchema",
+        "description": "Zod schema for an allowed sender entry with id and optional name",
+        "filepath": "src/policy.ts",
+        "lines": [
+          73,
+          73
+        ]
+      },
+      {
+        "variable_name": "Weak",
+        "variable_id": "src/policy.ts:Weak",
+        "description": "Zod enum of weaker admission strengths: inferred or ignore",
+        "filepath": "src/policy.ts",
+        "lines": [
+          74,
+          74
+        ]
+      },
+      {
+        "variable_name": "AdmissionRowSchema",
+        "variable_id": "src/policy.ts:AdmissionRowSchema",
+        "description": "Zod schema validating an admission row's per-cell strength settings",
+        "filepath": "src/policy.ts",
+        "lines": [
+          75,
+          75
+        ]
+      },
+      {
+        "variable_name": "AdmissionTableSchema",
+        "variable_id": "src/policy.ts:AdmissionTableSchema",
+        "description": "Zod schema for the admission table keyed by row name",
+        "filepath": "src/policy.ts",
+        "lines": [
+          76,
+          76
+        ]
+      },
+      {
+        "variable_name": "SourcePolicySchema",
+        "variable_id": "src/policy.ts:SourcePolicySchema",
+        "description": "Zod schema for a source policy: allowed list and admission table with passthrough keys",
+        "filepath": "src/policy.ts",
+        "lines": [
+          77,
+          77
+        ]
+      },
+      {
+        "variable_name": "PolicyConfigSchema",
+        "variable_id": "src/policy.ts:PolicyConfigSchema",
+        "description": "Zod schema for policy config: unique rules and per-source policies",
+        "filepath": "src/policy.ts",
+        "lines": [
+          79,
+          82
+        ]
+      },
+      {
+        "variable_name": "EvalConfigSchema",
+        "variable_id": "src/policy.ts:EvalConfigSchema",
+        "description": "Zod schema for eval config: mode, timeout seconds and optional model",
+        "filepath": "src/policy.ts",
+        "lines": [
+          83,
+          87
+        ]
+      },
+      {
+        "variable_name": "CommandNameSchema",
+        "variable_id": "src/policy.ts:CommandNameSchema",
+        "description": "Zod schema validating blockable command names, rejecting worker commands and dot names",
+        "filepath": "src/policy.ts",
+        "lines": [
+          88,
+          89
+        ]
+      },
+      {
+        "variable_name": "ExecutorConfigSchema",
+        "variable_id": "src/policy.ts:ExecutorConfigSchema",
+        "description": "Zod schema for executor config: model, max workers, directory, prepare command and blocked commands",
+        "filepath": "src/policy.ts",
+        "lines": [
+          91,
+          97
+        ]
+      },
+      {
+        "variable_name": "SourceInstanceSchema",
+        "variable_id": "src/policy.ts:SourceInstanceSchema",
+        "description": "Zod schema for a configured source instance: enabled flag and free-form config",
+        "filepath": "src/policy.ts",
+        "lines": [
+          98,
+          98
+        ]
+      },
+      {
+        "variable_name": "SettingsSchema",
+        "variable_id": "src/policy.ts:SettingsSchema",
+        "description": "Zod schema for the full settings document with defaults for all sections",
+        "filepath": "src/policy.ts",
+        "lines": [
+          99,
+          105
+        ]
+      },
+      {
+        "variable_name": "POLICY_REVISION",
+        "variable_id": "src/policy.ts:POLICY_REVISION",
+        "description": "Constant revision tag used when hashing the policy version",
+        "filepath": "src/policy.ts",
+        "lines": [
+          111,
+          111
+        ]
+      },
+      {
+        "variable_name": "anyoneAllowed",
+        "variable_id": "src/policy.ts:anyoneAllowed",
+        "description": "Returns whether any source policy has at least one allowed sender",
+        "filepath": "src/policy.ts",
+        "lines": [
+          127,
+          127
+        ]
+      },
+      {
+        "variable_name": "senderName",
+        "variable_id": "src/policy.ts:senderName",
+        "description": "Returns the display name of an allowed entry, falling back to its id",
+        "filepath": "src/policy.ts",
+        "lines": [
+          128,
+          128
+        ]
+      },
+      {
+        "variable_name": "participating",
+        "variable_id": "src/policy.ts:participating",
+        "description": "Checks whether a thread has subscriptions or tickets not yet present in its context",
+        "filepath": "src/policy.ts",
+        "lines": [
+          131,
+          132
+        ]
+      },
+      {
+        "variable_name": "listened",
+        "variable_id": "src/policy.ts:listened",
+        "description": "Resolves the scope for a given source and message metadata",
+        "filepath": "src/policy.ts",
+        "lines": [
+          133,
+          133
+        ]
+      },
+      {
+        "variable_name": "STRENGTH",
+        "variable_id": "src/policy.ts:STRENGTH",
+        "description": "Ordering of admission strengths from weakest (ignore) to strongest (explicit)",
+        "filepath": "src/policy.ts",
+        "lines": [
+          141,
+          141
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "RuleMatch",
+        "alias_id": "src/policy.ts:RuleMatch",
+        "description": "Inferred type of a matched rule entry (rule id plus reason)",
+        "filepath": "src/policy.ts",
+        "lines": [
+          15,
+          15
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "RuleAssessment",
+        "alias_id": "src/policy.ts:RuleAssessment",
+        "description": "Inferred type of a single rule assessment (match plus matched flag)",
+        "filepath": "src/policy.ts",
+        "lines": [
+          17,
+          17
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "AdmissionDirection",
+        "alias_id": "src/policy.ts:AdmissionDirection",
+        "description": "Inferred type describing implementation direction evidence for admission decisions",
+        "filepath": "src/policy.ts",
+        "lines": [
+          24,
+          24
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "Rule",
+        "alias_id": "src/policy.ts:Rule",
+        "description": "Inferred type of a configured rule (id, name, enabled, instruction)",
+        "filepath": "src/policy.ts",
+        "lines": [
+          69,
+          69
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "RoleModel",
+        "alias_id": "src/policy.ts:RoleModel",
+        "description": "Inferred type of a provider/model/reasoning-effort configuration",
+        "filepath": "src/policy.ts",
+        "lines": [
+          71,
+          71
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "SourcePolicy",
+        "alias_id": "src/policy.ts:SourcePolicy",
+        "description": "Inferred type of a source's policy: allowed senders and admission table",
+        "filepath": "src/policy.ts",
+        "lines": [
+          78,
+          78
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "Settings",
+        "alias_id": "src/policy.ts:Settings",
+        "description": "Inferred type of the complete persisted settings document",
+        "filepath": "src/policy.ts",
+        "lines": [
+          106,
+          106
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "SettingsBlock",
+        "alias_id": "src/policy.ts:SettingsBlock",
+        "description": "Names of settings sections that can be individually updated",
+        "filepath": "src/policy.ts",
+        "lines": [
+          107,
+          107
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "SettingsSave",
+        "alias_id": "src/policy.ts:SettingsSave",
+        "description": "Settings blocks plus pause that may be saved",
+        "filepath": "src/policy.ts",
+        "lines": [
+          108,
+          108
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "SettingsOrigin",
+        "alias_id": "src/policy.ts:SettingsOrigin",
+        "description": "Origin of a settings change: panel, tool or sync",
+        "filepath": "src/policy.ts",
+        "lines": [
+          109,
+          109
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

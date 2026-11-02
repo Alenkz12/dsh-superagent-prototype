@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/store.ts",
+    "path": "src/app/store.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "store.ts",
+    "file_path": "src/app/store.ts",
+    "description": "SQLite-backed persistence store: schema, migrations, and repositories implementation",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "node:sqlite",
+        "description": "Node SQLite bindings: synchronous database handle and SQL input value type",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "node:fs",
+        "description": "Filesystem helpers for permission changes and directory creation",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "node:path",
+        "description": "Path utility for resolving the database file's directory",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Core domain types and helpers: keys, channels, messages, threads, tickets, repositories",
+        "lines": [
+          5,
+          6
+        ],
+        "source": "internal",
+        "filepath": "../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Key-value store helpers and key/family types",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "../kv.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Policy settings schema and settings-related types",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "../policy.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Schema version constants and migration routine to schema 11",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "./migration.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Versions repository for tracking recorded versions",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "./versions.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Read-side queries companion module for the store",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "./store-read.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [],
+    "classes": [
+      {
+        "class_name": "Store",
+        "class_id": "src/app/store.ts:Store",
+        "description": "Main store class implementing Repositories, wrapping a SQLite database with migration on open",
+        "super_class": [],
+        "filepath": "src/app/store.ts",
+        "lines": [
+          51,
+          289
+        ],
+        "function": [],
+        "variables": []
+      }
+    ],
+    "interfaces": [
+      {
+        "interface_name": "TimelinePlace",
+        "interface_id": "src/app/store.ts:TimelinePlace",
+        "description": "Timeline entry referencing a timestamp and place id",
+        "filepath": "src/app/store.ts",
+        "lines": [
+          14,
+          14
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "Receipt",
+        "interface_id": "src/app/store.ts:Receipt",
+        "description": "Outbound message receipt with reply status and optional drop info",
+        "filepath": "src/app/store.ts",
+        "lines": [
+          18,
+          18
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "SettingsVersion",
+        "interface_id": "src/app/store.ts:SettingsVersion",
+        "description": "Stored settings revision snapshot with provenance, policy version and notification list",
+        "filepath": "src/app/store.ts",
+        "lines": [
+          22,
+          25
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "SETS",
+        "variable_id": "src/app/store.ts:SETS",
+        "description": "Generated-column SQL expressions per table (ticket, thread, outbox) for indexed JSON fields",
+        "filepath": "src/app/store.ts",
+        "lines": [
+          30,
+          44
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "DropReason",
+        "alias_id": "src/app/store.ts:DropReason",
+        "description": "Reason an outbound message was dropped: channel gone or channel ignored",
+        "filepath": "src/app/store.ts",
+        "lines": [
+          16,
+          16
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "Dropped",
+        "alias_id": "src/app/store.ts:Dropped",
+        "description": "A receipt narrowed to carry mandatory drop details",
+        "filepath": "src/app/store.ts",
+        "lines": [
+          20,
+          20
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

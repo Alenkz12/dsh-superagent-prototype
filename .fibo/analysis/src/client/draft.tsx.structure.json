@@ -1,0 +1,662 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/draft.tsx",
+    "path": "src/client/draft.tsx",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "draft.tsx",
+    "file_path": "src/client/draft.tsx",
+    "description": "Optimistic settings draft state with sessionStorage persistence and three-way rebase (merge3) against concurrent server saves. Provides the draftReducer state machine, the useDraft React hook, and the sticky SaveBar UI component.",
+    "file_type": "tsx",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ApiError",
+        "description": "Error thrown by the client API layer, carries HTTP status and validation issues used to detect 409 conflicts and invalid fields",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "src/client/api.ts",
+        "alias": ""
+      }
+    ],
+    "import_function": [
+      {
+        "function_name": "useEffect",
+        "description": "React hook used to persist or clear the draft in sessionStorage",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "useLayoutEffect",
+        "description": "React hook used to restore focus to the parent block when the save bar is hidden",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "useReducer",
+        "description": "React hook used to drive the draft state machine",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "useRef",
+        "description": "React hook used to keep DOM and focus refs for the save bar",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "FormEvent",
+        "description": "React type import describing a form submit event accepted by the draft submit handler",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "usePanel",
+        "description": "Hook exposing panel context, used here to access `restart` and the translation function `t`",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "src/client/provider.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "errorText",
+        "description": "Converts an unknown thrown value into a human readable error message",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "T",
+        "description": "Type import of the panel translation function signature used to render save bar texts",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "Button",
+        "description": "Reusable button component (ghost/primary variants) used for the discard and save actions",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      }
+    ],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "same",
+        "function_id": "src/client/draft.tsx:same(unknown, unknown)",
+        "description": "Deep equality check by JSON serialization, used to detect unchanged drafts",
+        "filepath": "src/client/draft.tsx",
+        "lines": [
+          10,
+          10
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "a",
+            "param_type": "unknown",
+            "description": "First value to compare",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "b",
+            "param_type": "unknown",
+            "description": "Second value to compare",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "boolean",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "isRecord",
+        "function_id": "src/client/draft.tsx:isRecord(unknown)",
+        "description": "Type guard checking that a value is a non-null, non-array object record",
+        "filepath": "src/client/draft.tsx",
+        "lines": [
+          11,
+          11
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "value",
+            "param_type": "unknown",
+            "description": "Value to test",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "value is Record<string, unknown>",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "named",
+        "function_id": "src/client/draft.tsx:named(unknown[], string)",
+        "description": "Checks that every element of a list is a record with a unique string value in the given key field, enabling keyed list merging",
+        "filepath": "src/client/draft.tsx",
+        "lines": [
+          13,
+          15
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "list",
+            "param_type": "unknown[]",
+            "description": "List of candidate records",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "field",
+            "param_type": "string",
+            "description": "Key field name (e.g. 'id' or 'chatId') expected to hold a unique string",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "boolean",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "merge3",
+        "function_id": "src/client/draft.tsx:merge3(unknown, unknown, unknown, string[][], string[])",
+        "description": "Three-way merge between a base value, local edits and remote changes; merges objects by key and keyed record lists by element and records conflicting paths",
+        "filepath": "src/client/draft.tsx",
+        "lines": [
+          21,
+          36
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "base",
+            "param_type": "unknown",
+            "description": "Common ancestor value the local edits were based on",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "mine",
+            "param_type": "unknown",
+            "description": "Local (draft) value",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "theirs",
+            "param_type": "unknown",
+            "description": "Remote (newly saved) value",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "conflicts",
+            "param_type": "string[][]",
+            "description": "Accumulator of conflicting property paths",
+            "default_value": "[]",
+            "is_optional": true
+          },
+          {
+            "param_name": "path",
+            "param_type": "string[]",
+            "description": "Current property path used for recursion tracking",
+            "default_value": "[]",
+            "is_optional": true
+          }
+        ],
+        "return_type": "unknown",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "mergeList",
+        "function_id": "src/client/draft.tsx:mergeList(unknown[][], string, string[][], string[])",
+        "description": "Merges three arrays of keyed records by their identifier field, preserving remote order and inserting locally added elements after their predecessor",
+        "filepath": "src/client/draft.tsx",
+        "lines": [
+          37,
+          50
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "lists",
+            "param_type": "unknown[][]",
+            "description": "Destructured triple [base, mine, theirs] of record lists",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "field",
+            "param_type": "string",
+            "description": "Key field used to identify elements ('id' or 'chatId')",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "conflicts",
+            "param_type": "string[][]",
+            "description": "Accumulator of conflicting paths",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "path",
+            "param_type": "string[]",
+            "description": "Current property path for conflict reporting",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "unknown[]",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "read",
+        "function_id": "src/client/draft.tsx:read(string | undefined)",
+        "description": "Reads and validates a persisted draft from sessionStorage, dropping unreadable or legacy entries that lack a merge base",
+        "filepath": "src/client/draft.tsx",
+        "lines": [
+          53,
+          60
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "key",
+            "param_type": "string | undefined",
+            "description": "sessionStorage key of the draft; when absent nothing is read",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "Stored<V, M> | undefined",
+        "is_async": false,
+        "generics": [
+          "V",
+          "M"
+        ],
+        "decorators": []
+      },
+      {
+        "function_name": "draftReducer",
+        "function_id": "src/client/draft.tsx:draftReducer(DraftState<V, M>, DraftAction<V, M>)",
+        "description": "State machine for a settings draft; holds submitted values until the polled revision catches up and rebases active edits onto newer remote revisions via merge3",
+        "filepath": "src/client/draft.tsx",
+        "lines": [
+          80,
+          108
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "state",
+            "param_type": "DraftState<V, M>",
+            "description": "Current draft state",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "action",
+            "param_type": "DraftAction<V, M>",
+            "description": "Action describing the transition to apply",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "DraftState<V, M>",
+        "is_async": false,
+        "generics": [
+          "V",
+          "M"
+        ],
+        "decorators": []
+      },
+      {
+        "function_name": "saveBarText",
+        "function_id": "src/client/draft.tsx:saveBarText(T, DraftState<unknown, unknown>, DraftWords)",
+        "description": "Derives the localized error or status line shown by the save bar from the draft state and notice",
+        "filepath": "src/client/draft.tsx",
+        "lines": [
+          114,
+          126
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "t",
+            "param_type": "T",
+            "description": "Translation function from the panel context",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "state",
+            "param_type": "DraftState<unknown, unknown>",
+            "description": "Destructured draft state (phase, sent, notice)",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "words",
+            "param_type": "DraftWords",
+            "description": "Optional custom wording overrides",
+            "default_value": "{}",
+            "is_optional": true
+          }
+        ],
+        "return_type": "{ error?: string; status: string }",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "useDraft",
+        "function_id": "src/client/draft.tsx:useDraft(DraftOptions<V>)",
+        "description": "React hook that manages a settings draft, persisting unsaved edits in sessionStorage, submitting them, handling 409 conflicts via reload, and rebasing when newer server revisions arrive",
+        "filepath": "src/client/draft.tsx",
+        "lines": [
+          136,
+          173
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "options",
+            "param_type": "DraftOptions<V>",
+            "description": "Destructured options: key, saved value, revision, save and reload callbacks",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "{ state: DraftState<V, M>; value: V; meta: M | undefined; revision: number; dirty: boolean; busy: boolean; submit: (event?: FormEvent) => Promise<void>; edit: (value: V, meta?: M) => void; discard: () => void }",
+        "is_async": false,
+        "generics": [
+          "V",
+          "M"
+        ],
+        "decorators": []
+      },
+      {
+        "function_name": "SaveBar",
+        "function_id": "src/client/draft.tsx:SaveBar(object)",
+        "description": "Sticky save/discard bar React component for a settings block; transfers focus back to its parent block when hidden so keyboard navigation does not reset",
+        "filepath": "src/client/draft.tsx",
+        "lines": [
+          176,
+          203
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "state",
+            "param_type": "DraftState<unknown, unknown>",
+            "description": "Draft state used to derive the status/error line",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "dirty",
+            "param_type": "boolean",
+            "description": "Whether there are unsaved changes",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "busy",
+            "param_type": "boolean",
+            "description": "Whether a save is in flight, disabling the actions",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "words",
+            "param_type": "DraftWords",
+            "description": "Optional custom wording overrides",
+            "default_value": "",
+            "is_optional": true
+          },
+          {
+            "param_name": "status",
+            "param_type": "string | undefined",
+            "description": "Optional status text overriding the derived one",
+            "default_value": "",
+            "is_optional": true
+          },
+          {
+            "param_name": "onDiscard",
+            "param_type": "() => void",
+            "description": "Handler invoked when the discard button is clicked",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "onSave",
+            "param_type": "() => void",
+            "description": "Optional custom save handler; when omitted the button submits the surrounding form",
+            "default_value": "",
+            "is_optional": true
+          }
+        ],
+        "return_type": "JSX.Element | null",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      }
+    ],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "Stored",
+        "interface_id": "src/client/draft.tsx:Stored",
+        "description": "Persisted draft payload kept in sessionStorage: the server baseline, the edited value, the revision it was based on and optional client metadata",
+        "extends": [],
+        "filepath": "src/client/draft.tsx",
+        "lines": [
+          52,
+          52
+        ],
+        "methods": [],
+        "properties": [
+          "base: V",
+          "value: V",
+          "revision: number",
+          "meta?: M"
+        ],
+        "generics": [
+          "V",
+          "M"
+        ]
+      },
+      {
+        "interface_name": "DraftState",
+        "interface_id": "src/client/draft.tsx:DraftState",
+        "description": "State machine shape for a settings draft including phase, current draft, in-flight submission, last seen revision and optional notice",
+        "extends": [],
+        "filepath": "src/client/draft.tsx",
+        "lines": [
+          66,
+          72
+        ],
+        "methods": [],
+        "properties": [
+          "phase: 'clean' | 'editing' | 'saving' | 'awaitingRevision'",
+          "draft?: Stored<V, M> | undefined",
+          "sent?: { value: V; revision: number; restarting: boolean } | undefined",
+          "seen?: number | undefined",
+          "notice?: DraftNotice | undefined"
+        ],
+        "generics": [
+          "V",
+          "M"
+        ]
+      },
+      {
+        "interface_name": "DraftWords",
+        "interface_id": "src/client/draft.tsx:DraftWords",
+        "description": "Custom wording overrides for save bar messages (merged, conflict, editing)",
+        "extends": [],
+        "filepath": "src/client/draft.tsx",
+        "lines": [
+          109,
+          113
+        ],
+        "methods": [
+          "merged?: (revision: number) => string",
+          "conflict?: (revision: number, paths: string[][]) => string",
+          "editing?: string"
+        ],
+        "properties": [],
+        "generics": []
+      },
+      {
+        "interface_name": "DraftOptions",
+        "interface_id": "src/client/draft.tsx:DraftOptions",
+        "description": "Options accepted by useDraft: storage key, authoritative saved value, current revision, save and reload callbacks",
+        "extends": [],
+        "filepath": "src/client/draft.tsx",
+        "lines": [
+          128,
+          134
+        ],
+        "methods": [
+          "save: (value: V, revision: number, base: V) => Promise<{ revision: number; restarting?: boolean }>",
+          "reload: () => Promise<unknown>"
+        ],
+        "properties": [
+          "key?: string",
+          "saved: V",
+          "revision: number | undefined"
+        ],
+        "generics": [
+          "V"
+        ]
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [
+      {
+        "constant_name": "LIST_KEYS",
+        "constant_id": "src/client/draft.tsx:LIST_KEYS",
+        "description": "Candidate key field names used to detect mergeable keyed record lists",
+        "filepath": "src/client/draft.tsx",
+        "lines": [
+          12,
+          12
+        ],
+        "constant_type": "string[]",
+        "value": "['id', 'chatId']"
+      },
+      {
+        "constant_name": "FAILURES",
+        "constant_id": "src/client/draft.tsx:FAILURES",
+        "description": "Set of notice kinds considered failures that must be preserved across subsequent edits",
+        "filepath": "src/client/draft.tsx",
+        "lines": [
+          65,
+          65
+        ],
+        "constant_type": "ReadonlySet<DraftNotice['kind']>",
+        "value": "new Set(['conflict', 'invalid', 'failed', 'unstored'])"
+      }
+    ],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "DraftNotice",
+        "alias_id": "src/client/draft.tsx:DraftNotice",
+        "description": "Union of user-facing draft notifications: restored, rebasing, merged, conflict with paths, invalid fields, or failure messages",
+        "filepath": "src/client/draft.tsx",
+        "lines": [
+          62,
+          64
+        ],
+        "target_type": "{ kind: 'restored' | 'rebasing' } | { kind: 'merged'; revision: number } | { kind: 'conflict'; revision: number; paths: string[][] } | { kind: 'invalid'; fields: string[] } | { kind: 'failed' | 'unstored'; error: string }",
+        "generics": []
+      },
+      {
+        "alias_name": "DraftAction",
+        "alias_id": "src/client/draft.tsx:DraftAction",
+        "description": "Union of actions accepted by draftReducer (edit, discard, submit, saved, refused, revisionArrived)",
+        "filepath": "src/client/draft.tsx",
+        "lines": [
+          73,
+          74
+        ],
+        "target_type": "{ type: 'edit'; value: V; meta: M | undefined; saved: V; revision: number | undefined } | { type: 'discard' | 'submit' } | { type: 'saved'; revision: number; restarting: boolean } | { type: 'refused'; notice: DraftNotice } | { type: 'revisionArrived'; saved: V; revision: number }",
+        "generics": [
+          "V",
+          "M"
+        ]
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

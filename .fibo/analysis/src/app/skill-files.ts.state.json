@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/skill-files.ts",
+    "path": "src/app/skill-files.ts",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "5183502aabcc914e0353b3fd2bfff803e2bbc789abcc920f42dcce8d5e3b383a",
+  "sourceFingerprint": "c95a1bb606bb9c7d932c807c4a9597ed7e0f8a02dbb1e16adb4133c0f1bfccf1",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "prompts",
+      "resultFingerprint": "20edf45e0757dabe839ebcdb914372251fbb5f0d1ffc4a9c1aec370c375b8db0"
+    },
+    {
+      "kind": "directory-listing",
+      "path": "skills",
+      "resultFingerprint": "d25b974c1daf6ea0895b791b9c0b0991b5fabcfeb963b8bf88ef43e28a13bfd2"
+    },
+    {
+      "kind": "file",
+      "path": "docs/007-architecture.md",
+      "contentFingerprint": "e3747665587fdf88b28d4e9c1a1f8ac40cbc2c65a9999be1fce14b69ec44d748"
+    },
+    {
+      "kind": "file",
+      "path": "skills/dsh-superagent-github/SKILL.md",
+      "contentFingerprint": "5081401e53813652f0afa3d73651147e0e7620577360f57cc43dd1c74fb41507"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/context.ts",
+      "contentFingerprint": "7442ebc5acc1267fc801665e36351e13a91d0bb97c2674b045330b5b8bb6d2cd"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/sessions.ts",
+      "contentFingerprint": "ca2b98e57e9f27b2abb0afab59d44ea744a96d8be4cf81d7b3776901b56cd36b"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/skill-files.ts",
+      "contentFingerprint": "c95a1bb606bb9c7d932c807c4a9597ed7e0f8a02dbb1e16adb4133c0f1bfccf1"
+    },
+    {
+      "kind": "file",
+      "path": "src/infra/paths.ts",
+      "contentFingerprint": "9ec0187b5f937fb9f803a1821e598eb77fd0878d56d269821f5b73e0f5d8f9ab"
+    },
+    {
+      "kind": "file",
+      "path": "tests/cards.spec.ts",
+      "contentFingerprint": "cc5a8b75490bef2f91af7f6ccfe58a9093b13d815277a6886bbcd8ddb21041e7"
+    },
+    {
+      "kind": "file",
+      "path": "tests/prompts.spec.ts",
+      "contentFingerprint": "5c9e26761d1fde35f7153a3fb95e89f72ab69e5eb97c52413f53838210ef4f40"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "bundledSkills",
+      "limit": 50,
+      "resultFingerprint": "28785bd5bb4b7795ad49eee063ad4151524a0d39dba29b6a0ea41193d9ec5269"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "promptFile",
+      "limit": 60,
+      "resultFingerprint": "114d723fbb93fda49ff4473de4d5d5ec4c136fc4c08952c8613587d13fb861d1"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-utility:data-contract",
+      "contentFingerprint": "2b8e61f32e18fd0fded9c2362d439a42ccfdef09339500ff0f68addfab8ecef4"
+    }
+  ],
+  "infoFingerprint": "3d54a01cd046deca74116e7f0286b324e10391668c0145002ca1b9f239d3904c",
+  "artifacts": {
+    "info": ".fibo/analysis/src/app/skill-files.ts.info.md",
+    "structure": ".fibo/analysis/src/app/skill-files.ts.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "3d54a01cd046deca74116e7f0286b324e10391668c0145002ca1b9f239d3904c",
+    "structure": "4c6b21f2843f3c3a424520ee9f34e6cf9ff90e1031aec9c5179f6764b5a1fd25"
+  }
+}

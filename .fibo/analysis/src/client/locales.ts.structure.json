@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/locales.ts",
+    "path": "src/client/locales.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "locales.ts",
+    "file_path": "src/client/locales.ts",
+    "description": "Client-side localization module defining bilingual (zh/en) UI text tables and derived locale maps.",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Imports the USER_ERRORS message table from core errors module.",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "../core/errors.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the SETUP_PROBLEMS message table from the setup module.",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "../setup.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the HEALTH_TEXT message table from the host source module.",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "../sources/host.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "LocaleNamespaceMap",
+        "interface_id": "src/client/locales.ts:LocaleNamespaceMap",
+        "description": "Locale namespace map interface binding the dshSuperagent namespace to its key type.",
+        "filepath": "src/client/locales.ts",
+        "lines": [
+          769,
+          769
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "TEXT",
+        "variable_id": "src/client/locales.ts:TEXT",
+        "description": "Bilingual (Chinese/English) tuple dictionary of all UI strings, including setup and health messages.",
+        "filepath": "src/client/locales.ts",
+        "lines": [
+          8,
+          749
+        ]
+      },
+      {
+        "variable_name": "language",
+        "variable_id": "src/client/locales.ts:language",
+        "description": "Factory that builds a single-language record by picking one index from each TEXT tuple.",
+        "filepath": "src/client/locales.ts",
+        "lines": [
+          751,
+          751
+        ]
+      },
+      {
+        "variable_name": "zh",
+        "variable_id": "src/client/locales.ts:zh",
+        "description": "Chinese locale map generated from TEXT by selecting index 0.",
+        "filepath": "src/client/locales.ts",
+        "lines": [
+          752,
+          752
+        ]
+      },
+      {
+        "variable_name": "en",
+        "variable_id": "src/client/locales.ts:en",
+        "description": "English locale map generated from TEXT by selecting index 1.",
+        "filepath": "src/client/locales.ts",
+        "lines": [
+          752,
+          752
+        ]
+      },
+      {
+        "variable_name": "GLOSSARY",
+        "variable_id": "src/client/locales.ts:GLOSSARY",
+        "description": "Grouped glossary of domain term categories such as roles, source, trigger, eval and execution.",
+        "filepath": "src/client/locales.ts",
+        "lines": [
+          755,
+          761
+        ]
+      },
+      {
+        "variable_name": "GLOSSARY_VALUES",
+        "variable_id": "src/client/locales.ts:GLOSSARY_VALUES",
+        "description": "Constant maps of enumerated domain values for decisions, strength, ticket stages, assignments and reports.",
+        "filepath": "src/client/locales.ts",
+        "lines": [
+          762,
+          766
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "DshSuperagentKey",
+        "alias_id": "src/client/locales.ts:DshSuperagentKey",
+        "description": "Union type of all translation keys derived from the TEXT dictionary.",
+        "filepath": "src/client/locales.ts",
+        "lines": [
+          750,
+          750
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

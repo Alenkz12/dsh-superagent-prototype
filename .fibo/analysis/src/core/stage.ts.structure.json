@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/core/stage.ts",
+    "path": "src/core/stage.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "stage.ts",
+    "file_path": "src/core/stage.ts",
+    "description": "Ticket stage derivation module: maps a ticket to its current workflow stage and retry eligibility",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Imports ticket model helpers latestAssignment, waitsForPerson, and the Ticket type",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "internal",
+        "filepath": "./model.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "ticketStage",
+        "function_id": "src/core/stage.ts:ticketStage(ticket: Ticket)",
+        "description": "Computes a ticket's current TicketStage from its ended, delivery, attention, and latest assignment report state",
+        "filepath": "src/core/stage.ts",
+        "lines": [
+          9,
+          21
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "canRetry",
+        "function_id": "src/core/stage.ts:canRetry(ticket: Ticket)",
+        "description": "Checks whether a ticket can be retried: not ended and either waiting for a person or having a delivery",
+        "filepath": "src/core/stage.ts",
+        "lines": [
+          24,
+          26
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "TicketStage",
+        "alias_id": "src/core/stage.ts:TicketStage",
+        "description": "Union type describing ticket stage states (person with action, working, idle, ended)",
+        "filepath": "src/core/stage.ts",
+        "lines": [
+          5,
+          6
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

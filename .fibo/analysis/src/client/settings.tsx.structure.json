@@ -1,0 +1,228 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/settings.tsx",
+    "path": "src/client/settings.tsx",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "settings.tsx",
+    "file_path": "src/client/settings.tsx",
+    "description": "Settings tab shell that routes between stage settings (Sources, Eval, Execution), Prompts, and Deployment, rendering group navigation and the active settings content.",
+    "file_type": "tsx",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "StateView",
+        "description": "Client state view type used by the settings page.",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "internal",
+        "filepath": "src/client/api.ts",
+        "alias": ""
+      },
+      {
+        "class_name": "DeploymentForm",
+        "description": "Deployment form state type used by the deployment settings page.",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "src/client/deployment.tsx",
+        "alias": ""
+      },
+      {
+        "class_name": "SettingsGroup",
+        "description": "Settings group identifier type for settings navigation and routing.",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/route.ts",
+        "alias": ""
+      }
+    ],
+    "import_function": [
+      {
+        "function_name": "DeploymentPage",
+        "description": "Deployment settings page component.",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "src/client/deployment.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "EvalSettings",
+        "description": "Evaluation settings component.",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/client/eval.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "ExecutionSettings",
+        "description": "Execution settings component.",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "src/client/execution.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "PromptsPage",
+        "description": "Prompts configuration page component.",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "src/client/prompts.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "usePanel",
+        "description": "Panel context hook providing translations and navigation.",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/provider.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "settingsRoute",
+        "description": "Builds the route path for a settings group.",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/route.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "SettingsProvider",
+        "description": "Provides settings form context to stage settings components.",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "src/client/settings-kit.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "SourceSettings",
+        "description": "Source settings component.",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "src/client/source.tsx",
+        "alias": ""
+      }
+    ],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "SettingsPage",
+        "function_id": "src/client/settings.tsx:SettingsPage",
+        "description": "React component that renders the settings tab, group navigation, and the selected settings page content.",
+        "filepath": "src/client/settings.tsx",
+        "lines": [
+          13,
+          38
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "group",
+            "param_type": "SettingsGroup",
+            "description": "Active settings group to render.",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "query",
+            "param_type": "{ source?: string; version?: string }",
+            "description": "Route query values used to focus source or version-specific settings.",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "state",
+            "param_type": "StateView",
+            "description": "Current client state view containing setup information.",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "deploymentForm",
+            "param_type": "DeploymentForm",
+            "description": "Deployment form state passed to the deployment settings page.",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      }
+    ],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [
+      {
+        "constant_name": "SETTINGS_GROUPS",
+        "constant_id": "src/client/route.ts:SETTINGS_GROUPS",
+        "description": "Imported ordered list of settings groups used to render the settings navigation.",
+        "filepath": "src/client/route.ts",
+        "lines": [
+          8,
+          8
+        ],
+        "constant_type": "readonly SettingsGroup[]",
+        "value": ""
+      },
+      {
+        "constant_name": "STAGE_GROUPS",
+        "constant_id": "src/client/settings.tsx:STAGE_GROUPS",
+        "description": "Settings groups that represent stage settings and receive the data-stage attribute.",
+        "filepath": "src/client/settings.tsx",
+        "lines": [
+          12,
+          12
+        ],
+        "constant_type": "readonly SettingsGroup[]",
+        "value": "['source', 'eval', 'execution']"
+      }
+    ],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

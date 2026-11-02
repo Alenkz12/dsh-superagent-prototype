@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/passes.ts",
+    "path": "src/app/passes.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "passes.ts",
+    "file_path": "src/app/passes.ts",
+    "description": "Pass scheduling module driving the engine pump loop and effect kicks",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Imports Engine, ReceiveResult, and Trigger types from core",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "internal",
+        "filepath": "../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports HealthEntry type from infrastructure health module",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "../infra/health.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports Effects type from the effects module",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "./effects.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [],
+    "classes": [
+      {
+        "class_name": "Passes",
+        "class_id": "src/app/passes.ts:Passes",
+        "description": "Scheduler that repeatedly pumps effects and evaluates due engine work on a timer",
+        "super_class": [],
+        "filepath": "src/app/passes.ts",
+        "lines": [
+          22,
+          69
+        ],
+        "function": [],
+        "variables": []
+      }
+    ],
+    "interfaces": [
+      {
+        "interface_name": "PassesHost",
+        "interface_id": "src/app/passes.ts:PassesHost",
+        "description": "Host contract exposing engine, effects, health, lifetime, and config state",
+        "filepath": "src/app/passes.ts",
+        "lines": [
+          6,
+          13
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "now",
+        "variable_id": "src/app/passes.ts:now",
+        "description": "Returns current time as an ISO 8601 string",
+        "filepath": "src/app/passes.ts",
+        "lines": [
+          15,
+          15
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

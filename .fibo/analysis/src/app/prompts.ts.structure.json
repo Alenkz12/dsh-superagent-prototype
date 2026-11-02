@@ -1,0 +1,509 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/prompts.ts",
+    "path": "src/app/prompts.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "prompts.ts",
+    "file_path": "src/app/prompts.ts",
+    "description": "Prompt configuration module: defines prompt schema, built-in parts, composition and persistence of role prompts",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "zod",
+        "description": "Zod runtime schema validation library",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Core utilities: UserError and key hashing helper",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Policy module: policy version helper and settings types",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "../policy.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Prompt context: built-in prompts, guides, team defaults and skill sources",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "./context.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Execution environment helpers and Variable type",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "./execution-environment.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Prompt change notification builder",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "./notices.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Sessions service type for notifications and delivery",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "./sessions.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Store type providing atomic transactions",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "./store.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Versions helper for revisioned configuration storage",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "./versions.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "KV key constants for prompts storage",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "../kv.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "environmentSection",
+        "function_id": "src/app/prompts.ts:environmentSection(config: PromptConfig, variables: Variable[] | undefined)",
+        "description": "Builds the runtime environment section text from settings variables, or a setup-pending notice",
+        "filepath": "src/app/prompts.ts",
+        "lines": [
+          83,
+          86
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "policySection",
+        "function_id": "src/app/prompts.ts:policySection(settings: Settings, config: PromptConfig = defaultPrompts())",
+        "description": "Composes the policy section text with version, accept mode and enabled rules",
+        "filepath": "src/app/prompts.ts",
+        "lines": [
+          92,
+          97
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "promptParts",
+        "function_id": "src/app/prompts.ts:promptParts(config: PromptConfig, role: Role, environment?: string, policy?: { key: string; text: string })",
+        "description": "Assembles the ordered prompt parts (fixed, team, generated) for a role, dropping empty ones",
+        "filepath": "src/app/prompts.ts",
+        "lines": [
+          102,
+          116
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "composePrompt",
+        "function_id": "src/app/prompts.ts:composePrompt(config: PromptConfig, role: Role, environment?: string, policy?: { key: string; text: string })",
+        "description": "Joins all prompt parts for a role into the final prompt string",
+        "filepath": "src/app/prompts.ts",
+        "lines": [
+          117,
+          119
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "composeSkill",
+        "function_id": "src/app/prompts.ts:composeSkill(config: PromptConfig, name: string)",
+        "description": "Returns the text for a skill: built-in for feishu/github, else the configured custom text",
+        "filepath": "src/app/prompts.ts",
+        "lines": [
+          120,
+          122
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "savePrompts",
+        "function_id": "src/app/prompts.ts:savePrompts(host: { store: Pick<Store, 'atomic'>; prompts: Pick<Prompts, 'save'>; sessions: Pick<Sessions, 'notify' | 'delivery'> }, config: unknown, baseRevision: number, origin: SettingsOrigin)",
+        "description": "Atomically saves a prompt config, notifies sessions and returns revision and delivery info",
+        "filepath": "src/app/prompts.ts",
+        "lines": [
+          239,
+          247
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [
+      {
+        "class_name": "PromptConflict",
+        "class_id": "src/app/prompts.ts:PromptConflict",
+        "description": "Error type raised when a prompt save conflicts with the current revision",
+        "super_class": [],
+        "filepath": "src/app/prompts.ts",
+        "lines": [
+          130,
+          130
+        ],
+        "function": [],
+        "variables": []
+      },
+      {
+        "class_name": "Prompts",
+        "class_id": "src/app/prompts.ts:Prompts",
+        "description": "Prompt store service managing versioned prompt configs, composition, defaults diffing and revision history",
+        "super_class": [],
+        "filepath": "src/app/prompts.ts",
+        "lines": [
+          135,
+          237
+        ],
+        "function": [],
+        "variables": []
+      }
+    ],
+    "interfaces": [
+      {
+        "interface_name": "PromptVersion",
+        "interface_id": "src/app/prompts.ts:PromptVersion",
+        "description": "Stored prompt version record with revision, timestamps, source and config",
+        "filepath": "src/app/prompts.ts",
+        "lines": [
+          39,
+          41
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "BuiltInPart",
+        "interface_id": "src/app/prompts.ts:BuiltInPart",
+        "description": "Built-in prompt part definition: applicable roles, text and optional placeholders",
+        "filepath": "src/app/prompts.ts",
+        "lines": [
+          48,
+          48
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "DefaultChange",
+        "interface_id": "src/app/prompts.ts:DefaultChange",
+        "description": "Describes a difference between default and current built-in part text",
+        "filepath": "src/app/prompts.ts",
+        "lines": [
+          125,
+          125
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "TEAM_SECTIONS",
+        "variable_id": "src/app/prompts.ts:TEAM_SECTIONS",
+        "description": "The three team section keys rendered into prompts",
+        "filepath": "src/app/prompts.ts",
+        "lines": [
+          14,
+          14
+        ]
+      },
+      {
+        "variable_name": "TEAM_HEADINGS",
+        "variable_id": "src/app/prompts.ts:TEAM_HEADINGS",
+        "description": "Markdown headings for each team section",
+        "filepath": "src/app/prompts.ts",
+        "lines": [
+          17,
+          17
+        ]
+      },
+      {
+        "variable_name": "SKILL_NAME",
+        "variable_id": "src/app/prompts.ts:SKILL_NAME",
+        "description": "Regex validating custom skill names (lowercase, digits, hyphens)",
+        "filepath": "src/app/prompts.ts",
+        "lines": [
+          18,
+          18
+        ]
+      },
+      {
+        "variable_name": "SKILL_PREFIX",
+        "variable_id": "src/app/prompts.ts:SKILL_PREFIX",
+        "description": "Prefix applied to skill names",
+        "filepath": "src/app/prompts.ts",
+        "lines": [
+          20,
+          20
+        ]
+      },
+      {
+        "variable_name": "SkillNameSchema",
+        "variable_id": "src/app/prompts.ts:SkillNameSchema",
+        "description": "Zod schema validating skill names and rejecting built-in skill names",
+        "filepath": "src/app/prompts.ts",
+        "lines": [
+          21,
+          22
+        ]
+      },
+      {
+        "variable_name": "PART_KEYS",
+        "variable_id": "src/app/prompts.ts:PART_KEYS",
+        "description": "List of all built-in prompt part keys",
+        "filepath": "src/app/prompts.ts",
+        "lines": [
+          24,
+          26
+        ]
+      },
+      {
+        "variable_name": "OverrideSchema",
+        "variable_id": "src/app/prompts.ts:OverrideSchema",
+        "description": "Zod schema for a built-in part text override with optional base key",
+        "filepath": "src/app/prompts.ts",
+        "lines": [
+          29,
+          30
+        ]
+      },
+      {
+        "variable_name": "PromptConfigSchema",
+        "variable_id": "src/app/prompts.ts:PromptConfigSchema",
+        "description": "Zod schema for the full prompt configuration: team sections, skills and overrides",
+        "filepath": "src/app/prompts.ts",
+        "lines": [
+          35,
+          37
+        ]
+      },
+      {
+        "variable_name": "defaultPrompts",
+        "variable_id": "src/app/prompts.ts:defaultPrompts",
+        "description": "Factory returning the default prompt configuration",
+        "filepath": "src/app/prompts.ts",
+        "lines": [
+          42,
+          42
+        ]
+      },
+      {
+        "variable_name": "ENVIRONMENT_HEADING",
+        "variable_id": "src/app/prompts.ts:ENVIRONMENT_HEADING",
+        "description": "Header text introducing the execution environment section",
+        "filepath": "src/app/prompts.ts",
+        "lines": [
+          44,
+          44
+        ]
+      },
+      {
+        "variable_name": "POLICY_HEAD",
+        "variable_id": "src/app/prompts.ts:POLICY_HEAD",
+        "description": "Header text introducing the policy section with version and accept mode",
+        "filepath": "src/app/prompts.ts",
+        "lines": [
+          45,
+          45
+        ]
+      },
+      {
+        "variable_name": "BOTH",
+        "variable_id": "src/app/prompts.ts:BOTH",
+        "description": "Role list applying to both orchestrator and worker",
+        "filepath": "src/app/prompts.ts",
+        "lines": [
+          49,
+          49
+        ]
+      },
+      {
+        "variable_name": "MAIN",
+        "variable_id": "src/app/prompts.ts:MAIN",
+        "description": "Role list applying only to the orchestrator",
+        "filepath": "src/app/prompts.ts",
+        "lines": [
+          49,
+          49
+        ]
+      },
+      {
+        "variable_name": "WORKER",
+        "variable_id": "src/app/prompts.ts:WORKER",
+        "description": "Role list applying only to the worker",
+        "filepath": "src/app/prompts.ts",
+        "lines": [
+          49,
+          49
+        ]
+      },
+      {
+        "variable_name": "parts",
+        "variable_id": "src/app/prompts.ts:parts",
+        "description": "Lazily cached record of all built-in prompt parts",
+        "filepath": "src/app/prompts.ts",
+        "lines": [
+          50,
+          50
+        ]
+      },
+      {
+        "variable_name": "builtInParts",
+        "variable_id": "src/app/prompts.ts:builtInParts",
+        "description": "Builds and caches the full record of built-in prompt parts",
+        "filepath": "src/app/prompts.ts",
+        "lines": [
+          55,
+          70
+        ]
+      },
+      {
+        "variable_name": "builtInBase",
+        "variable_id": "src/app/prompts.ts:builtInBase",
+        "description": "Hashes built-in part text into a stable base key",
+        "filepath": "src/app/prompts.ts",
+        "lines": [
+          72,
+          72
+        ]
+      },
+      {
+        "variable_name": "builtInPart",
+        "variable_id": "src/app/prompts.ts:builtInPart",
+        "description": "Looks up a built-in part definition by key, if it exists",
+        "filepath": "src/app/prompts.ts",
+        "lines": [
+          74,
+          75
+        ]
+      },
+      {
+        "variable_name": "builtIn",
+        "variable_id": "src/app/prompts.ts:builtIn",
+        "description": "Returns a part's text, preferring the configured override over the built-in default",
+        "filepath": "src/app/prompts.ts",
+        "lines": [
+          77,
+          78
+        ]
+      },
+      {
+        "variable_name": "fill",
+        "variable_id": "src/app/prompts.ts:fill",
+        "description": "Replaces {placeholders} in a template with provided values",
+        "filepath": "src/app/prompts.ts",
+        "lines": [
+          80,
+          81
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "TeamSection",
+        "alias_id": "src/app/prompts.ts:TeamSection",
+        "description": "Union of team section names: communication, scope, delivery",
+        "filepath": "src/app/prompts.ts",
+        "lines": [
+          15,
+          15
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "PartKey",
+        "alias_id": "src/app/prompts.ts:PartKey",
+        "description": "Union of all built-in prompt part keys",
+        "filepath": "src/app/prompts.ts",
+        "lines": [
+          27,
+          27
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "PromptConfig",
+        "alias_id": "src/app/prompts.ts:PromptConfig",
+        "description": "Inferred TypeScript type of the prompt configuration schema",
+        "filepath": "src/app/prompts.ts",
+        "lines": [
+          38,
+          38
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "Role",
+        "alias_id": "src/app/prompts.ts:Role",
+        "description": "Agent role: orchestrator or worker",
+        "filepath": "src/app/prompts.ts",
+        "lines": [
+          46,
+          46
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

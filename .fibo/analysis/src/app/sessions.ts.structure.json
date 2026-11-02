@@ -1,0 +1,356 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/sessions.ts",
+    "path": "src/app/sessions.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "sessions.ts",
+    "file_path": "src/app/sessions.ts",
+    "description": "Session lifecycle module wiring agents, prompts, skills, tools and delivery for the superagent app",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "cordis",
+        "description": "Cordis framework Context type for the plugin runtime",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "dsh-agent",
+        "description": "Agent type from the DSH agent package",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "dsh-llm",
+        "description": "MessageId type for identifying LLM messages",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "dsh-scope",
+        "description": "Helper resolving the parent context scope",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "dsh-session",
+        "description": "SessionId type for identifying sessions",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "node:path",
+        "description": "Node path utility providing dirname",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "zod",
+        "description": "Zod schema validation library",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Core ticket helpers: key, liveTicket and Ticket type",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Executor helpers for mandate instructions and session-to-ticket lookup",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "../executor/dsh.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "HealthEntry type describing a health registry entry",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "../infra/health.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "AgentDelivery class and messageId helper for effect delivery",
+        "lines": [
+          12,
+          12
+        ],
+        "source": "internal",
+        "filepath": "./delivery.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Effects type for the ordered effect pipeline",
+        "lines": [
+          13,
+          13
+        ],
+        "source": "internal",
+        "filepath": "./effects.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Variable type for execution environment variables",
+        "lines": [
+          14,
+          14
+        ],
+        "source": "internal",
+        "filepath": "./execution-environment.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "RetryHealth tracker for model-budget retry status",
+        "lines": [
+          15,
+          15
+        ],
+        "source": "internal",
+        "filepath": "./retry-health.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Initializer for role-specific model settings",
+        "lines": [
+          16,
+          16
+        ],
+        "source": "internal",
+        "filepath": "./role-models.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Bundled skill definitions loader",
+        "lines": [
+          17,
+          17
+        ],
+        "source": "internal",
+        "filepath": "./skill-files.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Prompt prefix constant plus PromptVersion and Prompts types",
+        "lines": [
+          18,
+          18
+        ],
+        "source": "internal",
+        "filepath": "./prompts.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Store type for persisted tickets, settings and KV access",
+        "lines": [
+          19,
+          19
+        ],
+        "source": "internal",
+        "filepath": "./store.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "KV key-value store helper",
+        "lines": [
+          20,
+          20
+        ],
+        "source": "internal",
+        "filepath": "../kv.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "RegisterTool and Tool types for tool registration",
+        "lines": [
+          21,
+          21
+        ],
+        "source": "internal",
+        "filepath": "./tools/tool.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "noWait",
+        "function_id": "src/app/sessions.ts:noWait({ name, arguments: input }: { name: string; arguments: unknown }, routed: () => boolean)",
+        "description": "Decides whether a bash or job_output tool call should return a no-wait/default-wait guidance message",
+        "filepath": "src/app/sessions.ts",
+        "lines": [
+          77,
+          86
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [
+      {
+        "class_name": "Sessions",
+        "class_id": "src/app/sessions.ts:Sessions",
+        "description": "Manages per-agent sessions: binds skills, prompts and tools, delivers relay/notice effects, and releases resources on dispose",
+        "super_class": [],
+        "filepath": "src/app/sessions.ts",
+        "lines": [
+          93,
+          352
+        ],
+        "function": [],
+        "variables": []
+      }
+    ],
+    "interfaces": [
+      {
+        "interface_name": "SessionsHost",
+        "interface_id": "src/app/sessions.ts:SessionsHost",
+        "description": "Host contract exposing context, store, prompts, effects, health, lifetime and tool/environment factories for Sessions",
+        "filepath": "src/app/sessions.ts",
+        "lines": [
+          24,
+          39
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "SessionBinding",
+        "interface_id": "src/app/sessions.ts:SessionBinding",
+        "description": "Per-agent binding record holding disposers, child scope, skills handle and subagent flag",
+        "filepath": "src/app/sessions.ts",
+        "lines": [
+          45,
+          45
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "Events",
+        "interface_id": "src/app/sessions.ts:Events",
+        "description": "Cordis event declarations for agent preset selection on a session",
+        "filepath": "src/app/sessions.ts",
+        "lines": [
+          50,
+          53
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "WORKER_PRESET",
+        "variable_id": "src/app/sessions.ts:WORKER_PRESET",
+        "description": "Preset name identifying the worker agent role",
+        "filepath": "src/app/sessions.ts",
+        "lines": [
+          48,
+          48
+        ]
+      },
+      {
+        "variable_name": "ROUTER_PRESET",
+        "variable_id": "src/app/sessions.ts:ROUTER_PRESET",
+        "description": "Preset name identifying the router agent role",
+        "filepath": "src/app/sessions.ts",
+        "lines": [
+          48,
+          48
+        ]
+      },
+      {
+        "variable_name": "WORK_TOOLS",
+        "variable_id": "src/app/sessions.ts:WORK_TOOLS",
+        "description": "List of tool names registered on worker sessions",
+        "filepath": "src/app/sessions.ts",
+        "lines": [
+          61,
+          62
+        ]
+      },
+      {
+        "variable_name": "NO_WAIT",
+        "variable_id": "src/app/sessions.ts:NO_WAIT",
+        "description": "Prompt text telling the model not to wait because results arrive as messages",
+        "filepath": "src/app/sessions.ts",
+        "lines": [
+          64,
+          65
+        ]
+      },
+      {
+        "variable_name": "DEFAULT_WAIT",
+        "variable_id": "src/app/sessions.ts:DEFAULT_WAIT",
+        "description": "Prompt text explaining the default shell wait limit and advising short timeouts or background runs",
+        "filepath": "src/app/sessions.ts",
+        "lines": [
+          67,
+          68
+        ]
+      },
+      {
+        "variable_name": "SLEEP",
+        "variable_id": "src/app/sessions.ts:SLEEP",
+        "description": "Regex detecting shell commands that invoke sleep",
+        "filepath": "src/app/sessions.ts",
+        "lines": [
+          70,
+          70
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

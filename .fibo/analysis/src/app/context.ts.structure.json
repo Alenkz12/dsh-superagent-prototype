@@ -1,0 +1,188 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/context.ts",
+    "path": "src/app/context.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "context.ts",
+    "file_path": "src/app/context.ts",
+    "description": "",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "internal",
+        "filepath": "./skill-files.ts"
+      },
+      {
+        "class_name": "dsh-session",
+        "description": "",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "./cards.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "transcriptEntry",
+        "function_id": "src/app/context.ts:transcriptEntry(event: SessionEvent)",
+        "description": "",
+        "filepath": "src/app/context.ts",
+        "lines": [
+          29,
+          33
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "sharedPrompt",
+        "variable_id": "src/app/context.ts:sharedPrompt",
+        "description": "",
+        "filepath": "src/app/context.ts",
+        "lines": [
+          7,
+          7
+        ]
+      },
+      {
+        "variable_name": "masterPrompt",
+        "variable_id": "src/app/context.ts:masterPrompt",
+        "description": "",
+        "filepath": "src/app/context.ts",
+        "lines": [
+          8,
+          8
+        ]
+      },
+      {
+        "variable_name": "workerPrompt",
+        "variable_id": "src/app/context.ts:workerPrompt",
+        "description": "",
+        "filepath": "src/app/context.ts",
+        "lines": [
+          9,
+          9
+        ]
+      },
+      {
+        "variable_name": "guides",
+        "variable_id": "src/app/context.ts:guides",
+        "description": "",
+        "filepath": "src/app/context.ts",
+        "lines": [
+          11,
+          12
+        ]
+      },
+      {
+        "variable_name": "sourceSkills",
+        "variable_id": "src/app/context.ts:sourceSkills",
+        "description": "",
+        "filepath": "src/app/context.ts",
+        "lines": [
+          14,
+          14
+        ]
+      },
+      {
+        "variable_name": "cliNotes",
+        "variable_id": "src/app/context.ts:cliNotes",
+        "description": "",
+        "filepath": "src/app/context.ts",
+        "lines": [
+          15,
+          15
+        ]
+      },
+      {
+        "variable_name": "teamDefaults",
+        "variable_id": "src/app/context.ts:teamDefaults",
+        "description": "",
+        "filepath": "src/app/context.ts",
+        "lines": [
+          17,
+          19
+        ]
+      },
+      {
+        "variable_name": "mainAdmissionPolicy",
+        "variable_id": "src/app/context.ts:mainAdmissionPolicy",
+        "description": "",
+        "filepath": "src/app/context.ts",
+        "lines": [
+          21,
+          21
+        ]
+      },
+      {
+        "variable_name": "handoff",
+        "variable_id": "src/app/context.ts:handoff",
+        "description": "",
+        "filepath": "src/app/context.ts",
+        "lines": [
+          23,
+          23
+        ]
+      },
+      {
+        "variable_name": "handoffPolicy",
+        "variable_id": "src/app/context.ts:handoffPolicy",
+        "description": "",
+        "filepath": "src/app/context.ts",
+        "lines": [
+          24,
+          24
+        ]
+      },
+      {
+        "variable_name": "autoMergeThreshold",
+        "variable_id": "src/app/context.ts:autoMergeThreshold",
+        "description": "",
+        "filepath": "src/app/context.ts",
+        "lines": [
+          26,
+          26
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

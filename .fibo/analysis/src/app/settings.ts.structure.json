@@ -1,0 +1,256 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/settings.ts",
+    "path": "src/app/settings.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "settings.ts",
+    "file_path": "src/app/settings.ts",
+    "description": "Settings module: defines typed settings blocks, parses/merges/guards values, and syncs source policies with health and setup checks",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "cordis",
+        "description": "Imports the Cordis Context type for dependency injection",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "zod",
+        "description": "Imports the zod schema validation library",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports UserError and the EngineForSettings type from core",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports policy config schemas plus policyEffects and policyVersion helpers",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "../policy.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports policy types for settings values, blocks, origins, and saves",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "../policy.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the SourceHost type used by source kinds",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "../sources/host.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports HealthBoard and HealthEntry types for health reporting",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "../infra/health.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the SourceRegistry type for source lookup and validation",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "../sources/registry.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports resolveRoleModel for validating and resolving role models",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "./role-models.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports changedPaths and settingsNotice helpers for change tracking and notifications",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "./notices.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Sessions type for notify and delivery access",
+        "lines": [
+          12,
+          12
+        ],
+        "source": "internal",
+        "filepath": "./sessions.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports setupChanged helper and the Setup type",
+        "lines": [
+          13,
+          13
+        ],
+        "source": "internal",
+        "filepath": "./setup.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Store type for settings persistence and atomic operations",
+        "lines": [
+          14,
+          14
+        ],
+        "source": "internal",
+        "filepath": "./store.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports KV key builders for settings storage lookups",
+        "lines": [
+          15,
+          15
+        ],
+        "source": "internal",
+        "filepath": "../kv.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [],
+    "classes": [
+      {
+        "class_name": "SettingsConflict",
+        "class_id": "src/app/settings.ts:SettingsConflict",
+        "description": "Error subclass signaling a settings write conflict",
+        "super_class": [],
+        "filepath": "src/app/settings.ts",
+        "lines": [
+          21,
+          21
+        ],
+        "function": [],
+        "variables": []
+      },
+      {
+        "class_name": "Settings",
+        "class_id": "src/app/settings.ts:Settings",
+        "description": "Settings service that validates and merges settings values per block, guards panel-only changes, and syncs source policies with retries and health reporting",
+        "super_class": [],
+        "filepath": "src/app/settings.ts",
+        "lines": [
+          82,
+          267
+        ],
+        "function": [],
+        "variables": []
+      }
+    ],
+    "interfaces": [
+      {
+        "interface_name": "Block",
+        "interface_id": "src/app/settings.ts:Block",
+        "description": "Describes a settings block handler with parse, merge, and optional guard operations",
+        "filepath": "src/app/settings.ts",
+        "lines": [
+          27,
+          31
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "SettingsHost",
+        "interface_id": "src/app/settings.ts:SettingsHost",
+        "description": "Host contract exposing store, sources, health, sessions, setup dependencies and a pass-request trigger to the settings service",
+        "filepath": "src/app/settings.ts",
+        "lines": [
+          56,
+          74
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "now",
+        "variable_id": "src/app/settings.ts:now",
+        "description": "Helper returning the current time as an ISO timestamp string",
+        "filepath": "src/app/settings.ts",
+        "lines": [
+          22,
+          22
+        ]
+      },
+      {
+        "variable_name": "environment",
+        "variable_id": "src/app/settings.ts:environment",
+        "description": "Helper serializing executor directory, prepare, and blocked commands to detect environment changes",
+        "filepath": "src/app/settings.ts",
+        "lines": [
+          24,
+          24
+        ]
+      },
+      {
+        "variable_name": "BLOCKS",
+        "variable_id": "src/app/settings.ts:BLOCKS",
+        "description": "Map of block kinds (policy, eval, executor, source) to their parse/merge/guard handlers",
+        "filepath": "src/app/settings.ts",
+        "lines": [
+          32,
+          53
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

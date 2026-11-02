@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/sources/registry.ts",
+    "path": "src/sources/registry.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "registry.ts",
+    "file_path": "src/sources/registry.ts",
+    "description": "Source registry module exposing the SourceRegistry class for managing source kinds, their health entries, and instance configuration",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Type imports for core channel, message, scope, and trigger contracts",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "internal",
+        "filepath": "../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Type import for the Commands interface from the infra commands module",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "../infra/commands.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the HealthBoard class and HealthEntry type used to claim and track source health",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "../infra/health.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the admission table schema and Settings type from the policy module",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "../policy.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Type imports for source kind, instance, channel link, trigger context, and variable spec definitions",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "./kind.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [],
+    "classes": [
+      {
+        "class_name": "SourceRegistry",
+        "class_id": "src/sources/registry.ts:SourceRegistry",
+        "description": "Registry implementing SourceScope that registers SourceKind instances, claims health entries on a HealthBoard, resolves stored config via schema validation, and returns unregister disposers",
+        "super_class": [],
+        "filepath": "src/sources/registry.ts",
+        "lines": [
+          13,
+          138
+        ],
+        "function": [],
+        "variables": []
+      }
+    ],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

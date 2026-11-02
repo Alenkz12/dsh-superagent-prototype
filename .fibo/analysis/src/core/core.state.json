@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "collection:src/core",
+    "path": "src/core",
+    "kind": "directory"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "c50c1751d10345f84d830e901c09029f7fa6234f44db8e1eb87014cfcc9463ca",
+  "children": [
+    {
+      "id": "file:src/core/assignments.ts",
+      "infoFingerprint": "2e41565ce287a72a56bf2d2faed0e3001e4d69fef799ba02cc8049a8d23e9476"
+    },
+    {
+      "id": "file:src/core/engine.ts",
+      "infoFingerprint": "db206457604c5060cc333f780711906b19474d1ca75fd5d83dd4edd2ada55285"
+    },
+    {
+      "id": "file:src/core/errors.ts",
+      "infoFingerprint": "d0e763609c7383932c0966bdbb3b5de4b7cf7246edaa595ce2b23fa02f50e9b8"
+    },
+    {
+      "id": "file:src/core/evals.ts",
+      "infoFingerprint": "cbfbb326cbac62bc4612063745fc087f874f9fc24bda80cddaea6cfe163f39d2"
+    },
+    {
+      "id": "file:src/core/ids.ts",
+      "infoFingerprint": "97fc451f7911ea5176679976b4b8dd3b2f496bbbc7d43703c0c6b79a07737f32"
+    },
+    {
+      "id": "file:src/core/index.ts",
+      "infoFingerprint": "8001c666a3d568dfbfb950e59e0133860c631cc19b320f15515fb6a5ecc213be"
+    },
+    {
+      "id": "file:src/core/intake.ts",
+      "infoFingerprint": "b68a1cdef487562f563e65fc9dbc9d1e1a216920e461d7771f2501c9e6bbcbe6"
+    },
+    {
+      "id": "file:src/core/memory.ts",
+      "infoFingerprint": "ae7c56195ba5fae899dce79dabf7719eafe431ec1f048e0883ee64e61cbbbeb7"
+    },
+    {
+      "id": "file:src/core/model.ts",
+      "infoFingerprint": "167ffa5a40ec97471e54923ce8a2f3ab0245a82ef0a4d0cc84ae6ebdc6ecc43f"
+    },
+    {
+      "id": "file:src/core/part.ts",
+      "infoFingerprint": "afe84cfbc240fe6360795057cca42b0e1ed79366026d60442857a9e455f5d930"
+    },
+    {
+      "id": "file:src/core/ports.ts",
+      "infoFingerprint": "f56ac0295555f063a846e0576b533b87bf443c01c0dd4bde16935d44340e2afd"
+    },
+    {
+      "id": "file:src/core/reasons.ts",
+      "infoFingerprint": "54729bc9cab51cc6f613a231ee4fc46351edd85dfe95d2167b1cceaf3828d072"
+    },
+    {
+      "id": "file:src/core/replies.ts",
+      "infoFingerprint": "bb4fc27a5018b6b9081a945a927f3297b0c36c55a0f8bf00400f0647ec8cfa5b"
+    },
+    {
+      "id": "file:src/core/stage.ts",
+      "infoFingerprint": "f2fd07133fe6e68c3e198f95c2da0af5f04ddccf82d0d3673d5f0d894aa17619"
+    },
+    {
+      "id": "file:src/core/tickets.ts",
+      "infoFingerprint": "90f7017bbd18ae46ae94f0cf74ce191ebff8e1de76f25c5f678ab1d007e4591a"
+    }
+  ],
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/core",
+      "resultFingerprint": "be82a7cf8ea92859bf3f3d905a318cf2acf25b289109698a34e8e9c13ab4a02c"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/assignments.ts",
+      "contentFingerprint": "6acf4b858b35d95c875680e39b1e3c41557bbe6d39f65031bb26927289327065"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/engine.ts",
+      "contentFingerprint": "bd9a4caff834859877d1a08ccddebc990d0e1ca568674b80f9d59ce5adcac827"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/errors.ts",
+      "contentFingerprint": "aa7532a2d1f8c443608683ef1231bf3d81b842f67a87d9b77742b5c76d515009"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/evals.ts",
+      "contentFingerprint": "38916de24ec6e1a27118dd5d7a7efa67bf7a2dfdbab26fb59d377516269e2fc8"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/ids.ts",
+      "contentFingerprint": "bc4bc6fd43ea1377087ff2815706c57f0200666aeb4a7711a40489c377f141ab"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/index.ts",
+      "contentFingerprint": "a5a1cf43f02eafaf520a5bfaf5e76b71ba521d04ee648cfcf12b3843cc474a3e"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/intake.ts",
+      "contentFingerprint": "323aadefea69436ba23ed2de3bdbaad673d61915be9e239f3233ecf551a74179"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/memory.ts",
+      "contentFingerprint": "36cefca987a4e533369a414e52e3fb4754945ae942bb021f8e5cf23c186cf536"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/model.ts",
+      "contentFingerprint": "982155fe6a03c887a7ac4475c6d1592d12aa23c5fe3698403c93bbfd6469d44a"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/part.ts",
+      "contentFingerprint": "437c4f4bcc05e836c056cdb45bbf451e55242d62b602b489f4df902be112e73e"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/ports.ts",
+      "contentFingerprint": "0b44f1cd716d64776b0e3ea74a158cf0effd92e763b1b13c7705e766e9225a43"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/reasons.ts",
+      "contentFingerprint": "dc29e0c3c52e4ffd6e8f27a618cbe704a83fdbd9c5a1b99a1e0c4184d5c33af4"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/replies.ts",
+      "contentFingerprint": "5a8821a1b9d951d2255709543e0be762c6d3204bca07a77ff17c7bfe82ba66f4"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/stage.ts",
+      "contentFingerprint": "b935012a654d2a68ca20cb27909ddc8dceafb704b56a16a23a08036a546141df"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/tickets.ts",
+      "contentFingerprint": "1d9f964ad34b54cbb0403bde16af58851e5e80111177ce73a27b6034e9af940e"
+    },
+    {
+      "kind": "template",
+      "key": "directory-language-gfgo-primary-domain-rules:api-boundary,data-contract,extension-point",
+      "contentFingerprint": "537ffc07d77cbe630c2a4a25b69aee4acc869efb18b29f506572be16748e8f52"
+    }
+  ],
+  "infoFingerprint": "0417e580ca7251c2e03fa20fbd8f0b5719edc2d4ceb7a1c25e4aaab062d8da46",
+  "artifacts": {
+    "info": ".fibo/analysis/src/core/core.info.md",
+    "structure": ".fibo/analysis/src/core/core.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "0417e580ca7251c2e03fa20fbd8f0b5719edc2d4ceb7a1c25e4aaab062d8da46",
+    "structure": "61790e835c3ed08f666257c369f6276b0f21892fb47af16db8abdef44ee5de58"
+  }
+}

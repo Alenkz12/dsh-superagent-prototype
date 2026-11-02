@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/core/replies.ts",
+    "path": "src/core/replies.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "replies.ts",
+    "file_path": "src/core/replies.ts",
+    "description": "Replies engine part: queues acknowledgement, answer, result and attention messages to the right channel of a ticket.",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Imports the id-key helper from ids.ts.",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "internal",
+        "filepath": "./ids.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the UserError class for user-facing failures.",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "./errors.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports ticket helper functions latestAssignment, liveTicket and ticketOutcome from model.ts.",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "./model.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports model types ChannelRef, Ticket and Trigger.",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "./model.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the ReplyStatus type from ports.ts.",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "./ports.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the EnginePart base class from part.ts.",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "./part.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [],
+    "classes": [
+      {
+        "class_name": "Replies",
+        "class_id": "src/core/replies.ts:Replies",
+        "description": "Engine part that queues reply messages for tickets, routing each purpose to its channel and keeping queueing idempotent.",
+        "super_class": [],
+        "filepath": "src/core/replies.ts",
+        "lines": [
+          26,
+          95
+        ],
+        "function": [],
+        "variables": []
+      }
+    ],
+    "interfaces": [
+      {
+        "interface_name": "Reply",
+        "interface_id": "src/core/replies.ts:Reply",
+        "description": "Result of a queued reply: its id, delivery status and whether an existing message was reused.",
+        "filepath": "src/core/replies.ts",
+        "lines": [
+          18,
+          18
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "ReplyRequest",
+        "alias_id": "src/core/replies.ts:ReplyRequest",
+        "description": "Union describing a reply request by purpose, with optional ticket, trigger, question and text fields.",
+        "filepath": "src/core/replies.ts",
+        "lines": [
+          14,
+          16
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

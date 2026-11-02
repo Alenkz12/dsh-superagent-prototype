@@ -1,0 +1,515 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/provider.tsx",
+    "path": "src/client/provider.tsx",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "provider.tsx",
+    "file_path": "src/client/provider.tsx",
+    "description": "Shared React panel provider for the dsh-superagent UI: exposes two React contexts (action helpers and polled server state), polling with restart detection, a toast notification portal, and the useAction hook that wraps async actions with re-entrancy protection, busy state, reload and error reporting.",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [],
+    "import_function": [
+      {
+        "function_name": "createContext",
+        "description": "React factory that creates a context object used for sharing the panel context and panel data across components.",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "useCallback",
+        "description": "React hook that memoizes a callback so stable identities are passed through context values.",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "useContext",
+        "description": "React hook used by usePanel and usePanelData to read the panel contexts.",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "useEffect",
+        "description": "React hook used for the toast auto-dismiss timer and the restart timeout timer.",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "useMemo",
+        "description": "React hook that memoizes the API caller, context value and data value objects.",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "useRef",
+        "description": "React hook holding the current translator, re-entrancy flag and latest onDone callback.",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "useState",
+        "description": "React hook for local state such as busy, toast, restarting and restarts counters.",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "createPortal",
+        "description": "React DOM helper that renders the toast element directly into document.body.",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "caller",
+        "description": "Creates the typed API call function used by the panel context to talk to the panel server.",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/client/api.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "usePoll",
+        "description": "Polling hook that fetches the panel state on an interval and returns data, error and reload.",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/client/api.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "errorText",
+        "description": "Formats an unknown failure into a localized error message for toast reporting.",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "setupText",
+        "description": "Renders a localized setup problem description shown when the server reports a setup failure.",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "valueLabel",
+        "description": "Resolves a localized label for a value kind, used to name the prompt part in refusal messages.",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      }
+    ],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "usePanel",
+        "function_id": "src/client/provider.tsx:usePanel()",
+        "description": "Reads the PanelContext and throws when a page is rendered outside of the panel provider.",
+        "filepath": "src/client/provider.tsx",
+        "lines": [
+          31,
+          35
+        ],
+        "code": null,
+        "parameters": [],
+        "return_type": "PanelContext",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "usePanelData",
+        "function_id": "src/client/provider.tsx:usePanelData()",
+        "description": "Reads the PanelData context (polled state) and throws when used outside the panel provider.",
+        "filepath": "src/client/provider.tsx",
+        "lines": [
+          36,
+          40
+        ],
+        "code": null,
+        "parameters": [],
+        "return_type": "PanelData",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "useAction",
+        "function_id": "src/client/provider.tsx:useAction(action, options)",
+        "description": "Wraps an async action with re-entrancy protection, busy state, an optional post-success reload and error toast reporting; returns a run function and busy flag.",
+        "filepath": "src/client/provider.tsx",
+        "lines": [
+          42,
+          56
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "action",
+            "param_type": "(...args: A) => Promise<unknown>",
+            "description": "The async action to execute when run is invoked.",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "options",
+            "param_type": "{ reload?: () => Promise<unknown> }",
+            "description": "Options object; reload is awaited after a successful action to refresh panel data.",
+            "default_value": "{}",
+            "is_optional": true
+          }
+        ],
+        "return_type": "{ run: (...args: A) => Promise<boolean>; busy: boolean }",
+        "is_async": false,
+        "generics": [
+          "A extends unknown[]"
+        ],
+        "decorators": []
+      },
+      {
+        "function_name": "messages",
+        "function_id": "src/client/provider.tsx:messages(t)",
+        "description": "Builds the ApiMessages bundle (offline, host not running, server/request failures, setup problems, user refusals) from the current translator.",
+        "filepath": "src/client/provider.tsx",
+        "lines": [
+          58,
+          64
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "t",
+            "param_type": "T",
+            "description": "Translator function used to localize every message.",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "ApiMessages",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "Toast",
+        "function_id": "src/client/provider.tsx:Toast({ text, onDone, holdMs })",
+        "description": "Portal-rendered status toast that auto-dismisses after the hold duration plus a short buffer.",
+        "filepath": "src/client/provider.tsx",
+        "lines": [
+          65,
+          71
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "text",
+            "param_type": "string",
+            "description": "Message text displayed in the toast.",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "onDone",
+            "param_type": "() => void",
+            "description": "Callback invoked when the toast has finished its hold time.",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "holdMs",
+            "param_type": "number",
+            "description": "How long the toast stays visible before dismissal.",
+            "default_value": "3000",
+            "is_optional": true
+          }
+        ],
+        "return_type": "React portal element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "stay",
+        "function_id": "src/client/provider.tsx:stay()",
+        "description": "No-op default used for the navigate and back callbacks when no router is supplied.",
+        "filepath": "src/client/provider.tsx",
+        "lines": [
+          72,
+          72
+        ],
+        "code": null,
+        "parameters": [],
+        "return_type": "void",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "noSession",
+        "function_id": "src/client/provider.tsx:noSession()",
+        "description": "Async no-op default for openSession when the host provides no session navigation.",
+        "filepath": "src/client/provider.tsx",
+        "lines": [
+          73,
+          73
+        ],
+        "code": null,
+        "parameters": [],
+        "return_type": "Promise<void>",
+        "is_async": true,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "PanelProvider",
+        "function_id": "src/client/provider.tsx:PanelProvider({ t, interval, openSession, navigate, back, backLabel, children })",
+        "description": "React component that supplies both panel contexts: builds the API caller and toast notifier, polls the state on an interval, detects dsh-superagent restarts (fast 1s polling until recovery or a 30s timeout) and renders global styles plus toast portal.",
+        "filepath": "src/client/provider.tsx",
+        "lines": [
+          74,
+          108
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "t",
+            "param_type": "T",
+            "description": "Translator function for all panel copy.",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "interval",
+            "param_type": "number",
+            "description": "State polling interval in milliseconds.",
+            "default_value": "5000",
+            "is_optional": true
+          },
+          {
+            "param_name": "openSession",
+            "param_type": "(sessionId: string) => Promise<void>",
+            "description": "Opens a given executor session from the panel.",
+            "default_value": "noSession",
+            "is_optional": true
+          },
+          {
+            "param_name": "navigate",
+            "param_type": "PanelContext['navigate']",
+            "description": "Router navigation function used by pages inside the panel.",
+            "default_value": "stay",
+            "is_optional": true
+          },
+          {
+            "param_name": "back",
+            "param_type": "() => void",
+            "description": "Router back navigation function.",
+            "default_value": "stay",
+            "is_optional": true
+          },
+          {
+            "param_name": "backLabel",
+            "param_type": "string",
+            "description": "Localized label for the back navigation affordance.",
+            "default_value": "''",
+            "is_optional": true
+          },
+          {
+            "param_name": "children",
+            "param_type": "ReactNode",
+            "description": "Panel page content rendered inside both providers.",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      }
+    ],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "PanelContext",
+        "interface_id": "src/client/provider.tsx:PanelContext",
+        "description": "Actions and translator exposed to every panel page: API caller, navigation helpers, session opener, toast notifier and restart trigger.",
+        "extends": [],
+        "filepath": "src/client/provider.tsx",
+        "lines": [
+          9,
+          18
+        ],
+        "methods": [
+          "navigate: (route: Route, replace?: boolean) => void",
+          "back: () => void",
+          "openSession: (sessionId: string) => Promise<void>",
+          "notify: (text: string) => void",
+          "restart: () => void"
+        ],
+        "properties": [
+          "t: T",
+          "call: Call",
+          "backLabel: string"
+        ],
+        "generics": []
+      },
+      {
+        "interface_name": "PanelData",
+        "interface_id": "src/client/provider.tsx:PanelData",
+        "description": "Polled server state exposed to panel pages, including load/setup views, running session count and restart counter.",
+        "extends": [],
+        "filepath": "src/client/provider.tsx",
+        "lines": [
+          19,
+          28
+        ],
+        "methods": [
+          "reload: () => Promise<void>"
+        ],
+        "properties": [
+          "state: StateView | undefined",
+          "error: Error | undefined",
+          "setup: SetupView | undefined",
+          "running: number",
+          "restarts: number"
+        ],
+        "generics": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "Panel",
+        "variable_id": "src/client/provider.tsx:Panel",
+        "description": "React context holding the PanelContext value, undefined until provided.",
+        "filepath": "src/client/provider.tsx",
+        "lines": [
+          29,
+          29
+        ],
+        "variable_type": "Context<PanelContext | undefined>",
+        "initial_value": "createContext<PanelContext | undefined>(undefined)",
+        "is_const": true
+      },
+      {
+        "variable_name": "PanelState",
+        "variable_id": "src/client/provider.tsx:PanelState",
+        "description": "React context holding the PanelData value, undefined until provided.",
+        "filepath": "src/client/provider.tsx",
+        "lines": [
+          30,
+          30
+        ],
+        "variable_type": "Context<PanelData | undefined>",
+        "initial_value": "createContext<PanelData | undefined>(undefined)",
+        "is_const": true
+      }
+    ],
+    "constants": [
+      {
+        "constant_name": "messages",
+        "constant_id": "src/client/provider.tsx:messages",
+        "description": "Factory returning the localized ApiMessages used by the API caller.",
+        "filepath": "src/client/provider.tsx",
+        "lines": [
+          58,
+          64
+        ],
+        "constant_type": "(t: T) => ApiMessages",
+        "value": "arrow function mapping translator to ApiMessages"
+      },
+      {
+        "constant_name": "stay",
+        "constant_id": "src/client/provider.tsx:stay",
+        "description": "No-op placeholder for navigation callbacks.",
+        "filepath": "src/client/provider.tsx",
+        "lines": [
+          72,
+          72
+        ],
+        "constant_type": "() => void",
+        "value": "() => {}"
+      },
+      {
+        "constant_name": "noSession",
+        "constant_id": "src/client/provider.tsx:noSession",
+        "description": "Async no-op placeholder for the openSession callback.",
+        "filepath": "src/client/provider.tsx",
+        "lines": [
+          73,
+          73
+        ],
+        "constant_type": "() => Promise<void>",
+        "value": "async () => {}"
+      }
+    ],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

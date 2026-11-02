@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/links.ts",
+    "path": "src/app/links.ts",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "81cc4b654c1903afa0472814c0e6a050a928b44681af4d9b3ce3b55360ae48ac",
+  "sourceFingerprint": "7d17aef4fb89936467ad99d6c25417b03d7b4a66ad02e3b0981aed3cb2f0ffc2",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/app",
+      "resultFingerprint": "c5d9a996b9b8fdf32bef10c15d47f0ba7a1c84c5d144bf4160f01af92915cf64"
+    },
+    {
+      "kind": "file",
+      "path": "docs/007-architecture.md",
+      "contentFingerprint": "e3747665587fdf88b28d4e9c1a1f8ac40cbc2c65a9999be1fce14b69ec44d748"
+    },
+    {
+      "kind": "file",
+      "path": "prompts/dispatch.md",
+      "contentFingerprint": "c34fce83efd114cb5bb725673f1249f092b4e57205cac7cdc45d51160d94ec2a"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/assessment.ts",
+      "contentFingerprint": "5b2c2cf71093fd560f1f3a57cc476f122241b780fbeb2f6007e727943142b545"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/cache.ts",
+      "contentFingerprint": "7489f68ca2889b981975b7ced0aa13094a08f6b15008a928981bb3c03cda5a5d"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/cards.ts",
+      "contentFingerprint": "9d3522b787612ba129058b89f8a4c5f9a4e980321f69c3cc68607c5b111d8ef6"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/http.ts",
+      "contentFingerprint": "5da39830429559975cae7ae6d39416acb2322ac8e31cfb4da3436df602cb7ec4"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/links.ts",
+      "contentFingerprint": "7d17aef4fb89936467ad99d6c25417b03d7b4a66ad02e3b0981aed3cb2f0ffc2"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/migration.ts",
+      "contentFingerprint": "b479546845852ac670ae8fe592b8564f96bb78d30dd2370f767ba2050bab8d9b"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/notices.ts",
+      "contentFingerprint": "c6d464a69809719408b6f279490d22e98e00901cba3058a84c76cfe73aa69022"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/resources.ts",
+      "contentFingerprint": "cc09f56669b2ccacfc889aa98132590b618f77e6648a7ff8fe8454106c8c663f"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/runtime.ts",
+      "contentFingerprint": "5befef035b4a70978cd881b32282680260c6d2561679f890dd911214664cf515"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/ports.ts",
+      "contentFingerprint": "0b44f1cd716d64776b0e3ea74a158cf0effd92e763b1b13c7705e766e9225a43"
+    },
+    {
+      "kind": "file",
+      "path": "src/executor/dsh.ts",
+      "contentFingerprint": "6445a03121fa9bd15fc437736bcc2acc6ab950c5fe732e5b99eb8ee2c8a9476b"
+    },
+    {
+      "kind": "file",
+      "path": "src/infra/commands.ts",
+      "contentFingerprint": "9d7593c5022e0c1813731c1f1cd8471b1536b0b5f42974a08ef2b2930c1e62b2"
+    },
+    {
+      "kind": "file",
+      "path": "src/policy.ts",
+      "contentFingerprint": "01cff8c333b341ee2943e644046f0da3ed9675af1c0029489b5f4bc8226d293d"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/feishu-read.ts",
+      "contentFingerprint": "4c8fa546db21c8cf2dbc2b7dc7533e06eff3dfb41ee05a9657bd9a7975671907"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/feishu-trigger.ts",
+      "contentFingerprint": "d605d1381da26509020f743b5945a768276aa81f9604ef0b5879aab3e535bf08"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/feishu.ts",
+      "contentFingerprint": "b8830aa06caa7ee13ffb7f5d31f8707392174e9e2920323582ee150a3abc6560"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/registry.ts",
+      "contentFingerprint": "fe8a8fce0b00b65d4fb69b7cd2e5fbf4950b8dc32f0891169f9150c4a16eb5cd"
+    },
+    {
+      "kind": "file",
+      "path": "tests/assessment.spec.ts",
+      "contentFingerprint": "3d1c5c2dd12bfd5ae2e7545d602231e0145dc66d3cc135b0eee76283a26d9a60"
+    },
+    {
+      "kind": "file",
+      "path": "tests/runtime-concurrency.spec.ts",
+      "contentFingerprint": "c29f5528381a30f27d9ee9bbf4af451dd32eeed8b2e66ab049137d87a02c0d2a"
+    },
+    {
+      "kind": "file",
+      "path": "tests/tools.spec.ts",
+      "contentFingerprint": "44b163705d397c18ec8fda277ed0bf6f91aea1228a47c6e15cc1918a87ff55a5"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "candidateCard",
+      "limit": 40,
+      "resultFingerprint": "7eb41c4d502026ce2207b706a06b2261e05498156204f40c88e4e3e197e6f991"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "export function feishuRef",
+      "limit": 10,
+      "resultFingerprint": "21d3c7f817ef03df30046cc848401c5fa896368a19b2267f6df9fec2aaaac05b"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "feishuSettings",
+      "limit": 20,
+      "resultFingerprint": "8c88976a85b514504ad2beffb7e1368baf4ab35eb4e14a5047b4a01357a14ac4"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "linkTimeoutMs",
+      "limit": 10,
+      "resultFingerprint": "1e1adfca432dfd7cf67157cf0d7b1134845d74c3c5560a68fec6af3a1cbf2500"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "referenced_tickets",
+      "limit": 20,
+      "resultFingerprint": "27e24a7e5b1d791483853e1b7f0649331b8c94bd49d73fb7a9c48618baf5208c"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "sourceLink",
+      "limit": 40,
+      "resultFingerprint": "48c122e08ed75ba87e3f3847f99efe1a057ba1a7931145121becc07c51949422"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "disposition",
+      "limit": 15,
+      "resultFingerprint": "efe372b67cd8a9307db3e39e905f7ae0b9e7753f589d49ab31571dd48f9993de"
+    },
+    {
+      "kind": "search",
+      "path": "src/app/store.ts",
+      "query": "disposition(",
+      "limit": 30,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "search",
+      "path": "src/core",
+      "query": "interface Candidate",
+      "limit": 15,
+      "resultFingerprint": "4362873b499cf8e7df19e5825e525177e65b64778266e207370b29f5c75479d1"
+    },
+    {
+      "kind": "search",
+      "path": "src/executor/dsh.ts",
+      "query": "export function triggerMessage",
+      "limit": 20,
+      "resultFingerprint": "b37418fcf512ba8cccd339ffead247ea93dc20c26366eae58965709decb1b5f2"
+    },
+    {
+      "kind": "search",
+      "path": "src/infra/commands.ts",
+      "query": "withSignal",
+      "limit": 10,
+      "resultFingerprint": "fc4866e68dc7775ad1e3cb9c469bb7b9a3ea560b5a6296d74cff8533dd9a1561"
+    },
+    {
+      "kind": "search",
+      "path": "src/policy.ts",
+      "query": "mode",
+      "limit": 10,
+      "resultFingerprint": "59feab5c4befe1c0b2cd676fb38d66d680f2b61b46237d5fbd2681a708b8116f"
+    },
+    {
+      "kind": "search",
+      "path": "src/sources/feishu.ts",
+      "query": "export function feishuRef",
+      "limit": 50,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "search",
+      "path": "src/sources/registry.ts",
+      "query": "find(",
+      "limit": 20,
+      "resultFingerprint": "ba9065dbee4327741db89c21ff2046e3c33a3e9354643c9d0c6b7a368fdd516c"
+    },
+    {
+      "kind": "search",
+      "path": "src/sources/registry.ts",
+      "query": "links.ts",
+      "limit": 10,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "search",
+      "path": "src/sources/registry.ts",
+      "query": "repliesTo",
+      "limit": 20,
+      "resultFingerprint": "c37bd877b5a704425fefffcfeef23f7cc5d8c6ad79aebc479253071c1e7f559e"
+    },
+    {
+      "kind": "search",
+      "path": "tests",
+      "query": "source_url_read",
+      "limit": 20,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-orchestration:external-adapter,presentation",
+      "contentFingerprint": "44b01aba19a73a1b47484bf3863591b32c97f6f2dc9214aaab94d844c36a3268"
+    }
+  ],
+  "infoFingerprint": "e5bd214491dbed7c3715ab5e50604b412d566f9687aa8e912de96ed9b9415544",
+  "artifacts": {
+    "info": ".fibo/analysis/src/app/links.ts.info.md",
+    "structure": ".fibo/analysis/src/app/links.ts.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "e5bd214491dbed7c3715ab5e50604b412d566f9687aa8e912de96ed9b9415544",
+    "structure": "23b73761a2876d7f57695ca5b530b8e6ce254157021868e76047d20f1f573dc3"
+  }
+}

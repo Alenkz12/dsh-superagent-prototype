@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/execution-environment.ts",
+    "path": "src/app/execution-environment.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "execution-environment.ts",
+    "file_path": "src/app/execution-environment.ts",
+    "description": "Builds the execution environment variable set (executor and source-owned) for deployments, tickets, and triggers",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "node:path",
+        "description": "Node path utility, provides the join function for path composition",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Core types for tickets and triggers",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Deployment type describing the target deployment",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "../deployment.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Settings type providing policy configuration",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "../policy.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Source kind types for localized text and variable specs",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "../sources/kind.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Source registry type listing declared and enabled environment sources",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "../sources/registry.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "declaredVariables",
+        "function_id": "src/app/execution-environment.ts:declaredVariables(sources: SourceRegistry, settings?: Settings)",
+        "description": "Returns executor and source variable declarations with their owner and enabled state",
+        "filepath": "src/app/execution-environment.ts",
+        "lines": [
+          21,
+          25
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "environmentOf",
+        "function_id": "src/app/execution-environment.ts:environmentOf(input: { deployment: Deployment; sources: SourceRegistry; settings: Settings; ticket?: { id: string; name: string; directory: string }; trigger?: Trigger })",
+        "description": "Composes the full variable list from executor specs and each enabled source environment",
+        "filepath": "src/app/execution-environment.ts",
+        "lines": [
+          27,
+          36
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "ticketEnvironment",
+        "function_id": "src/app/execution-environment.ts:ticketEnvironment(input: { deployment: Deployment; sources: SourceRegistry; settings: Settings; ticket: Ticket; trigger?: Trigger })",
+        "description": "Builds environment variables for a ticket by extracting its id, name, and directory",
+        "filepath": "src/app/execution-environment.ts",
+        "lines": [
+          39,
+          43
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "environmentLines",
+        "function_id": "src/app/execution-environment.ts:environmentLines(variables: Variable[])",
+        "description": "Formats variables into markdown-style key/value/description lines",
+        "filepath": "src/app/execution-environment.ts",
+        "lines": [
+          44,
+          46
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "Variable",
+        "interface_id": "src/app/execution-environment.ts:Variable",
+        "description": "Resolved environment variable with key, value, localized description, and owner",
+        "filepath": "src/app/execution-environment.ts",
+        "lines": [
+          16,
+          16
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "EXECUTOR_VARIABLES",
+        "variable_id": "src/app/execution-environment.ts:EXECUTOR_VARIABLES",
+        "description": "Executor-owned variable specs, including ticket-specific ones and blocked commands",
+        "filepath": "src/app/execution-environment.ts",
+        "lines": [
+          10,
+          15
+        ]
+      },
+      {
+        "variable_name": "executionRoot",
+        "variable_id": "src/app/execution-environment.ts:executionRoot",
+        "description": "Resolves the execution root directory from settings or falls back to the state work dir",
+        "filepath": "src/app/execution-environment.ts",
+        "lines": [
+          18,
+          18
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

@@ -1,0 +1,301 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "collection:src/app",
+    "path": "src/app",
+    "kind": "directory"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "c0755462cc2e29b8bec497b4e5dd06cf3d88d5dc9ab1ca0485f3361440bd82f3",
+  "children": [
+    {
+      "id": "collection:src/app/tools",
+      "infoFingerprint": "8e9e29a00944614397e027840abf35f840501b357439480d0eb3e3c5edbf92d4"
+    },
+    {
+      "id": "collection:src/app/views",
+      "infoFingerprint": "959098a68dfc7b5aa04c90207f134ad44d3992d6981e67638854d20a2e9a74f8"
+    },
+    {
+      "id": "file:src/app/api.ts",
+      "infoFingerprint": "4c9de7c87655a9e1f04c71aa99f7e46d1bf3ffb00fae66a12f9fd7eaa92ae4e7"
+    },
+    {
+      "id": "file:src/app/assessment.ts",
+      "infoFingerprint": "aeb8c431cef33553de712557bf494e8012f412cf7bc961c65f3ed27a6ce4ea09"
+    },
+    {
+      "id": "file:src/app/cache.ts",
+      "infoFingerprint": "cb98140263bde2e4be0db03513557436148c57a5bc1e1ec3beeda1b4962b460f"
+    },
+    {
+      "id": "file:src/app/cards.ts",
+      "infoFingerprint": "d8f06dac2650e1fa21634317325583bdb7ee3cff0b6678f34a3d257992a75100"
+    },
+    {
+      "id": "file:src/app/context.ts",
+      "infoFingerprint": "63871d60887855a2ce868450b942660655b1e08e8b021f965916db01b5715178"
+    },
+    {
+      "id": "file:src/app/delivery.ts",
+      "infoFingerprint": "cec1bc8061def7bd5843371df0b533cee4886affcea8e3d755644aa620ab077a"
+    },
+    {
+      "id": "file:src/app/effects.ts",
+      "infoFingerprint": "e6b4e7618e879a4c3fe1a2dbae16b22b0743d99101227cd050322d5f4ba3e5a8"
+    },
+    {
+      "id": "file:src/app/execution-environment.ts",
+      "infoFingerprint": "66684ebe660b033dd5b7d12d1bb1668f3473782709e00b4ef3d694ea2d54f4ce"
+    },
+    {
+      "id": "file:src/app/http.ts",
+      "infoFingerprint": "4c897d6ead3e4810b0174a5cd684d4e3ad2cf3301fbc037f98398a1bcfcd5af9"
+    },
+    {
+      "id": "file:src/app/links.ts",
+      "infoFingerprint": "e5bd214491dbed7c3715ab5e50604b412d566f9687aa8e912de96ed9b9415544"
+    },
+    {
+      "id": "file:src/app/migration.ts",
+      "infoFingerprint": "99568aee6c332b43e2a08a4c38e1e916c16c129c52389b4120bb3dc5d1121e0f"
+    },
+    {
+      "id": "file:src/app/notices.ts",
+      "infoFingerprint": "2269501d82f344e0d90e52b7f466f422ad69cfaffad87e439201b28e45f378be"
+    },
+    {
+      "id": "file:src/app/outbox.ts",
+      "infoFingerprint": "74c9f9d0ec95649fa08541de59378ef1f764a07be4f60cfaa4fa07f414c9721d"
+    },
+    {
+      "id": "file:src/app/passes.ts",
+      "infoFingerprint": "5eac1fbe6072dc6bb31f850596b39e3ffeeff791d86d509b08287216b4106f8d"
+    },
+    {
+      "id": "file:src/app/prompts.ts",
+      "infoFingerprint": "b2efcda2248c4c8fe66618154d9318a7d43c0b987d7b6588cfe21739ab42f7fe"
+    },
+    {
+      "id": "file:src/app/resources.ts",
+      "infoFingerprint": "73ac8a70fb031b29e6b64bd187390e4e1ec7b0f47055dcf7c0560755f335d2d0"
+    },
+    {
+      "id": "file:src/app/retry-health.ts",
+      "infoFingerprint": "50e1cc221a4d3158db2b8af5717e77b6c787bfdfa54a1db8880dcccdc64d25bd"
+    },
+    {
+      "id": "file:src/app/role-models.ts",
+      "infoFingerprint": "cb4d558ef12a4610c46e59be66149b40f0aac36733f439fa6eae82d5aa51e6fa"
+    },
+    {
+      "id": "file:src/app/runtime.ts",
+      "infoFingerprint": "2b202c9c7e66f75c5e8d020f1682cc55a8d2c3ff7d0eb73d3863b48f12736510"
+    },
+    {
+      "id": "file:src/app/sessions.ts",
+      "infoFingerprint": "d690f50cdb854abf821b2426eb99383a319fcc77a4f4d1e2aabbd8f1567847a8"
+    },
+    {
+      "id": "file:src/app/settings-history.ts",
+      "infoFingerprint": "5da8900ad540ac1b86f44366f09b1c551b8b874a9c37ef6eefba916ab2d4eac0"
+    },
+    {
+      "id": "file:src/app/settings.ts",
+      "infoFingerprint": "909230d380800e096d98c828a253f4816030b88a561554afece060b4e6100fab"
+    },
+    {
+      "id": "file:src/app/setup.ts",
+      "infoFingerprint": "cf2d3d049183dfb72390207afe652159e746bea1d4067ed5ddcc7f9412bdface"
+    },
+    {
+      "id": "file:src/app/skill-files.ts",
+      "infoFingerprint": "3d54a01cd046deca74116e7f0286b324e10391668c0145002ca1b9f239d3904c"
+    },
+    {
+      "id": "file:src/app/source-context.ts",
+      "infoFingerprint": "6580d004675e80f0e03ce6ccf6a8683db946e1bc1dd7914142cd7f42672674fc"
+    },
+    {
+      "id": "file:src/app/store-read.ts",
+      "infoFingerprint": "c446eb3d8d67069fb227a8498810dbe91e4dd1fff25c3de3aa0854b17a943abe"
+    },
+    {
+      "id": "file:src/app/store.ts",
+      "infoFingerprint": "13e0f34f782bd9e9cfd954a523562d245b44709296abaa91b26533a5b2f7d581"
+    },
+    {
+      "id": "file:src/app/versions.ts",
+      "infoFingerprint": "13314dddc8ef37b749c919544690e8ef844c24069c1a9f531abe41138a078aba"
+    }
+  ],
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src",
+      "resultFingerprint": "e17b6d8ec5aecd9176b3ffda9aabd0329f88456cdae8ef4e381964a8cae1ea63"
+    },
+    {
+      "kind": "directory-listing",
+      "path": "src/app",
+      "resultFingerprint": "c5d9a996b9b8fdf32bef10c15d47f0ba7a1c84c5d144bf4160f01af92915cf64"
+    },
+    {
+      "kind": "directory-listing",
+      "path": "src/core",
+      "resultFingerprint": "be82a7cf8ea92859bf3f3d905a318cf2acf25b289109698a34e8e9c13ab4a02c"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/api.ts",
+      "contentFingerprint": "ceb0c76cb2d8680e2be4edf0f6ac42c90e6a4ff78e0e14ce4aa277357606ff04"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/assessment.ts",
+      "contentFingerprint": "5b2c2cf71093fd560f1f3a57cc476f122241b780fbeb2f6007e727943142b545"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/context.ts",
+      "contentFingerprint": "7442ebc5acc1267fc801665e36351e13a91d0bb97c2674b045330b5b8bb6d2cd"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/delivery.ts",
+      "contentFingerprint": "2a4f531e6ceca4fc98ed0203247f4abeaa10776e5b26909eb93f347b479f7a73"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/effects.ts",
+      "contentFingerprint": "d350590473299398b17c50dd641c72e1995dd95920c5138699491ab77e3ae481"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/http.ts",
+      "contentFingerprint": "5da39830429559975cae7ae6d39416acb2322ac8e31cfb4da3436df602cb7ec4"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/outbox.ts",
+      "contentFingerprint": "48d20062dd8c34c2b95e851c78265c9e403d1040894e97c7d9d0fa190d54415e"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/passes.ts",
+      "contentFingerprint": "79688aeb8c43396b9f122b3feba0ce1c422f1bfbca3b32919cd764a217b67ea9"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/prompts.ts",
+      "contentFingerprint": "fd22f1b1e7c1571f2eae4299995a13cc0b04cb212e18ef23e9b27ed28a1a1de6"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/resources.ts",
+      "contentFingerprint": "cc09f56669b2ccacfc889aa98132590b618f77e6648a7ff8fe8454106c8c663f"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/runtime.ts",
+      "contentFingerprint": "5befef035b4a70978cd881b32282680260c6d2561679f890dd911214664cf515"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/sessions.ts",
+      "contentFingerprint": "ca2b98e57e9f27b2abb0afab59d44ea744a96d8be4cf81d7b3776901b56cd36b"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/settings.ts",
+      "contentFingerprint": "2c7cd780dd24ab6a99ddfd30f80b921db035e0d56e3e1d42a86371fe20423f3f"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/setup.ts",
+      "contentFingerprint": "d1de51b048d352345d4837a5911ba4d0158979c8073575feddc064670c8a697a"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/source-context.ts",
+      "contentFingerprint": "909ad5cb9739e4143ddc9ad1d38a6b1b46b18d52c0bcd2b4f8e25b691d0b9047"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/store-read.ts",
+      "contentFingerprint": "610916ed23ce62bd60c6ebdfa4f59510b1f8f842399fff0dac6aeed96a9c93ef"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/store.ts",
+      "contentFingerprint": "c124de893fbe260571b18b0ac4875bc7647e44e72062ba38b02c809e0012d583"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/tools/executor.ts",
+      "contentFingerprint": "9869d8a5043725847f18814e23b29c11ae93aa974defa72d2eab62c61a6def47"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/tools/main.ts",
+      "contentFingerprint": "88603eb5a94c67e93141e07bd09bde85d65f980a1f42503c53ab9c22ec5c538d"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/views/records.ts",
+      "contentFingerprint": "5ed48ab5dfaaa729f0520c1dfc30d962f6a716d11d71088fd43ce9bedaa3cd39"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/engine.ts",
+      "contentFingerprint": "bd9a4caff834859877d1a08ccddebc990d0e1ca568674b80f9d59ce5adcac827"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/host.ts",
+      "contentFingerprint": "b07998dad9194319a95a9436084cf1612aef9c4c6de22288cfa04258bbfbb1ce"
+    },
+    {
+      "kind": "search",
+      "path": "src/app/prompts.ts",
+      "query": "save(",
+      "limit": 50,
+      "resultFingerprint": "6509d8f04436babd4a57ff4d53bb63044993cdfc48b047dfcedaae1842dc9250"
+    },
+    {
+      "kind": "search",
+      "path": "src/app/settings.ts",
+      "query": "save(",
+      "limit": 50,
+      "resultFingerprint": "5e2a724073e561fb0745e33209cdd6daffd3e4d3030639652ce4af2d626ef167"
+    },
+    {
+      "kind": "search",
+      "path": "src/core/engine.ts",
+      "query": "export class Engine",
+      "limit": 50,
+      "resultFingerprint": "0f046e91a6651624bb0c8ebb12c9e99930fccb4f2dfc2d9c7c43a6403b1e9d4c"
+    },
+    {
+      "kind": "search",
+      "path": "src/sources/host.ts",
+      "query": "export interface SourceHost",
+      "limit": 50,
+      "resultFingerprint": "6b893d0dc1c4b6296ee24bb065973dd7bd7fc78db3d7ec712662b24be8d26826"
+    },
+    {
+      "kind": "template",
+      "key": "directory-language-gfgo-primary-orchestration:api-boundary,configuration,state-storage",
+      "contentFingerprint": "fe641999b527a29aac760f13a3532bdcb63af9414ba79b1e11574245fd4fd62f"
+    }
+  ],
+  "infoFingerprint": "e837313b9a53e9a86f4e59de5bfd10b3acdf45781bdabaa0fd9858b4e103970b",
+  "artifacts": {
+    "info": ".fibo/analysis/src/app/app.info.md",
+    "structure": ".fibo/analysis/src/app/app.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "e837313b9a53e9a86f4e59de5bfd10b3acdf45781bdabaa0fd9858b4e103970b",
+    "structure": "7b691ac524e674373ee351e47e94a164c8c3a0afbc09e3686619b119dbb3457b"
+  }
+}

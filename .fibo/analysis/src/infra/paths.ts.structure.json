@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/infra/paths.ts",
+    "path": "src/infra/paths.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "paths.ts",
+    "file_path": "src/infra/paths.ts",
+    "description": "Path utilities locating the package root directory and resolving package-relative paths",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "node:fs",
+        "description": "Node fs helpers for checking and reading the package manifest file",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "node:path",
+        "description": "Node path helpers for directory traversal and segment joining",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "node:url",
+        "description": "Node url helper converting the module URL to a filesystem path",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "packageRoot",
+        "function_id": "src/infra/paths.ts:packageRoot()",
+        "description": "Finds and caches the root directory of the dsh-superagent package by walking up to its package.json",
+        "filepath": "src/infra/paths.ts",
+        "lines": [
+          7,
+          19
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "cached",
+        "variable_id": "src/infra/paths.ts:cached",
+        "description": "Memoized package root directory path, undefined until first resolution",
+        "filepath": "src/infra/paths.ts",
+        "lines": [
+          6,
+          6
+        ]
+      },
+      {
+        "variable_name": "packagePath",
+        "variable_id": "src/infra/paths.ts:packagePath",
+        "description": "Joins given path segments onto the resolved package root directory",
+        "filepath": "src/infra/paths.ts",
+        "lines": [
+          20,
+          20
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

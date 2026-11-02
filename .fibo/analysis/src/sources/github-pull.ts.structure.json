@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/sources/github-pull.ts",
+    "path": "src/sources/github-pull.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "github-pull.ts",
+    "file_path": "src/sources/github-pull.ts",
+    "description": "GitHub pull request source integration: schema, ticket binding, closure handling, and end notices",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "zod",
+        "description": "Imports the zod schema validation library",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports core helpers, thread key utility, and ticket/notice types",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the deployment type definition",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "../deployment.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the sameName text comparison helper",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "../infra/text.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the source context type for host integrations",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "./host.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports GitHub source constants, page URL helper, and user schema",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "./github-trigger.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "claimPull",
+        "function_id": "src/sources/github-pull.ts:claimPull(ctx: SourceContext, ticketId: string, pr: Pull)",
+        "description": "Validates and claims a PR for a ticket, binding the PR thread when appropriate; returns an error message when invalid",
+        "filepath": "src/sources/github-pull.ts",
+        "lines": [
+          35,
+          50
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "observePull",
+        "function_id": "src/sources/github-pull.ts:observePull(ctx: SourceContext, pr: Pull)",
+        "description": "Observes a PR state update, closing it when ended or auto-claiming it for a matching open ticket; returns whether the PR ended",
+        "filepath": "src/sources/github-pull.ts",
+        "lines": [
+          57,
+          69
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "bind",
+        "function_id": "src/sources/github-pull.ts:bind(ctx: SourceContext, ticketId: string, pr: Pull, own: boolean)",
+        "description": "Atomically binds a PR thread to a ticket and patches the thread with PR metadata",
+        "filepath": "src/sources/github-pull.ts",
+        "lines": [
+          70,
+          75
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "closePull",
+        "function_id": "src/sources/github-pull.ts:closePull(ctx: SourceContext, pr: Pull)",
+        "description": "Marks the PR thread as merged or closed for tickets currently following it",
+        "filepath": "src/sources/github-pull.ts",
+        "lines": [
+          80,
+          84
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "pullEndNotices",
+        "function_id": "src/sources/github-pull.ts:pullEndNotices(ticket: Ticket, request: string, repository: string)",
+        "description": "Builds localized merge/close notice messages for a ticket's ended PR, skipping GitHub channels",
+        "filepath": "src/sources/github-pull.ts",
+        "lines": [
+          90,
+          105
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "PullSchema",
+        "variable_id": "src/sources/github-pull.ts:PullSchema",
+        "description": "Zod schema describing the GitHub pull request API response shape",
+        "filepath": "src/sources/github-pull.ts",
+        "lines": [
+          9,
+          14
+        ]
+      },
+      {
+        "variable_name": "readPull",
+        "variable_id": "src/sources/github-pull.ts:readPull",
+        "description": "Fetches a single pull request by number through the GitHub API and parses it",
+        "filepath": "src/sources/github-pull.ts",
+        "lines": [
+          16,
+          17
+        ]
+      },
+      {
+        "variable_name": "pullNumber",
+        "variable_id": "src/sources/github-pull.ts:pullNumber",
+        "description": "Extracts the PR number from a GitHub thread identifier string",
+        "filepath": "src/sources/github-pull.ts",
+        "lines": [
+          18,
+          18
+        ]
+      },
+      {
+        "variable_name": "pullsOf",
+        "variable_id": "src/sources/github-pull.ts:pullsOf",
+        "description": "Lists PR numbers a ticket follows, optionally only still-open ones",
+        "filepath": "src/sources/github-pull.ts",
+        "lines": [
+          19,
+          20
+        ]
+      },
+      {
+        "variable_name": "pullOf",
+        "variable_id": "src/sources/github-pull.ts:pullOf",
+        "description": "Returns the most recent PR number a ticket follows, preferring open ones",
+        "filepath": "src/sources/github-pull.ts",
+        "lines": [
+          21,
+          21
+        ]
+      },
+      {
+        "variable_name": "agentPull",
+        "variable_id": "src/sources/github-pull.ts:agentPull",
+        "description": "Checks whether a PR was authored by the agent's account from the target repository",
+        "filepath": "src/sources/github-pull.ts",
+        "lines": [
+          23,
+          25
+        ]
+      },
+      {
+        "variable_name": "ticketBranch",
+        "variable_id": "src/sources/github-pull.ts:ticketBranch",
+        "description": "Checks whether a branch ref's last path segment matches the ticket's execution name",
+        "filepath": "src/sources/github-pull.ts",
+        "lines": [
+          27,
+          28
+        ]
+      },
+      {
+        "variable_name": "AUTO_MERGE_ON",
+        "variable_id": "src/sources/github-pull.ts:AUTO_MERGE_ON",
+        "description": "Thread fact label indicating that auto-merge is enabled",
+        "filepath": "src/sources/github-pull.ts",
+        "lines": [
+          29,
+          29
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "Pull",
+        "alias_id": "src/sources/github-pull.ts:Pull",
+        "description": "Parsed GitHub pull request payload extended with its PR number",
+        "filepath": "src/sources/github-pull.ts",
+        "lines": [
+          15,
+          15
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

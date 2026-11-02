@@ -1,0 +1,656 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/thread.tsx",
+    "path": "src/client/thread.tsx",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "thread.tsx",
+    "file_path": "src/client/thread.tsx",
+    "description": "Thread detail page component: renders a Thread's trigger timeline with gap-free pagination (live polling + deep-linked target + manual 'load earlier'), disposition tags, decisions disclosure, subscribed tickets, correlated threads, and an unsubscribe danger zone.",
+    "file_type": "tsx",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ApiError",
+        "description": "API error class used to detect a missing Thread (404) and render a not-found hint",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "src/client/api.ts",
+        "alias": ""
+      }
+    ],
+    "import_function": [
+      {
+        "function_name": "useEffect",
+        "description": "React effect hook used to load the deep-linked trigger page and to fill timeline gaps",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "useState",
+        "description": "React state hook used for local component state (older page, decisions disclosure)",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "usePoll",
+        "description": "Polling hook that periodically fetches the newest Thread page and exposes data/error/reload",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "src/client/api.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "Button",
+        "description": "Generic button control used for the 'load earlier' pagination action",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "DisclosureRow",
+        "description": "Collapsible disclosure row control wrapping the decisions list",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "Icon",
+        "description": "Named SVG icon renderer (decision, refresh, chevron-down)",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "Tag",
+        "description": "Small toned tag/chip element used for disposition labels",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "decisionMark",
+        "description": "Maps a decision outcome to a tag tone and localized label",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "src/client/marks.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "useAction",
+        "description": "Hook wrapping an async action with busy state and optional post-success reload",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "src/client/provider.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "usePanel",
+        "description": "Panel context hook providing translator, api caller, navigation and notifier",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "src/client/provider.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "DecisionLine",
+        "description": "List row rendering a single decision",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/rows.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "Earlier",
+        "description": "Renders the folded earlier triggers of an automated run",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/rows.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "TicketLine",
+        "description": "List row rendering a subscribed Ticket with optional context marking",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/rows.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "automatedRuns",
+        "description": "Groups consecutive automated triggers into folded runs for timeline rendering",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/rows.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "actorName",
+        "description": "Resolves a localized display name for an actor",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "errorText",
+        "description": "Converts an unknown failure into a human-readable error message",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "readableMarkers",
+        "description": "Renders marker tokens (mentions, references) in a human-readable form",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "reasonLabel",
+        "description": "Localizes a filtering/disposition reason identifier",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "valueLabel",
+        "description": "Localizes an enumerated value for a given field kind (e.g. source, strength)",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "when",
+        "description": "Formats a timestamp relative to the current locale",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "ActionLink",
+        "description": "Styled external link action for the original Thread URL",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "ClampText",
+        "description": "Clamped/truncated multi-line text block",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "ConfirmButton",
+        "description": "Button that asks for confirmation before running a destructive action",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "Hint",
+        "description": "Muted hint/notice text element",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "LoadState",
+        "description": "Loading/error placeholder renderer",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "PageHead",
+        "description": "Page header with title and optional actions",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "Section",
+        "description": "Titled section container with optional count badge",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "When",
+        "description": "Timestamp display component",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      }
+    ],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "triggerTags",
+        "function_id": "src/client/thread.tsx:triggerTags(T, TriggerRow, Set<string>)",
+        "description": "Builds the disposition tag list for a Trigger (queued/evaluating/filtered/decision/delivered/fanout), omitting 'ignore' and suppressing fanout tags when every target ticket is already subscribed",
+        "filepath": "src/client/thread.tsx",
+        "lines": [
+          12,
+          26
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "t",
+            "param_type": "T",
+            "description": "Translator function for localized labels",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "trigger",
+            "param_type": "TriggerRow",
+            "description": "Trigger row whose disposition is rendered as tags",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "subscribed",
+            "param_type": "Set<string>",
+            "description": "Set of ticket ids already listed as subscribed, used to suppress redundant fanout tags",
+            "default_value": "",
+            "is_optional": true
+          }
+        ],
+        "return_type": "ReactNode",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "TriggerItem",
+        "function_id": "src/client/thread.tsx:TriggerItem(props)",
+        "description": "Renders a single timeline entry: actor and time footer, clamped text, folded earlier triggers, handback hints, disposition tags, an 'open ticket' link, and an optional requeue button; auto-scrolls to itself when it is the deep-linked target",
+        "filepath": "src/client/thread.tsx",
+        "lines": [
+          28,
+          56
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "trigger",
+            "param_type": "TriggerRow",
+            "description": "The trigger represented by this timeline entry",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "earlier",
+            "param_type": "TriggerRow[]",
+            "description": "Earlier automated triggers folded into this entry",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "target",
+            "param_type": "string | undefined",
+            "description": "Deep-linked trigger id to highlight and scroll into view",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "subscribed",
+            "param_type": "Set<string>",
+            "description": "Ids of tickets already listed as subscribed",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "requeue",
+            "param_type": "{ busy: boolean; run: () => void } | undefined",
+            "description": "Requeue action state and callback, present only when the trigger supports requeue",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "overlaps",
+        "function_id": "src/client/thread.tsx:overlaps(TriggerRow[], TriggerRow[])",
+        "description": "Checks whether two trigger lists share at least one trigger id",
+        "filepath": "src/client/thread.tsx",
+        "lines": [
+          58,
+          58
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "some",
+            "param_type": "TriggerRow[]",
+            "description": "First trigger list",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "others",
+            "param_type": "TriggerRow[]",
+            "description": "Second trigger list",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "boolean",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "byTime",
+        "function_id": "src/client/thread.tsx:byTime(TriggerRow[])",
+        "description": "De-duplicates triggers by id and sorts them ascending by timestamp",
+        "filepath": "src/client/thread.tsx",
+        "lines": [
+          59,
+          60
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "triggers",
+            "param_type": "TriggerRow[]",
+            "description": "Triggers to deduplicate and sort",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "TriggerRow[]",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "gapBetween",
+        "function_id": "src/client/thread.tsx:gapBetween(ThreadPageView, Older)",
+        "description": "Determines whether there is a discontinuity between the newest polled page and the older loaded page (cursor present but no overlapping triggers)",
+        "filepath": "src/client/thread.tsx",
+        "lines": [
+          61,
+          62
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "newest",
+            "param_type": "ThreadPageView",
+            "description": "Most recently polled thread page",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "older",
+            "param_type": "Older | undefined",
+            "description": "Previously loaded older page, if any",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "boolean",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "mergeTimeline",
+        "function_id": "src/client/thread.tsx:mergeTimeline(ThreadPageView, Older)",
+        "description": "Merges the newest polled page with older loaded triggers (only when contiguous) and advances the earlier cursor",
+        "filepath": "src/client/thread.tsx",
+        "lines": [
+          63,
+          66
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "newest",
+            "param_type": "ThreadPageView",
+            "description": "Most recently polled thread page",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "older",
+            "param_type": "Older | undefined",
+            "description": "Older page to merge into the timeline",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "ThreadPageView",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "useThreadTimeline",
+        "function_id": "src/client/thread.tsx:useThreadTimeline(string, string|undefined)",
+        "description": "Hook managing a Thread's timeline across live polling, a deep-linked target trigger (fetched with `around`) and manual pagination; fills gaps between the newest page and older pages before merging so the timeline stays contiguous",
+        "filepath": "src/client/thread.tsx",
+        "lines": [
+          72,
+          107
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "key",
+            "param_type": "string",
+            "description": "Thread key identifying the thread to load",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "target",
+            "param_type": "string | undefined",
+            "description": "Optional deep-linked trigger id that must be made visible",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "{ data: ThreadPageView | undefined; error: unknown; reload: () => void; earlier: ActionState }",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "ThreadPage",
+        "function_id": "src/client/thread.tsx:ThreadPage(props)",
+        "description": "Exported Thread detail page component rendering header, status/meta line, evaluating banner, poll error, subscribed tickets, decisions disclosure, correlated threads, the paginated timeline (with requeue) and an unsubscribe danger zone",
+        "filepath": "src/client/thread.tsx",
+        "lines": [
+          108,
+          176
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "id",
+            "param_type": "string",
+            "description": "Thread key/id to display",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "target",
+            "param_type": "string",
+            "description": "Optional trigger id to highlight and scroll to (from a deep link)",
+            "default_value": "",
+            "is_optional": true
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      }
+    ],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "Older",
+        "interface_id": "src/client/thread.tsx:Older",
+        "description": "An older page of triggers loaded for the timeline, together with the cursor for the next older page",
+        "extends": [],
+        "filepath": "src/client/thread.tsx",
+        "lines": [
+          57,
+          57
+        ],
+        "methods": [],
+        "properties": [
+          "triggers: TriggerRow[]",
+          "cursor: string | null"
+        ],
+        "generics": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [
+      {
+        "constant_name": "PAGE",
+        "constant_id": "src/client/thread.tsx:PAGE",
+        "description": "Page size (number of triggers) requested per timeline API call",
+        "filepath": "src/client/thread.tsx",
+        "lines": [
+          67,
+          67
+        ],
+        "constant_type": "number",
+        "value": "50"
+      }
+    ],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

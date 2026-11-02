@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/views/sources.ts",
+    "path": "src/app/views/sources.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "sources.ts",
+    "file_path": "src/app/views/sources.ts",
+    "description": "View module that assembles source (integration) status, health, and dropped-reply data for the UI.",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Imports threadKey helper from core.",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "internal",
+        "filepath": "../../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Deployment type from deployment module.",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "../../deployment.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Health type from the sources host module.",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "../../sources/host.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the SourceInstance type from the sources kind module.",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "../../sources/kind.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the SourceRegistry type from the sources registry module.",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "../../sources/registry.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the SetupProblem type from the setup module.",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "../../setup.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports dayAgo, snapshot, and ViewHost type from records view helpers.",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "./records.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the preview text helper from the text view module.",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "./text.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "sourceHealth",
+        "function_id": "src/app/views/sources.ts:sourceHealth(sources: SourceRegistry, instance: SourceInstance, health: HealthMap)",
+        "description": "Builds a source instance's title and per-health-part entries, defaulting to 'starting' when unknown or disabled.",
+        "filepath": "src/app/views/sources.ts",
+        "lines": [
+          13,
+          21
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "sourceState",
+        "function_id": "src/app/views/sources.ts:sourceState(instance: SourceInstance & { installed: boolean }, parts: { state: string }[], setup: SetupState)",
+        "description": "Derives a single source state (missing/off/error/setup/starting/paused/ready) from install, enable, problem, and health flags.",
+        "filepath": "src/app/views/sources.ts",
+        "lines": [
+          33,
+          40
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "sourcesStatus",
+        "function_id": "src/app/views/sources.ts:sourcesStatus(host: ViewHost, health: HealthMap, setup: SetupState)",
+        "description": "Returns status view models for all source instances, including state, health, problem, trigger stats, filtered and dropped items.",
+        "filepath": "src/app/views/sources.ts",
+        "lines": [
+          41,
+          57
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "droppedReplies",
+        "function_id": "src/app/views/sources.ts:droppedReplies({ store, links }: Pick<ViewHost, 'store' | 'links'>)",
+        "description": "Lists dropped replies within the last 24 hours, enriched with ticket, thread, and preview info.",
+        "filepath": "src/app/views/sources.ts",
+        "lines": [
+          60,
+          70
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "SetupState",
+        "interface_id": "src/app/views/sources.ts:SetupState",
+        "description": "Setup state holding resolved deployment facts and setup/Feishu problems that block sources.",
+        "filepath": "src/app/views/sources.ts",
+        "lines": [
+          22,
+          29
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "problemOf",
+        "variable_id": "src/app/views/sources.ts:problemOf",
+        "description": "Finds the setup problem (general or Feishu) that applies to the given source id.",
+        "filepath": "src/app/views/sources.ts",
+        "lines": [
+          30,
+          30
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "HealthMap",
+        "alias_id": "src/app/views/sources.ts:HealthMap",
+        "description": "Map from health check name to its Health record.",
+        "filepath": "src/app/views/sources.ts",
+        "lines": [
+          11,
+          11
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "SourceState",
+        "alias_id": "src/app/views/sources.ts:SourceState",
+        "description": "Union of possible source states from missing to ready.",
+        "filepath": "src/app/views/sources.ts",
+        "lines": [
+          32,
+          32
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "SourceStatusView",
+        "alias_id": "src/app/views/sources.ts:SourceStatusView",
+        "description": "Type of a single entry returned by sourcesStatus.",
+        "filepath": "src/app/views/sources.ts",
+        "lines": [
+          58,
+          58
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

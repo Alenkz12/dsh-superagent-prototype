@@ -1,0 +1,208 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/deployment.tsx",
+    "path": "src/client/deployment.tsx",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "99f43824d6d0b62738c86c16bf5189591044742f2ba2df4ca7bdd29435f15df8",
+  "sourceFingerprint": "c37ebd5a24d0319a28d3d98a76dde23d9694b0fad4a7900df0eff85de82afb4b",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": ".",
+      "resultFingerprint": "33d167122a7a91ec8c4229cc048c3eced0124c8af994b4237ff4b53af38c4f08"
+    },
+    {
+      "kind": "directory-listing",
+      "path": "src/client",
+      "resultFingerprint": "7bf3ac2d009d046122c35f91b95f5cb11c1fc74f53cdfbb3bacbc80ac2b588dc"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/assessment.ts",
+      "contentFingerprint": "5b2c2cf71093fd560f1f3a57cc476f122241b780fbeb2f6007e727943142b545"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/execution-environment.ts",
+      "contentFingerprint": "82aae39bd65141df80f6a85991e35d05c9f0dfc748be88f78b7520ce97883b3f"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/http.ts",
+      "contentFingerprint": "5da39830429559975cae7ae6d39416acb2322ac8e31cfb4da3436df602cb7ec4"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/runtime.ts",
+      "contentFingerprint": "5befef035b4a70978cd881b32282680260c6d2561679f890dd911214664cf515"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/setup.ts",
+      "contentFingerprint": "d1de51b048d352345d4837a5911ba4d0158979c8073575feddc064670c8a697a"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/source-context.ts",
+      "contentFingerprint": "909ad5cb9739e4143ddc9ad1d38a6b1b46b18d52c0bcd2b4f8e25b691d0b9047"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/api.ts",
+      "contentFingerprint": "800b0347183c39601b8b7cd33607dee2538eb8da5feb5f1c7e13a1a7c2268f36"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/app.tsx",
+      "contentFingerprint": "23cca247e0a67fb581df6fc517522ccf0026a4897cda109c9e57c367cb2b1051"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/deployment.tsx",
+      "contentFingerprint": "c37ebd5a24d0319a28d3d98a76dde23d9694b0fad4a7900df0eff85de82afb4b"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/draft.tsx",
+      "contentFingerprint": "e29c5acfd0edacb022bdffe13f6225d2a824fbd01af6554120567dd7beede4d1"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/index.tsx",
+      "contentFingerprint": "6a7e5a0295ecbbd047dbb619e0cdf9d1489a46c8dfcc56dbfd1cfe6f6d866529"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/locales.ts",
+      "contentFingerprint": "d172c86d672b9244effe3590bc7c25ac71b80d3ccbb7d6c5fe76848ce31eba12"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/provider.tsx",
+      "contentFingerprint": "5639db28e87c1fa0752a30b5280c2e492685bea0593809f72c975b5274d12a8f"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/settings-kit.tsx",
+      "contentFingerprint": "4a75031188c08fb54fd8f45725a3530b3005920412004f5d9817757a72eb87a9"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/settings.tsx",
+      "contentFingerprint": "cd1a57e27ac0d8d3a968c6abb0093ddd48a2b5e36b3d16fcb1f9be3930885ee4"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/text.ts",
+      "contentFingerprint": "b5c4a264ea799f40598b66d175b434dcb37e2033cddffad8f3e0c8ec1e080c92"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/widgets.tsx",
+      "contentFingerprint": "6aa900da1203bb7c05a81f1aa8f98376ef6c5edbc6b8f6adce2719d18b1995f4"
+    },
+    {
+      "kind": "file",
+      "path": "src/deployment.ts",
+      "contentFingerprint": "9984953f17592b267e386d4028552d413cfe9c9ac4df6dfb730b6be5115dbf77"
+    },
+    {
+      "kind": "file",
+      "path": "src/index.ts",
+      "contentFingerprint": "fbe2a1290be6f92f641592754e813a1fc0ffc164072a8ef2f1e57f8c151d44ec"
+    },
+    {
+      "kind": "file",
+      "path": "src/limits.ts",
+      "contentFingerprint": "78e4171e6624580038996e3931888cd1cdbefa5c0e1035235c4dffdbb4af236f"
+    },
+    {
+      "kind": "file",
+      "path": "src/setup.ts",
+      "contentFingerprint": "eae13507edd63c331ccde9e979835202e742378cca2eb35fcd12af60e48fc6f2"
+    },
+    {
+      "kind": "file",
+      "path": "tests/fixtures/panel.tsx",
+      "contentFingerprint": "c6ce5095b92dc5c0e9af1f1c19688ffae79240cd8cf201faaf2d3792d7e314f7"
+    },
+    {
+      "kind": "file",
+      "path": "tests/panel-deployment.spec.tsx",
+      "contentFingerprint": "7635cf0906d308ced62532dc2b5e80e8c227a3d1f347364f5397c06365b8421c"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "ConfigPageForm",
+      "limit": 20,
+      "resultFingerprint": "e62711af92a34e18a6756b13d930294d6f41fbab25d95dcbcbdbf3cf330ff0fb"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "deployment",
+      "limit": 60,
+      "resultFingerprint": "d7e15070a6728ff19850e1b0d813536a9020885b28cfb71669468e46b2ea9317"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "PluginConfig",
+      "limit": 50,
+      "resultFingerprint": "4fbefde5e014bd773b9375abd08726b3447ccbdfd8bf7743cd7c8a4685ec7f1f"
+    },
+    {
+      "kind": "search",
+      "path": "src/client",
+      "query": "DeploymentPage",
+      "limit": 50,
+      "resultFingerprint": "eadaac8b3d3c06972bb13c0af18cae10adb14db8897f6b90971518e0705f203a"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/api.ts",
+      "query": "SetupView",
+      "limit": 50,
+      "resultFingerprint": "d8d2e078b82a35ad16bd528beda9dee7506ad10365fdebbb7b54ca07fc71b9b6"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/locales.ts",
+      "query": "deployment",
+      "limit": 40,
+      "resultFingerprint": "a03ac2052fed4167ea0953f8186a23cd352a87924a3a3e9f6b05e5c55898f417"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/widgets.tsx",
+      "query": "CheckSetupButton",
+      "limit": 50,
+      "resultFingerprint": "e67d423d8b6d61efa9f304bb2db2ba801c2bce52b0111fed5eae2e299226e27c"
+    },
+    {
+      "kind": "search",
+      "path": "tests",
+      "query": "deployment.tsx",
+      "limit": 50,
+      "resultFingerprint": "9d3f00898f5813095821b8670d5d06993050a19dbf21f2d6d733886780874707"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-presentation:orchestration",
+      "contentFingerprint": "29dd1b20f7e2daeae82095044d6c923a58677a7694d5c9a9157f1f60778a017d"
+    }
+  ],
+  "infoFingerprint": "7d697310278fb366cdde43c7276d53498ae7c0e01f2e9393d615659116539cfa",
+  "artifacts": {
+    "info": ".fibo/analysis/src/client/deployment.tsx.info.md",
+    "structure": ".fibo/analysis/src/client/deployment.tsx.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "7d697310278fb366cdde43c7276d53498ae7c0e01f2e9393d615659116539cfa",
+    "structure": "4891d2406da6b257fe845e5ba7ba0583bd0ea4dc873c49c34a7899d25b239c37"
+  }
+}

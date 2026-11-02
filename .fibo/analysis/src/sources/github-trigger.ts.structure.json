@@ -1,0 +1,291 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/sources/github-trigger.ts",
+    "path": "src/sources/github-trigger.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "github-trigger.ts",
+    "file_path": "src/sources/github-trigger.ts",
+    "description": "GitHub source adapter: parses GitHub URLs, validates payload schemas, and builds Trigger objects for comments, issues, PRs and CI",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "zod",
+        "description": "Imports the zod library for schema validation",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports key helper and ChannelRef/Trigger types from core index",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports escapeRegExp and sameName text helpers from infra/text",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "../infra/text.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "githubAddress",
+        "function_id": "src/sources/github-trigger.ts:githubAddress(url: string, repository: string)",
+        "description": "Parses a GitHub issue/PR URL into number, pr flag and optional discussion id, requiring repository match",
+        "filepath": "src/sources/github-trigger.ts",
+        "lines": [
+          13,
+          18
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "reviewPlace",
+        "function_id": "src/sources/github-trigger.ts:reviewPlace(comment: GithubComment)",
+        "description": "Formats the code location of a review comment (path:line plus trailing diff hunk lines)",
+        "filepath": "src/sources/github-trigger.ts",
+        "lines": [
+          49,
+          53
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "commentText",
+        "function_id": "src/sources/github-trigger.ts:commentText(comment: GithubComment, kind: 'conversation' | 'inline' | 'review')",
+        "description": "Composes comment text from review decision, inline code place and body depending on comment kind",
+        "filepath": "src/sources/github-trigger.ts",
+        "lines": [
+          54,
+          59
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "commentTrigger",
+        "function_id": "src/sources/github-trigger.ts:commentTrigger(comment: GithubComment, ref: PullRef, kind: 'conversation' | 'inline' | 'review', agent: string)",
+        "description": "Builds a Trigger from a GitHub comment (conversation, inline or review) with author, channel, url and meta",
+        "filepath": "src/sources/github-trigger.ts",
+        "lines": [
+          65,
+          77
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "issueTrigger",
+        "function_id": "src/sources/github-trigger.ts:issueTrigger(issue: Opened, agent: string)",
+        "description": "Builds a Trigger from a newly opened GitHub issue with title/body text and issue metadata",
+        "filepath": "src/sources/github-trigger.ts",
+        "lines": [
+          82,
+          89
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "pullTrigger",
+        "function_id": "src/sources/github-trigger.ts:pullTrigger(pull: Opened, agent: string)",
+        "description": "Builds a Trigger for an opened pull request by reusing issueTrigger with PR metadata",
+        "filepath": "src/sources/github-trigger.ts",
+        "lines": [
+          94,
+          96
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "branchCiTrigger",
+        "function_id": "src/sources/github-trigger.ts:branchCiTrigger(branch: string, sha: string, revision: number, summary: string, url: string)",
+        "description": "Builds a non-human CI Trigger for a branch push identified by branch, sha and revision",
+        "filepath": "src/sources/github-trigger.ts",
+        "lines": [
+          98,
+          102
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "ciTrigger",
+        "function_id": "src/sources/github-trigger.ts:ciTrigger(pr: { number: number; html_url: string; user: { login: string } }, revision: number, summary: string)",
+        "description": "Builds a non-human CI Trigger for a pull request run with revision, summary and PR metadata",
+        "filepath": "src/sources/github-trigger.ts",
+        "lines": [
+          103,
+          108
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "PullRef",
+        "interface_id": "src/sources/github-trigger.ts:PullRef",
+        "description": "Reference to a pull request or issue: number, isPr flag, optional url and PR author",
+        "filepath": "src/sources/github-trigger.ts",
+        "lines": [
+          41,
+          41
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "SOURCE",
+        "variable_id": "src/sources/github-trigger.ts:SOURCE",
+        "description": "Source identifier constant set to 'github'",
+        "filepath": "src/sources/github-trigger.ts",
+        "lines": [
+          6,
+          6
+        ]
+      },
+      {
+        "variable_name": "githubChannel",
+        "variable_id": "src/sources/github-trigger.ts:githubChannel",
+        "description": "Builds a ChannelRef for a GitHub thread from issue/PR number and optional url",
+        "filepath": "src/sources/github-trigger.ts",
+        "lines": [
+          8,
+          9
+        ]
+      },
+      {
+        "variable_name": "githubPage",
+        "variable_id": "src/sources/github-trigger.ts:githubPage",
+        "description": "Builds the public GitHub web URL for an issue or pull request page",
+        "filepath": "src/sources/github-trigger.ts",
+        "lines": [
+          10,
+          11
+        ]
+      },
+      {
+        "variable_name": "UserSchema",
+        "variable_id": "src/sources/github-trigger.ts:UserSchema",
+        "description": "Zod schema for a GitHub user, defaulting null users to a 'ghost' User",
+        "filepath": "src/sources/github-trigger.ts",
+        "lines": [
+          20,
+          21
+        ]
+      },
+      {
+        "variable_name": "CommentSchema",
+        "variable_id": "src/sources/github-trigger.ts:CommentSchema",
+        "description": "Zod schema validating GitHub comment payload fields including review and inline data",
+        "filepath": "src/sources/github-trigger.ts",
+        "lines": [
+          26,
+          32
+        ]
+      },
+      {
+        "variable_name": "IssueSchema",
+        "variable_id": "src/sources/github-trigger.ts:IssueSchema",
+        "description": "Zod schema extending CommentSchema with issue/PR specific fields like number and title",
+        "filepath": "src/sources/github-trigger.ts",
+        "lines": [
+          35,
+          38
+        ]
+      },
+      {
+        "variable_name": "isHumanLogin",
+        "variable_id": "src/sources/github-trigger.ts:isHumanLogin",
+        "description": "Checks whether a GitHub user is human (not a [bot] login and type User)",
+        "filepath": "src/sources/github-trigger.ts",
+        "lines": [
+          46,
+          47
+        ]
+      },
+      {
+        "variable_name": "mentions",
+        "variable_id": "src/sources/github-trigger.ts:mentions",
+        "description": "Tests whether text mentions the given login with proper word boundaries",
+        "filepath": "src/sources/github-trigger.ts",
+        "lines": [
+          60,
+          61
+        ]
+      },
+      {
+        "variable_name": "author",
+        "variable_id": "src/sources/github-trigger.ts:author",
+        "description": "Builds actor and human flag for a user, treating the agent itself as non-human",
+        "filepath": "src/sources/github-trigger.ts",
+        "lines": [
+          62,
+          63
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "GithubComment",
+        "alias_id": "src/sources/github-trigger.ts:GithubComment",
+        "description": "Comment type inferred from CommentSchema",
+        "filepath": "src/sources/github-trigger.ts",
+        "lines": [
+          33,
+          33
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "GithubIssue",
+        "alias_id": "src/sources/github-trigger.ts:GithubIssue",
+        "description": "Issue type inferred from IssueSchema",
+        "filepath": "src/sources/github-trigger.ts",
+        "lines": [
+          39,
+          39
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "Opened",
+        "alias_id": "src/sources/github-trigger.ts:Opened",
+        "description": "Subset of issue fields (number, title, body, user, created_at, html_url) for opened events",
+        "filepath": "src/sources/github-trigger.ts",
+        "lines": [
+          40,
+          40
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

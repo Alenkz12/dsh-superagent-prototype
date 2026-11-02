@@ -1,0 +1,314 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/sources/feishu-read.ts",
+    "path": "src/sources/feishu-read.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "feishu-read.ts",
+    "file_path": "src/sources/feishu-read.ts",
+    "description": "Feishu source reader: resolves trigger message links, reads message/root/parent/thread/chat-around resources and maps them to context messages",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "zod",
+        "description": "Imports the zod schema library for runtime validation",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Trigger type from core",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports command helpers and the Commands type from infra",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "../infra/commands.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports Feishu image listing and reading helpers",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "./feishu-image.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports Feishu trigger helpers: ref parsing, time formatting, history schemas and mention handling",
+        "lines": [
+          6,
+          7
+        ],
+        "source": "internal",
+        "filepath": "./feishu-trigger.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports ContextMessage and ThreadContext types",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "./kind.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "readFeishuLink",
+        "function_id": "src/sources/feishu-read.ts:readFeishuLink(commands: Commands, ref: FeishuRef)",
+        "description": "Fetches the Feishu app link of the source message via lark CLI and validates it belongs to the expected chat",
+        "filepath": "src/sources/feishu-read.ts",
+        "lines": [
+          30,
+          37
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "feishuReferences",
+        "function_id": "src/sources/feishu-read.ts:feishuReferences(ref: FeishuRef)",
+        "description": "Builds the map of feishu/<triggerId>/<section> resource identifiers for a trigger",
+        "filepath": "src/sources/feishu-read.ts",
+        "lines": [
+          40,
+          44
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "feishuResource",
+        "function_id": "src/sources/feishu-read.ts:feishuResource(resource: string)",
+        "description": "Parses a feishu resource path into triggerId, section and optional cursor, rejecting invalid forms",
+        "filepath": "src/sources/feishu-read.ts",
+        "lines": [
+          47,
+          53
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "sourceOf",
+        "function_id": "src/sources/feishu-read.ts:sourceOf(commands: Commands, ref: FeishuRef)",
+        "description": "Reads the source message via the raw mget API and validates it exists, is not deleted and matches the trigger chat",
+        "filepath": "src/sources/feishu-read.ts",
+        "lines": [
+          54,
+          64
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "readFeishu",
+        "function_id": "src/sources/feishu-read.ts:readFeishu(commands: Commands, ref: FeishuRef, resource: string, pageSize: number, order: 'asc' | 'desc' = 'asc')",
+        "description": "Reads one Feishu message resource (root/parent/thread) with schema validation and returns a paged or single result",
+        "filepath": "src/sources/feishu-read.ts",
+        "lines": [
+          69,
+          97
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "isoTime",
+        "function_id": "src/sources/feishu-read.ts:isoTime(value: string)",
+        "description": "Converts a Feishu timestamp to ISO form, falling back to the raw value on failure",
+        "filepath": "src/sources/feishu-read.ts",
+        "lines": [
+          98,
+          100
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "feishuView",
+        "function_id": "src/sources/feishu-read.ts:feishuView(message: FeishuMessage)",
+        "description": "Maps a raw Feishu message to a ContextMessage with sender, time, mentions, bot/deleted flags and reply info",
+        "filepath": "src/sources/feishu-read.ts",
+        "lines": [
+          101,
+          106
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "historyView",
+        "function_id": "src/sources/feishu-read.ts:historyView(message: HistoricalMessage)",
+        "description": "Maps a historical chat message to a ContextMessage including mentions and bot/deleted metadata",
+        "filepath": "src/sources/feishu-read.ts",
+        "lines": [
+          108,
+          113
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "chatAround",
+        "function_id": "src/sources/feishu-read.ts:chatAround(commands: Commands, ref: FeishuRef, cursor: string | undefined, before = 5, after = 5)",
+        "description": "Reads messages before and after the trigger message in the same chat and returns them as a paged ContextMessage list",
+        "filepath": "src/sources/feishu-read.ts",
+        "lines": [
+          115,
+          135
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "feishuRead",
+        "function_id": "src/sources/feishu-read.ts:feishuRead(commands: Commands, ref: FeishuRef, resource: string, pageSize: number)",
+        "description": "Main entry that reads any feishu resource (including chat-around) and converts results into ContextMessages",
+        "filepath": "src/sources/feishu-read.ts",
+        "lines": [
+          136,
+          147
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "sourceRef",
+        "function_id": "src/sources/feishu-read.ts:sourceRef(trigger: Trigger)",
+        "description": "Extracts a FeishuRef from a trigger, throwing if the trigger is not a Feishu source",
+        "filepath": "src/sources/feishu-read.ts",
+        "lines": [
+          148,
+          152
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "FeishuRef",
+        "interface_id": "src/sources/feishu-read.ts:FeishuRef",
+        "description": "Reference to a Feishu source trigger with trigger, chat and message ids plus optional timestamp",
+        "filepath": "src/sources/feishu-read.ts",
+        "lines": [
+          11,
+          11
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "FeishuPage",
+        "interface_id": "src/sources/feishu-read.ts:FeishuPage",
+        "description": "Generic paged result holding status, message list and next resource cursor for Feishu reads",
+        "filepath": "src/sources/feishu-read.ts",
+        "lines": [
+          66,
+          66
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "FeishuOne",
+        "interface_id": "src/sources/feishu-read.ts:FeishuOne",
+        "description": "Generic single-message result holding a status and optional message",
+        "filepath": "src/sources/feishu-read.ts",
+        "lines": [
+          67,
+          67
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "messageId",
+        "variable_id": "src/sources/feishu-read.ts:messageId",
+        "description": "Zod schema validating Feishu message ids with the om_ prefix",
+        "filepath": "src/sources/feishu-read.ts",
+        "lines": [
+          12,
+          12
+        ]
+      },
+      {
+        "variable_name": "sourceSchema",
+        "variable_id": "src/sources/feishu-read.ts:sourceSchema",
+        "description": "Zod schema for the source message fields: ids, thread id and deleted flag",
+        "filepath": "src/sources/feishu-read.ts",
+        "lines": [
+          13,
+          16
+        ]
+      },
+      {
+        "variable_name": "messageSchema",
+        "variable_id": "src/sources/feishu-read.ts:messageSchema",
+        "description": "Zod schema describing a full Feishu message: content, sender, times, mentions and links",
+        "filepath": "src/sources/feishu-read.ts",
+        "lines": [
+          17,
+          23
+        ]
+      },
+      {
+        "variable_name": "threadSchema",
+        "variable_id": "src/sources/feishu-read.ts:threadSchema",
+        "description": "Zod schema for thread listing responses with messages, has_more and page token",
+        "filepath": "src/sources/feishu-read.ts",
+        "lines": [
+          26,
+          27
+        ]
+      },
+      {
+        "variable_name": "feishuThreadContext",
+        "variable_id": "src/sources/feishu-read.ts:feishuThreadContext",
+        "description": "ThreadContext implementation wiring Feishu page reading and admission image handling into the agent context",
+        "filepath": "src/sources/feishu-read.ts",
+        "lines": [
+          153,
+          171
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "FeishuMessage",
+        "alias_id": "src/sources/feishu-read.ts:FeishuMessage",
+        "description": "Inferred type of a Feishu message as defined by messageSchema",
+        "filepath": "src/sources/feishu-read.ts",
+        "lines": [
+          24,
+          24
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

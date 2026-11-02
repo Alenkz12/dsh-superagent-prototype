@@ -1,0 +1,783 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/app.tsx",
+    "path": "src/client/app.tsx",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "app.tsx",
+    "file_path": "src/client/app.tsx",
+    "description": "Root panel shell React component: renders the header with global search and glossary modal, the top-level navigation tabs, and the active route view, while managing route history and shared panel state.",
+    "file_type": "tsx",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "FormEvent",
+        "description": "React type import used for form submit event typing",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "class_name": "ReactNode",
+        "description": "React type import used for renderable child content typing",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "class_name": "Button",
+        "description": "Reusable button control component",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "class_name": "Dot",
+        "description": "Small status dot indicator component",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "class_name": "Icon",
+        "description": "Icon glyph component",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "class_name": "Input",
+        "description": "Text search input component with optional icon",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "class_name": "Modal",
+        "description": "Modal dialog component used for the glossary overlay",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "class_name": "SegmentedTabs",
+        "description": "Segmented tab navigation control used for the top-level page tabs",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "class_name": "EvalStatus",
+        "description": "Page component showing evaluation status",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "src/client/eval.tsx",
+        "alias": ""
+      },
+      {
+        "class_name": "ExecutionStatus",
+        "description": "Page component showing execution status list",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/execution.tsx",
+        "alias": ""
+      },
+      {
+        "class_name": "GLOSSARY",
+        "description": "Grouped glossary term keys (constant object import)",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "src/client/locales.ts",
+        "alias": ""
+      },
+      {
+        "class_name": "GLOSSARY_VALUES",
+        "description": "Grouped glossary enumerated value keys (constant object import)",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "src/client/locales.ts",
+        "alias": ""
+      },
+      {
+        "class_name": "en",
+        "description": "English locale dictionary (constant object import)",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "src/client/locales.ts",
+        "alias": ""
+      },
+      {
+        "class_name": "zh",
+        "description": "Chinese locale dictionary (constant object import)",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "src/client/locales.ts",
+        "alias": ""
+      },
+      {
+        "class_name": "DshSuperagentKey",
+        "description": "Type import for locale translation keys",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "src/client/locales.ts",
+        "alias": ""
+      },
+      {
+        "class_name": "OverviewPage",
+        "description": "Overview page component",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "src/client/overview.tsx",
+        "alias": ""
+      },
+      {
+        "class_name": "PanelProvider",
+        "description": "React context provider supplying panel state, navigation and actions",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/provider.tsx",
+        "alias": ""
+      },
+      {
+        "class_name": "HOME",
+        "description": "Default home route constant",
+        "lines": [
+          12,
+          13
+        ],
+        "source": "internal",
+        "filepath": "src/client/route.ts",
+        "alias": ""
+      },
+      {
+        "class_name": "TABS",
+        "description": "Ordered list of top-level navigation tabs",
+        "lines": [
+          12,
+          13
+        ],
+        "source": "internal",
+        "filepath": "src/client/route.ts",
+        "alias": ""
+      },
+      {
+        "class_name": "Location",
+        "description": "Type describing the current route plus history stack and settings group",
+        "lines": [
+          12,
+          13
+        ],
+        "source": "internal",
+        "filepath": "src/client/route.ts",
+        "alias": ""
+      },
+      {
+        "class_name": "Route",
+        "description": "Type describing a panel route (page id and query)",
+        "lines": [
+          12,
+          13
+        ],
+        "source": "internal",
+        "filepath": "src/client/route.ts",
+        "alias": ""
+      },
+      {
+        "class_name": "Tab",
+        "description": "Type describing a top-level tab identifier",
+        "lines": [
+          12,
+          13
+        ],
+        "source": "internal",
+        "filepath": "src/client/route.ts",
+        "alias": ""
+      },
+      {
+        "class_name": "SettingsPage",
+        "description": "Settings page component",
+        "lines": [
+          14,
+          14
+        ],
+        "source": "internal",
+        "filepath": "src/client/settings.tsx",
+        "alias": ""
+      },
+      {
+        "class_name": "SourceStatus",
+        "description": "Source status page component",
+        "lines": [
+          15,
+          15
+        ],
+        "source": "internal",
+        "filepath": "src/client/source.tsx",
+        "alias": ""
+      },
+      {
+        "class_name": "T",
+        "description": "Type import for the translation function",
+        "lines": [
+          16,
+          16
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "class_name": "ThreadPage",
+        "description": "Thread detail page component",
+        "lines": [
+          17,
+          17
+        ],
+        "source": "internal",
+        "filepath": "src/client/thread.tsx",
+        "alias": ""
+      },
+      {
+        "class_name": "TicketPage",
+        "description": "Ticket detail page component",
+        "lines": [
+          18,
+          18
+        ],
+        "source": "internal",
+        "filepath": "src/client/ticket.tsx",
+        "alias": ""
+      },
+      {
+        "class_name": "TriggerStatus",
+        "description": "Trigger status page component",
+        "lines": [
+          19,
+          19
+        ],
+        "source": "internal",
+        "filepath": "src/client/trigger.tsx",
+        "alias": ""
+      },
+      {
+        "class_name": "When",
+        "description": "Component rendering a formatted timestamp",
+        "lines": [
+          20,
+          20
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      }
+    ],
+    "import_function": [
+      {
+        "function_name": "useCallback",
+        "description": "React hook memoizing callbacks",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "useEffect",
+        "description": "React hook running side effects",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "useRef",
+        "description": "React hook creating mutable refs",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "useState",
+        "description": "React hook for component state",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "ticketMark",
+        "description": "Computes the display mark (label and state) for a ticket",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/marks.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "usePanel",
+        "description": "Hook accessing panel context (translation, api call, navigation, notifications)",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/provider.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "usePanelData",
+        "description": "Hook accessing panel shared data (state, error, reload, setup)",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/provider.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "initialLocation",
+        "description": "Returns the initial panel location from the URL/history",
+        "lines": [
+          12,
+          13
+        ],
+        "source": "internal",
+        "filepath": "src/client/route.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "lastSettingsGroup",
+        "description": "Returns the last opened settings group from a location",
+        "lines": [
+          12,
+          13
+        ],
+        "source": "internal",
+        "filepath": "src/client/route.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "remember",
+        "description": "Persists the current location for later restoration",
+        "lines": [
+          12,
+          13
+        ],
+        "source": "internal",
+        "filepath": "src/client/route.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "routeLabel",
+        "description": "Returns the human readable label for a route",
+        "lines": [
+          12,
+          13
+        ],
+        "source": "internal",
+        "filepath": "src/client/route.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "settingsRoute",
+        "description": "Builds a settings route for a given settings group",
+        "lines": [
+          12,
+          13
+        ],
+        "source": "internal",
+        "filepath": "src/client/route.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "actorName",
+        "description": "Formats an actor identifier for display",
+        "lines": [
+          16,
+          16
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "readableMarkers",
+        "description": "Converts internal marker tokens in text into readable text",
+        "lines": [
+          16,
+          16
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "errorText",
+        "description": "Extracts a displayable message from an error value",
+        "lines": [
+          16,
+          16
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "reasonLabel",
+        "description": "Returns a localized label for a filter reason",
+        "lines": [
+          16,
+          16
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "valueLabel",
+        "description": "Returns a localized label for an enumerated value in a group",
+        "lines": [
+          16,
+          16
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      }
+    ],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "Glossary",
+        "function_id": "src/client/app.tsx:Glossary({open,onClose})",
+        "description": "Glossary modal showing bilingual term tables, status legend and enumerated values",
+        "filepath": "src/client/app.tsx",
+        "lines": [
+          27,
+          55
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "open",
+            "param_type": "boolean",
+            "description": "Whether the glossary modal is visible",
+            "is_optional": false
+          },
+          {
+            "param_name": "onClose",
+            "param_type": "() => void",
+            "description": "Callback invoked to close the modal",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "Highlight",
+        "function_id": "src/client/app.tsx:Highlight({text,query})",
+        "description": "Renders text with the first case-insensitive match of the query wrapped in a mark element",
+        "filepath": "src/client/app.tsx",
+        "lines": [
+          57,
+          61
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "text",
+            "param_type": "string",
+            "description": "Text to render",
+            "is_optional": false
+          },
+          {
+            "param_name": "query",
+            "param_type": "string",
+            "description": "Substring to highlight",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "Result",
+        "function_id": "src/client/app.tsx:Result({name,open,children})",
+        "description": "Renders a single search result row with an optional navigation action and meta content",
+        "filepath": "src/client/app.tsx",
+        "lines": [
+          62,
+          67
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "name",
+            "param_type": "ReactNode",
+            "description": "Title content of the result row",
+            "is_optional": false
+          },
+          {
+            "param_name": "open",
+            "param_type": "(() => void) | undefined",
+            "description": "Optional click handler navigating to the result; undefined for non-navigable results",
+            "is_optional": true
+          },
+          {
+            "param_name": "children",
+            "param_type": "ReactNode",
+            "description": "Meta information displayed below the title",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "SearchResults",
+        "function_id": "src/client/app.tsx:SearchResults({result,query,onClose})",
+        "description": "Dropdown listing search hits across tickets, threads and triggers with counts and empty-state hints",
+        "filepath": "src/client/app.tsx",
+        "lines": [
+          68,
+          99
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "result",
+            "param_type": "SearchView",
+            "description": "Search response containing tickets, threads and trigger items",
+            "is_optional": false
+          },
+          {
+            "param_name": "query",
+            "param_type": "string",
+            "description": "Query string used for highlighting matches",
+            "is_optional": false
+          },
+          {
+            "param_name": "onClose",
+            "param_type": "() => void",
+            "description": "Callback closing the search results panel",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "Header",
+        "function_id": "src/client/app.tsx:Header({masterId})",
+        "description": "Panel header with title, global search form, glossary button and open-master-session action",
+        "filepath": "src/client/app.tsx",
+        "lines": [
+          101,
+          139
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "masterId",
+            "param_type": "string | undefined",
+            "description": "Identifier of the master session that the open-session button targets",
+            "is_optional": true
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "Pages",
+        "function_id": "src/client/app.tsx:Pages({route,openTab,deploymentForm})",
+        "description": "Layout that renders the header, tab navigation and the page component matching the active route",
+        "filepath": "src/client/app.tsx",
+        "lines": [
+          141,
+          170
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "route",
+            "param_type": "Route",
+            "description": "Active route determining which page is rendered",
+            "is_optional": false
+          },
+          {
+            "param_name": "openTab",
+            "param_type": "(tab: Tab) => void",
+            "description": "Callback switching to another top-level tab",
+            "is_optional": false
+          },
+          {
+            "param_name": "deploymentForm",
+            "param_type": "DeploymentForm",
+            "description": "Deployment form factory passed down to the settings page",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "App",
+        "function_id": "src/client/app.tsx:App({t,openSession,deploymentForm})",
+        "description": "Root panel component managing route history (navigate/back/openTab) and providing shared panel context",
+        "filepath": "src/client/app.tsx",
+        "lines": [
+          173,
+          188
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "t",
+            "param_type": "T",
+            "description": "Translation function",
+            "is_optional": false
+          },
+          {
+            "param_name": "openSession",
+            "param_type": "(sessionId: string) => Promise<void>",
+            "description": "Opens a session by id asynchronously",
+            "is_optional": false
+          },
+          {
+            "param_name": "deploymentForm",
+            "param_type": "DeploymentForm",
+            "description": "Deployment form factory used by the settings page",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      }
+    ],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "AppProps",
+        "interface_id": "src/client/app.tsx:AppProps",
+        "description": "Props of the root App component: translator, session opener and deployment form factory",
+        "extends": [],
+        "filepath": "src/client/app.tsx",
+        "lines": [
+          22,
+          25
+        ],
+        "methods": [],
+        "properties": [
+          "t: T",
+          "openSession: (sessionId: string) => Promise<void>",
+          "deploymentForm: DeploymentForm"
+        ],
+        "generics": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

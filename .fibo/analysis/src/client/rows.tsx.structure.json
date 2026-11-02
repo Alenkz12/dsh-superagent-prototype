@@ -1,0 +1,498 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/rows.tsx",
+    "path": "src/client/rows.tsx",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "rows.tsx",
+    "file_path": "src/client/rows.tsx",
+    "description": "Shared list-row React components (TicketLine, ThreadLine, DecisionLine) used by Tickets, Threads and Decisions views, plus the ThreadChip fact chip, the generic automatedRuns grouping helper and the collapsible Earlier component for folded automated messages.",
+    "file_type": "tsx",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "DecisionRow",
+        "description": "Type-only import: row shape describing a decision record rendered by DecisionLine",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "src/client/api.ts",
+        "alias": ""
+      },
+      {
+        "class_name": "ThreadFacts",
+        "description": "Type-only import: fact/source descriptor for a thread, partially consumed by ThreadChip",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "src/client/api.ts",
+        "alias": ""
+      },
+      {
+        "class_name": "ThreadRow",
+        "description": "Type-only import: row shape describing a thread record rendered by ThreadLine",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "src/client/api.ts",
+        "alias": ""
+      },
+      {
+        "class_name": "TicketRow",
+        "description": "Type-only import: row shape describing a ticket record rendered by TicketLine",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "src/client/api.ts",
+        "alias": ""
+      }
+    ],
+    "import_function": [
+      {
+        "function_name": "useState",
+        "description": "React hook for local component state (used by Earlier to toggle expansion)",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "Icon",
+        "description": "Inline icon component used inside the thread chip",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "Tag",
+        "description": "Small label/tag component used for the context-only marker",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "decisionMark",
+        "description": "Derives stage mark (dot/icon/label) for a decision outcome",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "src/client/marks.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "threadMark",
+        "description": "Derives stage mark (dot/icon/label) for a thread",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "src/client/marks.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "ticketMark",
+        "description": "Derives stage mark (dot/icon/label) for a ticket",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "src/client/marks.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "usePanel",
+        "description": "Panel context hook exposing translator, API caller and navigation helpers",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "src/client/provider.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "actorName",
+        "description": "Localizes/renders an actor identifier for display",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "localized",
+        "description": "Resolves a localized value (plain or per-locale map) for display",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "readableMarkers",
+        "description": "Renders internal inline markers in text into human-readable form",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "reasonLabel",
+        "description": "Produces a localized label for a decision reason code",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "valueLabel",
+        "description": "Produces a localized label for a value of a given value-kind (e.g. 'source')",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "ActionLink",
+        "description": "Styled external action link button (e.g. 'answer in source')",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "ConfirmButton",
+        "description": "Button that asks for confirmation before running an action",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "LabelValue",
+        "description": "Renders an inline label/value pair inside row meta",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "SessionButton",
+        "description": "Button linking to the executor session of a ticket",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "StageMark",
+        "description": "Renders the stage dot/icon/label of a row",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "When",
+        "description": "Renders a relative/absolute timestamp",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      }
+    ],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "TicketLine",
+        "function_id": "src/client/rows.tsx:TicketLine({ ticket, question, onChanged, context })",
+        "description": "React function component rendering one ticket row: stage mark, title link to the execution page, thread chips, context/undelivered badges, latest note or timestamp, and action buttons (answer, retry, session, stop).",
+        "filepath": "src/client/rows.tsx",
+        "lines": [
+          10,
+          44
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "ticket",
+            "param_type": "TicketRow",
+            "description": "Ticket row data to render",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "question",
+            "param_type": "boolean",
+            "description": "Whether the ticket is a question awaiting an answer (affects stage dot and note rendering)",
+            "default_value": "",
+            "is_optional": true
+          },
+          {
+            "param_name": "onChanged",
+            "param_type": "() => Promise<void>",
+            "description": "Callback invoked (and awaited) after a ticket mutation so the caller can refresh",
+            "default_value": "",
+            "is_optional": true
+          },
+          {
+            "param_name": "context",
+            "param_type": "boolean",
+            "description": "Marks the ticket as context-only and renders the context tag",
+            "default_value": "",
+            "is_optional": true
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "ContextTag",
+        "function_id": "src/client/rows.tsx:ContextTag()",
+        "description": "Small component rendering the localized 'context only' tag with a hint tooltip.",
+        "filepath": "src/client/rows.tsx",
+        "lines": [
+          46,
+          49
+        ],
+        "code": null,
+        "parameters": [],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "ThreadLine",
+        "function_id": "src/client/rows.tsx:ThreadLine({ thread, ticketId, context })",
+        "description": "React function component rendering one thread row: stage mark, title link to the trigger page, latest message quote, thread chip, fanout targets or poll error, and timestamp.",
+        "filepath": "src/client/rows.tsx",
+        "lines": [
+          51,
+          76
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "thread",
+            "param_type": "ThreadRow",
+            "description": "Thread row data to render",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "ticketId",
+            "param_type": "string",
+            "description": "Current ticket id; that ticket is omitted from the fanout target list when rendering on a ticket page",
+            "default_value": "",
+            "is_optional": true
+          },
+          {
+            "param_name": "context",
+            "param_type": "boolean",
+            "description": "Marks the thread as context-only and renders the context tag",
+            "default_value": "",
+            "is_optional": true
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "DecisionLine",
+        "function_id": "src/client/rows.tsx:DecisionLine({ decision })",
+        "description": "React function component rendering one decision row: outcome stage mark, title/preview link (to the ticket or the triggering thread), reason, matched rule names and timestamp.",
+        "filepath": "src/client/rows.tsx",
+        "lines": [
+          78,
+          102
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "decision",
+            "param_type": "DecisionRow",
+            "description": "Decision row data (outcome, preview, reason, matched rules, ticket/thread ids) to render",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "ThreadChip",
+        "function_id": "src/client/rows.tsx:ThreadChip({ thread })",
+        "description": "Component rendering a chat-style chip with the thread source and its facts (label/value), optionally wrapped in a link with an external-link icon.",
+        "filepath": "src/client/rows.tsx",
+        "lines": [
+          104,
+          116
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "thread",
+            "param_type": "Pick<ThreadFacts, 'source' | 'facts' | 'url' | 'title'>",
+            "description": "Subset of thread facts (source, fact map, optional url and title) needed to render the chip",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "automatedRuns",
+        "function_id": "src/client/rows.tsx:automatedRuns<I>(items: I[], sender: (item: I) => string | undefined)",
+        "description": "Generic helper that groups consecutive items coming from the same sender into runs, keeping only the newest item visible by default and collecting earlier ones in `earlier`.",
+        "filepath": "src/client/rows.tsx",
+        "lines": [
+          120,
+          128
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "items",
+            "param_type": "I[]",
+            "description": "Ordered items to fold into runs",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "sender",
+            "param_type": "(item: I) => string | undefined",
+            "description": "Returns the sender key of an item; undefined means the item is never grouped",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "Run<I>[]",
+        "is_async": false,
+        "generics": [
+          "I"
+        ],
+        "decorators": []
+      },
+      {
+        "function_name": "Earlier",
+        "function_id": "src/client/rows.tsx:Earlier({ items })",
+        "description": "Collapsible component listing earlier automated messages; renders nothing when the list is empty and toggles via local useState, showing localized timestamps and previews.",
+        "filepath": "src/client/rows.tsx",
+        "lines": [
+          129,
+          140
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "items",
+            "param_type": "{ id: string; at: string; preview: string }[]",
+            "description": "Earlier folded messages (id, timestamp and preview text) to list when expanded",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element | null",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      }
+    ],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "Run",
+        "alias_id": "src/client/rows.tsx:Run",
+        "description": "Generic pair of a representative item plus the earlier items that were folded into the same automated run",
+        "filepath": "src/client/rows.tsx",
+        "lines": [
+          118,
+          118
+        ],
+        "target_type": "{ item: I; earlier: I[] }",
+        "generics": [
+          "I"
+        ]
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

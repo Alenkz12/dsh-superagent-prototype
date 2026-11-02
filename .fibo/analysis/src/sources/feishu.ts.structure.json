@@ -1,0 +1,564 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/sources/feishu.ts",
+    "path": "src/sources/feishu.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "feishu.ts",
+    "file_path": "src/sources/feishu.ts",
+    "description": "Defines the Feishu SourceKind (config schema, settings fields, scope/observation rules, channel messaging, thread context, reply linkage, policy schema/rows/sync, environment variables and facts), exports a helper to read Feishu settings, and registers the Cordis plugin that installs the source kind and starts the Feishu polling loop. Also re-exports Feishu trigger and loop helpers.",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "Context",
+        "description": "Cordis plugin context type used to register effects and access the orchestrator service",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      }
+    ],
+    "import_function": [
+      {
+        "function_name": "z",
+        "description": "Zod schema construction and validation namespace (looseObject, object, array, string, number, boolean, enum, infer)",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "FeishuBotSchema",
+        "description": "Base Zod schema describing the Feishu bot deployment configuration that FeishuConfigSchema extends",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/deployment.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "feishuLink",
+        "description": "Builds a link to an original Feishu message for a given address",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "src/sources/feishu-channel.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "sendFeishu",
+        "description": "Sends a reply message through Feishu to a chat address",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "src/sources/feishu-channel.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "feishuThreadContext",
+        "description": "Reads the Feishu thread context for a trigger, used as the SourceKind threadContext hook",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "src/sources/feishu-read.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "refreshChatNames",
+        "description": "Refreshes the stored names of chats the bot has joined",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/sources/feishu-loops.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "runFeishu",
+        "description": "Runs the Feishu ingestion loop (history backfill and thread polling) until aborted",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/sources/feishu-loops.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "SOURCE",
+        "description": "The Feishu source kind identifier string",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/sources/feishu-trigger.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "feishuTriggerId",
+        "description": "Computes the Trigger ID for a Feishu message, used to link replies to their parent message",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/sources/feishu-trigger.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "sourceContext",
+        "description": "Builds the per-source host context (commands, store, etc.) for a given source kind",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "src/sources/host.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "Localized",
+        "description": "Type import: localized string map ({ zh, en }) used for labels and hints",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "src/sources/kind.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "SourceKind",
+        "description": "Type import: generic interface describing a source kind implementation",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "src/sources/kind.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "SourceRegistry",
+        "description": "Type import: registry of instantiated sources used to look up a source's config",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/sources/registry.ts",
+        "alias": ""
+      }
+    ],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "feishuSettings",
+        "function_id": "src/sources/feishu.ts:feishuSettings(SourceRegistry)",
+        "description": "Returns the Feishu Source's settings, falling back to schema defaults while the Feishu plugin is disabled",
+        "filepath": "src/sources/feishu.ts",
+        "lines": [
+          128,
+          128
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "sources",
+            "param_type": "SourceRegistry",
+            "description": "Registry used to look up the registered Feishu source instance and its config",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "FeishuConfig",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "apply",
+        "function_id": "src/sources/feishu.ts:apply(Context)",
+        "description": "Cordis plugin entry: registers the Feishu source kind and starts the Feishu run loop as cancellable effects",
+        "filepath": "src/sources/feishu.ts",
+        "lines": [
+          132,
+          139
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "ctx",
+            "param_type": "Context",
+            "description": "Cordis plugin context providing effect() and the orchestrator service",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "void",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "scope",
+        "function_id": "src/sources/feishu.ts:feishuKind.scope({ meta }, FeishuConfig)",
+        "description": "SourceKind scope hook: decides whether a message's chat/direct conversation is listened to and whether all its messages are observed rather than only mentions",
+        "filepath": "src/sources/feishu.ts",
+        "lines": [
+          54,
+          59
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "meta",
+            "param_type": "{ direct?: boolean; chatId?: string }",
+            "description": "Message metadata identifying the chat and whether it is a direct message",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "config",
+            "param_type": "FeishuConfig",
+            "description": "Feishu source configuration describing which chats to receive",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "{ listened: boolean; observed?: boolean; row?: string; reason?: string }",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "allowed",
+        "function_id": "src/sources/feishu.ts:feishuKind.channel.allowed(address, FeishuConfig)",
+        "description": "Channel hook: a reply may only be sent to a chat the Source still receives",
+        "filepath": "src/sources/feishu.ts",
+        "lines": [
+          62,
+          63
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "address",
+            "param_type": "{ chatId?: string; direct?: string }",
+            "description": "Destination chat address, including whether it is a direct message",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "config",
+            "param_type": "FeishuConfig",
+            "description": "Feishu source configuration used to re-evaluate scope",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "boolean",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "find",
+        "function_id": "src/sources/feishu.ts:feishuKind.find(string)",
+        "description": "SourceKind find hook: extracts Feishu message IDs (om_...) from a query as search terms; no threads are looked up",
+        "filepath": "src/sources/feishu.ts",
+        "lines": [
+          67,
+          67
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "query",
+            "param_type": "string",
+            "description": "Free-form search text that may contain Feishu message IDs",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "{ threads: []; terms: string[] }",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "repliesTo",
+        "function_id": "src/sources/feishu.ts:feishuKind.repliesTo(Trigger)",
+        "description": "SourceKind repliesTo hook: a message's Trigger is named after its parent message ID, resolving the trigger it replies to",
+        "filepath": "src/sources/feishu.ts",
+        "lines": [
+          69,
+          69
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "trigger",
+            "param_type": "Trigger",
+            "description": "Trigger whose meta.parentId names the replied-to message",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "string | undefined",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "rows",
+        "function_id": "src/sources/feishu.ts:feishuKind.policy.rows(unknown)",
+        "description": "Policy hook: renders the chats, other-chats and direct-message rows with admission cell values derived from the stored config",
+        "filepath": "src/sources/feishu.ts",
+        "lines": [
+          90,
+          101
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "stored",
+            "param_type": "unknown",
+            "description": "Stored Feishu configuration, parsed with FeishuConfigSchema before use",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "Array<{ id: string; label: string | Localized; note: Localized; cells: Record<string, boolean> }>",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "ready",
+        "function_id": "src/sources/feishu.ts:feishuKind.policy.sync.ready(PolicyPart)",
+        "description": "Policy sync hook: the Sync button is enabled only when a sync chat is configured",
+        "filepath": "src/sources/feishu.ts",
+        "lines": [
+          104,
+          104
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "part",
+            "param_type": "PolicyPart",
+            "description": "Policy part holding the syncChat setting",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "boolean",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "run",
+        "function_id": "src/sources/feishu.ts:feishuKind.policy.sync.run(Host, PolicyPart, AbortSignal)",
+        "description": "Policy sync hook: lists all members of the sync chat via lark-cli and rewrites the allowed-user list, preserving order and updating names in place",
+        "filepath": "src/sources/feishu.ts",
+        "lines": [
+          105,
+          115
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "host",
+            "param_type": "Host",
+            "description": "Source host used to obtain a signal-aware command runner",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "part",
+            "param_type": "PolicyPart",
+            "description": "Policy part containing syncChat and the current allowed entries",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "signal",
+            "param_type": "AbortSignal",
+            "description": "Cancellation signal passed to the lark-cli command runner",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "Promise<PolicyPart>",
+        "is_async": true,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "values",
+        "function_id": "src/sources/feishu.ts:feishuKind.environment.values({ deployment, trigger })",
+        "description": "Environment hook: supplies DSH_SUPERAGENT_FEISHU_BOT and DSH_SUPERAGENT_FEISHU_CHAT values for the execution environment",
+        "filepath": "src/sources/feishu.ts",
+        "lines": [
+          123,
+          123
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "deployment",
+            "param_type": "{ feishu?: { name?: string; botId: string } }",
+            "description": "Deployment configuration providing the current Feishu bot",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "trigger",
+            "param_type": "Trigger | undefined",
+            "description": "Trigger that originated the ticket, used to derive the Feishu chat id",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "Record<string, string>",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "facts",
+        "function_id": "src/sources/feishu.ts:feishuKind.facts(Deployment)",
+        "description": "Facts hook: reports the current Feishu bot as a localized fact when a Feishu deployment exists",
+        "filepath": "src/sources/feishu.ts",
+        "lines": [
+          125,
+          125
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "deployment",
+            "param_type": "Deployment | undefined",
+            "description": "Deployment configuration used to derive the current bot label",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "Record<string, Localized | string>",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      }
+    ],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [
+      {
+        "constant_name": "MembersSchema",
+        "constant_id": "src/sources/feishu.ts:MembersSchema",
+        "description": "Zod schema validating the lark-cli chat-member list response (users, has_more, truncations)",
+        "filepath": "src/sources/feishu.ts",
+        "lines": [
+          17,
+          20
+        ],
+        "constant_type": "ZodObject",
+        "value": "z.looseObject({ users, has_more, truncations? })"
+      },
+      {
+        "constant_name": "FeishuConfigSchema",
+        "constant_id": "src/sources/feishu.ts:FeishuConfigSchema",
+        "description": "Zod schema for the Feishu source configuration, extending the bot schema with read page size, link timeout, chat list, direct-message and other-chat reception settings",
+        "filepath": "src/sources/feishu.ts",
+        "lines": [
+          21,
+          29
+        ],
+        "constant_type": "ZodObject",
+        "value": "FeishuBotSchema.extend({ readPageSize, linkTimeoutMs, chats, directMessages, otherChats }).strict()"
+      },
+      {
+        "constant_name": "feishuKind",
+        "constant_id": "src/sources/feishu.ts:feishuKind",
+        "description": "The Feishu SourceKind implementation: kind id, label refresh, localized title/description, config schema, settings fields, health checks, scope, channel, thread context, find, repliesTo, policy (schema, fields, rows, sync), environment and facts",
+        "filepath": "src/sources/feishu.ts",
+        "lines": [
+          31,
+          126
+        ],
+        "constant_type": "SourceKind<FeishuConfig>",
+        "value": "{ kind: SOURCE, title, description, schema, fields, health, scope, channel, threadContext, find, repliesTo, policy, environment, facts }"
+      },
+      {
+        "constant_name": "name",
+        "constant_id": "src/sources/feishu.ts:name",
+        "description": "Cordis plugin name for the Feishu source plugin",
+        "filepath": "src/sources/feishu.ts",
+        "lines": [
+          130,
+          130
+        ],
+        "constant_type": "string",
+        "value": "'dsh-superagent-feishu'"
+      },
+      {
+        "constant_name": "inject",
+        "constant_id": "src/sources/feishu.ts:inject",
+        "description": "Cordis dependency declaration: the plugin requires the orchestrator service",
+        "filepath": "src/sources/feishu.ts",
+        "lines": [
+          131,
+          131
+        ],
+        "constant_type": "string[]",
+        "value": "['orchestrator']"
+      }
+    ],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "FeishuConfig",
+        "alias_id": "src/sources/feishu.ts:FeishuConfig",
+        "description": "Inferred TypeScript type of the parsed Feishu source configuration schema",
+        "filepath": "src/sources/feishu.ts",
+        "lines": [
+          30,
+          30
+        ],
+        "target_type": "z.infer<typeof FeishuConfigSchema>",
+        "generics": []
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:tsdown.config.ts",
+    "path": "tsdown.config.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "tsdown.config.ts",
+    "file_path": "tsdown.config.ts",
+    "description": "tsdown build configuration that adds a raw-import plugin for ?raw file loading",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "node:fs",
+        "description": "Node.js fs module, provides readFileSync for reading raw file contents",
+        "lines": [
+          1,
+          1
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "node:path",
+        "description": "Node.js path module, provides dirname and resolve for path resolution",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "tsdown",
+        "description": "tsdown package, provides defineConfig for typed build configuration",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "raw",
+        "variable_id": "tsdown.config.ts:raw",
+        "description": "tsdown plugin resolving ?raw imports and inlining file contents as default string exports",
+        "filepath": "tsdown.config.ts",
+        "lines": [
+          5,
+          8
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

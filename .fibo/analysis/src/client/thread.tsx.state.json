@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/thread.tsx",
+    "path": "src/client/thread.tsx",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "6f4540986fe31f854a4f259502274d4b94bcd4281fb0811a3fe56eada21a5447",
+  "sourceFingerprint": "6870694d97c1c1e75bbd43f0ed7efbf6e6eba50a19a27c60fef7b052a5a979f6",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/client",
+      "resultFingerprint": "7bf3ac2d009d046122c35f91b95f5cb11c1fc74f53cdfbb3bacbc80ac2b588dc"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/api.ts",
+      "contentFingerprint": "ceb0c76cb2d8680e2be4edf0f6ac42c90e6a4ff78e0e14ce4aa277357606ff04"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/views/threads.ts",
+      "contentFingerprint": "e0a0caa5364754a7d45426cafaacf315bda5124e39171f90fe67a26849931b5f"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/api.ts",
+      "contentFingerprint": "800b0347183c39601b8b7cd33607dee2538eb8da5feb5f1c7e13a1a7c2268f36"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/app.tsx",
+      "contentFingerprint": "23cca247e0a67fb581df6fc517522ccf0026a4897cda109c9e57c367cb2b1051"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/provider.tsx",
+      "contentFingerprint": "5639db28e87c1fa0752a30b5280c2e492685bea0593809f72c975b5274d12a8f"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/rows.tsx",
+      "contentFingerprint": "905d0859ac8f7d7b6bf9375b30a9c1bcf2744c11f171e6e9070c6b0328490458"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/thread.tsx",
+      "contentFingerprint": "6870694d97c1c1e75bbd43f0ed7efbf6e6eba50a19a27c60fef7b052a5a979f6"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/widgets.tsx",
+      "contentFingerprint": "6aa900da1203bb7c05a81f1aa8f98376ef6c5edbc6b8f6adce2719d18b1995f4"
+    },
+    {
+      "kind": "search",
+      "path": "src/app/api.ts",
+      "query": "ThreadDetailView",
+      "limit": 50,
+      "resultFingerprint": "e8f7ee5b8d24133e08bfc10665f44536d4f9c5d0c06aefc1c3f4fe42fd19e926"
+    },
+    {
+      "kind": "search",
+      "path": "src/app/api.ts",
+      "query": "threads/:key",
+      "limit": 50,
+      "resultFingerprint": "4d0e5dd66cc40595378aabd0bb34678fd68bcba5ec75dd73ada86381756a79a4"
+    },
+    {
+      "kind": "search",
+      "path": "src/client",
+      "query": "ThreadPage",
+      "limit": 50,
+      "resultFingerprint": "cbd0fdf9868e7cfc79758d9861d609ade8710f9ffe74dff5128ba78570788f60"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/api.ts",
+      "query": "export function usePoll",
+      "limit": 50,
+      "resultFingerprint": "30ecebe13ad6e255dc84be20df23fd5969cf150f34200f3fdb6a79b6bdcc6bd2"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/api.ts",
+      "query": "ThreadPageView",
+      "limit": 50,
+      "resultFingerprint": "cda447a741100c69ab2fd1e2f3728bf551745b5c23ce4f81636ea4fdbb1882b4"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/provider.tsx",
+      "query": "export function useAction",
+      "limit": 50,
+      "resultFingerprint": "d693b45d8634dfcc9a9e4bc317ae5b06724d38e5938c2121ca6b4db3426ecd38"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/provider.tsx",
+      "query": "export function usePanel",
+      "limit": 50,
+      "resultFingerprint": "adb0cfbb23fb0ae40c69bbb464c340002add808e2911ba9b4f9643e1f5c277ac"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/rows.tsx",
+      "query": "export function automatedRuns",
+      "limit": 50,
+      "resultFingerprint": "419ce1807c2950130edf03ae784b9df2e4417fdd0ad6d052c3c85b0afe77f2c0"
+    },
+    {
+      "kind": "search",
+      "path": "src/client/widgets.tsx",
+      "query": "export function Section",
+      "limit": 50,
+      "resultFingerprint": "9bc1287dee04e9ce180d3f8611d40cc0a43bae111a1578afd77729d8b1f5a30a"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-presentation:orchestration",
+      "contentFingerprint": "29dd1b20f7e2daeae82095044d6c923a58677a7694d5c9a9157f1f60778a017d"
+    }
+  ],
+  "infoFingerprint": "b8d576c0530998cc3d526d94aedcc10ced7819dbf5557af22346ab5d6cfe1fc6",
+  "artifacts": {
+    "info": ".fibo/analysis/src/client/thread.tsx.info.md",
+    "structure": ".fibo/analysis/src/client/thread.tsx.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "b8d576c0530998cc3d526d94aedcc10ced7819dbf5557af22346ab5d6cfe1fc6",
+    "structure": "1bf22b7ae08ca952d17d78b41b5d517a944fd9ec5e446a8c46b32cf2d2eca108"
+  }
+}

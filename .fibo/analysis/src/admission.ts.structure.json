@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/admission.ts",
+    "path": "src/admission.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "admission.ts",
+    "file_path": "src/admission.ts",
+    "description": "Admission configuration types and constants for import dependency policy decisions",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Type-only import of AdmissionCell from the core model module",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "./core/model.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "ADMISSION_OPTIONS",
+        "variable_id": "src/admission.ts:ADMISSION_OPTIONS",
+        "description": "Allowed admission choices keyed by admission cell category",
+        "filepath": "src/admission.ts",
+        "lines": [
+          9,
+          10
+        ]
+      },
+      {
+        "variable_name": "ADMISSION_DEFAULTS",
+        "variable_id": "src/admission.ts:ADMISSION_DEFAULTS",
+        "description": "Default admission decision for each admission cell category",
+        "filepath": "src/admission.ts",
+        "lines": [
+          13,
+          13
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "Admission",
+        "alias_id": "src/admission.ts:Admission",
+        "description": "Union type of admission modes: explicit, inferred, or ignore",
+        "filepath": "src/admission.ts",
+        "lines": [
+          8,
+          8
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "AdmissionRow",
+        "alias_id": "src/admission.ts:AdmissionRow",
+        "description": "Maps each admission cell to its allowed admission option values",
+        "filepath": "src/admission.ts",
+        "lines": [
+          11,
+          11
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

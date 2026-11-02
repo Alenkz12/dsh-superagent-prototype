@@ -1,0 +1,231 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "collection:src/executor",
+    "path": "src/executor",
+    "kind": "directory"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "f406dc8a203d5f5ac075dc414ddb2daef9832ac6d7fdd4617c2da60a4474e9b0",
+  "children": [
+    {
+      "id": "file:src/executor/background.ts",
+      "infoFingerprint": "fe99262b5f3c0b17c6f4de46ba51a5a3f18df09ef6b8b85a9a0154c37cf83542"
+    },
+    {
+      "id": "file:src/executor/dsh.ts",
+      "infoFingerprint": "59e58e1d3b23a76d40d56248bd0e846936bab9e6dd178b8bf3ef93ed055921d2"
+    }
+  ],
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src",
+      "resultFingerprint": "e17b6d8ec5aecd9176b3ffda9aabd0329f88456cdae8ef4e381964a8cae1ea63"
+    },
+    {
+      "kind": "directory-listing",
+      "path": "src/executor",
+      "resultFingerprint": "06da48bd8f56620ff2f2b10b73b8177f038f087409d06e790b5ebe3898f83803"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/effects.ts",
+      "contentFingerprint": "d350590473299398b17c50dd641c72e1995dd95920c5138699491ab77e3ae481"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/execution-environment.ts",
+      "contentFingerprint": "82aae39bd65141df80f6a85991e35d05c9f0dfc748be88f78b7520ce97883b3f"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/http.ts",
+      "contentFingerprint": "5da39830429559975cae7ae6d39416acb2322ac8e31cfb4da3436df602cb7ec4"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/resources.ts",
+      "contentFingerprint": "cc09f56669b2ccacfc889aa98132590b618f77e6648a7ff8fe8454106c8c663f"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/runtime.ts",
+      "contentFingerprint": "5befef035b4a70978cd881b32282680260c6d2561679f890dd911214664cf515"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/sessions.ts",
+      "contentFingerprint": "ca2b98e57e9f27b2abb0afab59d44ea744a96d8be4cf81d7b3776901b56cd36b"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/settings-history.ts",
+      "contentFingerprint": "a20acbb1e121b41f355970c738047b3b89a75979d216079657f40bdbd2366023"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/settings.ts",
+      "contentFingerprint": "2c7cd780dd24ab6a99ddfd30f80b921db035e0d56e3e1d42a86371fe20423f3f"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/setup.ts",
+      "contentFingerprint": "d1de51b048d352345d4837a5911ba4d0158979c8073575feddc064670c8a697a"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/tools/executor.ts",
+      "contentFingerprint": "9869d8a5043725847f18814e23b29c11ae93aa974defa72d2eab62c61a6def47"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/views/overview.ts",
+      "contentFingerprint": "c8eb087eb5e3586e924ff5df659aa1535d64e6723f2f5ffa8e721f4abbfabef8"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/views/tickets.ts",
+      "contentFingerprint": "7345a63859a81e525ba4341d8a7091053b8825f73215a028e144cd0dc8da5ccc"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/assignments.ts",
+      "contentFingerprint": "6acf4b858b35d95c875680e39b1e3c41557bbe6d39f65031bb26927289327065"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/engine.ts",
+      "contentFingerprint": "bd9a4caff834859877d1a08ccddebc990d0e1ca568674b80f9d59ce5adcac827"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/index.ts",
+      "contentFingerprint": "a5a1cf43f02eafaf520a5bfaf5e76b71ba521d04ee648cfcf12b3843cc474a3e"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/model.ts",
+      "contentFingerprint": "982155fe6a03c887a7ac4475c6d1592d12aa23c5fe3698403c93bbfd6469d44a"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/ports.ts",
+      "contentFingerprint": "0b44f1cd716d64776b0e3ea74a158cf0effd92e763b1b13c7705e766e9225a43"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/tickets.ts",
+      "contentFingerprint": "1d9f964ad34b54cbb0403bde16af58851e5e80111177ce73a27b6034e9af940e"
+    },
+    {
+      "kind": "file",
+      "path": "src/executor/background.ts",
+      "contentFingerprint": "60b98302d412426cda7df12ed69d750183f60fb00ac802a01ae2c963cfc79420"
+    },
+    {
+      "kind": "file",
+      "path": "src/executor/dsh.ts",
+      "contentFingerprint": "6445a03121fa9bd15fc437736bcc2acc6ab950c5fe732e5b99eb8ee2c8a9476b"
+    },
+    {
+      "kind": "file",
+      "path": "src/infra/environment.ts",
+      "contentFingerprint": "413680e755ed36b74157f364a38cb5dbe81e4af0db0fa88c8376c682e2282a7c"
+    },
+    {
+      "kind": "file",
+      "path": "src/infra/health.ts",
+      "contentFingerprint": "dcd84306e795866ffb66ecb5274edf50114ba77052d260b4b530a1a81022d76e"
+    },
+    {
+      "kind": "file",
+      "path": "src/policy.ts",
+      "contentFingerprint": "01cff8c333b341ee2943e644046f0da3ed9675af1c0029489b5f4bc8226d293d"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "DshExecutor",
+      "limit": 50,
+      "resultFingerprint": "de544b592bd59a5114508be11e9245e35307b83fb0678e0cc326fd94c3ff0e01"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "interface Executor",
+      "limit": 50,
+      "resultFingerprint": "449faf6572a933aa5bd9c65c5b6f8937e05ac4fb5c88c10a1d71b77a5300db3d"
+    },
+    {
+      "kind": "search",
+      "path": "src/app",
+      "query": "executor.",
+      "limit": 40,
+      "resultFingerprint": "92aaafb93be37ed90ae5371927967138a01fa266fa22e0a7cb16abadc8bfa258"
+    },
+    {
+      "kind": "search",
+      "path": "src/app/sessions.ts",
+      "query": "prompt(",
+      "limit": 50,
+      "resultFingerprint": "ca66ebec4cdbee0861d8e1a43e650574e6cf3db13575ec7ed11a862f5c4451c1"
+    },
+    {
+      "kind": "search",
+      "path": "src/core",
+      "query": "EngineForExecutor",
+      "limit": 50,
+      "resultFingerprint": "0bb70e81afbbe0bdb1f516cd914e1059f3f292e7e70d8f21c48a226d45ed5594"
+    },
+    {
+      "kind": "search",
+      "path": "src/core",
+      "query": "export function runningAssignment",
+      "limit": 50,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "search",
+      "path": "src/core",
+      "query": "runningAssignment",
+      "limit": 50,
+      "resultFingerprint": "6377ab131dc248f906a5c1b2c3871a9b98f9825edb6bcadb6a3b5244c314c561"
+    },
+    {
+      "kind": "search",
+      "path": "src/core/ports.ts",
+      "query": "EngineForExecutor",
+      "limit": 50,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "search",
+      "path": "src/infra/environment.ts",
+      "query": "export",
+      "limit": 50,
+      "resultFingerprint": "f240ae7e0c3a93b0c735b2d4c3ef055fc45332980bfb13549a4d497b4a9ec14f"
+    },
+    {
+      "kind": "search",
+      "path": "src/policy.ts",
+      "query": "maxWorkers",
+      "limit": 50,
+      "resultFingerprint": "60c2f7104c68f7f869034f2a6572a70f65a2e6912b15890618d6c3dba368c051"
+    },
+    {
+      "kind": "template",
+      "key": "directory-language-gfgo-primary-orchestration:external-adapter",
+      "contentFingerprint": "30a050f313f7e6c96d1aded81f38db3b517782cd4b22d7b8e8c135bec8b4deaa"
+    }
+  ],
+  "infoFingerprint": "b3f767968f1f4078f8629d6ac1d4cca8bf56b8fe47c17e2918c77bed9132c73e",
+  "artifacts": {
+    "info": ".fibo/analysis/src/executor/executor.info.md",
+    "structure": ".fibo/analysis/src/executor/executor.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "b3f767968f1f4078f8629d6ac1d4cca8bf56b8fe47c17e2918c77bed9132c73e",
+    "structure": "3e5182c622e269c2a4d4cef85f7384b4a151033ca710f9d908c34739cef4e72f"
+  }
+}

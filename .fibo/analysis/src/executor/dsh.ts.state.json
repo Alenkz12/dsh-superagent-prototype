@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/executor/dsh.ts",
+    "path": "src/executor/dsh.ts",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "d8e052dcc2c553644a6152ad25c2a7e64521b5f47f7ea2ba32af1b15e32ba622",
+  "sourceFingerprint": "6445a03121fa9bd15fc437736bcc2acc6ab950c5fe732e5b99eb8ee2c8a9476b",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/executor",
+      "resultFingerprint": "06da48bd8f56620ff2f2b10b73b8177f038f087409d06e790b5ebe3898f83803"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/effects.ts",
+      "contentFingerprint": "d350590473299398b17c50dd641c72e1995dd95920c5138699491ab77e3ae481"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/http.ts",
+      "contentFingerprint": "5da39830429559975cae7ae6d39416acb2322ac8e31cfb4da3436df602cb7ec4"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/runtime.ts",
+      "contentFingerprint": "5befef035b4a70978cd881b32282680260c6d2561679f890dd911214664cf515"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/sessions.ts",
+      "contentFingerprint": "ca2b98e57e9f27b2abb0afab59d44ea744a96d8be4cf81d7b3776901b56cd36b"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/model.ts",
+      "contentFingerprint": "982155fe6a03c887a7ac4475c6d1592d12aa23c5fe3698403c93bbfd6469d44a"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/ports.ts",
+      "contentFingerprint": "0b44f1cd716d64776b0e3ea74a158cf0effd92e763b1b13c7705e766e9225a43"
+    },
+    {
+      "kind": "file",
+      "path": "src/executor/background.ts",
+      "contentFingerprint": "60b98302d412426cda7df12ed69d750183f60fb00ac802a01ae2c963cfc79420"
+    },
+    {
+      "kind": "file",
+      "path": "src/executor/dsh.ts",
+      "contentFingerprint": "6445a03121fa9bd15fc437736bcc2acc6ab950c5fe732e5b99eb8ee2c8a9476b"
+    },
+    {
+      "kind": "file",
+      "path": "src/infra/health.ts",
+      "contentFingerprint": "dcd84306e795866ffb66ecb5274edf50114ba77052d260b4b530a1a81022d76e"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "class Later",
+      "limit": 50,
+      "resultFingerprint": "19cc79be723c410e27df13b5dc0bdfd3b65385a3fd80d2fdbff1db0b88f988dc"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "DshExecutor",
+      "limit": 40,
+      "resultFingerprint": "de544b592bd59a5114508be11e9245e35307b83fb0678e0cc326fd94c3ff0e01"
+    },
+    {
+      "kind": "search",
+      "path": "src/app/effects.ts",
+      "query": "export const Later",
+      "limit": 50,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "search",
+      "path": "src/app/sessions.ts",
+      "query": "  prompt(",
+      "limit": 50,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "search",
+      "path": "src/app/sessions.ts",
+      "query": "prompt(",
+      "limit": 30,
+      "resultFingerprint": "ca66ebec4cdbee0861d8e1a43e650574e6cf3db13575ec7ed11a862f5c4451c1"
+    },
+    {
+      "kind": "search",
+      "path": "src/core",
+      "query": "export const liveTicket",
+      "limit": 50,
+      "resultFingerprint": "cfbdfaab07ea264020fa61e59f0d71250e07d8f33fb7073ddba44d8d4d7a4fe6"
+    },
+    {
+      "kind": "search",
+      "path": "src/core",
+      "query": "export interface Ticket {",
+      "limit": 50,
+      "resultFingerprint": "f6335ef3ffde41597831666e7890e839fd58766cba4583f9e940fcf2f469e1fa"
+    },
+    {
+      "kind": "search",
+      "path": "src/core",
+      "query": "interface Executor",
+      "limit": 50,
+      "resultFingerprint": "4f40979393a7a14e13d209afe788f9b0179574299429a4eb5000e5352fa225ce"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-orchestration:domain-rules,external-adapter",
+      "contentFingerprint": "163bf608a81145734236aa6124f2734b715be455b7c7434efa05b7f72d142209"
+    }
+  ],
+  "infoFingerprint": "59e58e1d3b23a76d40d56248bd0e846936bab9e6dd178b8bf3ef93ed055921d2",
+  "artifacts": {
+    "info": ".fibo/analysis/src/executor/dsh.ts.info.md",
+    "structure": ".fibo/analysis/src/executor/dsh.ts.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "59e58e1d3b23a76d40d56248bd0e846936bab9e6dd178b8bf3ef93ed055921d2",
+    "structure": "84ceff6ee0a2dd867b481d73b9c6da71cfe84bbcfb12a1ef25f52ef4276eaccf"
+  }
+}

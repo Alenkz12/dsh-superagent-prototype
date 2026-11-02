@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "collection:src/app",
+    "path": "src/app",
+    "kind": "directory",
+    "sourceKind": "directory"
+  }
+}

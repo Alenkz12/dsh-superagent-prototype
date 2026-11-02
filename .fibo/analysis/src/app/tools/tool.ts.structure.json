@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/tools/tool.ts",
+    "path": "src/app/tools/tool.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "tool.ts",
+    "file_path": "src/app/tools/tool.ts",
+    "description": "Tool definition helpers for the orchestrator: tool interface, registration type, and the read tool factory",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "zod",
+        "description": "Imports the zod library as z for schema definitions",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports word limit constant and word counting helper from infra text module",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "../../infra/text.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports resourceGrammar helper describing valid resource names",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "../resources.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "readTool",
+        "function_id": "src/app/tools/tool.ts:readTool(description: string, executor: boolean, read: (resource: string, offset: number, limit: number | undefined, signal: AbortSignal) => Promise<unknown>)",
+        "description": "Creates the orchestrator_read tool that reads a resource page by offset and limit",
+        "filepath": "src/app/tools/tool.ts",
+        "lines": [
+          22,
+          35
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "Tool",
+        "interface_id": "src/app/tools/tool.ts:Tool",
+        "description": "Generic tool contract holding name, description, zod schema, and async executor",
+        "filepath": "src/app/tools/tool.ts",
+        "lines": [
+          6,
+          11
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "tool",
+        "variable_id": "src/app/tools/tool.ts:tool",
+        "description": "Identity helper that types a tool definition as a Tool",
+        "filepath": "src/app/tools/tool.ts",
+        "lines": [
+          13,
+          13
+        ]
+      },
+      {
+        "variable_name": "AcknowledgementSchema",
+        "variable_id": "src/app/tools/tool.ts:AcknowledgementSchema",
+        "description": "Zod schema validating a non-empty acknowledgement string within the word limit",
+        "filepath": "src/app/tools/tool.ts",
+        "lines": [
+          16,
+          17
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "RegisterTool",
+        "alias_id": "src/app/tools/tool.ts:RegisterTool",
+        "description": "Type of the function that registers a named tool with schema and executor",
+        "filepath": "src/app/tools/tool.ts",
+        "lines": [
+          12,
+          12
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

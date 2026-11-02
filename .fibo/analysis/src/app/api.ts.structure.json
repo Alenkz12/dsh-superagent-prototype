@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/api.ts",
+    "path": "src/app/api.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "api.ts",
+    "file_path": "src/app/api.ts",
+    "description": "API type definitions module: declares the Api route map, request/response helper types, and filter constants",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "types",
+        "description": "Imports the ModelCatalog type from the session controller API package",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports PromptConfig and Prompts types from prompts module",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "./prompts.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports PromptsView, StateView, and TicketPageView types from http module",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "./http.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports HistoryView type from settings-history module",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "./settings-history.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports OverviewView type from views/overview module",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "./views/overview.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports SettingsView type from views/settings module",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "./views/settings.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports SourceStatusView type from views/sources module",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "./views/sources.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports thread and search view types from views/threads module",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "./views/threads.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports TicketListView type from views/tickets module",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "./views/tickets.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "Paged",
+        "interface_id": "src/app/api.ts:Paged",
+        "description": "Pagination options interface with optional offset and limit",
+        "filepath": "src/app/api.ts",
+        "lines": [
+          16,
+          16
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "Api",
+        "interface_id": "src/app/api.ts:Api",
+        "description": "Exported interface mapping route key strings (method + path) to their query/body/response types",
+        "filepath": "src/app/api.ts",
+        "lines": [
+          20,
+          46
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "TICKET_FILTERS",
+        "variable_id": "src/app/api.ts:TICKET_FILTERS",
+        "description": "Exported readonly list of valid ticket filter values",
+        "filepath": "src/app/api.ts",
+        "lines": [
+          12,
+          12
+        ]
+      },
+      {
+        "variable_name": "THREAD_FILTERS",
+        "variable_id": "src/app/api.ts:THREAD_FILTERS",
+        "description": "Exported readonly list of valid thread filter values",
+        "filepath": "src/app/api.ts",
+        "lines": [
+          13,
+          13
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "TicketFilter",
+        "alias_id": "src/app/api.ts:TicketFilter",
+        "description": "Ticket filter union derived from the TICKET_FILTERS constant",
+        "filepath": "src/app/api.ts",
+        "lines": [
+          14,
+          14
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "ThreadFilter",
+        "alias_id": "src/app/api.ts:ThreadFilter",
+        "description": "Thread filter union derived from the THREAD_FILTERS constant",
+        "filepath": "src/app/api.ts",
+        "lines": [
+          15,
+          15
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "Delivery",
+        "alias_id": "src/app/api.ts:Delivery",
+        "description": "Prompt context delivery mode: injected or pending",
+        "filepath": "src/app/api.ts",
+        "lines": [
+          18,
+          18
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "Path",
+        "alias_id": "src/app/api.ts:Path",
+        "description": "Extracts the path portion from a 'METHOD path' route key",
+        "filepath": "src/app/api.ts",
+        "lines": [
+          47,
+          47
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "Params",
+        "alias_id": "src/app/api.ts:Params",
+        "description": "Recursively extracts :param names from a path template into a record type",
+        "filepath": "src/app/api.ts",
+        "lines": [
+          48,
+          49
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "RouteParams",
+        "alias_id": "src/app/api.ts:RouteParams",
+        "description": "Route params record type for a given Api route key",
+        "filepath": "src/app/api.ts",
+        "lines": [
+          50,
+          50
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "ApiRequest",
+        "alias_id": "src/app/api.ts:ApiRequest",
+        "description": "Request type for a route key: route params plus query/body without response",
+        "filepath": "src/app/api.ts",
+        "lines": [
+          51,
+          51
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "ApiResponse",
+        "alias_id": "src/app/api.ts:ApiResponse",
+        "description": "Response type for a given Api route key",
+        "filepath": "src/app/api.ts",
+        "lines": [
+          52,
+          52
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/index.ts",
+    "path": "src/index.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "index.ts",
+    "file_path": "src/index.ts",
+    "description": "Plugin entry for dsh-superagent: registers the plugin, wires runtime, and re-exports deployment and core APIs",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "cordis",
+        "description": "Type-only import of the cordis Context type",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "dsh-settings",
+        "description": "Type-only import to augment DSH settings service typings",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Runtime class from the app runtime module",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "./app/runtime.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports Config, machineOf, and DeploymentConfig from the deployment module",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "./deployment.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Re-exports Deployment and DeploymentConfig types from the deployment module",
+        "lines": [
+          26,
+          26
+        ],
+        "source": "internal",
+        "filepath": "./deployment.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Re-exports all public APIs from the core index",
+        "lines": [
+          27,
+          27
+        ],
+        "source": "internal",
+        "filepath": "./core/index.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "apply",
+        "function_id": "src/index.ts:apply(ctx: Context, config: DeploymentConfig)",
+        "description": "Plugin apply hook: builds machine from config, injects settings, creates Runtime, and stops it on dispose",
+        "filepath": "src/index.ts",
+        "lines": [
+          10,
+          25
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "name",
+        "variable_id": "src/index.ts:name",
+        "description": "Plugin name constant 'dsh-superagent'",
+        "filepath": "src/index.ts",
+        "lines": [
+          7,
+          7
+        ]
+      },
+      {
+        "variable_name": "inject",
+        "variable_id": "src/index.ts:inject",
+        "description": "Declares required services the plugin injects (agents, tools, llm, subprocess, etc.)",
+        "filepath": "src/index.ts",
+        "lines": [
+          8,
+          8
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

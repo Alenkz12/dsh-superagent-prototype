@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/executor/background.ts",
+    "path": "src/executor/background.ts",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "c9cb70ca8321a77ef4161bc20d627b0ad5097f4fc0c26e2969a672d79d6b6705",
+  "sourceFingerprint": "60b98302d412426cda7df12ed69d750183f60fb00ac802a01ae2c963cfc79420",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/executor",
+      "resultFingerprint": "06da48bd8f56620ff2f2b10b73b8177f038f087409d06e790b5ebe3898f83803"
+    },
+    {
+      "kind": "file",
+      "path": "docs/007-architecture.md",
+      "contentFingerprint": "e3747665587fdf88b28d4e9c1a1f8ac40cbc2c65a9999be1fce14b69ec44d748"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/notices.ts",
+      "contentFingerprint": "c6d464a69809719408b6f279490d22e98e00901cba3058a84c76cfe73aa69022"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/runtime.ts",
+      "contentFingerprint": "5befef035b4a70978cd881b32282680260c6d2561679f890dd911214664cf515"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/sessions.ts",
+      "contentFingerprint": "ca2b98e57e9f27b2abb0afab59d44ea744a96d8be4cf81d7b3776901b56cd36b"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/client.css",
+      "contentFingerprint": "8de57c24e782831b713dd5221900ee3a45172285f8598b80b27797cd9799db32"
+    },
+    {
+      "kind": "file",
+      "path": "src/executor/background.ts",
+      "contentFingerprint": "60b98302d412426cda7df12ed69d750183f60fb00ac802a01ae2c963cfc79420"
+    },
+    {
+      "kind": "file",
+      "path": "src/executor/dsh.ts",
+      "contentFingerprint": "6445a03121fa9bd15fc437736bcc2acc6ab950c5fe732e5b99eb8ee2c8a9476b"
+    },
+    {
+      "kind": "file",
+      "path": "tests/background.spec.ts",
+      "contentFingerprint": "d74c22ea95a8596523c6f87815e86e50bb015526766a6fdbae832e4c90e45dbf"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "executor/background",
+      "limit": 30,
+      "resultFingerprint": "a2f614a4fbc7ce2e93868c40f1cd56debffd172d6cfb2930c5e665ef9c46ee32"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "background",
+      "limit": 60,
+      "resultFingerprint": "1b29f862dfb09509891052c376ec2a6c368f2b68c03141cf6c5ad735dd4d0fbd"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "ctx.get('jobs')",
+      "limit": 30,
+      "resultFingerprint": "4d0ab64edf68dacba1020a92c999233137ed58c71951483068aea0e9a0799c36"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "stopSubagents",
+      "limit": 30,
+      "resultFingerprint": "6e6a3c14624a76dd556ccaf1750f4ec61e13adcc885b341aecf11d778dab69ae"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "untilQuiet",
+      "limit": 40,
+      "resultFingerprint": "cdba4489188ed4d100d62093af012bee38b1a9c3d529f1305baa1dd34baf3dc6"
+    },
+    {
+      "kind": "search",
+      "path": "src/executor/dsh.ts",
+      "query": "cancelled",
+      "limit": 30,
+      "resultFingerprint": "07def4b32913f33e9a5fec103be045c3bc8c46e5a676f1beb973e3b63d36d872"
+    },
+    {
+      "kind": "search",
+      "path": "src/executor/dsh.ts",
+      "query": "cancelled.has",
+      "limit": 30,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "search",
+      "path": "src/executor/dsh.ts",
+      "query": "cancelled|collectJob|killJobs|runningJobs|stopBackground|stopSubagents|until(",
+      "limit": 40,
+      "resultFingerprint": "672520b3d62e70d22cdb380395e614200d4114038f0faf927012ddb0fee2d2a0"
+    },
+    {
+      "kind": "search",
+      "path": "src/executor/dsh.ts",
+      "query": "collectJob",
+      "limit": 30,
+      "resultFingerprint": "ddf1f25080b53304fe3ed299ff97fecf3ef2c696755ebb010b4bff76446fa466"
+    },
+    {
+      "kind": "search",
+      "path": "src/executor/dsh.ts",
+      "query": "stopBackground",
+      "limit": 40,
+      "resultFingerprint": "48ff9ea62200503c8720da30c3e959cd5f0de8b290a1935aaee59053c7bbd7ca"
+    },
+    {
+      "kind": "search",
+      "path": "src/executor/dsh.ts",
+      "query": "untilQuiet",
+      "limit": 40,
+      "resultFingerprint": "7bbc4cb33b3af5f6c2caed1923cc1ad033f9ebc3508c763b11c47b7ccf0ffb70"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-orchestration:external-adapter",
+      "contentFingerprint": "1d40cf5f2f2f9da9c9ad45e31a725c32f23f064ff689c28e2e9f7fd301db9d0b"
+    }
+  ],
+  "infoFingerprint": "fe99262b5f3c0b17c6f4de46ba51a5a3f18df09ef6b8b85a9a0154c37cf83542",
+  "artifacts": {
+    "info": ".fibo/analysis/src/executor/background.ts.info.md",
+    "structure": ".fibo/analysis/src/executor/background.ts.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "fe99262b5f3c0b17c6f4de46ba51a5a3f18df09ef6b8b85a9a0154c37cf83542",
+    "structure": "6ef8ae7a05d86a9a165b7aca6abb0330c65d9b1d850547a63d97fb43c9335f6f"
+  }
+}

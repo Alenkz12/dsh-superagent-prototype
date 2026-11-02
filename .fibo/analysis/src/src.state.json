@@ -1,0 +1,256 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "collection:src",
+    "path": "src",
+    "kind": "directory"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "12f81fcce5713c556d248a7e8ef60a7b7dfbf9ccc0dc6d8e742d2485a0414609",
+  "children": [
+    {
+      "id": "collection:src/app",
+      "infoFingerprint": "e837313b9a53e9a86f4e59de5bfd10b3acdf45781bdabaa0fd9858b4e103970b"
+    },
+    {
+      "id": "collection:src/client",
+      "infoFingerprint": "9c6fa2627b8e36c667a22c4cb4db57f5ab6e2ad76acb05d7c605b93379c2e255"
+    },
+    {
+      "id": "collection:src/core",
+      "infoFingerprint": "0417e580ca7251c2e03fa20fbd8f0b5719edc2d4ceb7a1c25e4aaab062d8da46"
+    },
+    {
+      "id": "collection:src/executor",
+      "infoFingerprint": "b3f767968f1f4078f8629d6ac1d4cca8bf56b8fe47c17e2918c77bed9132c73e"
+    },
+    {
+      "id": "collection:src/infra",
+      "infoFingerprint": "6ca0eac8b55bb259557f83401e990a74094fc94bbb8f2072976de371eb7e0445"
+    },
+    {
+      "id": "collection:src/sources",
+      "infoFingerprint": "1120b8f0ce24f3234ef789aaa54dbd2f6c81d68761662426a4b359fff8eb59c3"
+    },
+    {
+      "id": "file:src/admission.ts",
+      "infoFingerprint": "a748ff18f7fa23af10a7fb30820ab611dd98b589de45b1477f3fc8743a612c94"
+    },
+    {
+      "id": "file:src/deployment.ts",
+      "infoFingerprint": "497df7fcb21e0c0673a035b79e5fcd52c7badeb70246a30ee089ce84f529d199"
+    },
+    {
+      "id": "file:src/index.ts",
+      "infoFingerprint": "35a6e13bfee93ab5d8b61cd05c0c2e9bc9afc70c4242a7847e4f458addda882c"
+    },
+    {
+      "id": "file:src/kv.ts",
+      "infoFingerprint": "e0d23c55274d7a4b3571ecc25bd226cf8e7ceaa34755e6191a2c0bdbb46ce872"
+    },
+    {
+      "id": "file:src/limits.ts",
+      "infoFingerprint": "5ab536b6368225a45f37dbab17e23d01b82c3056af6ceb792bf56f211f1c35f8"
+    },
+    {
+      "id": "file:src/navigation.ts",
+      "infoFingerprint": "ea51714c7a837eb6d091f9ddfbc701b631faf2e49f5a1a14690d7a1307fde872"
+    },
+    {
+      "id": "file:src/policy.ts",
+      "infoFingerprint": "da73accec43d0e68b3a3bfe95ea6d8d36a31ca20d4f5df93b4421942c6a9742a"
+    },
+    {
+      "id": "file:src/setup.ts",
+      "infoFingerprint": "7e66f7c372b4d91b8b033b742f36ffd6fb03ccfd0c2a8a538ff756fb3b228266"
+    }
+  ],
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src",
+      "resultFingerprint": "e17b6d8ec5aecd9176b3ffda9aabd0329f88456cdae8ef4e381964a8cae1ea63"
+    },
+    {
+      "kind": "directory-listing",
+      "path": "src/app",
+      "resultFingerprint": "c5d9a996b9b8fdf32bef10c15d47f0ba7a1c84c5d144bf4160f01af92915cf64"
+    },
+    {
+      "kind": "directory-listing",
+      "path": "src/core",
+      "resultFingerprint": "be82a7cf8ea92859bf3f3d905a318cf2acf25b289109698a34e8e9c13ab4a02c"
+    },
+    {
+      "kind": "directory-listing",
+      "path": "src/executor",
+      "resultFingerprint": "06da48bd8f56620ff2f2b10b73b8177f038f087409d06e790b5ebe3898f83803"
+    },
+    {
+      "kind": "directory-listing",
+      "path": "src/infra",
+      "resultFingerprint": "812201e003213df01502321bd5f8990ab3aee224858775929593aacc6c6dd8f8"
+    },
+    {
+      "kind": "directory-listing",
+      "path": "src/sources",
+      "resultFingerprint": "e13a5d7335d2907bee6071268ebe6f12a05e34a0f356774711e36baefff226d6"
+    },
+    {
+      "kind": "file",
+      "path": "cordis.patch.yml",
+      "contentFingerprint": "fc9271cdf9b3d96bcb7febffe194f92cb427a88044168f83b3fb7522ab5c9bce"
+    },
+    {
+      "kind": "file",
+      "path": "package.json",
+      "contentFingerprint": "f5170d812137dd370c568decb481e19f4da9a3d1fd7bad341a0f07942020a559"
+    },
+    {
+      "kind": "file",
+      "path": "src/admission.ts",
+      "contentFingerprint": "62f54fe63762a347e54cec2aed098e1b28a0a547a4133b5e3fc2e91a10b94afd"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/http.ts",
+      "contentFingerprint": "5da39830429559975cae7ae6d39416acb2322ac8e31cfb4da3436df602cb7ec4"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/runtime.ts",
+      "contentFingerprint": "5befef035b4a70978cd881b32282680260c6d2561679f890dd911214664cf515"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/setup.ts",
+      "contentFingerprint": "d1de51b048d352345d4837a5911ba4d0158979c8073575feddc064670c8a697a"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/deployment.tsx",
+      "contentFingerprint": "c37ebd5a24d0319a28d3d98a76dde23d9694b0fad4a7900df0eff85de82afb4b"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/eval.tsx",
+      "contentFingerprint": "44350064a4a7649e418ea5db25d98a58e31f77b8171393589c5b4644d03b8cc8"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/execution.tsx",
+      "contentFingerprint": "8d9200aab40f092972234fc5712a78f1db0c1ad581517d574f8b8143c289959c"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/index.tsx",
+      "contentFingerprint": "6a7e5a0295ecbbd047dbb619e0cdf9d1489a46c8dfcc56dbfd1cfe6f6d866529"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/index.ts",
+      "contentFingerprint": "a5a1cf43f02eafaf520a5bfaf5e76b71ba521d04ee648cfcf12b3843cc474a3e"
+    },
+    {
+      "kind": "file",
+      "path": "src/deployment.ts",
+      "contentFingerprint": "9984953f17592b267e386d4028552d413cfe9c9ac4df6dfb730b6be5115dbf77"
+    },
+    {
+      "kind": "file",
+      "path": "src/index.ts",
+      "contentFingerprint": "fbe2a1290be6f92f641592754e813a1fc0ffc164072a8ef2f1e57f8c151d44ec"
+    },
+    {
+      "kind": "file",
+      "path": "src/infra/environment.ts",
+      "contentFingerprint": "413680e755ed36b74157f364a38cb5dbe81e4af0db0fa88c8376c682e2282a7c"
+    },
+    {
+      "kind": "file",
+      "path": "src/kv.ts",
+      "contentFingerprint": "c6dd38e1ef7b19ae5a0440e11c4a713103a318e0df3fc2fc3b12cbd9a8f4eea7"
+    },
+    {
+      "kind": "file",
+      "path": "src/limits.ts",
+      "contentFingerprint": "78e4171e6624580038996e3931888cd1cdbefa5c0e1035235c4dffdbb4af236f"
+    },
+    {
+      "kind": "file",
+      "path": "src/navigation.ts",
+      "contentFingerprint": "0185810fbfed59fb7c9d40936d36cb4746e6ce469948199d815f7f736ffcc13f"
+    },
+    {
+      "kind": "file",
+      "path": "src/policy.ts",
+      "contentFingerprint": "01cff8c333b341ee2943e644046f0da3ed9675af1c0029489b5f4bc8226d293d"
+    },
+    {
+      "kind": "file",
+      "path": "src/setup.ts",
+      "contentFingerprint": "eae13507edd63c331ccde9e979835202e742378cca2eb35fcd12af60e48fc6f2"
+    },
+    {
+      "kind": "file",
+      "path": "tsdown.config.ts",
+      "contentFingerprint": "39163d8b6b8bd8e7eb723e535da60ce6840fa83930f4c92e1de916d3cfdfd211"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "'../admission.ts'",
+      "limit": 30,
+      "resultFingerprint": "a5e59026b6a5743b7e80141723b8c77f53b3b646f65751324d131ac8bca396a2"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "'../limits.ts'",
+      "limit": 30,
+      "resultFingerprint": "faa17ea0f8feaae76b9cce32310a4ca9815909fca5bf6b1253270ce40ac47fb4"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "'../navigation.ts'",
+      "limit": 20,
+      "resultFingerprint": "7d91621736ee8a6585fc17a24e580a1ba03f417cb6b5a03d1ac8b2d8d1ab391a"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "from './policy.ts'",
+      "limit": 50,
+      "resultFingerprint": "8d0e77ccbd9674fd6b27bbe7549d0afbec7cfba391e17ace376a295befe1cd55"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "SetupError",
+      "limit": 30,
+      "resultFingerprint": "d0c85e3ce8dec9bedd77b7cee5de8c5fca7abc4327077dacc072821ad47251b0"
+    },
+    {
+      "kind": "search",
+      "path": "tsdown.config.ts",
+      "query": "entry",
+      "limit": 50,
+      "resultFingerprint": "4ae1a538627e7d075edd2a604fff4f9f11e733eb7515d6849b125f1cf06bc428"
+    },
+    {
+      "kind": "template",
+      "key": "directory-language-gfgo-primary-entry:configuration,domain-rules",
+      "contentFingerprint": "bb52c0af3d265392f84727b2f143bf9b239a11e989ded80907b34e73274b38a2"
+    }
+  ],
+  "infoFingerprint": "dfb21f26870dabde0428afd658f310346ab1fcbbf2e53f39a47fd319ba8a25e6",
+  "artifacts": {
+    "info": ".fibo/analysis/src/src.info.md",
+    "structure": ".fibo/analysis/src/src.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "dfb21f26870dabde0428afd658f310346ab1fcbbf2e53f39a47fd319ba8a25e6",
+    "structure": "849304574f21e2a86ca116074e1aaccfe917e49e9ce6a24da1409b794f066404"
+  }
+}

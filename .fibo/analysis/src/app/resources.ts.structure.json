@@ -1,0 +1,407 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/resources.ts",
+    "path": "src/app/resources.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "resources.ts",
+    "file_path": "src/app/resources.ts",
+    "description": "Resource routing module exposing context resources (tickets, triggers, threads, prompts, models, source pages) for the agent to read",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "dsh-session",
+        "description": "Session identifier type from the dsh-session package",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Core domain helpers and types for tickets, triggers and thread keys",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Executor helpers for batches, messages and worker session ids",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "../executor/dsh.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "GitHub source reader used to serve GitHub originals",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "../sources/github-read.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Feishu source reader and reference helpers",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "../sources/feishu-read.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Feishu reference builder for source links",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "../sources/feishu.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Feishu trigger id resolver",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "../sources/feishu-trigger.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Card renderers, paging helpers and preview utilities for resource output",
+        "lines": [
+          9,
+          10
+        ],
+        "source": "internal",
+        "filepath": "./cards.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Thread title formatting helper from record views",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "./views/records.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Transcript entry renderer for context output",
+        "lines": [
+          12,
+          12
+        ],
+        "source": "internal",
+        "filepath": "./context.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Built-in prompt parts and default prompt configuration",
+        "lines": [
+          13,
+          13
+        ],
+        "source": "internal",
+        "filepath": "./prompts.ts"
+      },
+      {
+        "class_name": "cordis",
+        "description": "Cordis framework Context type",
+        "lines": [
+          14,
+          14
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Commands type for slash command access",
+        "lines": [
+          15,
+          15
+        ],
+        "source": "internal",
+        "filepath": "../infra/commands.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Prompt version and prompt manager types",
+        "lines": [
+          16,
+          16
+        ],
+        "source": "internal",
+        "filepath": "./prompts.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Sessions type for session status and retry access",
+        "lines": [
+          17,
+          17
+        ],
+        "source": "internal",
+        "filepath": "./sessions.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Settings type for view and block configuration",
+        "lines": [
+          18,
+          18
+        ],
+        "source": "internal",
+        "filepath": "./settings.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "KV storage abstraction used by the store",
+        "lines": [
+          19,
+          19
+        ],
+        "source": "internal",
+        "filepath": "../kv.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Store type for persisted domain entities",
+        "lines": [
+          20,
+          20
+        ],
+        "source": "internal",
+        "filepath": "./store.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "TextCache type for cached page bodies",
+        "lines": [
+          21,
+          21
+        ],
+        "source": "internal",
+        "filepath": "./cache.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "list",
+        "function_id": "src/app/resources.ts:list({ offset, limit }: Read, fetch: (offset: number, count: number) => T[])",
+        "description": "Paginates a fetch callback with capped page size and returns items plus next offset",
+        "filepath": "src/app/resources.ts",
+        "lines": [
+          88,
+          92
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "sourcePage",
+        "function_id": "src/app/resources.ts:sourcePage(read: Read, source: string, fetch: () => Promise<unknown>)",
+        "description": "Fetches and caches a source page body at offset 0, serving later offsets from cache",
+        "filepath": "src/app/resources.ts",
+        "lines": [
+          104,
+          110
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "transcript",
+        "function_id": "src/app/resources.ts:transcript(host: ResourceHost, ticketId: string)",
+        "description": "Returns the recorded transcript events of a ticket's worker session",
+        "filepath": "src/app/resources.ts",
+        "lines": [
+          114,
+          116
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "readResource",
+        "function_id": "src/app/resources.ts:readResource(host: ResourceHost, resource: string, offset: number, limit: number | undefined, ticketId?: string, signal?: AbortSignal)",
+        "description": "Normalizes a resource name, matches it against ROUTES, and dispatches to the matching reader",
+        "filepath": "src/app/resources.ts",
+        "lines": [
+          299,
+          308
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "ResourceHost",
+        "interface_id": "src/app/resources.ts:ResourceHost",
+        "description": "Host contract providing store, caches, prompts, commands, context and revision access to resource readers",
+        "filepath": "src/app/resources.ts",
+        "lines": [
+          59,
+          71
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "MainResourceHost",
+        "interface_id": "src/app/resources.ts:MainResourceHost",
+        "description": "Extended resource host for the main session, adding sessions and settings access",
+        "filepath": "src/app/resources.ts",
+        "lines": [
+          72,
+          75
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "Read",
+        "interface_id": "src/app/resources.ts:Read",
+        "description": "Parameter object describing a single resource read request with host, name, paging and session info",
+        "filepath": "src/app/resources.ts",
+        "lines": [
+          76,
+          79
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "RESOURCES",
+        "variable_id": "src/app/resources.ts:RESOURCES",
+        "description": "Table describing every context resource name, what it holds, and whether it is executor-only",
+        "filepath": "src/app/resources.ts",
+        "lines": [
+          24,
+          55
+        ]
+      },
+      {
+        "variable_name": "resourceGrammar",
+        "variable_id": "src/app/resources.ts:resourceGrammar",
+        "description": "Builds a human-readable grammar string of resource names and their contents, optionally executor-only",
+        "filepath": "src/app/resources.ts",
+        "lines": [
+          56,
+          57
+        ]
+      },
+      {
+        "variable_name": "main",
+        "variable_id": "src/app/resources.ts:main",
+        "description": "Guards that a read targets the main session and narrows the host to MainResourceHost",
+        "filepath": "src/app/resources.ts",
+        "lines": [
+          83,
+          86
+        ]
+      },
+      {
+        "variable_name": "text",
+        "variable_id": "src/app/resources.ts:text",
+        "description": "Renders a resource body into a paged text response with default limit",
+        "filepath": "src/app/resources.ts",
+        "lines": [
+          87,
+          87
+        ]
+      },
+      {
+        "variable_name": "readable",
+        "variable_id": "src/app/resources.ts:readable",
+        "description": "Checks whether a trigger is reachable from a ticket via threads, origins or follows",
+        "filepath": "src/app/resources.ts",
+        "lines": [
+          94,
+          95
+        ]
+      },
+      {
+        "variable_name": "trigger",
+        "variable_id": "src/app/resources.ts:trigger",
+        "description": "Looks up a trigger and verifies the ticket may read it, throwing user errors otherwise",
+        "filepath": "src/app/resources.ts",
+        "lines": [
+          96,
+          102
+        ]
+      },
+      {
+        "variable_name": "THREAD_DECISIONS",
+        "variable_id": "src/app/resources.ts:THREAD_DECISIONS",
+        "description": "Number of latest decisions shown per thread card",
+        "filepath": "src/app/resources.ts",
+        "lines": [
+          111,
+          111
+        ]
+      },
+      {
+        "variable_name": "triggerLine",
+        "variable_id": "src/app/resources.ts:triggerLine",
+        "description": "Summarizes a trigger into a compact line with id, actor, timestamp, preview and read path",
+        "filepath": "src/app/resources.ts",
+        "lines": [
+          112,
+          113
+        ]
+      },
+      {
+        "variable_name": "ROUTES",
+        "variable_id": "src/app/resources.ts:ROUTES",
+        "description": "Route table mapping each resource name or prefix to its reader implementation",
+        "filepath": "src/app/resources.ts",
+        "lines": [
+          118,
+          293
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "Route",
+        "alias_id": "src/app/resources.ts:Route",
+        "description": "Tuple type of a route name pattern paired with its read handler",
+        "filepath": "src/app/resources.ts",
+        "lines": [
+          80,
+          80
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

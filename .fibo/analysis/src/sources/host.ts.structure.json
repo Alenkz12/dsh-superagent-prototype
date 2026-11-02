@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/sources/host.ts",
+    "path": "src/sources/host.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "host.ts",
+    "file_path": "src/sources/host.ts",
+    "description": "Source host abstractions: health reporting types, SourceHost/SourceContext contracts and helpers",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Imports core types: channels, messages, threads, tickets, triggers",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "internal",
+        "filepath": "../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Commands type from infra",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "../infra/commands.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the Deployment type",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "../deployment.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the SourceRegistry type",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "./registry.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the SetupProblem type",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "../setup.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports KV Family and Key types",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "../kv.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports the fill text templating helper",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "../infra/text.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "health",
+        "function_id": "src/sources/host.ts:health(state: Health['state'], code: HealthCode, values: Record<string, string> = {})",
+        "description": "Builds a Health record from state, code, and interpolated text values",
+        "filepath": "src/sources/host.ts",
+        "lines": [
+          20,
+          22
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "SourceHost",
+        "interface_id": "src/sources/host.ts:SourceHost",
+        "description": "Host contract exposing the source registry and per-kind Source contexts",
+        "filepath": "src/sources/host.ts",
+        "lines": [
+          23,
+          27
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "ThreadDescription",
+        "interface_id": "src/sources/host.ts:ThreadDescription",
+        "description": "Optional label, URL and facts describing a thread",
+        "filepath": "src/sources/host.ts",
+        "lines": [
+          29,
+          29
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "SourceContext",
+        "interface_id": "src/sources/host.ts:SourceContext",
+        "description": "Per-source runtime context: deployment, commands, tickets, triggers, health reporting",
+        "filepath": "src/sources/host.ts",
+        "lines": [
+          31,
+          66
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "HEALTH_TEXT",
+        "variable_id": "src/sources/host.ts:HEALTH_TEXT",
+        "description": "Readonly map of health codes to human-readable status messages",
+        "filepath": "src/sources/host.ts",
+        "lines": [
+          11,
+          17
+        ]
+      },
+      {
+        "variable_name": "sourceContext",
+        "variable_id": "src/sources/host.ts:sourceContext",
+        "description": "Helper returning the SourceContext for a host and source kind",
+        "filepath": "src/sources/host.ts",
+        "lines": [
+          67,
+          67
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "HealthCode",
+        "alias_id": "src/sources/host.ts:HealthCode",
+        "description": "Union of the health message keys defined in HEALTH_TEXT",
+        "filepath": "src/sources/host.ts",
+        "lines": [
+          18,
+          18
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "Health",
+        "alias_id": "src/sources/host.ts:Health",
+        "description": "Health status shape with state, detail text and optional code/values",
+        "filepath": "src/sources/host.ts",
+        "lines": [
+          19,
+          19
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/css.d.ts",
+    "path": "src/client/css.d.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "css.d.ts",
+    "file_path": "src/client/css.d.ts",
+    "description": "TypeScript declaration file providing type definitions for CSS module imports in the client",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

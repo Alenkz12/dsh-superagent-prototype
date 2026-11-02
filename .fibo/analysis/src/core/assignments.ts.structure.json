@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/core/assignments.ts",
+    "path": "src/core/assignments.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "assignments.ts",
+    "file_path": "src/core/assignments.ts",
+    "description": "Ticket assignment lifecycle engine part: start, run, end and recover assignments",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Imports `key` helper from ids module",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "internal",
+        "filepath": "./ids.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports `UserError` error class from errors module",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "./errors.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports `latestAssignment`, `liveTicket`, `runningAssignment` model helpers",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "./model.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Type-only import of `ReportState` and `Ticket` from model",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "./model.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports `EnginePart` base class and `EngineOptions` type",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "./part.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Type-only import of `Replies` interface",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "./replies.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports `automatic` helper and `Tickets` type from tickets module",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "./tickets.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [],
+    "classes": [
+      {
+        "class_name": "Assignments",
+        "class_id": "src/core/assignments.ts:Assignments",
+        "description": "Engine part managing ticket assignments: start, run, end and recover work",
+        "super_class": [],
+        "filepath": "src/core/assignments.ts",
+        "lines": [
+          30,
+          140
+        ],
+        "function": [],
+        "variables": []
+      }
+    ],
+    "interfaces": [
+      {
+        "interface_name": "WorkerReport",
+        "interface_id": "src/core/assignments.ts:WorkerReport",
+        "description": "Worker status report: state, summary, open question and answered question refs",
+        "filepath": "src/core/assignments.ts",
+        "lines": [
+          11,
+          20
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "RECOVERY_NOTE",
+        "variable_id": "src/core/assignments.ts:RECOVERY_NOTE",
+        "description": "Instruction text for resuming work after a host restart during a ticket",
+        "filepath": "src/core/assignments.ts",
+        "lines": [
+          21,
+          21
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

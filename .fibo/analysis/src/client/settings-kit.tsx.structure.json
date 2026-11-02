@@ -1,0 +1,1041 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/settings-kit.tsx",
+    "path": "src/client/settings-kit.tsx",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "settings-kit.tsx",
+    "file_path": "src/client/settings-kit.tsx",
+    "description": "Shared React building blocks for the panel settings UI: a settings context/provider, a block-scoped draft hook backed by the settings API, form primitives (fieldset, labeled field, switch row), a model selector with catalog autocomplete, a schema-driven Source field renderer (switch/select/number/text/fact/rows), and a collapsible configuration revision history panel.",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [],
+    "import_function": [
+      {
+        "function_name": "cloneElement",
+        "description": "React helper used to inject a generated id into a child control element",
+        "lines": [
+          2,
+          3
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "createContext",
+        "description": "React factory used to create the settings React context",
+        "lines": [
+          2,
+          3
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "useContext",
+        "description": "React hook used to read the settings context",
+        "lines": [
+          2,
+          3
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "useEffect",
+        "description": "React hook used to load the model catalog and policy history",
+        "lines": [
+          2,
+          3
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "useId",
+        "description": "React hook generating unique field ids for label/control association",
+        "lines": [
+          2,
+          3
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "useLayoutEffect",
+        "description": "React hook used to restore focus after a fieldset is re-enabled",
+        "lines": [
+          2,
+          3
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "useRef",
+        "description": "React hook holding the fieldset element and previously focused element",
+        "lines": [
+          2,
+          3
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "useState",
+        "description": "React hook for local component state (catalogs, history data, errors, expansion)",
+        "lines": [
+          2,
+          3
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "ReactElement",
+        "description": "Type-only import: React element type used for the wrapped field child",
+        "lines": [
+          2,
+          3
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "ReactNode",
+        "description": "Type-only import: React node type used for children props",
+        "lines": [
+          2,
+          3
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "ApiResponse",
+        "description": "Type-only import: typed API response for the model catalog endpoint",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/app/api.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "FieldSpec",
+        "description": "Type-only import: declarative schema describing a Source field (switch/select/number/text/fact/rows)",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "src/sources/kind.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "Localized",
+        "description": "Type-only import: localized string descriptor resolved via the i18n helper",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "src/sources/kind.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "usePoll",
+        "description": "Hook that repeatedly polls an API call; used to load the settings view",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "src/client/api.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "HistoryView",
+        "description": "Type-only import: shape of the policy/settings revision history response",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "src/client/api.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "Settings",
+        "description": "Type-only import: settings model type used to derive the role-model shape",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "src/client/api.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "SettingsView",
+        "description": "Type-only import: full settings view payload stored in the settings context",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "src/client/api.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "SourceView",
+        "description": "Type-only import: per-source view model used for labels and change descriptions",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "src/client/api.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "Button",
+        "description": "Shared button component used for row actions and refresh controls",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "DisclosureRow",
+        "description": "Collapsible row component wrapping the configuration history section",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "Icon",
+        "description": "Icon component rendering named glyphs such as history, refresh, plus and trash",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "InfoTip",
+        "description": "Tooltip component showing field hints",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "Input",
+        "description": "Text/number input component used by field renderers",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "SegmentedControl",
+        "description": "Segmented select control used to render select-type fields",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "Switch",
+        "description": "Toggle switch component used for boolean fields",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "useDraft",
+        "description": "Generic draft/persist hook handling unsaved values, revisions and saving",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/draft.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "useAction",
+        "description": "Hook wrapping an async action with busy state, used for the label refresh action",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "src/client/provider.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "usePanel",
+        "description": "Hook exposing translations, API call, notifications and navigation",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "src/client/provider.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "usePanelData",
+        "description": "Hook exposing panel-wide data such as state, sources and restart counter",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "src/client/provider.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "settingsRoute",
+        "description": "Builds the client route for a settings section",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "src/client/route.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "errorText",
+        "description": "Converts an unknown failure into a displayable message",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "localized",
+        "description": "Resolves a Localized descriptor into a translated string",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "valueLabel",
+        "description": "Translates an enumerated value into its localized label",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "when",
+        "description": "Formats a timestamp for display using the active language",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "T",
+        "description": "Type-only import: translation function type",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "Hint",
+        "description": "Small helper text component used throughout the settings UI",
+        "lines": [
+          12,
+          12
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "LoadState",
+        "description": "Component rendering loading/error placeholder states",
+        "lines": [
+          12,
+          12
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      }
+    ],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "numberOf",
+        "function_id": "src/client/settings-kit.tsx:numberOf(string)",
+        "description": "Parses a numeric input string, returning null for blank input so the server rejects missing required numbers instead of coercing them to 0",
+        "filepath": "src/client/settings-kit.tsx",
+        "lines": [
+          15,
+          15
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "text",
+            "param_type": "string",
+            "description": "Raw text from a numeric input",
+            "default_value": null,
+            "is_optional": false
+          }
+        ],
+        "return_type": "number | null",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "useSettings",
+        "function_id": "src/client/settings-kit.tsx:useSettings()",
+        "description": "Reads the settings context, throwing when a settings block is rendered outside the settings provider",
+        "filepath": "src/client/settings-kit.tsx",
+        "lines": [
+          18,
+          22
+        ],
+        "code": null,
+        "parameters": [],
+        "return_type": "SettingsData",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "SettingsProvider",
+        "function_id": "src/client/settings-kit.tsx:SettingsProvider({ children })",
+        "description": "Polls the settings endpoint and provides the settings view plus a reload function to descendant settings blocks",
+        "filepath": "src/client/settings-kit.tsx",
+        "lines": [
+          23,
+          32
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "children",
+            "param_type": "ReactNode",
+            "description": "Settings blocks rendered inside the provider",
+            "default_value": null,
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "useBlockDraft",
+        "function_id": "src/client/settings-kit.tsx:useBlockDraft<V>(block, saved, revision, toValue)",
+        "description": "Creates a draft for one settings block, persisting it through the PUT settings/:block endpoint with revision-based conflict detection",
+        "filepath": "src/client/settings-kit.tsx",
+        "lines": [
+          33,
+          42
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "block",
+            "param_type": "string",
+            "description": "Settings block identifier used in the draft key and the API path",
+            "default_value": null,
+            "is_optional": false
+          },
+          {
+            "param_name": "saved",
+            "param_type": "V",
+            "description": "Server-side saved value for the block",
+            "default_value": null,
+            "is_optional": false
+          },
+          {
+            "param_name": "revision",
+            "param_type": "number",
+            "description": "Revision number of the saved value used for optimistic concurrency",
+            "default_value": null,
+            "is_optional": false
+          },
+          {
+            "param_name": "toValue",
+            "param_type": "(draft: V) => unknown",
+            "description": "Optional converter applied to the draft before sending it to the server",
+            "default_value": "draft => draft",
+            "is_optional": false
+          }
+        ],
+        "return_type": "ReturnType<typeof useDraft<V>>",
+        "is_async": false,
+        "generics": [
+          "V"
+        ],
+        "decorators": []
+      },
+      {
+        "function_name": "Fields",
+        "function_id": "src/client/settings-kit.tsx:Fields({ disabled, children })",
+        "description": "Fieldset wrapper that remembers the focused input when disabled and restores focus after the save completes and the form is re-enabled",
+        "filepath": "src/client/settings-kit.tsx",
+        "lines": [
+          45,
+          55
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "disabled",
+            "param_type": "boolean",
+            "description": "Whether the fieldset is currently disabled (e.g. while saving)",
+            "default_value": null,
+            "is_optional": false
+          },
+          {
+            "param_name": "children",
+            "param_type": "ReactNode",
+            "description": "Form fields contained in the fieldset",
+            "default_value": null,
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "Field",
+        "function_id": "src/client/settings-kit.tsx:Field({ label, hint, note, children })",
+        "description": "Labeled field container that generates an id, associates the label with the child control and optionally shows a hint tooltip and a note",
+        "filepath": "src/client/settings-kit.tsx",
+        "lines": [
+          56,
+          63
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "label",
+            "param_type": "string",
+            "description": "Visible field label",
+            "default_value": null,
+            "is_optional": false
+          },
+          {
+            "param_name": "hint",
+            "param_type": "string | undefined",
+            "description": "Optional tooltip text explaining the field",
+            "default_value": null,
+            "is_optional": true
+          },
+          {
+            "param_name": "note",
+            "param_type": "ReactNode",
+            "description": "Optional additional note rendered below the control",
+            "default_value": null,
+            "is_optional": true
+          },
+          {
+            "param_name": "children",
+            "param_type": "ReactElement<{ id?: string }>",
+            "description": "The control element which receives the generated id",
+            "default_value": null,
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "SwitchRow",
+        "function_id": "src/client/settings-kit.tsx:SwitchRow({ label, hint, checked, onChange })",
+        "description": "Internal row layout pairing a label/hint with a toggle switch for boolean settings",
+        "filepath": "src/client/settings-kit.tsx",
+        "lines": [
+          64,
+          70
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "label",
+            "param_type": "string",
+            "description": "Switch label",
+            "default_value": null,
+            "is_optional": false
+          },
+          {
+            "param_name": "hint",
+            "param_type": "string | undefined",
+            "description": "Optional tooltip text",
+            "default_value": null,
+            "is_optional": true
+          },
+          {
+            "param_name": "checked",
+            "param_type": "boolean",
+            "description": "Current switch state",
+            "default_value": null,
+            "is_optional": false
+          },
+          {
+            "param_name": "onChange",
+            "param_type": "(next: boolean) => void",
+            "description": "Callback invoked with the new switch state",
+            "default_value": null,
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "ModelField",
+        "function_id": "src/client/settings-kit.tsx:ModelField({ id, value, onChange })",
+        "description": "Editor for a role model setting (provider, model, reasoning effort) with autocomplete lists backed by the model catalog and a hint showing the default model",
+        "filepath": "src/client/settings-kit.tsx",
+        "lines": [
+          72,
+          104
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "id",
+            "param_type": "string",
+            "description": "Base id used to build datalist identifiers",
+            "default_value": null,
+            "is_optional": false
+          },
+          {
+            "param_name": "value",
+            "param_type": "RoleModel",
+            "description": "Current model selection, or null to inherit the default",
+            "default_value": null,
+            "is_optional": false
+          },
+          {
+            "param_name": "onChange",
+            "param_type": "(next: RoleModel) => void",
+            "description": "Callback invoked with the updated model selection or null when cleared",
+            "default_value": null,
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "changeText",
+        "function_id": "src/client/settings-kit.tsx:changeText(t, change, sources)",
+        "description": "Renders a single history change entry as localized text, resolving source, field and before/after values",
+        "filepath": "src/client/settings-kit.tsx",
+        "lines": [
+          107,
+          118
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "t",
+            "param_type": "T",
+            "description": "Translation function",
+            "default_value": null,
+            "is_optional": false
+          },
+          {
+            "param_name": "change",
+            "param_type": "HistoryChange",
+            "description": "Change record from the policy history response",
+            "default_value": null,
+            "is_optional": false
+          },
+          {
+            "param_name": "sources",
+            "param_type": "SourceView[]",
+            "description": "Known sources used to resolve titles, labels and field names",
+            "default_value": null,
+            "is_optional": false
+          }
+        ],
+        "return_type": "string",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "ConfigHistory",
+        "function_id": "src/client/settings-kit.tsx:ConfigHistory({ blocks, versions, focus })",
+        "description": "Collapsible revision history for the given settings blocks, optionally including all Policy-changing saves and scrolling to a focused policy version",
+        "filepath": "src/client/settings-kit.tsx",
+        "lines": [
+          123,
+          161
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "blocks",
+            "param_type": "string[]",
+            "description": "Settings block identifiers (or prefix ending with ':') whose revisions should be listed",
+            "default_value": null,
+            "is_optional": false
+          },
+          {
+            "param_name": "versions",
+            "param_type": "boolean",
+            "description": "When true, also include revisions that changed the Policy",
+            "default_value": null,
+            "is_optional": true
+          },
+          {
+            "param_name": "focus",
+            "param_type": "string",
+            "description": "Policy version prefix to highlight and scroll into view",
+            "default_value": null,
+            "is_optional": true
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "byName",
+        "function_id": "src/client/settings-kit.tsx:byName([, a], [, b])",
+        "description": "Comparator that sorts label/key entries by their display name",
+        "filepath": "src/client/settings-kit.tsx",
+        "lines": [
+          166,
+          166
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "a",
+            "param_type": "[string, string]",
+            "description": "First key/value entry (destructured, only the value is used)",
+            "default_value": null,
+            "is_optional": false
+          },
+          {
+            "param_name": "b",
+            "param_type": "[string, string]",
+            "description": "Second key/value entry (destructured, only the value is used)",
+            "default_value": null,
+            "is_optional": false
+          }
+        ],
+        "return_type": "number",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "RowsField",
+        "function_id": "src/client/settings-kit.tsx:RowsField({ field, value, saved, onChange, labels, refreshLabels })",
+        "description": "Editor for rows-type schema fields: renders/edits a list of rows with per-column selects or text inputs, add/remove actions, label refresh and collapsing for long lists",
+        "filepath": "src/client/settings-kit.tsx",
+        "lines": [
+          167,
+          239
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "field",
+            "param_type": "Extract<FieldSpec, { type: 'rows' }>",
+            "description": "Rows field specification including columns, labels and hints",
+            "default_value": null,
+            "is_optional": false
+          },
+          {
+            "param_name": "value",
+            "param_type": "unknown",
+            "description": "Current draft array of rows",
+            "default_value": null,
+            "is_optional": false
+          },
+          {
+            "param_name": "saved",
+            "param_type": "unknown",
+            "description": "Server-saved rows used to lock already persisted keys",
+            "default_value": null,
+            "is_optional": false
+          },
+          {
+            "param_name": "onChange",
+            "param_type": "(next: unknown) => void",
+            "description": "Callback invoked with the updated rows array",
+            "default_value": null,
+            "is_optional": false
+          },
+          {
+            "param_name": "labels",
+            "param_type": "Record<string, string>",
+            "description": "Mapping of option key to human-readable label",
+            "default_value": null,
+            "is_optional": false
+          },
+          {
+            "param_name": "refreshLabels",
+            "param_type": "() => Promise<string[]>",
+            "description": "Optional async action refreshing available labels, resolving to newly added names",
+            "default_value": null,
+            "is_optional": true
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "SourceField",
+        "function_id": "src/client/settings-kit.tsx:SourceField({ field, value, saved, fact, onChange, labels, refreshLabels })",
+        "description": "Schema-driven renderer that dispatches a Source field spec to the appropriate control (switch, select, number, text with label chooser, read-only fact, or rows editor)",
+        "filepath": "src/client/settings-kit.tsx",
+        "lines": [
+          240,
+          278
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "field",
+            "param_type": "FieldSpec",
+            "description": "Declarative field specification to render",
+            "default_value": null,
+            "is_optional": false
+          },
+          {
+            "param_name": "value",
+            "param_type": "unknown",
+            "description": "Current draft value of the field",
+            "default_value": null,
+            "is_optional": false
+          },
+          {
+            "param_name": "saved",
+            "param_type": "unknown",
+            "description": "Server-saved value used by rows fields to lock persisted keys",
+            "default_value": null,
+            "is_optional": false
+          },
+          {
+            "param_name": "fact",
+            "param_type": "Localized | string | undefined",
+            "description": "Computed read-only fact to display for fact fields or as a note",
+            "default_value": null,
+            "is_optional": false
+          },
+          {
+            "param_name": "onChange",
+            "param_type": "(next: unknown) => void",
+            "description": "Callback invoked with the updated field value",
+            "default_value": null,
+            "is_optional": false
+          },
+          {
+            "param_name": "labels",
+            "param_type": "Record<string, string>",
+            "description": "Mapping of option key to human-readable label",
+            "default_value": null,
+            "is_optional": false
+          },
+          {
+            "param_name": "refreshLabels",
+            "param_type": "() => Promise<string[]>",
+            "description": "Optional async action to refresh available labels",
+            "default_value": null,
+            "is_optional": true
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      }
+    ],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "SettingsData",
+        "interface_id": "src/client/settings-kit.tsx:SettingsData",
+        "description": "Value provided by the settings React context: the current settings view plus a reload function",
+        "extends": [],
+        "filepath": "src/client/settings-kit.tsx",
+        "lines": [
+          16,
+          16
+        ],
+        "methods": [
+          "reload: () => Promise<void>"
+        ],
+        "properties": [
+          "settings: SettingsView",
+          "reload: () => Promise<void>"
+        ],
+        "generics": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "SettingsContext",
+        "variable_id": "src/client/settings-kit.tsx:SettingsContext",
+        "description": "React context holding the current settings view and reload function, undefined outside the provider",
+        "filepath": "src/client/settings-kit.tsx",
+        "lines": [
+          17,
+          17
+        ],
+        "variable_type": "Context<SettingsData | undefined>",
+        "initial_value": "createContext<SettingsData | undefined>(undefined)",
+        "is_const": true
+      }
+    ],
+    "constants": [
+      {
+        "constant_name": "ROWS_SHOWN",
+        "constant_id": "src/client/settings-kit.tsx:ROWS_SHOWN",
+        "description": "Maximum number of row editors rendered before the rows field collapses into a summary",
+        "filepath": "src/client/settings-kit.tsx",
+        "lines": [
+          165,
+          165
+        ],
+        "constant_type": "number",
+        "value": "6"
+      }
+    ],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "RoleModel",
+        "alias_id": "src/client/settings-kit.tsx:RoleModel",
+        "description": "Type of the per-role evaluation model setting (provider/model/reasoning effort) or null",
+        "filepath": "src/client/settings-kit.tsx",
+        "lines": [
+          71,
+          71
+        ],
+        "target_type": "Settings['eval']['model']",
+        "generics": []
+      },
+      {
+        "alias_name": "HistoryChange",
+        "alias_id": "src/client/settings-kit.tsx:HistoryChange",
+        "description": "A single field-level change entry inside a settings history revision item",
+        "filepath": "src/client/settings-kit.tsx",
+        "lines": [
+          106,
+          106
+        ],
+        "target_type": "NonNullable<HistoryView['items'][number]['changes']>[number]",
+        "generics": []
+      },
+      {
+        "alias_name": "Row",
+        "alias_id": "src/client/settings-kit.tsx:Row",
+        "description": "A single string-keyed row rendered by the rows field editor",
+        "filepath": "src/client/settings-kit.tsx",
+        "lines": [
+          163,
+          163
+        ],
+        "target_type": "Record<string, string>",
+        "generics": []
+      },
+      {
+        "alias_name": "Column",
+        "alias_id": "src/client/settings-kit.tsx:Column",
+        "description": "A single column definition of a rows-type field spec",
+        "filepath": "src/client/settings-kit.tsx",
+        "lines": [
+          164,
+          164
+        ],
+        "target_type": "Extract<FieldSpec, { type: 'rows' }>['columns'][number]",
+        "generics": []
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

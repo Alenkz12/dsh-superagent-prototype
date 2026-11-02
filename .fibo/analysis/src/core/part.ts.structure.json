@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/core/part.ts",
+    "path": "src/core/part.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "part.ts",
+    "file_path": "src/core/part.ts",
+    "description": "Core part module defining engine part abstraction, its options, and required imports.",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Imports UserError from the errors module.",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "internal",
+        "filepath": "./errors.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports followupOwners, reached, and threadKey from the model module.",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "./model.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports model types Thread, ThreadRef, Ticket, and Trigger.",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "./model.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Imports port types Assessor, AssessmentOutcome, DomainEvent, DomainEvents, Executor, Outbox, Policy, Repositories, and SourceScope.",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "./ports.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [],
+    "classes": [
+      {
+        "class_name": "EnginePart",
+        "class_id": "src/core/part.ts:EnginePart",
+        "description": "Abstract base class for engine parts, providing ticket, trigger, policy, and ownership helpers.",
+        "super_class": [],
+        "filepath": "src/core/part.ts",
+        "lines": [
+          24,
+          80
+        ],
+        "function": [],
+        "variables": []
+      }
+    ],
+    "interfaces": [
+      {
+        "interface_name": "EngineOptions",
+        "interface_id": "src/core/part.ts:EngineOptions",
+        "description": "Configuration options for engine parts, including repositories, policy, scope, assessor, executor, and hooks.",
+        "filepath": "src/core/part.ts",
+        "lines": [
+          7,
+          18
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

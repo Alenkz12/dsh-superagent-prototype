@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/core/model.ts",
+    "path": "src/core/model.ts",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "7371e47ff58bcd10c0932524501747d391c1b981966dd17aec070563f1d6f89c",
+  "sourceFingerprint": "982155fe6a03c887a7ac4475c6d1592d12aa23c5fe3698403c93bbfd6469d44a",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/core",
+      "resultFingerprint": "be82a7cf8ea92859bf3f3d905a318cf2acf25b289109698a34e8e9c13ab4a02c"
+    },
+    {
+      "kind": "file",
+      "path": "docs/007-architecture.md",
+      "contentFingerprint": "e3747665587fdf88b28d4e9c1a1f8ac40cbc2c65a9999be1fce14b69ec44d748"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/notices.ts",
+      "contentFingerprint": "c6d464a69809719408b6f279490d22e98e00901cba3058a84c76cfe73aa69022"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/tools/main.ts",
+      "contentFingerprint": "88603eb5a94c67e93141e07bd09bde85d65f980a1f42503c53ab9c22ec5c538d"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/views/records.ts",
+      "contentFingerprint": "5ed48ab5dfaaa729f0520c1dfc30d962f6a716d11d71088fd43ce9bedaa3cd39"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/engine.ts",
+      "contentFingerprint": "bd9a4caff834859877d1a08ccddebc990d0e1ca568674b80f9d59ce5adcac827"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/index.ts",
+      "contentFingerprint": "a5a1cf43f02eafaf520a5bfaf5e76b71ba521d04ee648cfcf12b3843cc474a3e"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/intake.ts",
+      "contentFingerprint": "323aadefea69436ba23ed2de3bdbaad673d61915be9e239f3233ecf551a74179"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/model.ts",
+      "contentFingerprint": "982155fe6a03c887a7ac4475c6d1592d12aa23c5fe3698403c93bbfd6469d44a"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/part.ts",
+      "contentFingerprint": "437c4f4bcc05e836c056cdb45bbf451e55242d62b602b489f4df902be112e73e"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/ports.ts",
+      "contentFingerprint": "0b44f1cd716d64776b0e3ea74a158cf0effd92e763b1b13c7705e766e9225a43"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/reasons.ts",
+      "contentFingerprint": "dc29e0c3c52e4ffd6e8f27a618cbe704a83fdbd9c5a1b99a1e0c4184d5c33af4"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/stage.ts",
+      "contentFingerprint": "b935012a654d2a68ca20cb27909ddc8dceafb704b56a16a23a08036a546141df"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/tickets.ts",
+      "contentFingerprint": "1d9f964ad34b54cbb0403bde16af58851e5e80111177ce73a27b6034e9af940e"
+    },
+    {
+      "kind": "file",
+      "path": "src/executor/dsh.ts",
+      "contentFingerprint": "6445a03121fa9bd15fc437736bcc2acc6ab950c5fe732e5b99eb8ee2c8a9476b"
+    },
+    {
+      "kind": "file",
+      "path": "tests/core-engine.spec.ts",
+      "contentFingerprint": "e29358c139a2dbb1a2877e980e043f34cf39bca1905fb10ee14e0b4866bc1a6b"
+    },
+    {
+      "kind": "file",
+      "path": "tests/runtime-concurrency.spec.ts",
+      "contentFingerprint": "c29f5528381a30f27d9ee9bbf4af451dd32eeed8b2e66ab049137d87a02c0d2a"
+    },
+    {
+      "kind": "file",
+      "path": "tests/runtime.spec.ts",
+      "contentFingerprint": "e3c0cfb494307adca014d6c958f5c0f92ffcaaccdfb13b5dba2fb28ef6472752"
+    },
+    {
+      "kind": "file",
+      "path": "tests/views.spec.ts",
+      "contentFingerprint": "d9a149c90e71ee5718237bfa33858ff584c892a672f26b098c99516565fb576d"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "followupOwners",
+      "limit": 30,
+      "resultFingerprint": "30286099d736b502683698ebd7f20de7da3a76198b933e362aeed492ec193f2f"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "settled(",
+      "limit": 20,
+      "resultFingerprint": "e94c51df64d08fb709fd96b80740ee74f322a09aafc6bcb172ec3bb1ec2366b8"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "waitsForPerson",
+      "limit": 30,
+      "resultFingerprint": "e33ad9e3c165ab9b66d8f72562cb4964ca7f3659574c8dd543e0c56df0a2c549"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-data-contract:domain-rules",
+      "contentFingerprint": "177efdbb08f98a91fc91c5fe065a3c42f74ef3414d5e679a77d37dadc9ea9723"
+    }
+  ],
+  "infoFingerprint": "167ffa5a40ec97471e54923ce8a2f3ab0245a82ef0a4d0cc84ae6ebdc6ecc43f",
+  "artifacts": {
+    "info": ".fibo/analysis/src/core/model.ts.info.md",
+    "structure": ".fibo/analysis/src/core/model.ts.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "167ffa5a40ec97471e54923ce8a2f3ab0245a82ef0a4d0cc84ae6ebdc6ecc43f",
+    "structure": "473c9698f4a630e62c74f784268d5a3ccca07622d17cc77b461050389311dbf9"
+  }
+}

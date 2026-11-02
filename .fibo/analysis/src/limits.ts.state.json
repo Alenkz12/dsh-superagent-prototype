@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/limits.ts",
+    "path": "src/limits.ts",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "9604bbaf8e765e77f3df77ef32583725ea2903e671c66afb2369b6f0952e6c54",
+  "sourceFingerprint": "78e4171e6624580038996e3931888cd1cdbefa5c0e1035235c4dffdbb4af236f",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src",
+      "resultFingerprint": "e17b6d8ec5aecd9176b3ffda9aabd0329f88456cdae8ef4e381964a8cae1ea63"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/prompts.ts",
+      "contentFingerprint": "fd22f1b1e7c1571f2eae4299995a13cc0b04cb212e18ef23e9b27ed28a1a1de6"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/deployment.tsx",
+      "contentFingerprint": "c37ebd5a24d0319a28d3d98a76dde23d9694b0fad4a7900df0eff85de82afb4b"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/eval.tsx",
+      "contentFingerprint": "44350064a4a7649e418ea5db25d98a58e31f77b8171393589c5b4644d03b8cc8"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/execution.tsx",
+      "contentFingerprint": "8d9200aab40f092972234fc5712a78f1db0c1ad581517d574f8b8143c289959c"
+    },
+    {
+      "kind": "file",
+      "path": "src/deployment.ts",
+      "contentFingerprint": "9984953f17592b267e386d4028552d413cfe9c9ac4df6dfb730b6be5115dbf77"
+    },
+    {
+      "kind": "file",
+      "path": "src/limits.ts",
+      "contentFingerprint": "78e4171e6624580038996e3931888cd1cdbefa5c0e1035235c4dffdbb4af236f"
+    },
+    {
+      "kind": "file",
+      "path": "src/policy.ts",
+      "contentFingerprint": "01cff8c333b341ee2943e644046f0da3ed9675af1c0029489b5f4bc8226d293d"
+    },
+    {
+      "kind": "search",
+      "path": "src",
+      "query": "LIMITS",
+      "limit": 80,
+      "resultFingerprint": "17985b54364a467a3eafe3618f635d94f9acecdc303fa0ed0c2904a0b92d7b8f"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-data-contract:configuration",
+      "contentFingerprint": "70ae6b10a8acde39091c9ddde990656b4a4750df84e8a35a08f8eccc9b929ab4"
+    }
+  ],
+  "infoFingerprint": "5ab536b6368225a45f37dbab17e23d01b82c3056af6ceb792bf56f211f1c35f8",
+  "artifacts": {
+    "info": ".fibo/analysis/src/limits.ts.info.md",
+    "structure": ".fibo/analysis/src/limits.ts.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "5ab536b6368225a45f37dbab17e23d01b82c3056af6ceb792bf56f211f1c35f8",
+    "structure": "18ab0b44884f5eb3ae54001fc48f2ab881aa2872a709c2a537fa965af4b380ab"
+  }
+}

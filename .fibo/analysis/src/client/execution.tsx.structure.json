@@ -1,0 +1,518 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/client/execution.tsx",
+    "path": "src/client/execution.tsx",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "execution.tsx",
+    "file_path": "src/client/execution.tsx",
+    "description": "React (TSX) client panel views for execution: an Execution status view listing active tickets with a pause/resume control and filter pills, plus an Execution settings group for executor model, worker capacity, workspace directory, prepare command, environment variables and blocked commands.",
+    "file_type": "tsx",
+    "language": "typescript",
+    "import_class": [],
+    "import_function": [
+      {
+        "function_name": "useRef",
+        "description": "React hook that returns a mutable ref object (used to reference the prepare-command textarea).",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "useState",
+        "description": "React hook for local component state (ticket limit, disclosure open flag).",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty",
+        "alias": ""
+      },
+      {
+        "function_name": "TICKET_FILTERS",
+        "description": "Constant list of ticket filter identifiers rendered as filter pills.",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "src/app/api.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "TicketFilter",
+        "description": "Type-only import: union type of valid ticket filter values.",
+        "lines": [
+          3,
+          3
+        ],
+        "source": "internal",
+        "filepath": "src/app/api.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "LIMITS",
+        "description": "Shared limits constants used for input bounds (maxWorkers min/max, prepareCommand length).",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "src/limits.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "usePoll",
+        "description": "Polling hook that repeatedly performs an API call and returns data, error and a reload function.",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "src/client/api.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "SettingsView",
+        "description": "Type-only import: shape of the settings payload returned by the panel API.",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "src/client/api.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "SourceView",
+        "description": "Type-only import: shape of a source (channel) view model.",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "src/client/api.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "StateView",
+        "description": "Type-only import: shape of the overall panel state (pause flag, load counters, setup problem).",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "src/client/api.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "DisclosureRow",
+        "description": "Collapsible disclosure row component with icon and title.",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "Icon",
+        "description": "Icon rendering component by name.",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "InfoTip",
+        "description": "Inline informational tooltip component.",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "Input",
+        "description": "Styled text/number input component.",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "Pill",
+        "description": "Selectable pill/toggle button used for filter chips.",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "src/client/controls.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "SaveBar",
+        "description": "Draft save/discard action bar component.",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "src/client/draft.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "usePanel",
+        "description": "Panel context hook exposing translation function, API call helper and navigation.",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "src/client/provider.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "TicketLine",
+        "description": "Row component rendering a single ticket in a list (optionally with an attached question).",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "src/client/rows.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "ConfigHistory",
+        "description": "Component showing configuration revision history for given blocks.",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "src/client/settings-kit.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "Field",
+        "description": "Form field wrapper providing label, hint and note.",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "src/client/settings-kit.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "Fields",
+        "description": "Container component grouping form fields and applying the disabled state.",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "src/client/settings-kit.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "ModelField",
+        "description": "Select field for choosing a model identifier.",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "src/client/settings-kit.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "numberOf",
+        "description": "Helper converting a raw text input value into a number.",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "src/client/settings-kit.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "useBlockDraft",
+        "description": "Hook managing an editable draft of a settings block including submit/discard and busy state.",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "src/client/settings-kit.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "useSettings",
+        "description": "Hook providing the current settings view (blocks, environment, sources).",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "src/client/settings-kit.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "localized",
+        "description": "Resolves a localized text value using the translation function.",
+        "lines": [
+          11,
+          11
+        ],
+        "source": "internal",
+        "filepath": "src/client/text.ts",
+        "alias": ""
+      },
+      {
+        "function_name": "ConfirmButton",
+        "description": "Button that asks for confirmation via a message before invoking its action.",
+        "lines": [
+          12,
+          12
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "Hint",
+        "description": "Small hint/empty-state text component.",
+        "lines": [
+          12,
+          12
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "LabelValue",
+        "description": "Component rendering a label paired with a value.",
+        "lines": [
+          12,
+          12
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "LoadMore",
+        "description": "Component rendering a load-more control for paginated lists.",
+        "lines": [
+          12,
+          12
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "LoadState",
+        "description": "Component rendering loading/error state for asynchronous data.",
+        "lines": [
+          12,
+          12
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "Section",
+        "description": "Titled section container with an optional hint.",
+        "lines": [
+          12,
+          12
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      },
+      {
+        "function_name": "StatusHead",
+        "description": "Page/section status header linking to a related settings group.",
+        "lines": [
+          12,
+          12
+        ],
+        "source": "internal",
+        "filepath": "src/client/widgets.tsx",
+        "alias": ""
+      }
+    ],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "ExecutionStatus",
+        "function_id": "src/client/execution.tsx:ExecutionStatus",
+        "description": "Execution status view: shows running/paused/waiting-setup state, running vs max worker counters, a pause/resume confirm button, ticket filter pills and the paginated list of active tickets.",
+        "filepath": "src/client/execution.tsx",
+        "lines": [
+          14,
+          51
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "filter",
+            "param_type": "TicketFilter",
+            "description": "Currently selected ticket filter (aliased as `current`).",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "state",
+            "param_type": "StateView",
+            "description": "Global panel state containing pause flag, load counters and setup problem.",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "reload",
+            "param_type": "() => Promise<void>",
+            "description": "Callback reloading the panel state after toggling pause.",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "firstSentence",
+        "function_id": "src/client/execution.tsx:firstSentence",
+        "description": "Extracts the first sentence of a text (splitting on CJK and Latin sentence terminators) for compact display; falls back to the whole text.",
+        "filepath": "src/client/execution.tsx",
+        "lines": [
+          53,
+          53
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "text",
+            "param_type": "string",
+            "description": "Full text to truncate to its first sentence.",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "string",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "EnvironmentVariables",
+        "function_id": "src/client/execution.tsx:EnvironmentVariables",
+        "description": "Collapsible disclosure row listing all available environment variables (key, short description, owning source) and letting the user insert a variable reference into the prepare command.",
+        "filepath": "src/client/execution.tsx",
+        "lines": [
+          54,
+          74
+        ],
+        "code": null,
+        "parameters": [
+          {
+            "param_name": "groups",
+            "param_type": "SettingsView['environment']['variables']",
+            "description": "Environment variable groups with owner and enabled flag.",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "sources",
+            "param_type": "SourceView[]",
+            "description": "Available sources used to resolve the human-readable owner title.",
+            "default_value": "",
+            "is_optional": false
+          },
+          {
+            "param_name": "onPick",
+            "param_type": "(key: string) => void",
+            "description": "Callback invoked with a variable key when the user clicks it, inserting it into the command.",
+            "default_value": "",
+            "is_optional": false
+          }
+        ],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      },
+      {
+        "function_name": "ExecutionSettings",
+        "function_id": "src/client/execution.tsx:ExecutionSettings",
+        "description": "Execution settings group form: edits executor model, max workers, execution directory, prepare command (with environment variable insertion), and blocked commands; submits through a block draft and shows configuration history.",
+        "filepath": "src/client/execution.tsx",
+        "lines": [
+          75,
+          127
+        ],
+        "code": null,
+        "parameters": [],
+        "return_type": "JSX.Element",
+        "is_async": false,
+        "generics": [],
+        "decorators": []
+      }
+    ],
+    "classes": [],
+    "interfaces": [],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "firstSentence",
+        "variable_id": "src/client/execution.tsx:firstSentence",
+        "description": "Arrow function helper extracting the first sentence of a text string.",
+        "filepath": "src/client/execution.tsx",
+        "lines": [
+          53,
+          53
+        ],
+        "variable_type": "(text: string) => string",
+        "initial_value": "(text: string): string => /^[^。；;.]*(?:[。；;]|\\.(?=\\s|$))?/.exec(text)?.[0] ?? text",
+        "is_const": true
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [],
+    "decorators": [],
+    "annotations": []
+  }
+}

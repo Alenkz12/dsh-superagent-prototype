@@ -1,0 +1,474 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/views/records.ts",
+    "path": "src/app/views/records.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "records.ts",
+    "file_path": "src/app/views/records.ts",
+    "description": "View model builders converting store records into presentation snapshots for tickets, threads, triggers and decisions",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "zod",
+        "description": "Zod schema validation library",
+        "lines": [
+          2,
+          2
+        ],
+        "source": "external",
+        "filepath": "thirdparty"
+      },
+      {
+        "class_name": "ts",
+        "description": "Core domain helpers and types for tickets, threads, triggers and decisions",
+        "lines": [
+          3,
+          4
+        ],
+        "source": "internal",
+        "filepath": "../../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Policy helpers for resolving allowed senders and listed bots",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "../../policy.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Types for channel links and localized values",
+        "lines": [
+          6,
+          6
+        ],
+        "source": "internal",
+        "filepath": "../../sources/kind.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Type for the source registry",
+        "lines": [
+          7,
+          7
+        ],
+        "source": "internal",
+        "filepath": "../../sources/registry.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Executor helper producing worker session ids",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "../../executor/dsh.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Type of the application store",
+        "lines": [
+          9,
+          9
+        ],
+        "source": "internal",
+        "filepath": "../store.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Text helpers for attribute, markdown, plain, preview and readable formatting",
+        "lines": [
+          10,
+          10
+        ],
+        "source": "internal",
+        "filepath": "./text.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "ownersOf",
+        "function_id": "src/app/views/records.ts:ownersOf(store: Pick<Store, 'tickets' | 'threads' | 'triggers'>)",
+        "description": "Builds an Owners resolver that maps a trigger to its follow-up owner ids using memoized ticket and thread lookups",
+        "filepath": "src/app/views/records.ts",
+        "lines": [
+          27,
+          35
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "snapshot",
+        "function_id": "src/app/views/records.ts:snapshot(host: ViewHost)",
+        "description": "Assembles the Snapshot view context from a ViewHost, adding thread queries, rule names, actor naming and owners resolution",
+        "filepath": "src/app/views/records.ts",
+        "lines": [
+          46,
+          68
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "triggerView",
+        "function_id": "src/app/views/records.ts:triggerView(view: Snapshot, trigger: Trigger, threadDecisions?: Decision[])",
+        "description": "Renders a trigger into a view with text, preview, threads, actions and disposition (queued, delivered, filtered, decision)",
+        "filepath": "src/app/views/records.ts",
+        "lines": [
+          86,
+          107
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "ticketNote",
+        "function_id": "src/app/views/records.ts:ticketNote(ticket: Ticket, stage: TicketStage)",
+        "description": "Derives an optional short note and error flag for a ticket from its stage, attention, delivery error or latest report",
+        "filepath": "src/app/views/records.ts",
+        "lines": [
+          110,
+          117
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "ticketSummary",
+        "function_id": "src/app/views/records.ts:ticketSummary(ticket: Ticket)",
+        "description": "Builds a ticket summary view with stage, note, state, actions, counts, session id and timestamps",
+        "filepath": "src/app/views/records.ts",
+        "lines": [
+          118,
+          131
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "threadUrl",
+        "function_id": "src/app/views/records.ts:threadUrl(store: Store, thread: Thread)",
+        "description": "Resolves a thread's URL from its metadata url or the URL of its first trigger",
+        "filepath": "src/app/views/records.ts",
+        "lines": [
+          133,
+          135
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "threadFacts",
+        "function_id": "src/app/views/records.ts:threadFacts(store: Store, thread: Thread)",
+        "description": "Returns compact thread facts: key, source, title, url and stored facts",
+        "filepath": "src/app/views/records.ts",
+        "lines": [
+          136,
+          139
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "threadTitle",
+        "function_id": "src/app/views/records.ts:threadTitle(store: Pick<Store, 'read'>, thread: Thread)",
+        "description": "Derives a thread title from its label attribute, else the first (preferably human) trigger preview, else the thread key",
+        "filepath": "src/app/views/records.ts",
+        "lines": [
+          143,
+          149
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "latestOnThread",
+        "function_id": "src/app/views/records.ts:latestOnThread(view: Snapshot, thread: Thread)",
+        "description": "Finds the most recent trigger on a thread and returns its actor, time and short preview",
+        "filepath": "src/app/views/records.ts",
+        "lines": [
+          150,
+          154
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "threadStage",
+        "function_id": "src/app/views/records.ts:threadStage(thread: Thread, pending: number, tickets: { state: string }[])",
+        "description": "Computes a thread's lifecycle stage (error, evaluating, queued, subscribed, dormant, unsubscribed)",
+        "filepath": "src/app/views/records.ts",
+        "lines": [
+          157,
+          163
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "threadSummary",
+        "function_id": "src/app/views/records.ts:threadSummary(view: Snapshot, thread: Thread)",
+        "description": "Builds a full thread summary view with tickets, pending count, stage, latest activity, evaluation and poll error",
+        "filepath": "src/app/views/records.ts",
+        "lines": [
+          164,
+          177
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "channelLink",
+        "function_id": "src/app/views/records.ts:channelLink({ store, links }: ViewHost, channel: ChannelRef)",
+        "description": "Resolves a channel reference into a link view with source, url and label",
+        "filepath": "src/app/views/records.ts",
+        "lines": [
+          180,
+          183
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "decisionView",
+        "function_id": "src/app/views/records.ts:decisionView(view: Snapshot, decision: Decision)",
+        "description": "Renders a decision with outcome, rules assessed, direction audit data, thread/ticket titles and trigger previews",
+        "filepath": "src/app/views/records.ts",
+        "lines": [
+          196,
+          209
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "ViewHost",
+        "interface_id": "src/app/views/records.ts:ViewHost",
+        "description": "Base view host providing the store, source registry and channel link resolver",
+        "filepath": "src/app/views/records.ts",
+        "lines": [
+          13,
+          13
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "ActorView",
+        "interface_id": "src/app/views/records.ts:ActorView",
+        "description": "View of an actor with source, id and optional localized display name",
+        "filepath": "src/app/views/records.ts",
+        "lines": [
+          20,
+          20
+        ],
+        "methods": []
+      },
+      {
+        "interface_name": "Snapshot",
+        "interface_id": "src/app/views/records.ts:Snapshot",
+        "description": "View context extending ViewHost with thread lookup, rule naming, actor resolution and follow-up owners",
+        "filepath": "src/app/views/records.ts",
+        "lines": [
+          37,
+          45
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [
+      {
+        "variable_name": "page",
+        "variable_id": "src/app/views/records.ts:page",
+        "description": "Slices a list into a paginated result with total and next offset",
+        "filepath": "src/app/views/records.ts",
+        "lines": [
+          14,
+          14
+        ]
+      },
+      {
+        "variable_name": "DAY",
+        "variable_id": "src/app/views/records.ts:DAY",
+        "description": "Milliseconds in one day constant",
+        "filepath": "src/app/views/records.ts",
+        "lines": [
+          15,
+          15
+        ]
+      },
+      {
+        "variable_name": "dayAgo",
+        "variable_id": "src/app/views/records.ts:dayAgo",
+        "description": "Returns the ISO timestamp of exactly 24 hours ago",
+        "filepath": "src/app/views/records.ts",
+        "lines": [
+          16,
+          16
+        ]
+      },
+      {
+        "variable_name": "newestFirst",
+        "variable_id": "src/app/views/records.ts:newestFirst",
+        "description": "Comparator sorting tickets by most recently updated first",
+        "filepath": "src/app/views/records.ts",
+        "lines": [
+          17,
+          17
+        ]
+      },
+      {
+        "variable_name": "awaitingEval",
+        "variable_id": "src/app/views/records.ts:awaitingEval",
+        "description": "Lists pending trigger ids on a thread that exist and have no owners yet",
+        "filepath": "src/app/views/records.ts",
+        "lines": [
+          74,
+          78
+        ]
+      },
+      {
+        "variable_name": "ticketLine",
+        "variable_id": "src/app/views/records.ts:ticketLine",
+        "description": "Combines a ticket summary with its thread facts for list output",
+        "filepath": "src/app/views/records.ts",
+        "lines": [
+          141,
+          142
+        ]
+      },
+      {
+        "variable_name": "AuditSchema",
+        "variable_id": "src/app/views/records.ts:AuditSchema",
+        "description": "Zod schema validating and defaulting stored decision audit data",
+        "filepath": "src/app/views/records.ts",
+        "lines": [
+          185,
+          191
+        ]
+      },
+      {
+        "variable_name": "outcomeOf",
+        "variable_id": "src/app/views/records.ts:outcomeOf",
+        "description": "Maps ignored decisions with would-accept audit data to 'wouldAccept', otherwise the decision kind",
+        "filepath": "src/app/views/records.ts",
+        "lines": [
+          194,
+          195
+        ]
+      }
+    ],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "LinkTarget",
+        "alias_id": "src/app/views/records.ts:LinkTarget",
+        "description": "Function resolving a channel reference into a channel link",
+        "filepath": "src/app/views/records.ts",
+        "lines": [
+          12,
+          12
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "Owners",
+        "alias_id": "src/app/views/records.ts:Owners",
+        "description": "Function resolving a trigger to the list of owner ids",
+        "filepath": "src/app/views/records.ts",
+        "lines": [
+          22,
+          22
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "TriggerView",
+        "alias_id": "src/app/views/records.ts:TriggerView",
+        "description": "Inferred return type of the triggerView builder",
+        "filepath": "src/app/views/records.ts",
+        "lines": [
+          108,
+          108
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "TicketSummaryView",
+        "alias_id": "src/app/views/records.ts:TicketSummaryView",
+        "description": "Inferred return type of the ticketSummary builder",
+        "filepath": "src/app/views/records.ts",
+        "lines": [
+          132,
+          132
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "ThreadFactsView",
+        "alias_id": "src/app/views/records.ts:ThreadFactsView",
+        "description": "Inferred return type of the threadFacts builder",
+        "filepath": "src/app/views/records.ts",
+        "lines": [
+          140,
+          140
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "ThreadStage",
+        "alias_id": "src/app/views/records.ts:ThreadStage",
+        "description": "Union of possible thread lifecycle stages",
+        "filepath": "src/app/views/records.ts",
+        "lines": [
+          156,
+          156
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "ThreadSummaryView",
+        "alias_id": "src/app/views/records.ts:ThreadSummaryView",
+        "description": "Inferred return type of the threadSummary builder",
+        "filepath": "src/app/views/records.ts",
+        "lines": [
+          178,
+          178
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "DecisionOutcome",
+        "alias_id": "src/app/views/records.ts:DecisionOutcome",
+        "description": "Decision kind extended with the hypothetical 'wouldAccept' outcome",
+        "filepath": "src/app/views/records.ts",
+        "lines": [
+          193,
+          193
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "DecisionView",
+        "alias_id": "src/app/views/records.ts:DecisionView",
+        "description": "Inferred return type of the decisionView builder",
+        "filepath": "src/app/views/records.ts",
+        "lines": [
+          210,
+          210
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}

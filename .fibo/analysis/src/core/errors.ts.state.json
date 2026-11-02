@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/core/errors.ts",
+    "path": "src/core/errors.ts",
+    "kind": "file"
+  },
+  "rulesFingerprint": "aa8a22671ebdc89c60af1ba6661b4ded293f5a80fb4dd26353cff43188558afa",
+  "inputFingerprint": "a00e8d01b28e0ba9308ec31b4390cb477dfca031a12e5285a470f1ad76f92a8d",
+  "sourceFingerprint": "aa7532a2d1f8c443608683ef1231bf3d81b842f67a87d9b77742b5c76d515009",
+  "observedInputs": [
+    {
+      "kind": "directory-listing",
+      "path": "src/core",
+      "resultFingerprint": "be82a7cf8ea92859bf3f3d905a318cf2acf25b289109698a34e8e9c13ab4a02c"
+    },
+    {
+      "kind": "file",
+      "path": "docs/007-architecture.md",
+      "contentFingerprint": "e3747665587fdf88b28d4e9c1a1f8ac40cbc2c65a9999be1fce14b69ec44d748"
+    },
+    {
+      "kind": "file",
+      "path": "docs/008-cookbook.md",
+      "contentFingerprint": "adbdaa519f56bc7987ca6394950802cffcb855acff4ee715d10a26a9b0ccefec"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/http.ts",
+      "contentFingerprint": "5da39830429559975cae7ae6d39416acb2322ac8e31cfb4da3436df602cb7ec4"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/prompts.ts",
+      "contentFingerprint": "fd22f1b1e7c1571f2eae4299995a13cc0b04cb212e18ef23e9b27ed28a1a1de6"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/resources.ts",
+      "contentFingerprint": "cc09f56669b2ccacfc889aa98132590b618f77e6648a7ff8fe8454106c8c663f"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/sessions.ts",
+      "contentFingerprint": "ca2b98e57e9f27b2abb0afab59d44ea744a96d8be4cf81d7b3776901b56cd36b"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/settings.ts",
+      "contentFingerprint": "2c7cd780dd24ab6a99ddfd30f80b921db035e0d56e3e1d42a86371fe20423f3f"
+    },
+    {
+      "kind": "file",
+      "path": "src/app/tools/main.ts",
+      "contentFingerprint": "88603eb5a94c67e93141e07bd09bde85d65f980a1f42503c53ab9c22ec5c538d"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/api.ts",
+      "contentFingerprint": "800b0347183c39601b8b7cd33607dee2538eb8da5feb5f1c7e13a1a7c2268f36"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/index.tsx",
+      "contentFingerprint": "6a7e5a0295ecbbd047dbb619e0cdf9d1489a46c8dfcc56dbfd1cfe6f6d866529"
+    },
+    {
+      "kind": "file",
+      "path": "src/client/locales.ts",
+      "contentFingerprint": "d172c86d672b9244effe3590bc7c25ac71b80d3ccbb7d6c5fe76848ce31eba12"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/errors.ts",
+      "contentFingerprint": "aa7532a2d1f8c443608683ef1231bf3d81b842f67a87d9b77742b5c76d515009"
+    },
+    {
+      "kind": "file",
+      "path": "src/core/index.ts",
+      "contentFingerprint": "a5a1cf43f02eafaf520a5bfaf5e76b71ba521d04ee648cfcf12b3843cc474a3e"
+    },
+    {
+      "kind": "file",
+      "path": "src/infra/commands.ts",
+      "contentFingerprint": "9d7593c5022e0c1813731c1f1cd8471b1536b0b5f42974a08ef2b2930c1e62b2"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/feishu-channel.ts",
+      "contentFingerprint": "c6fa722414256df055ae09e935ec402ccec9b63bdb5f73d2b5ff3f34d6d1abf7"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/github-channel.ts",
+      "contentFingerprint": "6de9657465b8bae9a7cb4748d469fedff3c8d27fec6ed6b4dd52e620a239a0d1"
+    },
+    {
+      "kind": "file",
+      "path": "src/sources/github.ts",
+      "contentFingerprint": "60bfc2c298cbef708553de5ca0c91c387fd633bc7440c6be0d1242478ef84e88"
+    },
+    {
+      "kind": "file",
+      "path": "tests/core-engine.spec.ts",
+      "contentFingerprint": "e29358c139a2dbb1a2877e980e043f34cf39bca1905fb10ee14e0b4866bc1a6b"
+    },
+    {
+      "kind": "file",
+      "path": "tests/locales.spec.ts",
+      "contentFingerprint": "18d918f19e0fa5c129f51027d13fc1b7980f751bd31cbbe5b5db1e5e60684545"
+    },
+    {
+      "kind": "file",
+      "path": "tests/prompts.spec.ts",
+      "contentFingerprint": "5c9e26761d1fde35f7153a3fb95e89f72ab69e5eb97c52413f53838210ef4f40"
+    },
+    {
+      "kind": "file",
+      "path": "tests/runtime.spec.ts",
+      "contentFingerprint": "e3c0cfb494307adca014d6c958f5c0f92ffcaaccdfb13b5dba2fb28ef6472752"
+    },
+    {
+      "kind": "file",
+      "path": "tests/service-script.spec.ts",
+      "contentFingerprint": "57bf507d5bb7e8fd98beb6d250c7f459ff042eacbc39491d678138e07beaa84d"
+    },
+    {
+      "kind": "file",
+      "path": "tests/settings.spec.ts",
+      "contentFingerprint": "119d7c86e03c5a14f585f58d257f3d590ee02dc3564391ecde2560107b8d7079"
+    },
+    {
+      "kind": "file",
+      "path": "tests/tools.spec.ts",
+      "contentFingerprint": "44b163705d397c18ec8fda277ed0bf6f91aea1228a47c6e15cc1918a87ff55a5"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "error.code",
+      "limit": 30,
+      "resultFingerprint": "3e09588c90eff102886a95b949bb3d465edbbd5df45eb8b4e66b9bb2e62b1501"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "instanceof UserError",
+      "limit": 30,
+      "resultFingerprint": "55b5a3380e4530a3b8cf04fc32fe6040b941e6e3182f022bfd9fceee53a7b96c"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "USER_ERRORS",
+      "limit": 40,
+      "resultFingerprint": "d01084b59f2f7773bfc50f65f3a71e3f3a1efcd8a8a41d0b6264b1b7437e2b6a"
+    },
+    {
+      "kind": "search",
+      "path": ".",
+      "query": "UserError",
+      "limit": 80,
+      "resultFingerprint": "5ba38630e3597a268e5fde83f79eaae0451dbe49add5963a38fd02ae7dcafbbd"
+    },
+    {
+      "kind": "search",
+      "path": "src/core/index.ts",
+      "query": "errors.ts",
+      "limit": 50,
+      "resultFingerprint": "5654db03b60acf0746fde628bc2a2e5d03d67d5da5de109a69c4ec31b6c61c61"
+    },
+    {
+      "kind": "template",
+      "key": "code-language-gfgo-primary-data-contract:api-boundary",
+      "contentFingerprint": "605dd7dfe8cba75b914a181d639231b1ce3f7dca7ab4ab574085bcf7ff2aadb6"
+    }
+  ],
+  "infoFingerprint": "d0e763609c7383932c0966bdbb3b5de4b7cf7246edaa595ce2b23fa02f50e9b8",
+  "artifacts": {
+    "info": ".fibo/analysis/src/core/errors.ts.info.md",
+    "structure": ".fibo/analysis/src/core/errors.ts.structure.json"
+  },
+  "artifactFingerprints": {
+    "info": "d0e763609c7383932c0966bdbb3b5de4b7cf7246edaa595ce2b23fa02f50e9b8",
+    "structure": "0db68f6e35c363a88f9a461325a68637e2df0f5c6b600379572acc4faac71f7e"
+  }
+}

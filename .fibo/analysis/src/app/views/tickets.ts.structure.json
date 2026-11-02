@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 2,
+  "unit": {
+    "id": "file:src/app/views/tickets.ts",
+    "path": "src/app/views/tickets.ts",
+    "kind": "file",
+    "sourceKind": "code"
+  },
+  "facts": {
+    "file_name": "tickets.ts",
+    "file_path": "src/app/views/tickets.ts",
+    "description": "Ticket view layer: builds list, row, and detail view models from the store",
+    "file_type": "ts",
+    "language": "typescript",
+    "import_class": [
+      {
+        "class_name": "ts",
+        "description": "Core ticket domain functions and types (ticket, stage, mandate basis)",
+        "lines": [
+          2,
+          3
+        ],
+        "source": "internal",
+        "filepath": "../../core/index.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Executor helper for worker session identifiers",
+        "lines": [
+          4,
+          4
+        ],
+        "source": "internal",
+        "filepath": "../../executor/dsh.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Store type import for ticket data access",
+        "lines": [
+          5,
+          5
+        ],
+        "source": "internal",
+        "filepath": "../store.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Shared view helpers and Snapshot/ViewHost types from records module",
+        "lines": [
+          6,
+          7
+        ],
+        "source": "internal",
+        "filepath": "./records.ts"
+      },
+      {
+        "class_name": "ts",
+        "description": "Text utilities for markdown rendering and previews",
+        "lines": [
+          8,
+          8
+        ],
+        "source": "internal",
+        "filepath": "./text.ts"
+      }
+    ],
+    "import_function": [],
+    "import_variable": [],
+    "import_package": [],
+    "import_module": [],
+    "function": [
+      {
+        "function_name": "basisFacts",
+        "function_id": "src/app/views/tickets.ts:basisFacts(basis: MandateBasis, rule: Snapshot['rule'])",
+        "description": "Derives display facts and legacy flag from a mandate basis and rule lookup",
+        "filepath": "src/app/views/tickets.ts",
+        "lines": [
+          18,
+          34
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "ticketList",
+        "function_id": "src/app/views/tickets.ts:ticketList(host: ViewHost, stage: 'open' | TicketStage['stage'], offset: number, limit: number)",
+        "description": "Paginates and sorts tickets by stage filter, mapping each to a row view",
+        "filepath": "src/app/views/tickets.ts",
+        "lines": [
+          35,
+          42
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "ticketRow",
+        "function_id": "src/app/views/tickets.ts:ticketRow(view: Snapshot, ticket: Ticket)",
+        "description": "Builds a single ticket row view, attaching a reply channel link when applicable",
+        "filepath": "src/app/views/tickets.ts",
+        "lines": [
+          44,
+          49
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "executorLoad",
+        "function_id": "src/app/views/tickets.ts:executorLoad(store: Store, running: number)",
+        "description": "Computes executor load: running count plus queued working tickets",
+        "filepath": "src/app/views/tickets.ts",
+        "lines": [
+          52,
+          55
+        ],
+        "code": ""
+      },
+      {
+        "function_name": "ticketDetail",
+        "function_id": "src/app/views/tickets.ts:ticketDetail(host: ViewHost, id: string)",
+        "description": "Assembles detailed ticket view with assignments, inputs, and related threads",
+        "filepath": "src/app/views/tickets.ts",
+        "lines": [
+          56,
+          86
+        ],
+        "code": ""
+      }
+    ],
+    "classes": [],
+    "interfaces": [
+      {
+        "interface_name": "ExecutorLoad",
+        "interface_id": "src/app/views/tickets.ts:ExecutorLoad",
+        "description": "Executor load shape with running and queued counts",
+        "filepath": "src/app/views/tickets.ts",
+        "lines": [
+          51,
+          51
+        ],
+        "methods": []
+      }
+    ],
+    "enums": [],
+    "structs": [],
+    "traits": [],
+    "protocols": [],
+    "global_variables": [],
+    "constants": [],
+    "macros": [],
+    "type_aliases": [
+      {
+        "alias_name": "BasisFact",
+        "alias_id": "src/app/views/tickets.ts:BasisFact",
+        "description": "Union of discriminated basis fact variants for ticket justification display",
+        "filepath": "src/app/views/tickets.ts",
+        "lines": [
+          10,
+          13
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "TicketListView",
+        "alias_id": "src/app/views/tickets.ts:TicketListView",
+        "description": "Inferred return type of the ticketList view function",
+        "filepath": "src/app/views/tickets.ts",
+        "lines": [
+          43,
+          43
+        ],
+        "target_type": ""
+      },
+      {
+        "alias_name": "TicketDetailView",
+        "alias_id": "src/app/views/tickets.ts:TicketDetailView",
+        "description": "Inferred non-null return type of the ticketDetail view function",
+        "filepath": "src/app/views/tickets.ts",
+        "lines": [
+          87,
+          87
+        ],
+        "target_type": ""
+      }
+    ],
+    "decorators": [],
+    "annotations": []
+  }
+}
